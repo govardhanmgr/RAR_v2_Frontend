@@ -7,7 +7,8 @@ import { AUTHENTICATION_ROUTES } from './routing/authentication-routing';
 
 const routes: Routes = [
   { path: '', component: AuthenticationLayoutComponent, children: AUTHENTICATION_ROUTES },
-  { path: 'admin', component: AdminLayoutComponent, children: ADMIN_ROUTES }
+  { path: 'admin', component: AdminLayoutComponent, children: ADMIN_ROUTES },
+
 ];
 
 @NgModule({
