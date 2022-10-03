@@ -8,7 +8,8 @@ import { AppComponent } from './app.component';
 import { ViewDetailsComponent } from './admin/view-details/view-details.component';
 import { PenrequestComponent } from './admin/penrequest/penrequest.component';
 import { RegistrationpageComponent } from './Authentication/registrationpage/registrationpage.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LdbpageComponent } from './admin/ldbpage/ldbpage.component';
+import { ReceivablesComponent } from './admin/receivables/receivables.component';
 
 @NgModule({
   declarations: [
@@ -16,12 +17,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     PenrequestComponent,
     ViewDetailsComponent,
     RegistrationpageComponent,
+    LdbpageComponent,
+    ReceivablesComponent
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule,
+   
 
   ],
   providers: [],
