@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 
 import { ViewDetailsComponent } from './admin/view-details/view-details.component';
 import { PenrequestComponent } from './admin/penrequest/penrequest.component';
+import { RegistrationpageComponent } from './Authentication/registrationpage/registrationpage.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PenrequestComponent,
     ViewDetailsComponent,
+    RegistrationpageComponent,
 
   ],
   imports: [
