@@ -9,6 +9,8 @@ import { PenrequestComponent } from './admin/penrequest/penrequest.component';
 import { RegistrationpageComponent } from './Authentication/registrationpage/registrationpage.component';
 <<<<<<< HEAD
 import { ReportpageComponent } from './reportpage/reportpage.component';
+import { UpdatedataComponent } from './admin/updatedata/updatedata.component';
+import { EmpexpdetailsComponent } from './admin/empexpdetails/empexpdetails.component';
 =======
 import { LdbpageComponent } from './admin/ldbpage/ldbpage.component';
 import { ReceivablesComponent } from './admin/receivables/receivables.component';
@@ -24,6 +26,8 @@ import { VisaupdateComponent } from './admin/visaupdate/visaupdate.component';
     RegistrationpageComponent,
 <<<<<<< HEAD
     ReportpageComponent,
+UpdatedataComponent,
+EmpexpdetailsComponent,
     
 =======
     LdbpageComponent,
