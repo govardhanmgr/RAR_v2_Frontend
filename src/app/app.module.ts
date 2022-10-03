@@ -12,6 +12,7 @@ import { LdbpageComponent } from './admin/ldbpage/ldbpage.component';
 import { ReceivablesComponent } from './admin/receivables/receivables.component';
 import { ForgetpasswordComponent } from './Authentication/forgetpassword/forgetpassword.component';
 import { VisaupdateComponent } from './admin/visaupdate/visaupdate.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { VisaupdateComponent } from './admin/visaupdate/visaupdate.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
    
 
   ],
