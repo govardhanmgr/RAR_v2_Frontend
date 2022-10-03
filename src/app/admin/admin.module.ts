@@ -6,13 +6,15 @@ import { EmployeeComponent } from './employee/employee.component';
 import { DepartmentComponent } from './department/department.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { SharedModule } from '../shared/shared.module';
+import { LaunchpageComponent } from './launchpage/launchpage.component';
 
 
 @NgModule({
   declarations: [
     EmployeeComponent,
     DepartmentComponent,
-    AdminDashboardComponent
+    AdminDashboardComponent,
+    LaunchpageComponent
   ],
   imports: [
     CommonModule,
