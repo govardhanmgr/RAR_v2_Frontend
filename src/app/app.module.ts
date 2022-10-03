@@ -8,6 +8,8 @@ import { AppComponent } from './app.component';
 import { ViewDetailsComponent } from './admin/view-details/view-details.component';
 import { PenrequestComponent } from './admin/penrequest/penrequest.component';
 import { RegistrationpageComponent } from './Authentication/registrationpage/registrationpage.component';
+import { LdbpageComponent } from './admin/ldbpage/ldbpage.component';
+import { ReceivablesComponent } from './admin/receivables/receivables.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +17,8 @@ import { RegistrationpageComponent } from './Authentication/registrationpage/reg
     PenrequestComponent,
     ViewDetailsComponent,
     RegistrationpageComponent,
+    LdbpageComponent,
+    ReceivablesComponent,
 
   ],
   imports: [
