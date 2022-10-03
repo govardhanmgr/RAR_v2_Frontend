@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
@@ -8,9 +7,14 @@ import { AppComponent } from './app.component';
 import { ViewDetailsComponent } from './admin/view-details/view-details.component';
 import { PenrequestComponent } from './admin/penrequest/penrequest.component';
 import { RegistrationpageComponent } from './Authentication/registrationpage/registrationpage.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginComponent } from './Authentication/login/login.component';
 import { EducationUpdateComponent } from './admin/education-update/education-update.component';
+
+import { ReportpageComponent } from './reportpage/reportpage.component';
+import { LdbpageComponent } from './admin/ldbpage/ldbpage.component';
+import { ReceivablesComponent } from './admin/receivables/receivables.component';
+import { ForgetpasswordComponent } from './Authentication/forgetpassword/forgetpassword.component';
+import { VisaupdateComponent } from './admin/visaupdate/visaupdate.component';
 
 @NgModule({
   declarations: [
@@ -18,14 +22,20 @@ import { EducationUpdateComponent } from './admin/education-update/education-upd
     PenrequestComponent,
     ViewDetailsComponent,
     RegistrationpageComponent,
-    LoginComponent,
-    EducationUpdateComponent,
+    ReportpageComponent,
+
+    LdbpageComponent,
+    ReceivablesComponent,
+    ForgetpasswordComponent,
+    VisaupdateComponent
 
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
+    LoginComponent,
+    EducationUpdateComponent,
+    AppRoutingModule
+
 
   ],
   providers: [],
