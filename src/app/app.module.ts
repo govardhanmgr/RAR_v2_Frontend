@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { ViewDetailsComponent } from './admin/view-details/view-details.component';
 import { PenrequestComponent } from './admin/penrequest/penrequest.component';
 import { RegistrationpageComponent } from './Authentication/registrationpage/registrationpage.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,9 @@ import { RegistrationpageComponent } from './Authentication/registrationpage/reg
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
