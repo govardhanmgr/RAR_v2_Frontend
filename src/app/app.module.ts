@@ -7,13 +7,15 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
 import { AuthenticationLayoutComponent } from './layouts/authentication-layout/authentication-layout.component';
 import { SharedModule } from './shared/shared.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ForgotpasswordComponent } from './authentication/forgotpassword/forgotpassword.component';
 
+
+ 
 @NgModule({
   declarations: [
     AppComponent,
     AuthenticationLayoutComponent,
-    AdminLayoutComponent
+    AdminLayoutComponent,
+    
   ],
   imports: [
     BrowserModule,
