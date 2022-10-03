@@ -9,6 +9,8 @@ import { ViewDetailsComponent } from './admin/view-details/view-details.componen
 import { PenrequestComponent } from './admin/penrequest/penrequest.component';
 import { RegistrationpageComponent } from './Authentication/registrationpage/registrationpage.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LoginComponent } from './Authentication/login/login.component';
+import { EducationUpdateComponent } from './admin/education-update/education-update.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +18,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     PenrequestComponent,
     ViewDetailsComponent,
     RegistrationpageComponent,
+    LoginComponent,
+    EducationUpdateComponent,
 
   ],
   imports: [
