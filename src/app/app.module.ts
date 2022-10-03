@@ -18,12 +18,14 @@ import { ReceivablesComponent } from './admin/receivables/receivables.component'
     ViewDetailsComponent,
     RegistrationpageComponent,
     LdbpageComponent,
-    ReceivablesComponent,
+    ReceivablesComponent
 
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+   
+
   ],
   providers: [],
   bootstrap: [AppComponent]
