@@ -9,6 +9,8 @@ import { ViewDetailsComponent } from './admin/view-details/view-details.componen
 import { PenrequestComponent } from './admin/penrequest/penrequest.component';
 import { RegistrationpageComponent } from './Authentication/registrationpage/registrationpage.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { UserdataComponent } from './admin/userdata/userdata.component';
+import { EmployeeExpensedataComponent } from './admin/employee-expensedata/employee-expensedata.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +18,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     PenrequestComponent,
     ViewDetailsComponent,
     RegistrationpageComponent,
+    UserdataComponent,
+    EmployeeExpensedataComponent,
 
   ],
   imports: [
