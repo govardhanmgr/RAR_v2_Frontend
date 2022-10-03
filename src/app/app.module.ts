@@ -3,12 +3,17 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AdminComponent } from './admin/admin/admin.component';
+
+
+import { ViewDetailsComponent } from './admin/view-details/view-details.component';
+import { PenrequestComponent } from './admin/penrequest/penrequest.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AdminComponent
+    PenrequestComponent,
+    ViewDetailsComponent,
+
   ],
   imports: [
     BrowserModule,
