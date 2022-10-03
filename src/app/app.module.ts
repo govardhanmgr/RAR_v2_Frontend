@@ -10,7 +10,6 @@ import { RegistrationpageComponent } from './Authentication/registrationpage/reg
 import { LoginComponent } from './Authentication/login/login.component';
 import { EducationUpdateComponent } from './admin/education-update/education-update.component';
 
-import { ReportpageComponent } from './reportpage/reportpage.component';
 import { LdbpageComponent } from './admin/ldbpage/ldbpage.component';
 import { ReceivablesComponent } from './admin/receivables/receivables.component';
 import { ForgetpasswordComponent } from './Authentication/forgetpassword/forgetpassword.component';
@@ -22,12 +21,11 @@ import { VisaupdateComponent } from './admin/visaupdate/visaupdate.component';
     PenrequestComponent,
     ViewDetailsComponent,
     RegistrationpageComponent,
-    ReportpageComponent,
 
     LdbpageComponent,
     ReceivablesComponent,
     ForgetpasswordComponent,
-    VisaupdateComponent
+    VisaupdateComponent,
 
   ],
   imports: [
