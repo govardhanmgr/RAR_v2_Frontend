@@ -18,6 +18,7 @@ import { AmdpageComponent } from './amdpage/amdpage.component';
 import { PayrollexpensesComponent } from './payrollexpenses/payrollexpenses.component';
 import { UpdatedataComponent } from './updatedata/updatedata.component';
 import { EmpexpdetailsComponent } from './empexpdetails/empexpdetails.component';
+import { OperationalCostComponent } from './operational-cost/operational-cost.component';
 
 
 
@@ -37,7 +38,8 @@ import { EmpexpdetailsComponent } from './empexpdetails/empexpdetails.component'
     AmdpageComponent,
     PayrollexpensesComponent,
     UpdatedataComponent,
-    EmpexpdetailsComponent
+    EmpexpdetailsComponent,
+    OperationalCostComponent
 
   ],
   imports: [
