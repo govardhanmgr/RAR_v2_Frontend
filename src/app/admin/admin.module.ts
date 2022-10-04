@@ -8,6 +8,9 @@ import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.compo
 import { SharedModule } from '../shared/shared.module';
 import { LaunchpageComponent } from './launchpage/launchpage.component';
 import { VisaupdateComponent } from './visaupdate/visaupdate.component';
+import { OrganizationdataComponent } from './organizationdata/organizationdata.component';
+import { PendingrequestComponent } from './pendingrequest/pendingrequest.component';
+
 
 
 @NgModule({
@@ -16,7 +19,10 @@ import { VisaupdateComponent } from './visaupdate/visaupdate.component';
     DepartmentComponent,
     AdminDashboardComponent,
     LaunchpageComponent,
-    VisaupdateComponent
+    VisaupdateComponent,
+    OrganizationdataComponent,
+    PendingrequestComponent,
+
   ],
   imports: [
     CommonModule,
