@@ -7,6 +7,7 @@ import { DepartmentComponent } from './department/department.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { SharedModule } from '../shared/shared.module';
 import { LaunchpageComponent } from './launchpage/launchpage.component';
+import { VisaupdateComponent } from './visaupdate/visaupdate.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { LaunchpageComponent } from './launchpage/launchpage.component';
     EmployeeComponent,
     DepartmentComponent,
     AdminDashboardComponent,
-    LaunchpageComponent
+    LaunchpageComponent,
+    VisaupdateComponent
   ],
   imports: [
     CommonModule,
