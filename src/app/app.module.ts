@@ -11,6 +11,7 @@ import { RegistrationpageComponent } from './Authentication/registrationpage/reg
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ResetPasswordComponent } from './Authentication/reset-password/reset-password.component';
 import { ActiveemplydataComponent } from './admin/activeemplydata/activeemplydata.component';
+import { ResetpasswordComponent } from './Authentication/resetpassword/resetpassword.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { ActiveemplydataComponent } from './admin/activeemplydata/activeemplydat
     RegistrationpageComponent,
     ResetPasswordComponent,
     ActiveemplydataComponent,
+    ResetpasswordComponent,
 
   ],
   imports: [
