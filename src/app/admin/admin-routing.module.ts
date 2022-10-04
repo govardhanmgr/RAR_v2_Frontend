@@ -8,6 +8,7 @@ import { EmpexpdetailsComponent } from './empexpdetails/empexpdetails.component'
 import { EmployeeComponent } from './employee/employee.component';
 import { LaunchpageComponent } from './launchpage/launchpage.component';
 import { LdbpageComponent } from './ldbpage/ldbpage.component';
+import { OperationalCostComponent } from './operational-cost/operational-cost.component';
 import { OrganizationdataComponent } from './organizationdata/organizationdata.component';
 import { PayrollexpensesComponent } from './payrollexpenses/payrollexpenses.component';
 import { PendingrequestComponent } from './pendingrequest/pendingrequest.component';
@@ -34,7 +35,8 @@ const routes: Routes = [
   {path:'amdpage',component:AmdpageComponent},
   {path:'payrollexpenses',component:PayrollexpensesComponent},
   {path:'updatedetails',component:UpdatedataComponent},
-  {path:'empexpdetails',component:EmpexpdetailsComponent} 
+  {path:'empexpdetails',component:EmpexpdetailsComponent},
+  {path:'operationalcost',component:OperationalCostComponent} 
 ];
 
 @NgModule({
