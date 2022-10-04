@@ -8,6 +8,8 @@ import { SignupComponent } from './signup/signup.component';
 import { RegistrationPageThreeComponent } from './registration-page-three/registration-page-three.component';
 
 import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
+import { SecurityquestionsComponent } from './securityquestions/securityquestions.component';
+import { RegistrationPageTwoComponent } from './registration-page-two/registration-page-two.component';
 
 
 
@@ -18,7 +20,9 @@ import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.compone
 
     RegistrationPageThreeComponent,
 
-    ForgotpasswordComponent
+    ForgotpasswordComponent,
+      SecurityquestionsComponent,
+      RegistrationPageTwoComponent
 
   ],
   imports: [
