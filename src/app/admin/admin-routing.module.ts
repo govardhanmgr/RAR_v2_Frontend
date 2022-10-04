@@ -3,11 +3,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { ActiveemployeedataComponent } from './activeemployeedata/activeemployeedata.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { AmdpageComponent } from './amdpage/amdpage.component';
+import { CompensationUpdateComponent } from './compensation-update/compensation-update.component';
 import { DepartmentComponent } from './department/department.component';
 import { EducationUpdateComponent } from './education-update/education-update.component';
 import { EmpexpdetailsComponent } from './empexpdetails/empexpdetails.component';
 import { EmployeeExpensedataComponent } from './employee-expensedata/employee-expensedata.component';
 import { EmployeeComponent } from './employee/employee.component';
+import { JobTabComponent } from './job-tab/job-tab.component';
 import { JobUpdateComponent } from './job-update/job-update.component';
 import { LaunchpageComponent } from './launchpage/launchpage.component';
 import { LdbpageComponent } from './ldbpage/ldbpage.component';
@@ -23,7 +25,6 @@ import { UpdatedataComponent } from './updatedata/updatedata.component';
 import { UserdataComponent } from './userdata/userdata.component';
 import { ViewdetailsComponent } from './viewdetails/viewdetails.component';
 import { VisaupdateComponent } from './visaupdate/visaupdate.component';
-
 
 const routes: Routes = [
   { path: '', component: AdminDashboardComponent },
@@ -46,13 +47,15 @@ const routes: Routes = [
   { path: 'employeeexpensedata', component: EmployeeExpensedataComponent },
   { path: 'userdata', component: UserdataComponent },
   { path: 'JobUpdate', component: JobUpdateComponent },
-  {path:'managementexpenses',component:ManagementExpensesComponent},
-  {path:'newemp',component:NewempComponent},
-  {path:'activeemployeedata',component:ActiveemployeedataComponent}
+  { path: 'managementexpenses', component: ManagementExpensesComponent },
+  { path: 'newemp', component: NewempComponent },
+  { path: 'activeemployeedata', component: ActiveemployeedataComponent },
+  { path: 'compensationupdate', component: CompensationUpdateComponent },
+  { path: 'jobtab', component: JobTabComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AdminRoutingModule { }
+export class AdminRoutingModule {}

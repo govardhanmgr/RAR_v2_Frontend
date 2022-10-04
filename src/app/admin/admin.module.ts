@@ -25,6 +25,8 @@ import { JobUpdateComponent } from './job-update/job-update.component';
 import { ManagementExpensesComponent } from './management-expenses/management-expenses.component';
 import { NewempComponent } from './newemp/newemp.component';
 import { ActiveemployeedataComponent } from './activeemployeedata/activeemployeedata.component';
+import { CompensationUpdateComponent } from './compensation-update/compensation-update.component';
+import { JobTabComponent } from './job-tab/job-tab.component';
 
 
 
@@ -51,7 +53,9 @@ import { ActiveemployeedataComponent } from './activeemployeedata/activeemployee
     JobUpdateComponent,
     ManagementExpensesComponent,
     NewempComponent,
-    ActiveemployeedataComponent
+    ActiveemployeedataComponent,
+    CompensationUpdateComponent,
+    JobTabComponent
 
   ],
   imports: [
