@@ -9,16 +9,7 @@ import { SharedModule } from './shared/shared.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
-import { ViewDetailsComponent } from './admin/view-details/view-details.component';
-import { PenrequestComponent } from './admin/penrequest/penrequest.component';
-import { RegistrationpageComponent } from './Authentication/registrationpage/registrationpage.component';
-import { LoginComponent } from './Authentication/login/login.component';
-import { EducationUpdateComponent } from './admin/education-update/education-update.component';
 
-import { LdbpageComponent } from './admin/ldbpage/ldbpage.component';
-import { ReceivablesComponent } from './admin/receivables/receivables.component';
-import { ForgetpasswordComponent } from './Authentication/forgetpassword/forgetpassword.component';
-import { VisaupdateComponent } from './admin/visaupdate/visaupdate.component';
 
 @NgModule({
   declarations: [
