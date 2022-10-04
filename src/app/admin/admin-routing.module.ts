@@ -42,7 +42,7 @@ const routes: Routes = [
   { path: 'operationalcost', component: OperationalCostComponent },
   { path: 'employeeexpensedata', component: EmployeeExpensedataComponent },
   { path: 'userdata', component: UserdataComponent },
-  {path: 'JobUpdate', component: JobUpdateComponent}
+  { path: 'JobUpdate', component: JobUpdateComponent }
 ];
 
 @NgModule({
