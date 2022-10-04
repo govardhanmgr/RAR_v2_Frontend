@@ -10,6 +10,8 @@ import { EmployeeComponent } from './employee/employee.component';
 import { JobUpdateComponent } from './job-update/job-update.component';
 import { LaunchpageComponent } from './launchpage/launchpage.component';
 import { LdbpageComponent } from './ldbpage/ldbpage.component';
+import { ManagementExpensesComponent } from './management-expenses/management-expenses.component';
+import { NewempComponent } from './newemp/newemp.component';
 import { OperationalCostComponent } from './operational-cost/operational-cost.component';
 import { OrganizationdataComponent } from './organizationdata/organizationdata.component';
 import { PayrollexpensesComponent } from './payrollexpenses/payrollexpenses.component';
@@ -42,7 +44,9 @@ const routes: Routes = [
   { path: 'operationalcost', component: OperationalCostComponent },
   { path: 'employeeexpensedata', component: EmployeeExpensedataComponent },
   { path: 'userdata', component: UserdataComponent },
-  { path: 'JobUpdate', component: JobUpdateComponent }
+  { path: 'JobUpdate', component: JobUpdateComponent },
+  {path:'managementexpenses',component:ManagementExpensesComponent},
+  {path:'newemp',component:NewempComponent}
 ];
 
 @NgModule({
