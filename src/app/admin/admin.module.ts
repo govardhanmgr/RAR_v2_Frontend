@@ -13,6 +13,7 @@ import { PendingrequestComponent } from './pendingrequest/pendingrequest.compone
 import { ViewdetailsComponent } from './viewdetails/viewdetails.component';
 import { LdbpageComponent } from './ldbpage/ldbpage.component';
 import { ReceivablesComponent } from './receivables/receivables.component';
+import { PersonaldataComponent } from './personaldata/personaldata.component';
 
 
 
@@ -27,7 +28,8 @@ import { ReceivablesComponent } from './receivables/receivables.component';
     PendingrequestComponent,
     ViewdetailsComponent,
     LdbpageComponent,
-    ReceivablesComponent
+    ReceivablesComponent,
+    PersonaldataComponent
 
   ],
   imports: [
