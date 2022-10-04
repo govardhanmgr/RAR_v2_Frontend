@@ -7,6 +7,7 @@ import { EducationUpdateComponent } from './education-update/education-update.co
 import { EmpexpdetailsComponent } from './empexpdetails/empexpdetails.component';
 import { EmployeeExpensedataComponent } from './employee-expensedata/employee-expensedata.component';
 import { EmployeeComponent } from './employee/employee.component';
+import { JobUpdateComponent } from './job-update/job-update.component';
 import { LaunchpageComponent } from './launchpage/launchpage.component';
 import { LdbpageComponent } from './ldbpage/ldbpage.component';
 import { OperationalCostComponent } from './operational-cost/operational-cost.component';
@@ -40,7 +41,8 @@ const routes: Routes = [
   { path: 'empexpdetails', component: EmpexpdetailsComponent },
   { path: 'operationalcost', component: OperationalCostComponent },
   { path: 'employeeexpensedata', component: EmployeeExpensedataComponent },
-  { path: 'userdata', component: UserdataComponent }
+  { path: 'userdata', component: UserdataComponent },
+  {path: 'JobUpdate', component: JobUpdateComponent}
 ];
 
 @NgModule({
