@@ -24,6 +24,7 @@ import { UserdataComponent } from './userdata/userdata.component';
 import { JobUpdateComponent } from './job-update/job-update.component';
 import { ManagementExpensesComponent } from './management-expenses/management-expenses.component';
 import { NewempComponent } from './newemp/newemp.component';
+import { ActiveemployeedataComponent } from './activeemployeedata/activeemployeedata.component';
 
 
 
@@ -49,7 +50,8 @@ import { NewempComponent } from './newemp/newemp.component';
     UserdataComponent,
     JobUpdateComponent,
     ManagementExpensesComponent,
-    NewempComponent
+    NewempComponent,
+    ActiveemployeedataComponent
 
   ],
   imports: [

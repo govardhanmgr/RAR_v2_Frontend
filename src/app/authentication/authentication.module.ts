@@ -10,6 +10,7 @@ import { RegistrationPageThreeComponent } from './registration-page-three/regist
 import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
 import { SecurityquestionsComponent } from './securityquestions/securityquestions.component';
 import { RegistrationPageTwoComponent } from './registration-page-two/registration-page-two.component';
+import { ResetpasswordComponent } from './resetpassword/resetpassword.component';
 
 
 
@@ -22,7 +23,8 @@ import { RegistrationPageTwoComponent } from './registration-page-two/registrati
 
     ForgotpasswordComponent,
       SecurityquestionsComponent,
-      RegistrationPageTwoComponent
+      RegistrationPageTwoComponent,
+      ResetpasswordComponent
 
   ],
   imports: [
