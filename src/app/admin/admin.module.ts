@@ -14,6 +14,8 @@ import { ViewdetailsComponent } from './viewdetails/viewdetails.component';
 import { LdbpageComponent } from './ldbpage/ldbpage.component';
 import { ReceivablesComponent } from './receivables/receivables.component';
 import { PersonaldataComponent } from './personaldata/personaldata.component';
+import { AmdpageComponent } from './amdpage/amdpage.component';
+import { PayrollexpensesComponent } from './payrollexpenses/payrollexpenses.component';
 
 
 
@@ -29,7 +31,9 @@ import { PersonaldataComponent } from './personaldata/personaldata.component';
     ViewdetailsComponent,
     LdbpageComponent,
     ReceivablesComponent,
-    PersonaldataComponent
+    PersonaldataComponent,
+    AmdpageComponent,
+    PayrollexpensesComponent
 
   ],
   imports: [

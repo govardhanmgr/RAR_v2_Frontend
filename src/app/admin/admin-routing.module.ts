@@ -1,12 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+import { AmdpageComponent } from './amdpage/amdpage.component';
 import { DepartmentComponent } from './department/department.component';
 import { EducationUpdateComponent } from './education-update/education-update.component';
 import { EmployeeComponent } from './employee/employee.component';
 import { LaunchpageComponent } from './launchpage/launchpage.component';
 import { LdbpageComponent } from './ldbpage/ldbpage.component';
 import { OrganizationdataComponent } from './organizationdata/organizationdata.component';
+import { PayrollexpensesComponent } from './payrollexpenses/payrollexpenses.component';
 import { PendingrequestComponent } from './pendingrequest/pendingrequest.component';
 import { PersonaldataComponent } from './personaldata/personaldata.component';
 import { ReceivablesComponent } from './receivables/receivables.component';
@@ -26,7 +28,9 @@ const routes: Routes = [
   { path: 'viewdetails', component: ViewdetailsComponent },
   {path:'ldbpage',component:LdbpageComponent},
   {path:'receivables',component:ReceivablesComponent},
-  {path: 'personaldata',component:PersonaldataComponent}
+  {path: 'personaldata',component:PersonaldataComponent},
+  {path:'amdpage',component:AmdpageComponent},
+  {path:'payrollexpenses',component:PayrollexpensesComponent}
 ];
 
 @NgModule({
