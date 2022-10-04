@@ -5,6 +5,7 @@ import { AmdpageComponent } from './amdpage/amdpage.component';
 import { DepartmentComponent } from './department/department.component';
 import { EducationUpdateComponent } from './education-update/education-update.component';
 import { EmpexpdetailsComponent } from './empexpdetails/empexpdetails.component';
+import { EmployeeExpensedataComponent } from './employee-expensedata/employee-expensedata.component';
 import { EmployeeComponent } from './employee/employee.component';
 import { LaunchpageComponent } from './launchpage/launchpage.component';
 import { LdbpageComponent } from './ldbpage/ldbpage.component';
@@ -15,6 +16,7 @@ import { PendingrequestComponent } from './pendingrequest/pendingrequest.compone
 import { PersonaldataComponent } from './personaldata/personaldata.component';
 import { ReceivablesComponent } from './receivables/receivables.component';
 import { UpdatedataComponent } from './updatedata/updatedata.component';
+import { UserdataComponent } from './userdata/userdata.component';
 import { ViewdetailsComponent } from './viewdetails/viewdetails.component';
 import { VisaupdateComponent } from './visaupdate/visaupdate.component';
 
@@ -29,14 +31,16 @@ const routes: Routes = [
   { path: 'education-update', component: EducationUpdateComponent },
   { path: 'visaupdate', component: VisaupdateComponent },
   { path: 'viewdetails', component: ViewdetailsComponent },
-  {path:'ldbpage',component:LdbpageComponent},
-  {path:'receivables',component:ReceivablesComponent},
-  {path: 'personaldata',component:PersonaldataComponent},
-  {path:'amdpage',component:AmdpageComponent},
-  {path:'payrollexpenses',component:PayrollexpensesComponent},
-  {path:'updatedetails',component:UpdatedataComponent},
-  {path:'empexpdetails',component:EmpexpdetailsComponent},
-  {path:'operationalcost',component:OperationalCostComponent} 
+  { path: 'ldbpage', component: LdbpageComponent },
+  { path: 'receivables', component: ReceivablesComponent },
+  { path: 'personaldata', component: PersonaldataComponent },
+  { path: 'amdpage', component: AmdpageComponent },
+  { path: 'payrollexpenses', component: PayrollexpensesComponent },
+  { path: 'updatedetails', component: UpdatedataComponent },
+  { path: 'empexpdetails', component: EmpexpdetailsComponent },
+  { path: 'operationalcost', component: OperationalCostComponent },
+  { path: 'employeeexpensedata', component: EmployeeExpensedataComponent },
+  { path: 'userdata', component: UserdataComponent }
 ];
 
 @NgModule({

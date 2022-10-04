@@ -19,6 +19,8 @@ import { PayrollexpensesComponent } from './payrollexpenses/payrollexpenses.comp
 import { UpdatedataComponent } from './updatedata/updatedata.component';
 import { EmpexpdetailsComponent } from './empexpdetails/empexpdetails.component';
 import { OperationalCostComponent } from './operational-cost/operational-cost.component';
+import { EmployeeExpensedataComponent } from './employee-expensedata/employee-expensedata.component';
+import { UserdataComponent } from './userdata/userdata.component';
 
 
 
@@ -39,7 +41,9 @@ import { OperationalCostComponent } from './operational-cost/operational-cost.co
     PayrollexpensesComponent,
     UpdatedataComponent,
     EmpexpdetailsComponent,
-    OperationalCostComponent
+    OperationalCostComponent,
+    EmployeeExpensedataComponent,
+    UserdataComponent
 
   ],
   imports: [
