@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ActiveemployeedataComponent } from './activeemployeedata/activeemployeedata.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { AmdpageComponent } from './amdpage/amdpage.component';
 import { DepartmentComponent } from './department/department.component';
@@ -46,7 +47,8 @@ const routes: Routes = [
   { path: 'userdata', component: UserdataComponent },
   { path: 'JobUpdate', component: JobUpdateComponent },
   {path:'managementexpenses',component:ManagementExpensesComponent},
-  {path:'newemp',component:NewempComponent}
+  {path:'newemp',component:NewempComponent},
+  {path:'activeemployeedata',component:ActiveemployeedataComponent}
 ];
 
 @NgModule({
