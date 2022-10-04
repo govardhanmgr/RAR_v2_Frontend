@@ -10,6 +10,9 @@ import { LaunchpageComponent } from './launchpage/launchpage.component';
 import { VisaupdateComponent } from './visaupdate/visaupdate.component';
 import { OrganizationdataComponent } from './organizationdata/organizationdata.component';
 import { PendingrequestComponent } from './pendingrequest/pendingrequest.component';
+import { ViewdetailsComponent } from './viewdetails/viewdetails.component';
+import { LdbpageComponent } from './ldbpage/ldbpage.component';
+import { ReceivablesComponent } from './receivables/receivables.component';
 
 
 
@@ -22,6 +25,9 @@ import { PendingrequestComponent } from './pendingrequest/pendingrequest.compone
     VisaupdateComponent,
     OrganizationdataComponent,
     PendingrequestComponent,
+    ViewdetailsComponent,
+    LdbpageComponent,
+    ReceivablesComponent
 
   ],
   imports: [
