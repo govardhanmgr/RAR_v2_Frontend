@@ -4,6 +4,9 @@ import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.compo
 import { DepartmentComponent } from './department/department.component';
 import { EmployeeComponent } from './employee/employee.component';
 import { LaunchpageComponent } from './launchpage/launchpage.component';
+import { OrganizationdataComponent } from './organizationdata/organizationdata.component';
+import { PendingrequestComponent } from './pendingrequest/pendingrequest.component';
+
 import { VisaupdateComponent } from './visaupdate/visaupdate.component';
 
 const routes: Routes = [
@@ -11,7 +14,9 @@ const routes: Routes = [
   { path: 'employee', component: EmployeeComponent },
   { path: 'department', component: DepartmentComponent },
   { path: 'launchpage', component: LaunchpageComponent },
-  
+  { path: 'orgdata', component: OrganizationdataComponent},
+  { path:'pendingrequest',component:PendingrequestComponent}
+
 ];
 
 @NgModule({
