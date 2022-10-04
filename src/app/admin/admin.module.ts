@@ -16,6 +16,8 @@ import { ReceivablesComponent } from './receivables/receivables.component';
 import { PersonaldataComponent } from './personaldata/personaldata.component';
 import { AmdpageComponent } from './amdpage/amdpage.component';
 import { PayrollexpensesComponent } from './payrollexpenses/payrollexpenses.component';
+import { UpdatedataComponent } from './updatedata/updatedata.component';
+import { EmpexpdetailsComponent } from './empexpdetails/empexpdetails.component';
 
 
 
@@ -33,7 +35,9 @@ import { PayrollexpensesComponent } from './payrollexpenses/payrollexpenses.comp
     ReceivablesComponent,
     PersonaldataComponent,
     AmdpageComponent,
-    PayrollexpensesComponent
+    PayrollexpensesComponent,
+    UpdatedataComponent,
+    EmpexpdetailsComponent
 
   ],
   imports: [

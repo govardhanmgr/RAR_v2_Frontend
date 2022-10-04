@@ -4,6 +4,7 @@ import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.compo
 import { AmdpageComponent } from './amdpage/amdpage.component';
 import { DepartmentComponent } from './department/department.component';
 import { EducationUpdateComponent } from './education-update/education-update.component';
+import { EmpexpdetailsComponent } from './empexpdetails/empexpdetails.component';
 import { EmployeeComponent } from './employee/employee.component';
 import { LaunchpageComponent } from './launchpage/launchpage.component';
 import { LdbpageComponent } from './ldbpage/ldbpage.component';
@@ -12,6 +13,7 @@ import { PayrollexpensesComponent } from './payrollexpenses/payrollexpenses.comp
 import { PendingrequestComponent } from './pendingrequest/pendingrequest.component';
 import { PersonaldataComponent } from './personaldata/personaldata.component';
 import { ReceivablesComponent } from './receivables/receivables.component';
+import { UpdatedataComponent } from './updatedata/updatedata.component';
 import { ViewdetailsComponent } from './viewdetails/viewdetails.component';
 import { VisaupdateComponent } from './visaupdate/visaupdate.component';
 
@@ -30,11 +32,13 @@ const routes: Routes = [
   {path:'receivables',component:ReceivablesComponent},
   {path: 'personaldata',component:PersonaldataComponent},
   {path:'amdpage',component:AmdpageComponent},
-  {path:'payrollexpenses',component:PayrollexpensesComponent}
+  {path:'payrollexpenses',component:PayrollexpensesComponent},
+  {path:'updatedetails',component:UpdatedataComponent},
+  {path:'empexpdetails',component:EmpexpdetailsComponent} 
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule],
+  exports: [RouterModule]
 })
 export class AdminRoutingModule { }
