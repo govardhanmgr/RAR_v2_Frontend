@@ -12,7 +12,7 @@ import { ReceivablesComponent } from './receivables/receivables.component';
 import { ViewdetailsComponent } from './viewdetails/viewdetails.component';
 import { VisaupdateComponent } from './visaupdate/visaupdate.component';
 
-import { VisaupdateComponent } from './visaupdate/visaupdate.component';
+
 
 const routes: Routes = [
   { path: '', component: AdminDashboardComponent },
