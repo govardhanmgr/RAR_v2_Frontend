@@ -22,9 +22,9 @@ import { ResetpasswordComponent } from './resetpassword/resetpassword.component'
     RegistrationPageThreeComponent,
 
     ForgotpasswordComponent,
-      SecurityquestionsComponent,
-      RegistrationPageTwoComponent,
-      ResetpasswordComponent
+    SecurityquestionsComponent,
+    RegistrationPageTwoComponent,
+    ResetpasswordComponent
 
   ],
   imports: [
