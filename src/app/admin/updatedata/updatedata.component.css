@@ -1,0 +1,12 @@
+.table_content{
+    width:100%;
+    text-align: center;
+}
+.update{
+    color: white;
+    background-color: blue;
+    border-radius:10px;
+    margin-right: 10px;
+    border: 1px solid white;
+    padding: 10px;
+  }
