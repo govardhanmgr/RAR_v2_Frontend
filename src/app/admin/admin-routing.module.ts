@@ -41,7 +41,7 @@ const routes: Routes = [
   { path: 'personaldata', component: PersonaldataComponent },
   { path: 'amdpage', component: AmdpageComponent },
   { path: 'payrollexpenses', component: PayrollexpensesComponent },
-  { path: 'updatedetails', component: UpdatedataComponent },
+  { path: 'updatedata', component: UpdatedataComponent },
   { path: 'empexpdetails', component: EmpexpdetailsComponent },
   { path: 'operationalcost', component: OperationalCostComponent },
   { path: 'employeeexpensedata', component: EmployeeExpensedataComponent },
