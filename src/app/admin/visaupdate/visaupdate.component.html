@@ -1,1 +1,51 @@
-<p>visaupdate works!</p>
+<div align="center">
+<h3>Add Visa Information</h3>
+<form>
+    <mat-form-field appearance="outline">
+        <mat-label>Date</mat-label>
+        <input matInput [matDatepicker]="picker">
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="outline">
+      <mat-label>Visa Type</mat-label>
+      <mat-select [(ngModel)]="selectedValue" name="Visa">
+        <mat-option *ngFor="let Visa of Type" [value]="Visa.value">
+          {{Visa.viewValue}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="outline">
+        <mat-label>Issuing Country</mat-label>
+        <mat-select [(ngModel)]="selectedValue" name="Country">
+          <mat-option *ngFor="let Country of Type1" [value]="Country.value">
+            {{Country.viewValue}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+ </form>
+ <mat-form-field appearance="outline">
+    <mat-label>Issued Date</mat-label>
+    <input matInput [matDatepicker]="picker">
+    <mat-hint>MM/DD/YYYY</mat-hint>
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+</mat-form-field>
+<br>
+ <mat-form-field appearance="outline">
+    <mat-label>Expiration Date</mat-label>
+    <input matInput [matDatepicker]="picker">
+    <mat-hint>MM/DD/YYYY</mat-hint>
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+</mat-form-field>
+<br>
+ <section>
+    <div class="example-button-row">
+      <button mat-raised-button color="primary">Add Details</button>
+    </div>
+  </section>
+</div>

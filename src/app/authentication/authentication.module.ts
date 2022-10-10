@@ -11,25 +11,36 @@ import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.compone
 import { SecurityquestionsComponent } from './securityquestions/securityquestions.component';
 import { RegistrationPageTwoComponent } from './registration-page-two/registration-page-two.component';
 import { ResetpasswordComponent } from './resetpassword/resetpassword.component';
-
-
-
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatSelectModule } from '@angular/material/select';
+import {MatButtonModule} from '@angular/material/button';
+import {MatCardModule} from '@angular/material/card';
 @NgModule({
   declarations: [
     LoginComponent,
     SignupComponent,
-
     RegistrationPageThreeComponent,
-
     ForgotpasswordComponent,
-      SecurityquestionsComponent,
-      RegistrationPageTwoComponent,
-      ResetpasswordComponent
+    SecurityquestionsComponent,
+    RegistrationPageTwoComponent,
+    ResetpasswordComponent
 
   ],
   imports: [
     CommonModule,
-    AuthenticationRoutingModule
+    AuthenticationRoutingModule,
+    MatInputModule,
+    ReactiveFormsModule,
+    FormsModule,
+    MatFormFieldModule,
+    MatNativeDateModule,
+    ReactiveFormsModule,
+    MatSelectModule,
+    MatButtonModule,
+    MatCardModule
   ]
 })
 export class AuthenticationModule { }
