@@ -29,6 +29,8 @@ import { CompensationUpdateComponent } from './compensation-update/compensation-
 import { JobTabComponent } from './job-tab/job-tab.component';
 import { EmployeedataComponent } from './updatedata/employeedata/employeedata.component';
 import { OrganisationdataComponent } from './updatedata/organisationdata/organisationdata.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatButtonModule } from '@angular/material/button';
 
 
 
@@ -65,7 +67,10 @@ import { OrganisationdataComponent } from './updatedata/organisationdata/organis
   imports: [
     CommonModule,
     AdminRoutingModule,
-    SharedModule
+    SharedModule,
+    MatTableModule,
+    MatButtonModule
+
   ]
 })
 export class AdminModule { }
