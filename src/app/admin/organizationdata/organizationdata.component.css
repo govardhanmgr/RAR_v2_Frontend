@@ -1,3 +1,42 @@
+*{
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+
 .text_color{
   background-color: #f3f6f9 ;
+  text-align: center;
 }
+
+.container{
+  width: auto;
+  border: 5px solid red;
+  display: flex;
+  justify-content: center;
+  justify-content: space-evenly;
+}
+
+/*flex: flex-grew flex_shrink flex-basis
+box{
+  flex: 0 0 25%;
+  flex: 0 0 calc(25% - 1rem);
+}*/
+
+
+.Entities{
+  border: 5px solid green;
+
+}
+
+.Roles{
+  border: 5px solid blue;
+
+}
+
+.Expenses{
+  border: 5px solid black;
+
+}
+
