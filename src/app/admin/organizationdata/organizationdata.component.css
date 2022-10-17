@@ -18,11 +18,11 @@
   justify-content: space-evenly;
 }
 
-/*flex: flex-grew flex_shrink flex-basis
+/*flex: flex-grew flex_shrink flex-basis*/
 box{
   flex: 0 0 25%;
   flex: 0 0 calc(25% - 1rem);
-}*/
+}
 
 
 .Entities{
