@@ -7,7 +7,7 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
 import { AuthenticationLayoutComponent } from './layouts/authentication-layout/authentication-layout.component';
 import { SharedModule } from './shared/shared.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatTableModule} from '@angular/material/table'
+
 
 
 
@@ -28,7 +28,7 @@ import {MatTableModule} from '@angular/material/table'
     AppRoutingModule,
     SharedModule,
     BrowserAnimationsModule,
-    MatTableModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
