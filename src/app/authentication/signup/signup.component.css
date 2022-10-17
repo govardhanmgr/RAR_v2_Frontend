@@ -1,26 +1,8 @@
-
-.card{
-    width: 40%;
-    top: 50%;
-    left: 60%;
-    height: 100%;
+.container-lg{
+    background-color:white;
+    width: 50%;
     box-sizing: border-box;
-    border-radius: 10%;
-    background-color: white;
+    top: 100px;
+    height: 200px;
     
-}
-.tb1{
-    align-self: center;
-}
-button{
-    color:rgb(237, 237, 239);
-    background-color: rgb(94, 94, 240);
-    border-radius: 0%;
-    width: 23%;
-    height: 50px;
-    
-    
-}
-.p1{
-    margin-right: 20%;
 }
