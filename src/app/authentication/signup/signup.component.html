@@ -1,3 +1,90 @@
-<p>signup works!</p>
-<br>
-Existing User <a [routerLink]="['/']">Login</a> Here
+<p class="p1" style="font-size:60px; "><b>Analyze</b></p>
+<form class="card">
+  <p style="font-size:20px ;margin-left:60px;"><b>Signup for New account</b></p>
+  <table class="tb1">
+    <table class="example-full-width" cellspacing="0"><tr>
+        <td><mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>First Name</mat-label>
+            <input type="email" matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher"
+                   placeholder="Ex.Santhosh">
+            <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+              Please enter a First Name
+            </mat-error>
+            <mat-error *ngIf="emailFormControl.hasError('required')">
+              First Name is required
+            </mat-error>
+          </mat-form-field></td>
+          <td><mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Last Name</mat-label>
+            <input type="email" matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher"
+                   placeholder="Ex.Kumar">
+            <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+              Please enter a Last Name
+            </mat-error>
+            <mat-error *ngIf="emailFormControl.hasError('required')">
+              Last Name is required
+            </mat-error>
+          </mat-form-field></td>
+      </tr></table>
+      <table class="example-full-width" cellspacing="0"><tr>
+        <td><mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Employee Id</mat-label>
+            <input type="email" matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher"
+                   placeholder="Ex.2021312">
+            <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+              Please enter a valid Employee Id
+            </mat-error>
+            <mat-error *ngIf="emailFormControl.hasError('required')">
+              Employee Id is required
+            </mat-error>
+          </mat-form-field></td>
+        <td><mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Email Id</mat-label>
+            <input type="email" matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher"
+                   placeholder="Ex. santh@example.com">
+            <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+              Please enter a valid email address
+            </mat-error>
+            <mat-error *ngIf="emailFormControl.hasError('required')">
+              Email is required
+            </mat-error>
+          </mat-form-field></td>
+      </tr></table>
+      <table class="example-full-width" cellspacing="0"><tr>
+        <td><mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Phone Number</mat-label>
+            <input type="email" matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher"
+                   placeholder="Ex.96996969696">
+            <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+              Please enter a valid Phone number
+            </mat-error>
+            <mat-error *ngIf="emailFormControl.hasError('required')">
+              Phone number is required
+            </mat-error>
+          </mat-form-field></td>
+          <td><mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Gender</mat-label>
+            <input type="email" matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher"
+                   placeholder="Ex.96996969696">
+            <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+              Please enter a valid Phone number
+            </mat-error>
+            <mat-error *ngIf="emailFormControl.hasError('required')">
+              Phone number is required
+            </mat-error>
+          </mat-form-field></td>
+      </tr></table>
+      <table class="example-full-width" cellspacing="0"><tr>
+        <td><mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Select Entity</mat-label>
+          <input matInput>
+        </mat-form-field></td>
+        <td><mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>DOB</mat-label>
+          <input matInput>
+        </mat-form-field></td>
+      </tr></table>
+      <button mat-raised-button color="primary">Next</button>
+    </table>  
+  </form>
+  
