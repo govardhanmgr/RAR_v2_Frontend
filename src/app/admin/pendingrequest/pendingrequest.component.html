@@ -1,9 +1,9 @@
 <table align="center" class="table_content">
-    <thead>
+    <thead class="border1">
 
-  <tr>
-    <th> First Name</th> 
-    <th> Last Name</th>
+  <tr >
+    <th class="border1"> First Name</th> 
+    <th > Last Name</th>
     <th> Email</th>
     <th> Role</th>
     <th> Entity</th>
@@ -12,34 +12,17 @@
 
 </thead>
 
-<tbody>
-  <tr>
+<tbody class="border1">
 
-    <td>sri</td>
-    <td>mamillapalli</td>
-    <td>sripathi@123</td>
-    <td>fullstack developer</td>
-    <td>snad developers</td>
-    <td >
-      <button class="view">View</button>
-      <button class="approved">Aapproved</button>
-      <button class="reject">Reject</button>
-    </td>
+  <tr *ngFor="let emp of employees"  class="border1">
 
-  </tr>
+    <td class="border1">{{emp.empFirstName}}</td>
+    <td>{{emp.empLastName}}</td>
+    <td>{{emp.empEmail}}</td>
+    <td>{{emp.empRole}}</td>
+    <td>{{emp.empEntity}}</td>
+    <td class="border1"><button class="view">View</button> <button class="approved">Aapproved</button> <button class="reject">Reject</button></td>
 
-  <tr>
-
-    <td>sri</td>
-    <td>mamillapalli</td>
-    <td>sripathi@123</td>
-    <td>fullstack developer</td>
-    <td>snad developers</td>
-    <td >
-      <button class="view">View</button> 
-      <button class="approved">Aapproved</button>
-      <button class="reject">Reject</button>
-    </td>
 
 
   </tr>
@@ -48,3 +31,43 @@
 
 
 </table>
+
+
+<br><br>
+
+
+
+
+  <table class="table table_content1">
+    <thead>
+
+      <tr>
+        <th> First Name</th> 
+        <th> Last Name</th>
+        <th> Email</th>
+        <th> Role</th>
+        <th> Entity</th>
+        <th> Action</th>
+      </tr>
+    
+    </thead>
+    
+    <tbody>
+     
+      <tr *ngFor="let emp of employees">
+    
+        <td>{{emp.empFirstName}}</td>
+        <td>{{emp.empLastName}}</td>
+        <td>{{emp.empEmail}}</td>
+        <td>{{emp.empRole}}</td>
+        <td>{{emp.empEntity}}</td>
+        <td><button class="view">View</button> <button class="approved">Aapproved</button> <button class="reject">Reject</button></td>
+    
+    
+    
+      </tr> 
+    </tbody>
+  </table>
+
+
+ 
