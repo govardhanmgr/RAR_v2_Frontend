@@ -16,7 +16,6 @@ import { ReceivablesComponent } from './receivables/receivables.component';
 import { PersonaldataComponent } from './personaldata/personaldata.component';
 import { AmdpageComponent } from './amdpage/amdpage.component';
 import { PayrollexpensesComponent } from './payrollexpenses/payrollexpenses.component';
-import { UpdatedataComponent } from './updatedata/updatedata.component';
 import { EmpexpdetailsComponent } from './empexpdetails/empexpdetails.component';
 import { OperationalCostComponent } from './operational-cost/operational-cost.component';
 import { EmployeeExpensedataComponent } from './employee-expensedata/employee-expensedata.component';
@@ -25,6 +24,11 @@ import { JobUpdateComponent } from './job-update/job-update.component';
 import { ManagementExpensesComponent } from './management-expenses/management-expenses.component';
 import { NewempComponent } from './newemp/newemp.component';
 import { ActiveemployeedataComponent } from './activeemployeedata/activeemployeedata.component';
+import { CompensationUpdateComponent } from './compensation-update/compensation-update.component';
+import { JobTabComponent } from './job-tab/job-tab.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatButtonModule } from '@angular/material/button';
+import { UserdetailsComponent } from './userdetails/userdetails.component';
 
 
 
@@ -43,7 +47,6 @@ import { ActiveemployeedataComponent } from './activeemployeedata/activeemployee
     PersonaldataComponent,
     AmdpageComponent,
     PayrollexpensesComponent,
-    UpdatedataComponent,
     EmpexpdetailsComponent,
     OperationalCostComponent,
     EmployeeExpensedataComponent,
@@ -51,13 +54,19 @@ import { ActiveemployeedataComponent } from './activeemployeedata/activeemployee
     JobUpdateComponent,
     ManagementExpensesComponent,
     NewempComponent,
-    ActiveemployeedataComponent
+    ActiveemployeedataComponent,
+    CompensationUpdateComponent,
+    JobTabComponent,  
+    UserdetailsComponent
 
   ],
   imports: [
     CommonModule,
     AdminRoutingModule,
-    SharedModule
+    SharedModule,
+    MatTableModule,
+    MatButtonModule
+
   ]
 })
 export class AdminModule { }
