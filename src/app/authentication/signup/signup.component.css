@@ -1,8 +1,10 @@
-.container-lg{
-    background-color:white;
-    width: 50%;
+.container{
     box-sizing: border-box;
-    top: 100px;
-    height: 200px;
-    
+    box-shadow: 100px;
+    width: 50%;
+    height: 50%;
+    border: 2px;
+    border-color: black;
+    border-style: double;
+    display: ;
 }
