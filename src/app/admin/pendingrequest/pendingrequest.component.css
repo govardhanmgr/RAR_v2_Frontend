@@ -1,0 +1,45 @@
+.table_content{
+  width:100%;
+  text-align: center;
+}
+
+.view{
+  color: white;
+  background-color: rgba(8,77,179,0.864);
+  border-radius:10px;
+  margin-right: 10px;
+  border: 1px solid white;
+  padding: 10px;
+}
+
+.approved{
+  color: white;
+  background-color: green;
+  border-radius:10px;
+  margin-right: 10px;
+  border: 1px solid white;
+  padding: 10px;
+}
+.reject{
+color: white;
+background-color: red;
+border-radius:10px;
+margin-right: 10px;
+border: 1px solid white;
+padding: 10px;
+
+}
+
+.table_content1{
+  width:100%;
+  text-align: center;
+ 
+
+}
+
+.border1{
+  padding: 10px;
+  border-bottom: 1px solid black;
+ 
+  
+}

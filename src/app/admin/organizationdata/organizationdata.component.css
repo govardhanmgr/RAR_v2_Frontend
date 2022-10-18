@@ -1,0 +1,61 @@
+*{
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+
+.text_color{
+  background-color: rgb(223, 181, 188);
+  text-align: center;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 5px;
+}
+
+.container{
+  height: auto;
+  width: auto;
+  display: flex;
+  justify-content: space-evenly;
+  height: 50vh;
+  border-radius: 10px;
+  background-color:rgb(238, 232, 233);
+  padding: 10px;
+ 
+}
+
+/*flex: flex-grew flex_shrink flex-basis*/
+box{
+  flex: 0 0 25%;
+  flex: 0 0 calc(25% - 1rem);
+}
+
+
+.Entities{
+  background-color: white;
+  border: 1px solid rgba(216, 193, 193, 0.644);
+  border-radius: 10px;
+  
+
+}
+
+.Roles{
+  background-color: white;
+  border-radius: 10px;
+  border: 1px solid rgba(216, 193, 193, 0.644);
+  
+
+}
+
+.Expenses{
+  display: inline-table;
+  height: auto;
+  background-color: white;
+  border-radius: 10px;
+  border: 1px solid rgba(216, 193, 193, 0.644);
+  margin: 10px;
+  
+
+}
+

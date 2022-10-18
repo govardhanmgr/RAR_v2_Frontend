@@ -1,0 +1,13 @@
+.header{
+    text-align: center;
+}
+.search{
+    display: grid;
+   justify-content: center;
+}
+.tableheads{
+    text-align: center;
+}
+.tabledata{
+    text-align: center;
+}

@@ -16,7 +16,6 @@ import { ReceivablesComponent } from './receivables/receivables.component';
 import { PersonaldataComponent } from './personaldata/personaldata.component';
 import { AmdpageComponent } from './amdpage/amdpage.component';
 import { PayrollexpensesComponent } from './payrollexpenses/payrollexpenses.component';
-import { UpdatedataComponent } from './updatedata/updatedata.component';
 import { EmpexpdetailsComponent } from './empexpdetails/empexpdetails.component';
 import { OperationalCostComponent } from './operational-cost/operational-cost.component';
 import { EmployeeExpensedataComponent } from './employee-expensedata/employee-expensedata.component';
@@ -27,13 +26,10 @@ import { NewempComponent } from './newemp/newemp.component';
 import { ActiveemployeedataComponent } from './activeemployeedata/activeemployeedata.component';
 import { CompensationUpdateComponent } from './compensation-update/compensation-update.component';
 import { JobTabComponent } from './job-tab/job-tab.component';
-import { MatInputModule } from '@angular/material/input';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatNativeDateModule } from '@angular/material/core';
-import { MatSelectModule } from '@angular/material/select';
-import {MatDatepickerModule} from '@angular/material/datepicker';
-import {MatButtonModule} from '@angular/material/button';
+
+import { UserdetailsComponent } from './userdetails/userdetails.component';
+
+
 
 @NgModule({
   declarations: [
@@ -50,7 +46,6 @@ import {MatButtonModule} from '@angular/material/button';
     PersonaldataComponent,
     AmdpageComponent,
     PayrollexpensesComponent,
-    UpdatedataComponent,
     EmpexpdetailsComponent,
     OperationalCostComponent,
     EmployeeExpensedataComponent,
@@ -60,22 +55,16 @@ import {MatButtonModule} from '@angular/material/button';
     NewempComponent,
     ActiveemployeedataComponent,
     CompensationUpdateComponent,
-    JobTabComponent
+    JobTabComponent,  
+    UserdetailsComponent
 
   ],
   imports: [
     CommonModule,
     AdminRoutingModule,
     SharedModule,
-    MatInputModule,
-    ReactiveFormsModule,
-    FormsModule,
-    MatFormFieldModule,
-    MatNativeDateModule,
-    ReactiveFormsModule,
-    MatSelectModule,
-    MatDatepickerModule,
-    MatButtonModule
+    
+
   ]
 })
 export class AdminModule { }
