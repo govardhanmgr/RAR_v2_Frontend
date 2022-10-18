@@ -18,7 +18,7 @@
   width: auto;
   display: flex;
   justify-content: space-evenly;
-  height: 50vh;
+  height: 100vh;
   border-radius: 10px;
   background-color:rgb(238, 232, 233);
   padding: 10px;
@@ -54,8 +54,18 @@ box{
   background-color: white;
   border-radius: 10px;
   border: 1px solid rgba(216, 193, 193, 0.644);
-  margin: 10px;
+  
   
 
 }
+
+.my-custom-scrollbar {
+  position: relative;
+  height: 88.7vh;
+  overflow: auto;
+  border-bottom-right-radius: 10px;
+  }
+  .table-wrapper-scroll-y {
+  display: block;
+  }
 
