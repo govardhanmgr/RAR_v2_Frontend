@@ -29,7 +29,7 @@ export class PendingrequestComponent implements OnInit {
       {empFirstName:'sripathi', empLastName:'mamillapalli', empEmail:'sripathisri8@gmail.com', empRole:'software developer',  empEntity:'snad' },
       {empFirstName:'sripathi', empLastName:'mamillapalli', empEmail:'sripathisri8@gmail.com', empRole:'software developer',  empEntity:'snad' },
       {empFirstName:'sripathi', empLastName:'mamillapalli', empEmail:'sripathisri8@gmail.com', empRole:'software developer',  empEntity:'snad' },
-      {empFirstName:'sripathi', empLastName:'mamillapalli', empEmail:'sripathisri8@gmail.com', empRole:'software developer',  empEntity:'snad' }
+      {empFirstName:'sripathi', empLastName:'mamillapalli', empEmail:'sripathisri8@gmail.com', empRole:'software developer',  empEntity:'snad' },
       {empFirstName:'sripathi', empLastName:'mamillapalli', empEmail:'sripathisri8@gmail.com', empRole:'software developer',  empEntity:'snad' },
       {empFirstName:'sripathi', empLastName:'mamillapalli', empEmail:'sripathisri8@gmail.com', empRole:'software developer',  empEntity:'snad' },
       {empFirstName:'sripathi', empLastName:'mamillapalli', empEmail:'sripathisri8@gmail.com', empRole:'software developer',  empEntity:'snad' },
