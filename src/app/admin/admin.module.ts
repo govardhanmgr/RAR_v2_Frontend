@@ -16,7 +16,6 @@ import { ReceivablesComponent } from './receivables/receivables.component';
 import { PersonaldataComponent } from './personaldata/personaldata.component';
 import { AmdpageComponent } from './amdpage/amdpage.component';
 import { PayrollexpensesComponent } from './payrollexpenses/payrollexpenses.component';
-import { UpdatedataComponent } from './updatedata/updatedata.component';
 import { EmpexpdetailsComponent } from './empexpdetails/empexpdetails.component';
 import { OperationalCostComponent } from './operational-cost/operational-cost.component';
 import { EmployeeExpensedataComponent } from './employee-expensedata/employee-expensedata.component';
@@ -27,10 +26,9 @@ import { NewempComponent } from './newemp/newemp.component';
 import { ActiveemployeedataComponent } from './activeemployeedata/activeemployeedata.component';
 import { CompensationUpdateComponent } from './compensation-update/compensation-update.component';
 import { JobTabComponent } from './job-tab/job-tab.component';
-import { EmployeedataComponent } from './updatedata/employeedata/employeedata.component';
-import { OrganisationdataComponent } from './updatedata/organisationdata/organisationdata.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatButtonModule } from '@angular/material/button';
+import { UserdetailsComponent } from './userdetails/userdetails.component';
 
 
 
@@ -49,7 +47,6 @@ import { MatButtonModule } from '@angular/material/button';
     PersonaldataComponent,
     AmdpageComponent,
     PayrollexpensesComponent,
-    UpdatedataComponent,
     EmpexpdetailsComponent,
     OperationalCostComponent,
     EmployeeExpensedataComponent,
@@ -59,9 +56,8 @@ import { MatButtonModule } from '@angular/material/button';
     NewempComponent,
     ActiveemployeedataComponent,
     CompensationUpdateComponent,
-    JobTabComponent,
-    EmployeedataComponent,
-    OrganisationdataComponent,
+    JobTabComponent,  
+    UserdetailsComponent
 
   ],
   imports: [

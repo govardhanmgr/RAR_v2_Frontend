@@ -6,37 +6,56 @@
 
 
 .text_color{
-  background-color: #f3f6f9 ;
+  background-color: rgb(223, 181, 188);
   text-align: center;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 5px;
 }
 
 .container{
+  height: auto;
   width: auto;
-  border: 5px solid red;
   display: flex;
-  justify-content: center;
   justify-content: space-evenly;
+  height: 50vh;
+  border-radius: 10px;
+  background-color:rgb(238, 232, 233);
+  padding: 10px;
+ 
 }
 
-/*flex: flex-grew flex_shrink flex-basis
+/*flex: flex-grew flex_shrink flex-basis*/
 box{
   flex: 0 0 25%;
   flex: 0 0 calc(25% - 1rem);
-}*/
+}
 
 
 .Entities{
-  border: 5px solid green;
+  background-color: white;
+  border: 1px solid rgba(216, 193, 193, 0.644);
+  border-radius: 10px;
+  
 
 }
 
 .Roles{
-  border: 5px solid blue;
+  background-color: white;
+  border-radius: 10px;
+  border: 1px solid rgba(216, 193, 193, 0.644);
+  
 
 }
 
 .Expenses{
-  border: 5px solid black;
+  display: inline-table;
+  height: auto;
+  background-color: white;
+  border-radius: 10px;
+  border: 1px solid rgba(216, 193, 193, 0.644);
+  margin: 10px;
+  
 
 }
 
