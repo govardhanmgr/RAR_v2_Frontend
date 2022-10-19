@@ -16,7 +16,6 @@ import { ReceivablesComponent } from './receivables/receivables.component';
 import { PersonaldataComponent } from './personaldata/personaldata.component';
 import { AmdpageComponent } from './amdpage/amdpage.component';
 import { PayrollexpensesComponent } from './payrollexpenses/payrollexpenses.component';
-import { UpdatedataComponent } from './updatedata/updatedata.component';
 import { EmpexpdetailsComponent } from './empexpdetails/empexpdetails.component';
 import { OperationalCostComponent } from './operational-cost/operational-cost.component';
 import { EmployeeExpensedataComponent } from './employee-expensedata/employee-expensedata.component';
@@ -27,6 +26,8 @@ import { NewempComponent } from './newemp/newemp.component';
 import { ActiveemployeedataComponent } from './activeemployeedata/activeemployeedata.component';
 import { CompensationUpdateComponent } from './compensation-update/compensation-update.component';
 import { JobTabComponent } from './job-tab/job-tab.component';
+
+import { UserdetailsComponent } from './userdetails/userdetails.component';
 
 
 
@@ -45,7 +46,6 @@ import { JobTabComponent } from './job-tab/job-tab.component';
     PersonaldataComponent,
     AmdpageComponent,
     PayrollexpensesComponent,
-    UpdatedataComponent,
     EmpexpdetailsComponent,
     OperationalCostComponent,
     EmployeeExpensedataComponent,
@@ -55,19 +55,16 @@ import { JobTabComponent } from './job-tab/job-tab.component';
     NewempComponent,
     ActiveemployeedataComponent,
     CompensationUpdateComponent,
-    JobTabComponent,
-
-
+    JobTabComponent,  
+    UserdetailsComponent
 
   ],
   imports: [
     CommonModule,
     AdminRoutingModule,
     SharedModule,
-   
+    
 
-    
-    
   ]
 })
 export class AdminModule { }
