@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 
-
 @Component({
   selector: 'app-visaupdate',
   templateUrl: './visaupdate.component.html',
@@ -9,9 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class VisaupdateComponent implements OnInit {
 
   constructor() { }
-  
+
   ngOnInit(): void {
   }
-  
 
 }

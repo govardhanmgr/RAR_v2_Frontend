@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {FormControl, FormGroupDirective, NgForm, Validators} from '@angular/forms';
-
 
 @Component({
   selector: 'app-signup',
@@ -8,9 +6,6 @@ import {FormControl, FormGroupDirective, NgForm, Validators} from '@angular/form
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent implements OnInit {
-  emailFormControl = new FormControl('', [Validators.required, Validators.email]);
-
-  
 
   constructor() { }
 
