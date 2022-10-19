@@ -17,15 +17,11 @@ import { SecurityquestionsComponent } from './securityquestions/securityquestion
 import { RegistrationPageTwoComponent } from './registration-page-two/registration-page-two.component';
 import { ResetpasswordComponent } from './resetpassword/resetpassword.component';
 
-
-
 @NgModule({
   declarations: [
     LoginComponent,
     SignupComponent,
-
     RegistrationPageThreeComponent,
-
     ForgotpasswordComponent,
     SecurityquestionsComponent,
     RegistrationPageTwoComponent,

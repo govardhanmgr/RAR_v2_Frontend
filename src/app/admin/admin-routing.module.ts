@@ -26,6 +26,7 @@ import { UserdetailsComponent } from './userdetails/userdetails.component';
 import { ViewdetailsComponent } from './viewdetails/viewdetails.component';
 import { VisaupdateComponent } from './visaupdate/visaupdate.component';
 
+
 const routes: Routes = [
   { path: '', component: AdminDashboardComponent },
   { path: 'employee', component: EmployeeComponent },
