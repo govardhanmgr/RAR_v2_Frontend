@@ -14,21 +14,20 @@
 }
 
 .container{
-  height: auto;
-  width: auto;
+  height: 70vh;
+  width: 100%;
   display: flex;
-  justify-content: space-evenly;
-  height: 100vh;
+  justify-content: space-between;
+  
   border-radius: 10px;
   background-color:rgb(238, 232, 233);
-  padding: 10px;
- 
+  
 }
 
 /*flex: flex-grew flex_shrink flex-basis*/
 box{
-  flex: 0 0 25%;
-  flex: 0 0 calc(25% - 1rem);
+  flex: 0 0 50%;
+  flex: 0 0 calc(50% - 2rem);
 }
 
 
@@ -49,11 +48,12 @@ box{
 }
 
 .Expenses{
-  display: inline-table;
+  display: inline-block;
   height: auto;
   background-color: white;
   border-radius: 10px;
   border: 1px solid rgba(216, 193, 193, 0.644);
+  overflow: hidden;
   
   
 
@@ -69,3 +69,57 @@ box{
   display: block;
   }
 
+
+
+  /*fixed table head*/
+
+*{
+  box-sizing: border-box;
+}
+
+.fixTableHead {
+overflow-y: auto;
+height: 60vh;
+width: 100%;
+}
+
+.fixTableHead thead th {
+position: sticky;
+top: 0;
+
+}
+table {
+border-collapse: collapse;        
+width: 100%;
+background-color: white;
+vertical-align: baseline;
+text-align: center;
+}
+
+
+
+
+
+
+  td {
+    padding: 8px 15px;
+    padding: 20px;
+    font-size: 18px;
+    border-top: 1px solid rgb(236, 235, 235);
+    }
+    th {
+      background-color: rgb(238, 229, 231);
+      padding: 15px;
+      font-size: 15px;
+    }
+
+
+
+
+  .view{
+    color: white;
+    background-color: rgba(8,77,179,0.864);
+    border-radius:10px;
+
+    border: 1px solid white;
+  }
