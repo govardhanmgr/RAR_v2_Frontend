@@ -27,8 +27,7 @@ import { NewempComponent } from './newemp/newemp.component';
 import { ActiveemployeedataComponent } from './activeemployeedata/activeemployeedata.component';
 import { CompensationUpdateComponent } from './compensation-update/compensation-update.component';
 import { JobTabComponent } from './job-tab/job-tab.component';
-import { MatTableModule } from '@angular/material/table';
-import { MatButtonModule } from '@angular/material/button';
+
 
 
 @NgModule({
@@ -65,8 +64,7 @@ import { MatButtonModule } from '@angular/material/button';
     CommonModule,
     AdminRoutingModule,
     SharedModule,
-    MatTableModule,
-    MatButtonModule
+   
 
     
     
