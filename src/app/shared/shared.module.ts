@@ -6,12 +6,17 @@ import { AdminHeaderComponent } from './admin-header/admin-header.component';
 import { AdminFooterComponent } from './admin-footer/admin-footer.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AmdbuttonsComponent } from './amdbuttons/amdbuttons.component';
+import { AuthenticHeaderComponent } from './authentic-header/authentic-header.component';
+import { AuthenticFooterComponent } from './authentic-footer/authentic-footer.component';
 
 
 @NgModule({
   declarations: [
     AdminHeaderComponent,
     AdminFooterComponent,
+    AmdbuttonsComponent,
+    AuthenticHeaderComponent,
+    AuthenticFooterComponent,
     NavbarComponent,
     AmdbuttonsComponent
   ],
@@ -19,6 +24,6 @@ import { AmdbuttonsComponent } from './amdbuttons/amdbuttons.component';
     CommonModule,
     SharedRoutingModule
   ],
-  exports: [AdminHeaderComponent, AdminFooterComponent,AmdbuttonsComponent, NavbarComponent]
+  exports: [AdminHeaderComponent, AdminFooterComponent,AmdbuttonsComponent,AuthenticFooterComponent,AuthenticHeaderComponent,NavbarComponent],
 })
 export class SharedModule { }

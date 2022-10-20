@@ -11,6 +11,7 @@ import { SecurityquestionsComponent } from './securityquestions/securityquestion
 import { RegistrationPageTwoComponent } from './registration-page-two/registration-page-two.component';
 import { ResetpasswordComponent } from './resetpassword/resetpassword.component';
 import { FormsModule } from '@angular/forms';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { FormsModule } from '@angular/forms';
     CommonModule,
     AuthenticationRoutingModule,
     FormsModule,
+    SharedModule
  
   ]
 })
