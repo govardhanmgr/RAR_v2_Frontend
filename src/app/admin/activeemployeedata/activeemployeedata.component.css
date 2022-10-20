@@ -48,8 +48,8 @@
       .header{
         text-align: center;
     }
-    .search{
-        display: grid;
-       justify-content: center;
+    #search{
+      text-align: center;
     }
+    
    
