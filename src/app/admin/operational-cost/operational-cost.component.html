@@ -1,64 +1,40 @@
 <strong><h1 align="center" >Opertaional Expenses</h1></strong>
+<button type="button" class="btn btn-primary">Back</button>
+<br>
+<br>
  
  
 
 
-<div class="shadow-lg p-5 mb-7 bg-white " id="shadow">
-  <button type="button" class="btn btn-primary">Back</button>
-  <br>
-  <br>
-<body>
+<div class="fixTableHead  shadow">
+    <table class="table">
+        <thead>
+            <tr>
+              <th> Employee Id</th> 
+              <th>First Name</th>
+              <th>LastName </th>
+              <th>TOTALOPERATIONALEXPENSES</th>
+        
+              
+            </tr>
+          </thead>
   
-
-  
-  
- 
-  
-
-  <table class="table" border="1px solid" >
-    <thead>
-      <tr>
-        <th scope="col">Employee id</th>
-        <th scope="col">FirstName</th>
-        <th scope="col">LastName</th>
-        <th scope="col">Total opertaional expenses</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>kolipara</td>
-        <td>lahari</td>
-        <td>$1000</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Naga deepti</td>
-        <td>nandigum</td>
-        <td>$1999</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td>Govardhan</td>
-        <td>reddy</td>
-        <td>$7228</td>
-      </tr>
-      <tr>
-        <th scope="row">4</th>
-        <td>Narendra</td>
-        <td>srinivaslu</td>
-        <td>$7228</td>
-      </tr>
-      <tr>
-        <th scope="row">5</th>
-        <td>Satya</td>
-        <td>kishore</td>
-        <td>$7228</td>
-      </tr>
-    
-    </tbody>
-  </table>
-</body>
-</div>
-
-    
+          <tbody>
+            <tr *ngFor="let emp of employees">
+          
+              <td>{{emp.empEmployeeNo}}</td>
+              <td>{{emp.empFIRSTNAME}}</td>
+              <td>{{emp.empLASTNAME}}</td>
+              <td>{{emp.empTOTALOPERATIONALEXPENSES}}</td>
+              
+              
+          
+          
+          
+            </tr>  
+      
+      
+          </tbody>
+        
+    </table>
+  </div> 
