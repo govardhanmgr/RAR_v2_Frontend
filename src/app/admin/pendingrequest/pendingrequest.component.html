@@ -1,51 +1,119 @@
-<table align="center" class="table_content">
+
+<!--sticky head-->
+  
+<div class="fixTableHead  shadow">
+  <table class="table">
+      <thead>
+          <tr>
+            <th> First Name</th> 
+            <th> Last Name</th>
+            <th> Email</th>
+            <th> Role</th>
+            <th> Entity</th>
+            <th> Action</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr *ngFor="let emp of employees">
+        
+            <td>{{emp.empFirstName}}</td>
+            <td>{{emp.empLastName}}</td>
+            <td>{{emp.empEmail}}</td>
+            <td>{{emp.empRole}}</td>
+            <td>{{emp.empEntity}}</td>
+            <td><button class="btn btn-primary  ">View</button> <button class="btn btn-success  me-2 ms-2">Approved</button> <button class="btn btn-danger  ">Reject</button></td>
+        
+        
+        
+          </tr>  
+    
+    
+        </tbody>
+      
+  </table>
+</div> 
+
+
+
+
+  <!--scrolled head 
+
+  <h2>scroll head</h2>
+ <div class="table-wrapper-scroll-y my-custom-scrollbar  table_content1  shadow">
+  <table class="table table1 ">
     <thead>
-
-  <tr>
-    <th> First Name</th> 
-    <br>
-    <th> Last Name</th>
-    <th> Email</th>
-    <th> Role</th>
-    <th> Entity</th>
-    <th> Action</th>
-  </tr>
-
-</thead>
-
-<tbody>
-  <tr>
-
-    <td>sri</td>
-    <td>mamillapalli</td>
-    <td>sripathi@123</td>
-    <td>fullstack developer</td>
-    <td>snad developers</td>
-    <td >
-      <button class="view">View</button>
-      <button class="approved">Aapproved</button>
-      <button class="reject">Reject</button>
-    </td>
-
-  </tr>
-
-  <tr>
-
-    <td>sri</td>
-    <td>mamillapalli</td>
-    <td>sripathi@123</td>
-    <td>fullstack developer</td>
-    <td>snad developers</td>
-    <td >
-      <button class="view">View</button> 
-      <button class="approved">Aapproved</button>
-      <button class="reject">Reject</button>
-    </td>
+      <tr>
+        <th> First Name</th> 
+        <th> Last Name</th>
+        <th> Email</th>
+        <th> Role</th>
+        <th> Entity</th>
+        <th> Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let emp of employees">
+    
+        <td>{{emp.empFirstName}}</td>
+        <td>{{emp.empLastName}}</td>
+        <td>{{emp.empEmail}}</td>
+        <td>{{emp.empRole}}</td>
+        <td>{{emp.empEntity}}</td>
+        <td><button class="btn btn-primary ">View</button> <button class="btn btn-success ms-2 me-2">Approved</button> <button class="btn btn-danger ">Reject</button></td>
+    
+    
+    
+      </tr> 
 
 
-  </tr>
+    </tbody>
+  </table>
+</div> 
 
-</tbody>
+<hr><hr> <br><br>
+
+-->
+
+<!--  <h2>no scrolling<h2>
 
 
-</table>
+<hr><hr> <br><br>
+
+
+<hr>
+     
+  <table class="table table_content1 shadow ">
+    <thead class="thead">
+
+      <tr>
+        <th> First Name</th> 
+        <th> Last Name</th>
+        <th> Email</th>
+        <th> Role</th>
+        <th> Entity</th>
+        <th> Action</th>
+      </tr>
+    
+    </thead>
+    
+    <tbody class="scroll">
+     
+      <tr *ngFor="let emp of employees">
+    
+        <td>{{emp.empFirstName}}</td>
+        <td>{{emp.empLastName}}</td>
+        <td>{{emp.empEmail}}</td>
+        <td>{{emp.empRole}}</td>
+        <td>{{emp.empEntity}}</td>
+        <td><button class="btn btn-primary  ">View</button> <button class="btn btn-success  me-2 ms-2">Approved</button> <button class="btn btn-danger  ">Reject</button></td>
+    
+    
+    
+      </tr> 
+    </tbody>
+  </table>
+
+
+   --> 
+ 

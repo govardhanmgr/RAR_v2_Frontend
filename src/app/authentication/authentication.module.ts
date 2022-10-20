@@ -1,10 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatInputModule} from '@angular/material/input';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {MatSelectModule} from '@angular/material/select';
-import {MatDatepickerModule} from '@angular/material/datepicker';
 
 
 
@@ -22,15 +17,11 @@ import { SecurityquestionsComponent } from './securityquestions/securityquestion
 import { RegistrationPageTwoComponent } from './registration-page-two/registration-page-two.component';
 import { ResetpasswordComponent } from './resetpassword/resetpassword.component';
 
-
-
 @NgModule({
   declarations: [
     LoginComponent,
     SignupComponent,
-
     RegistrationPageThreeComponent,
-
     ForgotpasswordComponent,
     SecurityquestionsComponent,
     RegistrationPageTwoComponent,
@@ -40,13 +31,7 @@ import { ResetpasswordComponent } from './resetpassword/resetpassword.component'
   imports: [
     CommonModule,
     AuthenticationRoutingModule,
-    MatFormFieldModule,
-    MatInputModule,
-    FormsModule,
-    ReactiveFormsModule,
-    MatSelectModule,
-    MatDatepickerModule
-
+ 
   ]
 })
 export class AuthenticationModule { }

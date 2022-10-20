@@ -21,8 +21,8 @@ import { PayrollexpensesComponent } from './payrollexpenses/payrollexpenses.comp
 import { PendingrequestComponent } from './pendingrequest/pendingrequest.component';
 import { PersonaldataComponent } from './personaldata/personaldata.component';
 import { ReceivablesComponent } from './receivables/receivables.component';
-import { UpdatedataComponent } from './updatedata/updatedata.component';
 import { UserdataComponent } from './userdata/userdata.component';
+import { UserdetailsComponent } from './userdetails/userdetails.component';
 import { ViewdetailsComponent } from './viewdetails/viewdetails.component';
 import { VisaupdateComponent } from './visaupdate/visaupdate.component';
 
@@ -42,7 +42,8 @@ const routes: Routes = [
   { path: 'personaldata', component: PersonaldataComponent },
   { path: 'amdpage', component: AmdpageComponent },
   { path: 'payrollexpenses', component: PayrollexpensesComponent },
-  { path: 'updatedata', component: UpdatedataComponent },
+  { path: 'userdata', component: UserdataComponent },
+  {path: 'userdetails', component: UserdetailsComponent},
   { path: 'empexpdetails', component: EmpexpdetailsComponent },
   { path: 'operationalcost', component: OperationalCostComponent },
   { path: 'employeeexpensedata', component: EmployeeExpensedataComponent },
