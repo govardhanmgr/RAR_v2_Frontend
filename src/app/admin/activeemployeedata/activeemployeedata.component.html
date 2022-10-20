@@ -1,6 +1,4 @@
 
-  
-<div class="fixTableHead  shadow">
   <br>
   <h2 class="header">Activee Employee Data</h2>
   <br>
@@ -10,6 +8,7 @@
 <button type="button" class="btn btn-primary" style="float:right;">New Employee</button>
 <br>
 <br>
+<div class="fixTableHead  shadow">
   <table class="table">
       <thead>
           <tr>
@@ -22,8 +21,13 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-
+          <tr  *ngFor="let act of actemployees">
+            <td>{{act.actEmployeeNumber}}</td>
+            <td>{{act.actFirstName}}</td>
+            <td>{{act.actLastName}}</td>
+            <td>{{act.actEmail}}</td>
+            <td>{{act.actContactNumber}}</td>
+            <td>{{act.actRole}}</td>
           </tr>
         </tbody>
       
