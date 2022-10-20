@@ -12,19 +12,19 @@ export class EmployeeExpensedataComponent implements OnInit {
 
   ngOnInit(): void {
     this.EmployeeExpensedata=[
-      {EmployeeId:101, FirstName:'poorna', LastName:'sai', TotalEmployeeExpenses : '$12423' },
-      {EmployeeId:102, FirstName:'samyuktha', LastName:'anumasa', TotalEmployeeExpenses : '$12425' },
-      {EmployeeId:103, FirstName:'rohini', LastName:'reddy', TotalEmployeeExpenses : '$12723' },
-      {EmployeeId:104, FirstName:'mounika', LastName:'mouni', TotalEmployeeExpenses : '$18423' },
-      {EmployeeId:101, FirstName:'poorna', LastName:'sai', TotalEmployeeExpenses : '$12423' },
-      {EmployeeId:101, FirstName:'poorna', LastName:'sai', TotalEmployeeExpenses : '$12423' },
-      {EmployeeId:101, FirstName:'poorna', LastName:'sai', TotalEmployeeExpenses : '$12423' },
-      {EmployeeId:102, FirstName:'samyuktha', LastName:'anumasa', TotalEmployeeExpenses : '$12425' },
-      {EmployeeId:103, FirstName:'rohini', LastName:'reddy', TotalEmployeeExpenses : '$12723' },
-      {EmployeeId:104, FirstName:'mounika', LastName:'mouni', TotalEmployeeExpenses : '$18423' },
-      {EmployeeId:102, FirstName:'samyuktha', LastName:'anumasa', TotalEmployeeExpenses : '$12425' },
-      {EmployeeId:103, FirstName:'rohini', LastName:'reddy', TotalEmployeeExpenses : '$12723' },
-      {EmployeeId:104, FirstName:'mounika', LastName:'mouni', TotalEmployeeExpenses : '$18423' },
+      {EmployeeId:101, FirstName:'poorna', LastName:'ramisetti', TotalEmployeeExpenses : '$12423' },
+      {EmployeeId:102, FirstName:'samyuktha', LastName:'alakanti', TotalEmployeeExpenses : '$12425' },
+      {EmployeeId:103, FirstName:'rohini', LastName:'chinnu', TotalEmployeeExpenses : '$12723' },
+      {EmployeeId:104, FirstName:'mounika', LastName:'boinapally', TotalEmployeeExpenses : '$18423' },
+      {EmployeeId:101, FirstName:'poorna', LastName:'ramisetti', TotalEmployeeExpenses : '$12423' },
+      {EmployeeId:101, FirstName:'poorna', LastName:'ramisetti', TotalEmployeeExpenses : '$12423' },
+      {EmployeeId:101, FirstName:'poorna', LastName:'ramisetti', TotalEmployeeExpenses : '$12423' },
+      {EmployeeId:102, FirstName:'samyuktha', LastName:'alakanti', TotalEmployeeExpenses : '$12425' },
+      {EmployeeId:103, FirstName:'rohini', LastName:'chinnu', TotalEmployeeExpenses : '$12723' },
+      {EmployeeId:104, FirstName:'mounika', LastName:'boinapally', TotalEmployeeExpenses : '$18423' },
+      {EmployeeId:102, FirstName:'samyuktha', LastName:'alakanti', TotalEmployeeExpenses : '$12425' },
+      {EmployeeId:103, FirstName:'rohini', LastName:'chinnu', TotalEmployeeExpenses : '$12723' },
+      {EmployeeId:104, FirstName:'mounika', LastName:'boinapally', TotalEmployeeExpenses : '$18423' },
     ]
   }
 
