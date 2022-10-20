@@ -5,19 +5,15 @@
 }
 .c-bg{
     
-    background-color: rgb(250, 236, 249);
-    height: 100vh;
+   width: 100%;
+    height: auto;
   
 }
 
-.commondiv{
-   background-color: white;
-   border: 1px solid black;
-   border-radius: 20px;
-}
+
 .shadow{
     background-color: white;
-    border: 1px solid black;
+    
     border-radius: 10px;
     box-shadow: 0 2px 15px rgba(64,64,64,.7);
 }
