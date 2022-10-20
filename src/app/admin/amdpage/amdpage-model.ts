@@ -3,5 +3,6 @@ export interface  tabledata{
     Lastname:string;
     Email:string;
     Role:string;
-    Entity:string
+    Entity:string;
+    Action:string;
 }
