@@ -1,9 +1,9 @@
-<div class="fixTableHead  shadow">
-    <br>
+
     <h2 class="header">Management Expenses</h2>
     <br>
     <button type="button" class="btn btn-primary">Back</button>
     <br><br>
+    <div class="fixTableHead  shadow">
     <table class="table">
         <thead>
             <tr>
@@ -14,29 +14,25 @@
             </tr>
           </thead>
   
+         
           <tbody>
-           <tr>
-            <td>1000</td>
-            <td>Rohini</td>
-            <td>Chinni</td>
-            <td>$1000</td>
-           </tr>
-           <tr>
-            <td>1001</td>
-            <td>poorna</td>
-            <td>sai</td>
-            <td>$1005</td>
-           </tr>
-           <tr>
-            <td>1003</td>
-            <td>mounika</td>
-            <td>boinapally</td>
-            <td>$1010</td>
-           </tr>
+            <tr *ngFor="let mgt of management ">
+
+              <td>{{mgt.mgtEmployeeId}}</td>
+              <td>{{mgt.mgtFirstName}}</td>
+              <td>{{mgt.mgtLastName}}</td>
+              <td>{{mgt.mgtTotalManagementExpenses}}</td>
+              
+          
+          
+            </tr>  
+      
       
           </tbody>
+     
         
     </table>
+  
   </div> 
   
   
