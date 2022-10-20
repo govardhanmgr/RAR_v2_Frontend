@@ -1,15 +1,23 @@
+<h2 class="header">Active Employee Data</h2>
+  <br>
 
-  
-<div class="fixTableHead  shadow">
-  <br>
-  <h2 class="header">Activee Employee Data</h2>
-  <br>
-  <div  class="search"><input type="search" class="btn btn-light" placeholder="search" ></div>
+  <div class="container">
+    <div class="row height d-flex justify-content-center align-items-center">
+      <div class="col-md-2">
+        <div class="form">
+          <i class="fa fa-search"></i>
+          <input type="text" class="form-control form-input" placeholder="Search" id="search">
+        </div>   
+      </div> 
+    </div>
+  </div>
+
  <br>
 <button type="button" class="btn btn-primary">Back</button>
 <button type="button" class="btn btn-primary" style="float:right;">New Employee</button>
 <br>
 <br>
+<div class="fixTableHead  shadow">
   <table class="table">
       <thead>
           <tr>
@@ -22,10 +30,14 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-
+          <tr  *ngFor="let act of actemployees">
+            <td>{{act.actEmployeeNumber}}</td>
+            <td>{{act.actFirstName}}</td>
+            <td>{{act.actLastName}}</td>
+            <td>{{act.actEmail}}</td>
+            <td>{{act.actContactNumber}}</td>
+            <td>{{act.actRole}}</td>
           </tr>
-        </tbody>
-      
+        </tbody>   
   </table>
 </div> 

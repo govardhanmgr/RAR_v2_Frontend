@@ -1,0 +1,27 @@
+form {
+    text-align: center;
+   
+
+}
+.container{
+    margin-top: 5%;
+}
+
+/* .form-select {
+    border-style: groove;
+    border-radius: 100px;
+}
+
+.form-control {
+    border-style: groove;
+    border-radius: 100px;
+} */
+#shadow{
+    border-radius: 3%;
+    
+}
+#card{
+    margin-right: 10%;
+
+
+}

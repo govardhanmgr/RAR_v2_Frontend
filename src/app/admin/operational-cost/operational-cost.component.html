@@ -1,0 +1,40 @@
+<strong><h1 align="center" >Opertaional Expenses</h1></strong>
+<button type="button" class="btn btn-primary">Back</button>
+<br>
+<br>
+ 
+ 
+
+
+<div class="fixTableHead  shadow">
+    <table class="table">
+        <thead>
+            <tr>
+              <th> Employee Id</th> 
+              <th>First Name</th>
+              <th>LastName </th>
+              <th>TOTALOPERATIONALEXPENSES</th>
+        
+              
+            </tr>
+          </thead>
+  
+          <tbody>
+            <tr *ngFor="let emp of employees">
+          
+              <td>{{emp.empEmployeeNo}}</td>
+              <td>{{emp.empFIRSTNAME}}</td>
+              <td>{{emp.empLASTNAME}}</td>
+              <td>{{emp.empTOTALOPERATIONALEXPENSES}}</td>
+              
+              
+          
+          
+          
+            </tr>  
+      
+      
+          </tbody>
+        
+    </table>
+  </div> 

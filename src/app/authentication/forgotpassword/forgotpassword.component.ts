@@ -1,6 +1,10 @@
 
 import { Component, OnInit } from '@angular/core';
 import {FormControl, FormGroupDirective, NgForm, Validators} from '@angular/forms';
+import { Iemail } from '../register-model';
+
+
+
 
 
 
@@ -13,15 +17,22 @@ import {FormControl, FormGroupDirective, NgForm, Validators} from '@angular/form
 
 
 export class ForgotpasswordComponent implements OnInit {
-  
-  email = new FormControl('', [Validators.required, Validators.email]);
+  Signup = { } as Iemail;
+  emailFormControl = new FormControl('', [Validators.required, Validators.email]);
 
+  
 
   constructor() { }
-
   ngOnInit(): void {
+    
+  }
+  register(f:NgForm){
+
+  }
+
+
   }
   
 
 
-}
+
