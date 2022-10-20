@@ -1,0 +1,29 @@
+.form-control{
+    width: 250px;
+    text-align: center;
+   
+}
+.form-select{
+    width: 250px;
+   
+    text-align: center;
+}
+
+.btn btn-primary {
+    margin: auto;
+   
+    
+}
+h4{
+    text-align:left;
+    margin-left:5px;
+}
+
+
+span{
+    color: red;
+}
+#shadow{
+   border-radius: 25px;
+    
+}
