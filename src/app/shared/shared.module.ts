@@ -5,18 +5,22 @@ import { SharedRoutingModule } from './shared-routing.module';
 import { AdminHeaderComponent } from './admin-header/admin-header.component';
 import { AdminFooterComponent } from './admin-footer/admin-footer.component';
 import { AmdbuttonsComponent } from './amdbuttons/amdbuttons.component';
+import { AuthenticHeaderComponent } from './authentic-header/authentic-header.component';
+import { AuthenticFooterComponent } from './authentic-footer/authentic-footer.component';
 
 
 @NgModule({
   declarations: [
     AdminHeaderComponent,
     AdminFooterComponent,
-    AmdbuttonsComponent
+    AmdbuttonsComponent,
+    AuthenticHeaderComponent,
+    AuthenticFooterComponent
   ],
   imports: [
     CommonModule,
     SharedRoutingModule
   ],
-  exports: [AdminHeaderComponent, AdminFooterComponent,AmdbuttonsComponent]
+  exports: [AdminHeaderComponent, AdminFooterComponent,AmdbuttonsComponent,AuthenticFooterComponent,AuthenticHeaderComponent]
 })
 export class SharedModule { }
