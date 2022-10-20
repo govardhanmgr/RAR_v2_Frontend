@@ -15,28 +15,28 @@
               <div class="col-lg-6 mb-5 mb-lg-0">
                   <div class="card">
                       <div class="card-body py-5 px-md-4">
-                          <form>
+                          <form name="signup" #signup="ngForm" (ngSubmit)="signup.valid && register(signup)">
                             
                             <div class="img" style="position:relative;left: 22%;">
-                              <img alt="" src="../assets/snadicon.png" />
+                              <img alt="" class="img" style="position: relative;display: flex;" src="../assets/snadicon.png" />
                            </div>
-                           <h3 style="margin:none;"><b>Registration Form</b></h3>
-                            <h4 style="top: 20px;">Signup for Registration</h4>
+                           
+                            <h4 class="text-center">Signup for Registration</h4>
                             <div class="row">
                               <div class="col-md-6 mb-4">
               
                                 <div class="form-outline">
                                   <label class="form-label" for="FirstName">First Name</label>
-                                  <input type="text" id="FirstName" class="form-control " placeholder="First Name"/>
-                                  
+                                  <input type="text" id="FirstName" class="form-control" name="FirstName" #FirstName="ngModel" placeholder="First Name" [(ngModel)]="Signup.FirstName" required />
+                                  <small *ngIf="(FirstName.touched && FirstName.invalid) || (FirstName.invalid && signup.submitted)">*First Name is required </small>
                                 </div>
                               </div>  
                               <div class="col-md-6 mb-4">
               
                                 <div class="form-outline">
                                   <label class="form-label" for="lastName">Last Name</label>
-                                  <input type="text" id="lastName" class="form-control " placeholder="Last Name"/>
-                                  
+                                  <input type="text" id="LastName" class="form-control" name="LastName" #LastName="ngModel" placeholder="Last Name"   [(ngModel)]="Signup.LastName" required/>
+                                  <small *ngIf="(LastName.touched && LastName.invalid) || (LastName.invalid && signup.submitted)">*Last Name is required </small>
                                 </div>
               
                               </div>
@@ -47,17 +47,17 @@
               
                                 <div class="form-outline">
                                   <label for="EmployeeId" class="form-label">Employee Id</label>
-                                  <input type="text" class="form-control" id="EmployeeId" placeholder="Employee Id" />
-                                  
+                                  <input type="text" class="form-control" id="EmployeeId" name="EmplyeeId" #EmployeeId="ngModel" placeholder="Employee Id" [(ngModel)]="Signup.EmployeeId" required/>
+                                  <small *ngIf="(EmployeeId.touched && EmployeeId.invalid) || (EmployeeId.invalid && signup.submitted)">*EmployeeId is required </small>
                                 </div>
               
                               </div>
                               <div class="col-md-6 mb-4">
               
                                 <div class="form-outline">
-                                  <label for="EmailId" class="form-label">Email Id</label>
-                                  <input type="mail" class="form-control" id="EmailId" placeholder="Email Id" />
-                                  
+                                  <label for="EmailId" class="form-label">Email Id</label> 
+                                  <input type="mail" class="form-control" id="EmailId" name="EmailId" #EmailId="ngModel" placeholder="Email Id" [(ngModel)]="Signup.EmailId" required/>
+                                  <small *ngIf="(EmailId.touched && EmailId.invalid) || (EmailId.invalid && signup.submitted)">*EmailId is required </small>
                                 </div>
               
                               </div>
@@ -69,20 +69,20 @@
               
                                 <div class="form-outline">
                                   <label for="PhoneNumber" class="form-label">Phone Number</label>
-                                  <input type="number" class="form-control" id="PhoneNumber" placeholder="Phone Number" />
-                                  
+                                  <input type="number" class="form-control" id="PhoneNumber" name="PhoneNumber" #PhoneNumber="ngModel" placeholder="Phone Number" [(ngModel)]="Signup.PhoneNumber" required />
+                                  <small *ngIf="(PhoneNumber.touched && PhoneNumber.invalid) || (PhoneNumber.invalid && signup.submitted)">*PhoneNumber is required </small>
                                 </div>
               
                               </div>
                               <div class="col-md-6 mb-4">
                                 <label class="form-label">Gender</label>
-                                <select class="select form-control">
+                                <select class="form-select" id="Gender" name="Gender" #Gender="ngModel"  aria-label="Default select example" [(ngModel)]="Signup.Gender" required>
                                   <option value="1" >Choose option</option>
                                   <option value="2">Male</option>
                                   <option value="3">Female</option>
                                   <option value="4">Other</option>
                                 </select>
-                               
+                                <small *ngIf="(Gender.touched && Gender.invalid) || (Gender.invalid && signup.submitted)">*Gender is required </small>
               
                               </div>
                             </div>
@@ -90,23 +90,23 @@
                             <div class="row">
                               <div class="col-md-6 mb-4">
                                 <label class="form-label">Select Entity</label>
-                                <select class="select form-control">
+                                <select class="form-select" id="SelectEntity" name="SelectEntity"  aria-label="Default select example" #SelectEntity="ngModel" [(ngModel)]="Signup.SelectEntity" required>
                                   <option value="1" >Choose option</option>
                                   <option value="2">HDFC</option>
                                   <option value="3">AXIS</option>
                                   <option value="4">AVERON</option>
                                 </select>
-                               
+                                <small *ngIf="(SelectEntity.touched && SelectEntity.invalid) || (SelectEntity.invalid && signup.submitted)">*SelectEntity is required </small>
+              
               
                               </div>
                               <div class="col-md-6 mb-4">
               
                                 <div class="form-outline">
                                   <label for="DateOfBirth" class="form-label">Date Of Birth</label>
-                                  <input type="date" class="form-control" id="DateOFBirth" placeholder="DateOFBirth" />
-                                  
+                                  <input type="date" class="form-control" id="DateOfBirth" name="DateOfBirth" #DateOfBirth="ngModel" placeholder="DateOfBirth"  [(ngModel)]="Signup.DateOfBirth" required />
+                                  <small *ngIf="(DateOfBirth.touched && DateOfBirth.invalid) || (DateOfBirth.invalid && signup.submitted)">*DateOfBirth is required </small>
                                 </div>
-              
                               </div>
                               
                             </div>
