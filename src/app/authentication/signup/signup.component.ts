@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, FormGroupDirective, NgForm, Validators} from '@angular/forms';
+import { Isignup } from '../register-model';
 
 
 @Component({
@@ -10,11 +11,13 @@ import {FormControl, FormGroupDirective, NgForm, Validators} from '@angular/form
 export class SignupComponent implements OnInit {
   emailFormControl = new FormControl('', [Validators.required, Validators.email]);
 
-  
-
+  Signup = { } as Isignup;
   constructor() { }
 
   ngOnInit(): void {
   }
+ 
+  register(f:NgForm){
 
+  }
 }

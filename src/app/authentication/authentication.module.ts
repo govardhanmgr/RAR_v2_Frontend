@@ -1,11 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-
-
-
-
-
 import { AuthenticationRoutingModule } from './authentication-routing.module';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
@@ -16,6 +10,7 @@ import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.compone
 import { SecurityquestionsComponent } from './securityquestions/securityquestions.component';
 import { RegistrationPageTwoComponent } from './registration-page-two/registration-page-two.component';
 import { ResetpasswordComponent } from './resetpassword/resetpassword.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -31,6 +26,7 @@ import { ResetpasswordComponent } from './resetpassword/resetpassword.component'
   imports: [
     CommonModule,
     AuthenticationRoutingModule,
+    FormsModule,
  
   ]
 })
