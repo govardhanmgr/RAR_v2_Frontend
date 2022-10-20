@@ -16,6 +16,7 @@ import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.compone
 import { SecurityquestionsComponent } from './securityquestions/securityquestions.component';
 import { RegistrationPageTwoComponent } from './registration-page-two/registration-page-two.component';
 import { ResetpasswordComponent } from './resetpassword/resetpassword.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { ResetpasswordComponent } from './resetpassword/resetpassword.component'
   imports: [
     CommonModule,
     AuthenticationRoutingModule,
+    FormsModule,
  
   ]
 })
