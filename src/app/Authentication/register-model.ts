@@ -9,3 +9,7 @@ export interface Isignup
     SelectEntity:string,
     DateOfBirth:string,
 }
+export interface Iemail
+{
+    EmailId:string,
+}
