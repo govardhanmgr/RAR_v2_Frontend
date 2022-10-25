@@ -8,6 +8,7 @@ import { AmdbuttonsComponent } from './shared/amdbuttons/amdbuttons.component';
 
 const routes: Routes = [
   { path: '', component: AuthenticationLayoutComponent, children: AUTHENTICATION_ROUTES },
+  { path: '', component: AdminLayoutComponent, children: ADMIN_ROUTES },
   { path: 'admin', component: AdminLayoutComponent, children: ADMIN_ROUTES },
   { path: 'amdbuttons', component: AmdbuttonsComponent }
 
