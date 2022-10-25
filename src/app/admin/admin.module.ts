@@ -20,13 +20,13 @@ import { EmpexpdetailsComponent } from './empexpdetails/empexpdetails.component'
 import { OperationalCostComponent } from './operational-cost/operational-cost.component';
 import { EmployeeExpensedataComponent } from './employee-expensedata/employee-expensedata.component';
 import { UserdataComponent } from './userdata/userdata.component';
-import { JobUpdateComponent } from './job-update/job-update.component';
+
 import { ManagementExpensesComponent } from './management-expenses/management-expenses.component';
 import { NewempComponent } from './newemp/newemp.component';
 import { ActiveemployeedataComponent } from './activeemployeedata/activeemployeedata.component';
 import { CompensationUpdateComponent } from './compensation-update/compensation-update.component';
 import { JobTabComponent } from './job-tab/job-tab.component';
-
+import { JobUpdateComponent } from './job-update/job-update.component';
 import { UserdetailsComponent } from './userdetails/userdetails.component';
 
 
@@ -51,6 +51,7 @@ import { UserdetailsComponent } from './userdetails/userdetails.component';
     EmployeeExpensedataComponent,
     UserdataComponent,
     JobUpdateComponent,
+   
     ManagementExpensesComponent,
     NewempComponent,
     ActiveemployeedataComponent,
