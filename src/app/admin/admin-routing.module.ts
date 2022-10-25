@@ -11,6 +11,7 @@ import { EmployeeExpensedataComponent } from './employee-expensedata/employee-ex
 import { EmployeeComponent } from './employee/employee.component';
 import { JobTabComponent } from './job-tab/job-tab.component';
 import { JobUpdateComponent } from './job-update/job-update.component';
+
 import { LaunchpageComponent } from './launchpage/launchpage.component';
 import { LdbpageComponent } from './ldbpage/ldbpage.component';
 import { ManagementExpensesComponent } from './management-expenses/management-expenses.component';
@@ -48,12 +49,13 @@ const routes: Routes = [
   { path: 'operationalcost', component: OperationalCostComponent },
   { path: 'employeeexpensedata', component: EmployeeExpensedataComponent },
   { path: 'userdata', component: UserdataComponent },
-  { path: 'JobUpdate', component: JobUpdateComponent },
+ 
   { path: 'managementexpenses', component: ManagementExpensesComponent },
   { path: 'newemp', component: NewempComponent },
   { path: 'activeemployeedata', component: ActiveemployeedataComponent },
   { path: 'compensationupdate', component: CompensationUpdateComponent },
   { path: 'jobtab', component: JobTabComponent },
+  {path:'job-update' ,component:JobUpdateComponent}
 ];
 
 @NgModule({
