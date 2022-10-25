@@ -26,11 +26,6 @@ export class ReceivablesComponent implements OnInit {
       {recClientId:110, recClientName:'LandT', recReceivables:'888.08'},
       {recClientId:111, recClientName:'Hitachi', recReceivables:'999.06'},
       {recClientId:112, recClientName:'Wipro', recReceivables:'879.06'},  
-
-
-
-
-      
       {recClientId:113, recClientName:'Phonix', recReceivables:'998.06'},
       {recClientId:114, recClientName:'Infosys', recReceivables:'1568.06'},
       {recClientId:115, recClientName:'TCS', recReceivables:'123.06'}
