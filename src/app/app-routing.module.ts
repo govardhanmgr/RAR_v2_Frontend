@@ -5,11 +5,13 @@ import { AuthenticationLayoutComponent } from './layouts/authentication-layout/a
 import { ADMIN_ROUTES } from './routing/admin-routing';
 import { AUTHENTICATION_ROUTES } from './routing/authentication-routing';
 import { AmdbuttonsComponent } from './shared/amdbuttons/amdbuttons.component';
+import { NavbarComponent } from './shared/navbar/navbar.component';
 
 const routes: Routes = [
   { path: '', component: AuthenticationLayoutComponent, children: AUTHENTICATION_ROUTES },
   { path: 'admin', component: AdminLayoutComponent, children: ADMIN_ROUTES },
-  { path: 'amdbuttons', component: AmdbuttonsComponent }
+  { path: 'amdbuttons', component: AmdbuttonsComponent },
+  {path:'navbar',component: NavbarComponent}
 
 ];
 
