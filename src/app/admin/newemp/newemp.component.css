@@ -1,12 +1,14 @@
 .form-control{
     width: 250px;
     text-align: center;
+    margin-right: 0%;
+    
    
 }
 .form-select{
     width: 250px;
-   
-    text-align: center;
+    text-align:center;
+    
 }
 
 .btn btn-primary {
@@ -27,3 +29,12 @@ span{
    border-radius: 25px;
     
 }
+
+
+.col{
+    margin-left: auto;
+}
+#date{
+    margin-right: auto;
+}
+
