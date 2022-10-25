@@ -1,6 +1,4 @@
 *{
-  padding: 0px;
-  margin: 0px;
   box-sizing: border-box;
 }
 
@@ -17,11 +15,9 @@
   height: 70vh;
   width: 100%;
   display: flex;
-  justify-content: space-between;
-  
+  justify-content: space-between; 
   border-radius: 10px;
-  background-color:rgb(238, 232, 233);
-  
+  background-color:rgb(238, 232, 233);  
 }
 
 /*flex: flex-grew flex_shrink flex-basis*/
@@ -35,8 +31,6 @@ box{
   background-color: white;
   border: 1px solid rgba(216, 193, 193, 0.644);
   border-radius: 10px;
-  
-
 }
 
 .Roles{
@@ -44,7 +38,6 @@ box{
   border-radius: 10px;
   border: 1px solid rgba(216, 193, 193, 0.644);
   
-
 }
 
 .Expenses{
@@ -54,9 +47,13 @@ box{
   border-radius: 10px;
   border: 1px solid rgba(216, 193, 193, 0.644);
   overflow: hidden;
-  
-  
 
+}
+
+.sri{
+  display: inline-block;
+   height: 70vh;
+   overflow: hidden;
 }
 
 .my-custom-scrollbar {
@@ -122,4 +119,9 @@ text-align: center;
     border-radius:10px;
 
     border: 1px solid white;
+  }
+
+
+  .put{
+    border-color: blue;
   }

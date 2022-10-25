@@ -14,5 +14,7 @@ export class AmdpageComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  
+
 
 }

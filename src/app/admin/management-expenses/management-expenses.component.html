@@ -7,28 +7,30 @@
     <table class="table">
         <thead>
             <tr>
-              <th>EMPLOYEE ID</th>
-              <th>FIRST NAME</th> 
-              <th>LAST NAME</th>
-              <th>TOTAL MANAGEMENT EXPENSES</th>
+              <th>Employee ID</th>
+              <th>First Name</th> 
+              <th>Last Name</th>
+              <th>Total Management Expenses</th>
             </tr>
           </thead>
-  
-         
           <tbody>
-            <tr *ngFor="let mgt of management ">
+            <tr *ngFor="let mgt of management">
+
+       
 
               <td>{{mgt.mgtEmployeeId}}</td>
+  
               <td>{{mgt.mgtFirstName}}</td>
+  
               <td>{{mgt.mgtLastName}}</td>
               <td>{{mgt.mgtTotalManagementExpenses}}</td>
-              
-          
-          
-            </tr>  
-      
-      
+  
+            </tr>
+  
+         
           </tbody>
+  
+         
      
         
     </table>
