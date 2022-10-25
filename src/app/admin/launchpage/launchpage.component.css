@@ -1,5 +1,5 @@
 *{
-   
+
     box-sizing: border-box;
 }
 .c-bg{
@@ -9,7 +9,7 @@
 
 
 .shadow{
-    background-color: white; 
+    background-color: white;
     border-radius: 20px;
     box-shadow: 0 2px 15px rgba(64,64,64,.7);
 }
