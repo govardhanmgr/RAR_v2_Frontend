@@ -3,10 +3,6 @@ export interface IEmployee{
     empLastName:String;
     empEmail:String;
     empRole:String;
-    empEntity:String;
-
-
-
-    
+    empEntity:String;  
 
 }
