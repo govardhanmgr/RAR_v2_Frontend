@@ -1,1 +1,71 @@
-<p>job-update works!</p>
+<!DOCTYPE html>
+<html>
+  <head>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    </head>
+  <body>
+   <form>
+    <h1 class="text-center">Add Job Information</h1>
+    <button type="button" class="btn btn-primary" style="margin-left: 9%;">Back</button>
+    <div class="px-4 py-2 px-md-5 col-md-8 text-center text-lg-start" style="margin-left:15%">
+        <div class=" shadow-lg p-5 mb-4 bg-white rounded">
+            <div class="card-body py-3 px-md-4">
+                <div class="col-md-6 mb-4">
+                        <div class="form-outline">
+                            <label for="Date" class="form-label">Effective Date</label>
+                            <input type="date" class="form-control" id="Date" placeholder="Date"/>
+                        </div>
+                    </div>
+                    
+                <div class="col-md-6 mb-4">
+                    <label class="form-label">Client Name</label>
+                    <select class="form-select" aria-label="Default select example">
+                        <option>Choose Option</option>
+                        <option value="1">UPS</option>
+                        <option value="2">Google</option>
+                        <option value="3">Facebook</option>
+                        <option value="4">Twitter</option>
+                    </select>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <label class="form-label">Job Title</label>
+                    <select class="form-select" aria-label="Default select example">
+                        <option>Choose Option</option>
+                        <option value="1">Cloud Engineer</option>
+                        <option value="2">Dotnet Developer</option>
+                        <option value="3">Java Developer</option>
+                        <option value="4">Python Developer</option>
+                    </select>
+                </div>
+                      <div class="col-md-6 mb-4">
+                    <label class="form-label">Reports to</label>
+                    <select class="form-select" aria-label="Default select example">
+                        <option>Choose Option</option>
+                        <option value="1">Naga Deepthi Nandigurr</option>
+                        <option value="2">Satya Kishore Mavuri</option>
+                        <option value="3">Pavan Kumar Avn</option>
+                        <option value="4">Ravi Teja</option>
+                    </select>
+                </div>
+                      <div class="col-md-6 mb-4">
+                    <label class="form-label">Location</label>
+                    <select class="form-select" aria-label="Default select example">
+                        <option>Choose Option</option>
+                        <option value="1">India</option>
+                        <option value="2">USA</option>
+                        <option value="3">United Kingdom</option>
+                        <option value="4">Germany</option>
+                    </select>
+                </div>
+                    <div class="mt-4 pt-2">
+                        <input class="btn btn-primary " type="submit" value="Add Details" style="margin-left: 45%;" />
+                    </div>    
+            </div>
+        </div>
+    </div>
+</form>
+  </body>
+</html>
