@@ -1,17 +1,16 @@
 *{
-    padding: 0px;
-    margin: 0px;
+
     box-sizing: border-box;
 }
 .c-bg{
-    
+
    width: 100%;
     height:100vh;
 }
 
 
 .shadow{
-    background-color: white; 
+    background-color: white;
     border-radius: 20px;
     box-shadow: 0 2px 15px rgba(64,64,64,.7);
 }
