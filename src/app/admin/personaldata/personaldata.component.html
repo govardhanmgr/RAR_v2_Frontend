@@ -1,4 +1,16 @@
-         <link rel="stylesheet" type="text/css" href="http://www.shieldui.com/shared/components/latest/css/light/all.min.css" />
+<ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link"  href="/personaldata">Personal</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/jobtab">Job</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/login">Document</a>
+    </li>
+   
+  </ul>
+        <link rel="stylesheet" type="text/css" href="http://www.shieldui.com/shared/components/latest/css/light/all.min.css" />
          <section class="vh-200 gradient-custom">
                 <div class="container py-5 h-100">
                   <div class="row justify-content-center align-items-center h-50">
@@ -8,7 +20,8 @@
                         <div class="card-body p-4 p-md-4">
                           
                           <h4 class="mb-4 pb-2 pb-md-0 mb-md-3">Basic Information</h4>
-
+                          <div class="fixTableHead  ">
+                          
                           <form>
                             <div class="row">
                               
@@ -41,6 +54,7 @@
                             </div>
               
                           </form>
+                       
               
               <br>
               
@@ -92,8 +106,11 @@
               
                              
                             </form>
+                          </div>
                              <hr>
+                             
                              <h4 class="mb-4 pb-2 pb-md-0 mb-md-3">Address</h4>
+                             <div class="fixTableHead  ">
                              <form>
                                 
                                 <div class="form-group">
@@ -121,7 +138,7 @@
                                   </div>
                                 </div>    
                             </form>
-                          
+                          </div>
                               
                             <hr>
                             <h4 class="mb-4 pb-2 pb-md-0 mb-md-3">Contact Details</h4>
@@ -145,7 +162,7 @@
                                 </div>
                                 <br>
                                 <br>
-                                <div class="mt-2 pt-1">
+                                <div class="mt-2 pt-1" id="btn">
                                     <button type="button" class="btn btn-primary">+Update</button>
                                   </div>
                                   <br>
@@ -156,12 +173,12 @@
                               </div>
                             <hr>
                             <h4 class="mb-4 pb-2 pb-md-0 mb-md-3">Educational Information</h4> 
-                            <button type="button" class="btn btn-primary" position="right">+Add new</button>
+                            <button type="button" class="btn btn-primary" position="right" id="btn1">+Add new</button>
                             <br>
                             <br>
                             <div class="table-bordered">
                                 <table class="table" >
-                                    <thead class="table-dark">
+                                    <thead class="table-light">
                                         <tr>
                                           <th>DEGREE</th>
                                           <th>UNIVERSITY</th> 
@@ -198,15 +215,15 @@
                                 </table> 
                             
                                 
-                            </div>
+                            </div><hr><br>
                 
                 <h4 class="mb-4 pb-2 pb-md-0 mb-md-3">Visa Information</h4> 
-                <button type="button" class="btn btn-primary">+Add new</button>
+                <button type="button" class="btn btn-primary" id="btn2">+Add new</button>
                 <br>
                 <br>
                 <div class="table-bordered">
-                    <table class="table">
-                        <thead class="table-dark">
+                    <table class="table" >
+                        <thead class="table-light">
                             <tr>
                               <th>Date</th>
                               <th>Visa status</th> 
@@ -247,9 +264,9 @@
                         
                     </table>                    
                     
-                </div> 
+                </div> <hr>
                 <br>
-                <button type="button" class="btn btn-success">Save All</button>
+                <button type="button" class="btn btn-success" id="save">Save All</button>
                           </div>
                         </div>
                       
