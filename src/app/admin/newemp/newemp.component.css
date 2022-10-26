@@ -2,26 +2,18 @@
     width: 250px;
     text-align: center;
     margin-right: 0%;
-    
-   
 }
 .form-select{
     width: 250px;
     text-align:center;
-    
 }
-
 .btn btn-primary {
-    margin: auto;
-   
-    
+    margin: auto;   
 }
 h4{
     text-align:left;
     margin-left:5px;
 }
-
-
 span{
     color: red;
 }
@@ -29,8 +21,6 @@ span{
    border-radius: 25px;
     
 }
-
-
 .col{
     margin-left: auto;
 }
