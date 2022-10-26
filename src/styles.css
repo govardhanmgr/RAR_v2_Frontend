@@ -11,3 +11,13 @@ body { margin: 0; font-family: Verdana, Geneva, Tahoma, sans-serif;    backgroun
 .inputs{
     width: 50%;
     }
+
+    .v1{
+      border-left: 2px solid rgb(131, 130, 130);
+
+
+      position: relative;
+
+      margin-left: 10px;
+      top: 0;
+    }
