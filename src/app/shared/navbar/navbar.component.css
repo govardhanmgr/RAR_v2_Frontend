@@ -1,6 +1,6 @@
 .container{
 border-radius: 25px;
-width: 0%;
+width: 115%;
 height: 70%;
 margin-right:10% ;
 margin-left: 5%;
@@ -11,9 +11,9 @@ margin-left: 5%;
     flex-grow: 1;
 
 }
-.move{
+/* .move{
     margin-left: 20%;
-}
+} */
 .down{
     margin-top: 45vh;
 }
