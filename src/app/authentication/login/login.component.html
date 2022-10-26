@@ -13,7 +13,8 @@
                 <div class="col-lg-5 mb-4 ">
                     <div class="card-body  px-md-4">
                         <div class="shadow-lg p-5 mb-7 bg-white rounded">
-                            <form>
+
+                            <form name="LOGIN" #LOGIN="ngForm" (ngSubmit)="LOGIN.valid && login(LOGIN)">
                                 <div class="img">
                                     <img alt="" src="../assets/snadicon.png" />
                                 </div>
@@ -21,24 +22,33 @@
 
                                 <div class="form-outline mb-2">
                                     <label class="form-label" for="form2Example1"></label>
-                                    <input type="email" id="form2Example1" placeholder="Enter User Id"
-                                        class="form-control" required />
-
+                                    <input type="email" id="userName" name="userName" placeholder="Enter User Id"
+                                        #userName="ngModel" [(ngModel)]="Login.userName" class="form-control"
+                                        required />
+                                    <small
+                                        *ngIf="(userName.touched && userName.invalid) || (userName.invalid && LOGIN.submitted)">
+                                        Email is
+                                        mandatory</small>
                                 </div>
                                 <div class="form-outline mb-2">
                                     <label class="form-label" for="form2Example2"></label>
-                                    <input type="password" id="form2Example2" placeholder="Enter Password"
+                                    <input type="password" id="password" placeholder="Enter Password" name="password" #password="ngModel"
+                                    [(ngModel)]="Login.password"
                                         class="form-control" required />
-
+                                        <small
+                                        *ngIf="(password.touched && password.invalid) || (password.invalid && LOGIN.submitted)">Password
+                                        is
+                                        mandatory</small>
                                 </div>
                                 <div class="form-outline mb-2">
                                     <label class="form-label" for="form2Example3"></label>
-                                    <select class="form-select" aria-label="Default select example">
+                                    <select class="form-select" id="SelectEntity" name="SelectEntity" aria-label="Default select example" #SelectEntity="ngModel" [(ngModel)]="Login.SelectEntity" required>
                                         <option value="1">Select Entity</option>
                                         <option value="2">HDFC</option>
                                         <option value="3">AXIS</option>
                                         <option value="4">AVERON</option>
                                     </select>
+                                    <small *ngIf="(SelectEntity.touched && SelectEntity.invalid) || (SelectEntity.invalid && LOGIN.submitted)">Entity is required </small>
                                 </div>
                                 <br>
                                 <div class="row mb-2">
