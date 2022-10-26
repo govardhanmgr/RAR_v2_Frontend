@@ -7,63 +7,72 @@
   <div class="container-fluid">
     <app-amdbuttons> </app-amdbuttons><br />
 
-    <div class="container-fluid text-center d-flex flex-column">
+    <div class="container-fluid text-center d-flex flex-column justify-content-evenly">
       <div class="row justify-content-evenly">
-        <div class="col-md-4 my-2">
+        <div class="col-md-3 my-2">
           <div class="Entities sri1">
-            <h4 class="text_color">Entitiyes</h4>
-            <div
-              class="col-md-12 d-flex align-items-baseline justify-content-around"
-            >
-              <div class=" ">
-                <input
-                  type="text"
-                  class="ms-2 me-2 mt-2 sri3 form-control"
-                  placeholder="Enter Entity Name"
-                />
-              </div>
-              <div>
-                <button class="view p-1 mt-2 mb-2">Add Entity</button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4 my-2">
-          <div class="Entities sri1">
-            <h4 class="text_color">Roles</h4>
+            <h4 class="text_color">Entities</h4>
             <div
               class="col-md-12 d-flex align-items-baseline justify-content-around"
             >
               <div class="">
                 <input
                   type="text"
-                  class="ms-2 me-2 mt-2 sri3 form-control"
-                  placeholder="Enter Roles Name"
+                  class="ms-2 me-2 mt-2  form-control"
+                  placeholder="Enter Entity Name"
                 />
               </div>
               <div>
-                <button class="view p-1 mt-2 mb-2">Add Role</button>
+                <button class="view p-1">Add Entity</button>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="col-md-4 my-2 sri">
-          <div class="Expenses">
+        <div class="col-md-3 my-2">
+          <div class="Entities sri1">
+            <h4 class="text_color">Roles</h4>
+            <div
+              class="col-md-12 d-flex align-items-baseline justify-content-around"
+            >
+              <div >
+                <input
+                  type="text"
+                  class="  form-control"
+                  placeholder="Enter Role Name"
+                />
+              </div>
+              <div class="">
+                <button class="view p-1  ">Add Role</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 my-2 sri">
+          <div class="Expenses sri1  ">
             <h4 class="text_color">Expenses</h4>
-            <input
-              type="text"
-              class="ms-2 me-2 mt-2"
-              placeholder="Expense Name"
-            />
-            <input
-              type="text"
-              class="m-2 form-control"
-              aria-label="First name"
-              placeholder="Expense Code"
-            />
-            <button class="view me-2 p-1 mt-2 mb-2">Add Expense</button>
+            <div
+            class="col-md-12 d-flex align-items-baseline "
+          >
+            
+              <div class="d-flex">
+              <input
+                type="text"
+                class="  form-control"
+                placeholder="Enter Roles Name"
+              />
+              <input
+                type="text"
+                class="  form-control"
+                placeholder="Enter Roles Name"
+              />
+            </div>
+            
+            <div>
+              <button class="view p-1 ">Add Role</button>
+            </div>
+          </div>
             <div class="fixTableHead">
               <table class="table">
                 <thead>
