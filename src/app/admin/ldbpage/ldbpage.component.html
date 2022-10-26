@@ -6,6 +6,7 @@
   <br />
   <div class="container-fluid">
     <div class="shadow-lg p-5 mb-7 bg-white" id="shadow">
+      <form name="ldbpage" #ldbpage="ngForm" (ngSubmit)="ldbpage.valid && load(ldbpage)">
       <!-- <div class="card" style="width: 22rem;height: 27rem;">     -->
 
       <div class="card-body">
@@ -19,23 +20,28 @@
             type="radio"
             name="flexRadioDefault"
             id="flexRadioDefault1"
+            name="flexRadioDefault" required
           />
           <label class="form-check-label" for="flexRadioDefault1"
             >Client
           </label>
+          <br>
+          <!-- <small *ngIf="(client.touched && client.invalid) || (client.invalid && ldb.submitted)"> Please Select the File </small> -->
         </div>
         <br />
         <div class="form-check">
           <input
             class="form-check-input"
             type="radio"
-            name="flexRadioDefault"
+           name="flexRadioDefault"
             id="flexRadioDefault2"
-            checked
+              required
           />
           <label class="form-check-label" for="flexRadioDefault2">
             Pay Roll
           </label>
+          <br>
+          <!-- <small *ngIf="(payroll.touched && payroll.invalid) || (payroll.invalid && ldb.submitted)"> Please Select the File </small> -->
         </div>
         <br />
         <div class="form-check">
@@ -43,9 +49,9 @@
             class="form-check-input"
             type="radio"
             name="flexRadioDefault"
-            id="flexRadioDefault1"
+            id="flexRadioDefault3"
           />
-          <label class="form-check-label" for="flexRadioDefault1">
+          <label class="form-check-label" for="flexRadioDefault3">
             Time Sheet
           </label>
         </div>
@@ -55,10 +61,10 @@
             class="form-check-input"
             type="radio"
             name="flexRadioDefault"
-            id="flexRadioDefault2"
+            id="flexRadioDefault4"
             checked
           />
-          <label class="form-check-label" for="flexRadioDefault2">
+          <label class="form-check-label" for="flexRadioDefault4">
             Management Expenses
           </label>
         </div>
@@ -68,9 +74,9 @@
             class="form-check-input"
             type="radio"
             name="flexRadioDefault"
-            id="flexRadioDefault1"
+            id="flexRadioDefault5"
           />
-          <label class="form-check-label" for="flexRadioDefault1">
+          <label class="form-check-label" for="flexRadioDefault5">
             Employee Expenses
           </label>
         </div>
@@ -80,10 +86,10 @@
             class="form-check-input"
             type="radio"
             name="flexRadioDefault"
-            id="flexRadioDefault2"
+            id="flexRadioDefault6"
             checked
           />
-          <label class="form-check-label" for="flexRadioDefault2">
+          <label class="form-check-label" for="flexRadioDefault6">
             Immigration Expenses
           </label>
         </div>
@@ -93,21 +99,26 @@
             class="form-check-input"
             type="radio"
             name="flexRadioDefault"
-            id="flexRadioDefault1"
+            id="flexRadioDefault7"
           />
-          <label class="form-check-label" for="flexRadioDefault1">
+          <label class="form-check-label" for="flexRadioDefault7">
             Employee Data
           </label>
         </div>
         <br />
         <div class="mb-3">
-          <input class="form-control" type="file" id="formFile" />
+          <input class="form-control" type="file" id="formFile" name="file" #file="ngModel"  [(ngModel)]="ldb.file" required />
+          <small *ngIf="(file.touched && file.invalid) || (file.invalid && ldbpage.submitted)">File is Required</small> 
           <br />
           <div class="bt">
-            <button type="button" class="btn btn-primary">Upload</button>
+            <button type="submit" class="btn btn-primary">Upload</button>
           </div>
         </div>
+        
       </div>
+      </form>
     </div>
   </div>
-</div>
+    
+  </div>
+
