@@ -1,4 +1,4 @@
-<form>
+<form name="EDUCATIONUPDATE" #EDUCATIONUPDATE="ngForm" (ngSubmit)="EDUCATIONUPDATE.valid && education(EDUCATIONUPDATE)" novalidate>
     <br>
     <h1 class="text-center">Add Education Information</h1>
     <button type="button" class="btn btn-primary" style="margin-left: 19%;">Back</button>
@@ -11,8 +11,9 @@
                 <div class="col-md-6 mb-4">
 
                     <div class="form-outline">
-                        <label for="University" class="form-label">University Name</label>
-                        <input type="text" class="form-control" id="University" placeholder="Enter University Name" />
+                        <label for="UniversityName" class="form-label">University Name</label>
+                        <input type="text" id="UniversityName" placeholder="Enter University Name"  name="UniversityName"  #UniversityName="ngModel"  [(ngModel)]="educationupdate.UniversityName" required />
+                        <small *ngIf="(UniversityName.touched && UniversityName.invalid) || (UniversityName.invalid && EDUCATIONUPDATE.submitted)">University Name is required </small>
 
                     </div>
 
