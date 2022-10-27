@@ -10,13 +10,13 @@
   <div class="container" >
     <div class="row">
       <div class="col-sm">
-        <h5>Name: Narendra </h5>
+        <h5>Name: {{employeeeexpense.firstname +" "+employeeeexpense.lastname}} </h5>
         </div>
       <div class="col-sm">
-        <h5>Employee ID: 1035</h5>
+        <h5>Employee ID: {{employeeeexpense.employeeid}}</h5>
             </div>
       <div class="col-sm">
-        <h5> Total Amount $4564</h5>
+        <h5> Total Amount $ {{employeeeexpense.sum}}</h5>
             </div>
     </div>
   
@@ -24,7 +24,7 @@
   <br>
 
   
-<div class="fixTableHead  shadow">
+<!-- <div class="fixTableHead  shadow">
   
 <table class="table">
   <thead>
@@ -116,4 +116,27 @@
 </div>
 
   
+</div> -->
+<div class="fixTableHead  shadow">
+  <table class="table">
+      <thead>
+          <tr>
+            <th>SNo</th> 
+            <th>Expense Date</th> 
+            <th>Expense Type</th>
+            <th>Amount</th>
+            <th>Invoice</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let emp of Expensedata" >
+            <td>{{ i }}</td>
+            <td>{{emp.expensedate}}</td>
+            <td>{{emp.expenses}}</td>
+            <td>{{emp.amount}}</td>
+            <!-- <td>{{emp.sum}}</td> -->
+            <td><a href="https://www.freshbooks.com/wp-content/uploads/invoice-template-pdf-white.png">Click Here</a></td>
+        </tbody>
+      
+  </table>
 </div>
