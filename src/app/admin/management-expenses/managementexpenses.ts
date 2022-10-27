@@ -1,7 +1,7 @@
 export interface IManagement{
-    mgtEmployeeId:Number;
-    mgtFirstName:String;
-    mgtLastName:String;
-    mgtTotalManagementExpenses:String;
+    employeeid:Number;
+    firstname:String;
+    lastname:String;
+    sum:Number;
     
 }
