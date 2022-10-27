@@ -1,8 +1,7 @@
-export interface  payrolldata{
-    Fname:string;
-    Lname:string;
-    email:string;
-    role:string;
-    entity:string;
-    action:string;
+export interface  Ipayrollexpenses{
+    employeeid:number;
+    firstname:string;
+    lastname:string;
+    sum:number;
+   
 }

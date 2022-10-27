@@ -1,34 +1,55 @@
-import { keyframes } from '@angular/animations';
-import { Component, OnInit } from '@angular/core';
-import { Action } from 'rxjs/internal/scheduler/Action';
 
-import { payrolldata } from './payrollexpenses';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { HttpService } from 'src/app/services/http.service';
+import { Ipayrollexpenses } from './payrollexpenses';
 
 @Component({
   selector: 'app-payrollexpenses',
   templateUrl: './payrollexpenses.component.html',
   styleUrls: ['./payrollexpenses.component.css']
 })
-export class PayrollexpensesComponent implements OnInit {
-  
-  PayrollData() {
-    alert("welcome everyone");
-
-  }
-  payrolldata = [] as payrolldata[];
+export class PayrollexpensesComponent implements OnInit,OnDestroy{
+ 
+  payrollexpense = [] as Ipayrollexpenses[];
   
   
   
   
 
-  constructor() { }
+  // constructor() { }
+
+  // ngOnInit(): void {
+    
+  //   this.payrolldata=[
+  //     {Fname:'girish',Lname:'k',email:'k@gmail.com',role:'developer',entity:'snad',action:'update'},
+  //     {Fname:'girish',Lname:'k',email:'k@gmail.com',role:'developer',entity:'snad',action:'update'},
+  //     {Fname:'girish',Lname:'k',email:'k@gmail.com',role:'developer',entity:'snad',action:'update'},
+  //     {Fname:'girish',Lname:'k',email:'k@gmail.com',role:'developer',entity:'snad',action:'update'},
+  //     {Fname:'girish',Lname:'k',email:'k@gmail.com',role:'developer',entity:'snad',action:'update'},
+  //     {Fname:'girish',Lname:'k',email:'k@gmail.com',role:'developer',entity:'snad',action:'update'},
+  //     {Fname:'girish',Lname:'k',email:'k@gmail.com',role:'developer',entity:'snad',action:'update'},
+	  
+  //   ]
+   
+  subscription!: Subscription;
+
+  constructor(private http:HttpService) { }
 
   ngOnInit(): void {
-    
-    
-   
-    
-    
-
-}
-}
+    this.payrollexpenses();
+  }
+  payrollexpenses() {
+    this.subscription = this.http.getData("payrollaccess").subscribe({
+      next: (data: any) => {
+        this.payrollexpense = data.result as Ipayrollexpenses[];
+      },
+      error: reason => console.log(reason)
+    });
+  }
+ 
+  ngOnDestroy(): void {
+    if(this.subscription)
+    this.subscription.unsubscribe();
+  }
+  }

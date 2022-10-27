@@ -16,7 +16,7 @@ export class LoginComponent implements OnInit,OnDestroy {
 
   Login = {} as ILogin;
   subscription!: Subscription;
-
+  
   entities= [] as any;
 
 
@@ -63,7 +63,11 @@ export class LoginComponent implements OnInit,OnDestroy {
     if(this.subscription){
       this.subscription.unsubscribe();
     }
+<<<<<<< HEAD
  
+=======
+    
+>>>>>>> 3f7da4e0c6c72ae23b3e52c9078b97ff0defd01a
     
     
   }
