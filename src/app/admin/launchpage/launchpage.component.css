@@ -19,3 +19,26 @@
     box-shadow: 0 2px 15px rgba(64,64,64,.4);
     background-color: white;
 }
+
+a:link {
+  text-decoration: inherit;
+  color: inherit;
+  cursor: auto;
+}
+
+a:visited {
+  text-decoration: inherit;
+  color: inherit;
+  cursor: auto;
+}
+
+
+.btn{
+  background-color: white;
+  border: white;
+}
+.hover:hover{
+cursor: pointer;
+background-color: rgb(224, 216, 216);
+}
+
