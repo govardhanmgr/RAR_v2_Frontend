@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./userdetails.component.css']
 })
 export class UserdetailsComponent implements OnInit {
+  ok() {
+alert("Updated");
+  }
 
   constructor() { }
 
   ngOnInit(): void {
+
   }
 
 }

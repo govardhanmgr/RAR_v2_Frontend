@@ -1,8 +1,8 @@
 export interface IEmployee{
-    empEmployeeNo:any;
-    empFIRSTNAME:String;
-    empLASTNAME:String;
-    empTOTALOPERATIONALEXPENSES:any;
+    employeeid:number;
+    firstname:String;
+    lastname:String;
+    totalexpenses:number;
     
 
 

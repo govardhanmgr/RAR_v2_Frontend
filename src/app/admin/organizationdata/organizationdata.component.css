@@ -1,127 +1,94 @@
 *{
-  box-sizing: border-box;
+  
+   box-sizing: border-box;
 }
 
 
 .text_color{
-  background-color: rgb(223, 181, 188);
-  text-align: center;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  padding: 5px;
+background-color: rgb(223, 181, 188);
+text-align: center;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+padding: 5px;
 }
 
 .container{
-  height: 70vh;
-  width: 100%;
-  display: flex;
-  justify-content: space-between; 
-  border-radius: 10px;
-  background-color:rgb(238, 232, 233);  
-}
+height: auto;
+width: 100%;
+display: flex;
+justify-content: space-between; 
+border-radius: 10px;
 
-/*flex: flex-grew flex_shrink flex-basis*/
-box{
-  flex: 0 0 50%;
-  flex: 0 0 calc(50% - 2rem);
 }
-
 
 .Entities{
-  background-color: white;
-  border: 1px solid rgba(216, 193, 193, 0.644);
-  border-radius: 10px;
+ background-color: white;
+ border: 1px solid rgba(216, 193, 193, 0.644);
+ border-radius: 10px;
 }
 
 .Roles{
-  background-color: white;
-  border-radius: 10px;
-  border: 1px solid rgba(216, 193, 193, 0.644);
-  
+ background-color: white;
+ border-radius: 10px;
+ border: 1px solid rgba(216, 193, 193, 0.644);
+
 }
 
 .Expenses{
-  display: inline-block;
-  height: auto;
-  background-color: white;
-  border-radius: 10px;
-  border: 1px solid rgba(216, 193, 193, 0.644);
-  overflow: hidden;
-
+   display: inline-block;
+    height: 70vh;
+ background-color: white;
+ border-radius: 10px;
+ border: 1px solid rgba(216, 193, 193, 0.644);
+ overflow: hidden;
+ 
 }
 
 .sri{
-  display: inline-block;
-   height: 70vh;
-   overflow: hidden;
+   display: inline-block;
+    height: 70vh;
+    overflow: hidden;
 }
 
-.my-custom-scrollbar {
-  position: relative;
-  height: 88.7vh;
-  overflow: auto;
-  border-bottom-right-radius: 10px;
-  }
-  .table-wrapper-scroll-y {
-  display: block;
-  }
-
-
-
-  /*fixed table head*/
-
-*{
-  box-sizing: border-box;
+.sri1{
+ height: 70vh;
 }
 
 .fixTableHead {
-overflow-y: auto;
-height: 60vh;
-width: 100%;
+  overflow-y: auto;
+  height: 70vh;
+  width: 100%;
 }
-
 .fixTableHead thead th {
 position: sticky;
 top: 0;
-
 }
+
 table {
 border-collapse: collapse;        
-width: 100%;
+ width: 100%;
 background-color: white;
 vertical-align: baseline;
 text-align: center;
 }
 
+td {
+   padding: 8px 15px;
+   padding: 20px;
+   font-size: 18px;
+   border-top: 1px solid rgb(236, 235, 235);
+}
+th {
+   background-color: rgb(238, 229, 231);
+   padding: 15px;
+   font-size: 15px;
+}
 
+.view{
+color: white;
+background-color: rgba(8,77,179,0.864);
+border-radius:10px;
 
+border: 1px solid white;
+}
 
-
-
-  td {
-    padding: 8px 15px;
-    padding: 20px;
-    font-size: 18px;
-    border-top: 1px solid rgb(236, 235, 235);
-    }
-    th {
-      background-color: rgb(238, 229, 231);
-      padding: 15px;
-      font-size: 15px;
-    }
-
-
-
-
-  .view{
-    color: white;
-    background-color: rgba(8,77,179,0.864);
-    border-radius:10px;
-
-    border: 1px solid white;
-  }
-
-
-  .put{
-    border-color: blue;
-  }

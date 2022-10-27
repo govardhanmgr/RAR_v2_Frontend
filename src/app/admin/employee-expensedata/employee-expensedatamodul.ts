@@ -1,6 +1,6 @@
 export interface IEmployeeExpensedata {
-    EmployeeId: number;
-    FirstName: string;
-    LastName: string;
-    TotalEmployeeExpenses:any;
+  employeeid: number;
+  firstname: string;
+  lastname: string;
+  sum:number;
   }

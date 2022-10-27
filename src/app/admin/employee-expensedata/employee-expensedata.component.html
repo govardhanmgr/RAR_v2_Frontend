@@ -1,7 +1,9 @@
 
   <h2 class="header">Total EmployeeExpenses Data</h2>
   <br>
-<button type="button" class="btn btn-primary">Back</button>
+   <div><a [routerLink]="['/admin/launchpage']" routerLinkActive="router-link-active"  class="btn btn-primary" role="button">Back</a>
+<!-- <button type="button" class="btn btn-primary">Back</button></div> -->
+
 <br>
 <div class="fixTableHead  shadow">
   <table class="table">
@@ -16,10 +18,10 @@
         </thead>
         <tbody>
           <tr *ngFor="let emp of EmployeeExpensedata">
-            <td>{{emp.EmployeeId}}</td>
-            <td>{{emp.FirstName}}</td>
-            <td>{{emp.LastName}}</td>
-            <td>{{emp.TotalEmployeeExpenses}}</td>
+            <td>{{emp.employeeid}}</td>
+            <td>{{emp.firstname}}</td>
+            <td>{{emp.lastname}}</td>
+            <td>{{emp.sum}}</td>
           
         </tbody>
       

@@ -1,5 +1,5 @@
 <strong><h1 align="center" >Opertaional Expenses</h1></strong>
-<button type="button" class="btn btn-primary">Back</button>
+<div><a class="btn btn-primary" [routerLink]="['/admin/launchpage']" routerLinkActive="router-link-active"  role="button">Back</a></div>
 <br>
 <br>
  
@@ -21,10 +21,10 @@
           <tbody>
             <tr *ngFor="let emp of employees">
           
-              <td>{{emp.empEmployeeNo}}</td>
-              <td>{{emp.empFIRSTNAME}}</td>
-              <td>{{emp.empLASTNAME}}</td>
-              <td>{{emp.empTOTALOPERATIONALEXPENSES}}</td>
+              <td>{{emp.employeeid}}</td>
+              <td>{{emp.firstname}}</td>
+              <td>{{emp.lastname}}</td>
+              <td>{{emp.totalexpenses}}</td>
               
           
             </tr>  
