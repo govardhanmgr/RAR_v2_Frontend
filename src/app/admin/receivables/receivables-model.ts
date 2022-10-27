@@ -1,6 +1,6 @@
 export interface IReceivables
 {
-    recClientId:number;
-    recClientName:string;
-    recReceivables:string;
+    clientid:number;
+    clientname:string;
+    sum:string;
 }
