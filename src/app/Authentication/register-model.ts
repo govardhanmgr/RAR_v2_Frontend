@@ -12,7 +12,7 @@ export interface Iemail {
     EmailId: string,
 }
 export interface ILogin {
-    userName: string,
+    email: string,
     password: string,
-    SelectEntity: string,
+    entity: string,
 }

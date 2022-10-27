@@ -22,11 +22,11 @@
 
                                 <div class="form-outline mb-2">
                                     <label class="form-label" for="form2Example1"></label>
-                                    <input type="email" id="userName" name="userName" placeholder="Enter User Id"
-                                        #userName="ngModel" [(ngModel)]="Login.userName" class="form-control"
+                                    <input type="email" id="email" name="email" placeholder="Enter User Id"
+                                        #email="ngModel" [(ngModel)]="Login.email" class="form-control"
                                         required />
                                     <small
-                                        *ngIf="(userName.touched && userName.invalid) || (userName.invalid && LOGIN.submitted)">
+                                        *ngIf="(email.touched && email.invalid) || (email.invalid && LOGIN.submitted)">
                                         Email is
                                         mandatory</small>
                                 </div>
@@ -42,13 +42,12 @@
                                 </div>
                                 <div class="form-outline mb-2">
                                     <label class="form-label" for="form2Example3"></label>
-                                    <select class="form-select" id="SelectEntity" name="SelectEntity" aria-label="Default select example" #SelectEntity="ngModel" [(ngModel)]="Login.SelectEntity" required>
-                                        <option value="1">Select Entity</option>
-                                        <option value="2">HDFC</option>
-                                        <option value="3">AXIS</option>
-                                        <option value="4">AVERON</option>
+                                    <select class="form-select" id="entity" name="entity" aria-label="Default select example" #entity="ngModel" [(ngModel)]="Login.entity" required>
+                                        <option >Select Entity</option>
+                                        <option *ngFor="let item of entities"> {{item.entity}} </option>
+                                       
                                     </select>
-                                    <small *ngIf="(SelectEntity.touched && SelectEntity.invalid) || (SelectEntity.invalid && LOGIN.submitted)">Entity is required </small>
+                                    <small *ngIf="(entity.touched && entity.invalid) || (entity.invalid && LOGIN.submitted)">Entity is required </small>
                                 </div>
                                 <br>
                                 <div class="row mb-2">
