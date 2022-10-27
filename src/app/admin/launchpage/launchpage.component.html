@@ -4,57 +4,88 @@
   <div class="container-fluid" style="width: fit-content">
     <app-navbar></app-navbar>
   </div>
+  <div class="v1"></div>
   <div class="container-fluid bg-light text-center d-flex flex-column c-bg">
     <div class="row justify-content-evenly">
       <div class="col-sm-12 col-md-5 m-2 text-start">
         <div class="">
-          <h4>Welcome back, Govardhan Reddy</h4>
+          <h4>Welcome back,Govardhan Reddy</h4>
         </div>
       </div>
       <div class="col-sm-12 col-md-5 m-2">
         <div class="text-end">
-          <p>Govradhan Reddy Morusu</p>
+          <p>Govardhan Reddy</p>
           <p>Admin</p>
         </div>
       </div>
 
       <div class="col-sm-12 col-md-4 mt-4">
-        <div class="shadow pt-2">
-          <h5>Active Employees</h5>
-          <strong><p class="p-2">12</p></strong>
-        </div>
+        <a
+          [routerLink]="['/admin/activeemployeedata']"
+          routerLinkActive="router-link-active"
+        >
+          <div class="shadow pt-2 hover">
+            <h5>Active Employees</h5>
+            <strong><p class="p-2">12</p></strong>
+          </div>
+        </a>
       </div>
       <div class="col-sm-12 col-md-4 mt-4">
-        <div class="shadow pt-2">
-          <h5>Employee Expenses</h5>
-          <strong><p class="p-2">$14.69</p></strong>
-        </div>
+        <a
+          [routerLink]="['/admin/employeeexpensedata']"
+          routerLinkActive="router-link-active"
+        >
+          <div class="shadow pt-2 hover">
+            <h5>Employee Expenses</h5>
+            <strong><p class="p-2">$14.69</p></strong>
+          </div>
+        </a>
       </div>
       <div class="col-sm-12 col-md-4 mt-4">
-        <div class="shadow pt-2">
-          <h5>Outstanding Receivables</h5>
-          <strong><p class="p-2">$14.69</p></strong>
-        </div>
+        <a
+          [routerLink]="['/admin/receivables']"
+          routerLinkActive="router-link-active"
+        >
+          <div class="shadow pt-2 hover">
+            <h5>Outstanding Receivables</h5>
+            <strong><p class="p-2">$14.69</p></strong>
+          </div>
+        </a>
       </div>
 
       <div class="col-sm-12 col-md-4 mt-4">
-        <div class="shadow pt-2">
-          <h5>Management Expenses</h5>
-          <strong><p class="p-2">$14.69</p></strong>
-        </div>
+        <a
+          [routerLink]="['/admin/managementexpenses']"
+          routerLinkActive="router-link-active"
+        >
+          <div class="shadow pt-2 hover">
+            <h5>Management Expenses</h5>
+            <strong><p class="p-2">$14.69</p></strong>
+          </div>
+        </a>
       </div>
       <div class="col-sm-12 col-md-4 mt-4">
-        <div class="shadow pt-2">
-          <h5>Payroll &nbsp; expenses</h5>
-          <strong><p class="p-2">$14.69</p></strong>
-        </div>
+        <a
+          [routerLink]="['/admin/payrollexpenses']"
+          routerLinkActive="router-link-active"
+        >
+          <div class="shadow pt-2 hover">
+            <h5>Payroll &nbsp;Expenses</h5>
+            <strong><p class="p-2">$14.69</p></strong>
+          </div>
+        </a>
       </div>
 
       <div class="col-sm-12 col-md-4 mt-4">
-        <div class="shadow pt-2">
-          <h5>Operational &nbsp; &nbsp;cost</h5>
-          <strong><p class="p-2">$14.69</p></strong>
-        </div>
+        <a
+          [routerLink]="['/admin/operationalcost']"
+          routerLinkActive="router-link-active"
+        >
+          <div class="shadow pt-2 hover">
+            <h5>Operational Cost</h5>
+            <strong><p class="p-2">$14.69</p></strong>
+          </div>
+        </a>
       </div>
 
       <div class="col-sm-12 col-12 mt-4">
