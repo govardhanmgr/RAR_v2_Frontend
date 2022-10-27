@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, NgForm, Validators } from '@angular/forms';
+import { IREGISTRATIONPAGETHREE } from './registration-page3-model';
 
 @Component({
   selector: 'app-registration-page-three',
@@ -6,10 +8,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./registration-page-three.component.css']
 })
 export class RegistrationPageThreeComponent implements OnInit {
-
+  emailFormControl = new FormControl('', [Validators.required, Validators.email]);
+  SECURITY= {} as   IREGISTRATIONPAGETHREE;
   constructor() { }
 
   ngOnInit(): void {
   }
-
+  security(f:NgForm){
+    
+  }
 }
