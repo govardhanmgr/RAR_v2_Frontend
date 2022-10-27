@@ -2,7 +2,7 @@
     <h2 class="header">Management Expenses</h2>
     <br>
     <button [routerLink]="['/admin/launchpage']" routerLinkActive="router-link-active" type="button" class="btn btn-primary">Back</button>
-    <br><br>
+    <br>
     <div class="fixTableHead  shadow">
     <table class="table">
         <thead>
@@ -15,10 +15,10 @@
           </thead>
           <tbody>
             <tr *ngFor="let mgt of management">
-              <td>{{mgt.mgtEmployeeId}}</td>
-              <td>{{mgt.mgtFirstName}}</td>
-              <td>{{mgt.mgtLastName}}</td>
-              <td>{{mgt.mgtTotalManagementExpenses}}</td>
+              <td>{{mgt.employeeid}}</td>
+              <td>{{mgt.firstname}}</td>
+              <td>{{mgt.lastname}}</td>
+              <td>{{mgt.sum}}</td>
             </tr>
           </tbody>
     </table>
