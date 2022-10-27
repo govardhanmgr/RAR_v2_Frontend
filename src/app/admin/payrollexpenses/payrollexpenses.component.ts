@@ -25,16 +25,7 @@ export class PayrollexpensesComponent implements OnInit {
 
   ngOnInit(): void {
     
-    this.payrolldata=[
-      {Fname:'girish',Lname:'k',email:'k@gmail.com',role:'developer',entity:'snad',action:'update'},
-      {Fname:'girish',Lname:'k',email:'k@gmail.com',role:'developer',entity:'snad',action:'update'},
-      {Fname:'girish',Lname:'k',email:'k@gmail.com',role:'developer',entity:'snad',action:'update'},
-      {Fname:'girish',Lname:'k',email:'k@gmail.com',role:'developer',entity:'snad',action:'update'},
-      {Fname:'girish',Lname:'k',email:'k@gmail.com',role:'developer',entity:'snad',action:'update'},
-      {Fname:'girish',Lname:'k',email:'k@gmail.com',role:'developer',entity:'snad',action:'update'},
-      {Fname:'girish',Lname:'k',email:'k@gmail.com',role:'developer',entity:'snad',action:'update'},
-	  
-    ]
+    
    
     
     

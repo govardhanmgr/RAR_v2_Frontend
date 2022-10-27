@@ -16,7 +16,7 @@ export class LoginComponent implements OnInit,OnDestroy {
 
   Login = {} as ILogin;
   subscription!: Subscription;
-  entitysubscription!:Subscription
+
   entities= [] as any;
 
 
@@ -52,7 +52,7 @@ export class LoginComponent implements OnInit,OnDestroy {
   }
 
   getentities(){
-    this.entitysubscription=this._httpservice.getData("orgndata").subscribe({
+    this.subscription=this._httpservice.getData("orgndata").subscribe({
       next: data  => {
           this.entities=data
       }
@@ -63,9 +63,7 @@ export class LoginComponent implements OnInit,OnDestroy {
     if(this.subscription){
       this.subscription.unsubscribe();
     }
-    if(this.entitysubscription){
-      this.entities.unsubscribe();
-    }
+ 
     
     
   }
