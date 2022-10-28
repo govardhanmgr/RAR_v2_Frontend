@@ -14,7 +14,7 @@ export class EmpexpdetailsComponent implements OnInit {
   employeeeexpense= {} as any;
   empids ={} as any;
   subscription!: Subscription;
-  i=1;
+  
   constructor(private http:HttpService,private router:Router) { }
 
   ngOnInit(): void {

@@ -118,7 +118,7 @@
   
 </div> -->
 <div class="fixTableHead  shadow">
-  <table class="table">
+  <table class="table" class="auto-index">
       <thead>
           <tr>
             <th>SNo</th> 
@@ -129,8 +129,8 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let emp of Expensedata" >
-            <td>{{ i }}</td>
+          <tr *ngFor="let emp of Expensedata let i=index;">
+            <td>{{ i+1 }}</td>
             <td>{{emp.expensedate}}</td>
             <td>{{emp.expenses}}</td>
             <td>{{emp.amount}}</td>
