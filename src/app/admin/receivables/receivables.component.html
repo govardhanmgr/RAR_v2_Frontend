@@ -3,7 +3,8 @@
   <h2 class="header">Outstanding Receivables</h2>
   <br>
  <br>
-<button type="button" class="btn btn-primary">Back</button><br>
+<button [routerLink]="['/admin/launchpage']" routerLinkActive="router-link-active"  type="button" class="btn btn-primary" >Back</button><br>
+
 <br>
 <div class="fixTableHead  shadow">
   <table class="table">
@@ -16,11 +17,12 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let rec of receivables">
+          
+          <tr *ngFor="let rec of receivables" >
         
-            <td>{{rec.recClientId}}</td>
-            <td>{{rec.recClientName}}</td>
-            <td>{{rec.recReceivables}}</td>
+            <td>{{rec.clientid}}</td>
+            <td>{{rec.clientname}}</td>
+            <td>{{rec.sum}}</td>
            
        
          

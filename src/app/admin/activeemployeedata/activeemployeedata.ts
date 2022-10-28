@@ -1,8 +1,8 @@
 export interface IActive{
-    actEmployeeNumber:string;
-    actFirstName:string;
-    actLastName:string;
-    actEmail:string;
-    actContactNumber:number;
-    actRole:string;
+    employeeid:number;
+    firstname:string;
+    lastname:string;
+    emailaddress:string;
+    contactnumber:number;
+    jobtitle:string;
 }
