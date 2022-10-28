@@ -1,6 +1,6 @@
 <br>
 
-<button type="button" class="btn btn-primary" id="buttons">Back</button><br><br>
+<button [routerLink]="['/admin/launchpage']" routerLinkActive="router-link-active" type="button" class="btn btn-primary" id="buttons">Back</button><br><br>
 
 
 <section class="vh-200 gradient-custom">
@@ -13,24 +13,25 @@
             
             <h1 class="mb-4 pb-2 pb-md-0 mb-md-5">User Details</h1>
 
-            <form>
+            <form >
               <div class="row">
                 
                 <div class="col">
                     <label class="form-label" for="firstName">First Name</label>
-                  <input type="text" class="form-control">
+                  <input type="text" class="form-control" ngModel disabled>
                 </div>
               
 
                 <div class="col">
-                  <label class="form-label" for="lastName">Last Name</label>
-                  <input type="text" class="form-control">
+                  <label class="form-label" for="lastName" >Last Name</label>
+                  <input type="text" class="form-control" ngModel disabled>
+                  
                 </div>
 
 
                 <div class="col">
                   <label class="form-label" for="gender">Gender</label>
-                  <input type="text" class="form-control">
+                  <input type="text" class="form-control" ngModel disabled>
                 </div>
 
               </div>
@@ -44,19 +45,19 @@
                 
                 <div class="col">
                     <label class="form-label" for="address line 1">Address Line 1</label>
-                  <input type="text" class="form-control">
+                  <input type="text" class="form-control" ngModel disabled>
                 </div>
               
 
                 <div class="col">
                   <label class="form-label" for="address line 2">Address Line 2</label>
-                  <input type="text" class="form-control">
+                  <input type="text" class="form-control" ngModel disabled>
                 </div>
 
 
                 <div class="col">
                   <label class="form-label" for="city">City</label>
-                  <input type="text" class="form-control">
+                  <input type="text" class="form-control" ngModel disabled>
                 </div>
 
               </div>
@@ -71,19 +72,19 @@
                 
                 <div class="col">
                     <label class="form-label" for="zpcode">Zipcode</label>
-                  <input type="text" class="form-control">
+                  <input type="text" class="form-control" ngModel disabled>
                 </div>
               
 
                 <div class="col">
                   <label class="form-label" for="firstName">State</label>
-                  <input type="text" class="form-control">
+                  <input type="text" class="form-control" ngModel disabled>
                 </div>
 
 
                 <div class="col">
                   <label class="form-label" for="country">Country</label>
-                  <input type="text" class="form-control">
+                  <input type="text" class="form-control" ngModel disabled>
                 </div>
 
               </div>
@@ -96,19 +97,19 @@
                   
                   <div class="col">
                       <label class="form-label" for="role">Role</label>
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" ngModel disabled> 
                   </div>
                 
 
                   <div class="col">
                     <label class="form-label" for="entity">Entity</label>
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" ngModel disabled>
                   </div>
 
 
                   <div class="col">
                     <label class="form-label" for="company id">Company Id</label>
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" ngModel disabled>
     
                   </div>
 

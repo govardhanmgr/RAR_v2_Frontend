@@ -1,27 +1,45 @@
 form {
     text-align: center;
-   
 
 }
+
 .container{
     margin-top: 5%;
 }
 
-/* .form-select {
-    border-style: groove;
-    border-radius: 100px;
-}
-
-.form-control {
-    border-style: groove;
-    border-radius: 100px;
-} */
 #shadow{
     border-radius: 3%;
+    
     
 }
 #card{
     margin-right: 10%;
+   
+}
 
+.span{
+    color: red;
+}
+.question{
+    color: red;
+}
 
+.answer{
+    color: red;
+}
+
+#select{
+    text-align: center;
+}
+
+#Answer1{
+    text-align: center;
+}
+
+#Answer2{
+    text-align: center;
+}
+
+#Answer3{
+    text-align: center;
 }
