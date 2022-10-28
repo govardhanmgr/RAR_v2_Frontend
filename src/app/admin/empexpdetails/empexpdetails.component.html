@@ -6,8 +6,8 @@
 <br>
 
 
-
-  <div class="container" >
+<!-- 
+  <div class="container" > -->
     <div class="row">
       <div class="col-sm">
         <h5>Name: {{employeeeexpense.firstname +" "+employeeeexpense.lastname}} </h5>
@@ -118,7 +118,7 @@
   
 </div> -->
 <div class="fixTableHead  shadow">
-  <table class="table" class="auto-index">
+  <table class="table auto-index">
       <thead>
           <tr>
             <th>SNo</th> 
@@ -128,6 +128,7 @@
             <th>Invoice</th>
           </tr>
         </thead>
+        
         <tbody>
           <tr *ngFor="let emp of Expensedata let i=index;">
             <td>{{ i+1 }}</td>
