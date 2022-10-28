@@ -1,90 +1,120 @@
 <section class="">
-    
-      <div class="container" >
-        <div class="row gx-lg-5 align-items-center">
-          <div class="col-lg-6 mb-5 mb-lg-0">
-            <h1><b style="font-size: 55px;">ANALYZE</b></h1>
-            <p>TODAY'S CHALLENGES</p>
-  
-            <h1><b style="font-size: 55px;">ENVISION</b></h1>
-            <P>TOMORROW'S INNOVATION</P>
-    
-           
-          </div>
-  
-  
-          <div class="col-lg-6 mb-5 mb-lg-0"> 
-              <div class="card-body py-5 px-md-5" id="card">
-              
-                <div class="shadow-lg p-5 mb-7 bg-white" id="shadow">
 
-               
-                <form>
-                  <div class="row">
-                    <div class="text-center">
-                      <img src="./assets/snadicon.png" class="rounded">
-                        
-                      </div>
-                   
-                      <h1>Forgot Password?</h1>
-                      <br>
-                      <h6>Please answer the below security questions to reset password</h6>
-                    
-                  </div>
-                  <br>
-                  <select class="form-select" aria-label="Default select example">
-                    <option selected>Select Question</option>
-                    <option value="1">What is your favourite food/dish?</option>
-                    <option value="2">Who is your favourite actor?</option>
-                    <option value="3">What is the name of your favourite pet?</option>
-                    <option value="4">What is your favourite hobby?</option>
-                    <option value="5">Who is your best friend?</option>
-                  </select><br>
-            
-                  <div class="input-group mb-3">
-                    <input type="text" class="form-control" aria-label="Recipient's username" aria-describedby="button-addon2">
-                    </div>
+  <div class="container">
+    <div class="row gx-lg-5 align-items-center">
+      <div class="col-lg-6 mb-5 mb-lg-0">
+        <h1><b style="font-size: 55px;">ANALYZE</b></h1>
+        <p>TODAY'S CHALLENGES</p>
 
-                    <select class="form-select" aria-label="Default select example">
-                        <option selected>Select Question</option>
-                        <option value="1">What is your favourite food/dish?</option>
-                        <option value="2">Who is your favourite actor?</option>
-                        <option value="3">What is the name of your favourite pet?</option>
-                        <option value="4">What is your favourite hobby?</option>
-                        <option value="5">Who is your best friend?</option>
-                      </select><br>
-                
-                      <div class="input-group mb-3">
-                        <input type="text" class="form-control" aria-label="Recipient's username" aria-describedby="button-addon2">
-                        </div>
-                        <select class="form-select" aria-label="Default select example">
-                            <option selected>Select Question</option>
-                            <option value="1">What is your favourite food/dish?</option>
-                            <option value="2">Who is your favourite actor?</option>
-                            <option value="3">What is the name of your favourite pet?</option>
-                            <option value="4">What is your favourite hobby?</option>
-                            <option value="5">Who is your best friend?</option>
-                          </select><br>
-                    
-                          <div class="input-group mb-3">
-                            <input type="text" class="form-control" aria-label="Recipient's username" aria-describedby="button-addon2">
-                            </div><br>
-  
-                  
-                            <div>
+        <h1><b style="font-size: 55px;">ENVISION</b></h1>
+        <P>TOMORROW'S INNOVATION</P>
 
-                              <a type="submit" class="btn btn-primary btn-block mb-3" href="/resetpassword"><b>Continue</b></a>
-            
-                            </div>
-  
-                 
-                </form>
+
+      </div>
+
+
+      <div class="col-lg-6 mb-5 mb-lg-0">
+        <div class="card-body py-5 px-md-5" id="card">
+
+          <div class="shadow-lg p-5 mb-7 bg-white" id="shadow">
+
+
+            <form name="security" #security="ngForm" (ngSubmit)="security.valid && SEC(security)">
+              <div class="row">
+                <div class="text-center">
+                  <img src="./assets/snadicon.png" class="rounded">
+
+                </div>
+
+                <h1>Forgot Password?</h1>
+                <br>
+                <h6>Please answer the below security questions to reset password</h6>
+
               </div>
+              <br>
+
+
+
+              <select class="form-select" id="Question1"  name="Select Question"   #Question1="ngModel" aria-label="Default select example" [(ngModel)]="Securityquestions.Question1" required>
+         
+
+                <option value="undefined" disabled selected id="select">Select Question  </option>
+                <option value="1">What is your favourite food/dish?</option>
+                <option value="2">Who is your favourite actor?</option>
+                <option value="3">What is the name of your favourite pet?</option>
+                <option value="4">What is your favourite hobby?</option>
+                <option value="5">Who is your best friend?</option>
+              </select>
+
+              <small class="question" *ngIf="(Question1.touched && Question1.invalid) || (Question1.invalid && security.submitted)">Please select a question </small>
+              <br>
+              <!-- #Question1="ngModel" -->
+
+              <div class="form">
+
+
+                <input type="text" class="form-control" id="Answer1" name="Answer1" #Answer1="ngModel" placeholder="Answer" [(ngModel)]="Securityquestions.Answer1" required >
+                <small class="answer" *ngIf="(Answer1.touched && Answer1.invalid) || (Answer1.invalid && security.submitted)">Please answer the above question </small>
+
+              </div><br>
+
+    
+
+                <select class="form-select" id="Question2" name="Question2" #Question2="ngModel" aria-label="Default select example" [(ngModel)]="Securityquestions.Question2" required>
+
+                <option value="undefined" disabled selected id="select">Select Question  </option>
+                <option value="1">What is your favourite food/dish?</option>
+                <option value="2">Who is your favourite actor?</option>
+                <option value="3">What is the name of your favourite pet?</option>
+                <option value="4">What is your favourite hobby?</option>
+                <option value="5">Who is your best friend?</option>
+              </select>
+
+              <small class="question" *ngIf="(Question2.touched && Question2.invalid) || (Question2.invalid && security.submitted)" >Please select a question </small>
+              <br>
+
+
+
+              <div class="form">
+                <input type="text" class="form-control" id="Answer2" name="Answer2" #Answer2="ngModel" placeholder="Answer" [(ngModel)]="Securityquestions.Answer2" required >
+                <small class="answer" *ngIf="(Answer2.touched && Answer2.invalid) || (Answer2.invalid && security.submitted)">Please answer the above question </small>
+              </div><br>
+
+
+
+                <select class="form-select" id="Question3" name="Question3" #Question3="ngModel" aria-label="Default select example" [(ngModel)]="Securityquestions.Question3" required>
+
+                <option value="undefined" disabled selected id="select">Select Question </option>
+                <option value="1">What is your favourite food/dish?</option>
+                <option value="2">Who is your favourite actor?</option>
+                <option value="3">What is the name of your favourite pet?</option>
+                <option value="4">What is your favourite hobby?</option>
+                <option value="5">Who is your best friend?</option>
+              </select>
+
+              <small class="question" *ngIf="(Question3.touched && Question3.invalid) || (Question3.invalid && security.submitted)" >Please select a question </small>
+              <br>
+
+              <div class="form">
+                <input type="text" class="form-control" id="Answer3" name="Answer3" #Answer3="ngModel" placeholder="Answer" [(ngModel)]="Securityquestions.Answer3" required >
+                <small class="answer" *ngIf="(Answer3.touched && Answer3.invalid) || (Answer3.invalid && security.submitted)">Please answer the above question </small>
+              </div><br>
+
+
+
+              <div>
+
+                <a type="submit" class="btn btn-primary btn-block mb-3" href="/resetpassword"><b>Continue</b></a>
+
               </div>
-            
+
+
+            </form>
           </div>
         </div>
+
       </div>
-   
-   
-  </section>
+    </div>
+  </div>
+
+</section>
