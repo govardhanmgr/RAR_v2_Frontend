@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {FormControl, FormGroupDirective, NgForm, Validators} from '@angular/forms';
-import { IEducationUpdate } from './education-update-model';
+import { FormControl, NgForm, Validators } from '@angular/forms';
+import { IEducationUpdate } from './educationupdate-model';
+
+
 
 @Component({
   selector: 'app-education-update',
@@ -13,14 +15,13 @@ export class EducationUpdateComponent implements OnInit {
 
   educationupdate={} as IEducationUpdate;
 
-
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  education(f: NgForm){
 
-  }
+ education(f:NgForm){
 
+ }
 }

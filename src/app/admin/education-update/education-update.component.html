@@ -1,4 +1,4 @@
-<section class="">
+<form name="EDUCATIONUPDATE" #EDUCATIONUPDATE="ngForm" (ngSubmit)="EDUCATIONUPDATE.valid && education(EDUCATIONUPDATE)" novalidate>
     <br>
     <h1 class="text-center">Add Education Information</h1>
     <button type="button" class="btn btn-primary" style="margin-left: 19%;">Back</button>
@@ -8,7 +8,32 @@
          mb-2 bg-white rounded">
 
             <div class="card-body py-3 px-md-2">
-                <form name="EDUCATIONUPDATE" #EDUCATIONUPDATE="ngForm" (ngSubmit)="EDUCATIONUPDATE.valid && education(EDUCATIONUPDATE)">
+
+                <div class="col-md-6 mb-4">
+
+                    <div class="form-outline">
+                        <label for="UniversityName" class="form-label">University Name</label>
+                        <input type="text" id="UniversityName" placeholder="Enter University Name"  name="UniversityName"  #UniversityName="ngModel"  [(ngModel)]="educationupdate.UniversityName" required />
+                        <small *ngIf="(UniversityName.touched && UniversityName.invalid) || (UniversityName.invalid && EDUCATIONUPDATE.submitted)">University Name is required </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-6 mb-4">
+                    <label class="form-label">Degree</label>
+                    <select class="form-select" aria-label="Default select example">
+                        <option>Choose Option</option>
+                        <option value="1">Bachelors</option>
+                        <option value="2">Masters</option>
+                        <option value="3">Diploma</option>
+                        <option value="4">Doctorate</option>
+                    </select>
+
+
+                </div>
+                <span>
                     <div class="col-md-6 mb-4">
 
                         <div class="form-outline">
