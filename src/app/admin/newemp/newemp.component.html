@@ -1,12 +1,11 @@
 
-<form >
 <div class="col d-flex justify-content-center">
   <div class="shadow-lg p-5 mb-7 bg-white " id="shadow">
     <form name="Newemp" #Newemp="ngForm" (ngSubmit)="Newemp.valid && employee(Newemp)">
   <h4>Personal</h4>
 <div class="mb-3">
     <label for="exampleFormControlInput1" class="form-label" >Employee Number <span>*</span> </label>
-    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Employee Number" name="EmployeeNumber" aria-label="EmployeeNumber" #EmployeeNumber="ngModel"  [(ngModel)]="NEWEMP. EmployeeNumber" required />
+    <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="Employee Number" name="EmployeeNumber" aria-label="EmployeeNumber" #EmployeeNumber="ngModel"  [(ngModel)]="NEWEMP. EmployeeNumber" required />
     <small *ngIf="(EmployeeNumber.touched && EmployeeNumber.invalid) || (EmployeeNumber.invalid && Newemp.submitted)">EmployeeNumber is required </small>
 </div>
 
@@ -30,7 +29,7 @@
     <div class="mb-3">
       <label for="exampleFormControlInput1" class="form-label">Gender<span>*</span> </label>
   <select class="form-select"  name="Gender"aria-label="Default select example" #Gender="ngModel" [(ngModel)]="NEWEMP.Gender" required >
-    <option selected>Gender</option>
+    <option value="undefined" disabled selected>Gender</option>
     <option value="1">Male</option>
     <option value="2">Female</option>
   </select>
@@ -72,7 +71,7 @@
     <label for="exampleFormControlInput1" class="form-label"></label>
   <select class="form-select"  name="SelectCountry"aria-label="Default select example" #selectcountry="ngModel" [(ngModel)]="NEWEMP.SelectCountry" required >
   
-    <option selected>Select Country</option>
+    <option value="undefined" disabled selected>Select Country</option>
     <option value="1">India</option>
     <option value="2">America</option>
     <option value="3">Srilanka</option>
@@ -88,7 +87,7 @@
   <h4>Contact<span>*</span> </h4>
   <div class="row">
     <div class="col">
-      <input type="number" name="PhoneNumber"class="form-control" id="PhoneNumber" name="PhoneNumber" #PhoneNumber="ngModel" placeholder="Phone Number" minlength="10" [(ngModel)]="NEWEMP.PhoneNumber" required />
+      <input type="number" name="PhoneNumber"class="form-control" id="PhoneNumber" name="PhoneNumber" #PhoneNumber="ngModel" placeholder="Phone Number"  [(ngModel)]="NEWEMP.PhoneNumber" required />
       <small *ngIf="(PhoneNumber.touched && PhoneNumber.invalid) || (PhoneNumber.invalid && Newemp.submitted)">PhoneNumber is required </small>
     </div>
     <div class="col">
@@ -100,13 +99,13 @@
   <h4>Compensation</h4>
   <div class="mb-3">
     <select class="form-select" aria-label="Default select example" name="SelectPaySchedule" #SelectPaySchedule="ngModel" [(ngModel)]="NEWEMP.SelectPaySchedule" required>
-      <option selected>Select Pay Schedule</option>
+      <option value="undefined" disabled selected>Select Pay Schedule</option>
       <option value="1"></option>
       <option value="2"></option>
     </select><small *ngIf="(SelectPaySchedule.touched && SelectPaySchedule.invalid) || (SelectPaySchedule.invalid && Newemp.submitted)">SelectPaySchedule is required </small>
     <br>
     <select class="form-select" aria-label="Default select example" name="SelectPaySchedule" #SelectPayType="ngModel" [(ngModel)]="NEWEMP.SelectPayType" required>
-        <option selected>Select Pay Type</option>
+        <option value="undefined" disabled selected>Select Pay Type</option>
         <option value="1"></option>
         <option value="2"></option>
       </select><small *ngIf="(SelectPayType.touched && SelectPayType.invalid) || (SelectPayType.invalid && Newemp.submitted)">SelectPayType is required </small><br>
@@ -119,7 +118,7 @@
 
         <label for="exampleFormControlInput1" class="form-label">Employement Status</label>
         <select class="form-select" aria-label="Default select example" name="Employement Status" #EmployeementStatus="ngModel" [(ngModel)]="NEWEMP. EmployementStatus" required >
-            <option selected>Employement Status </option>
+            <option value="undefined" disabled selected>Employement Status </option>
             <option value="1"></option>
             <option value="2"></option>
           </select><small *ngIf="(EmployeementStatus.touched && EmployeementStatus.invalid) || (EmployeementStatus.invalid && Newemp.submitted)">EmployeementStatus is required </small>
@@ -127,38 +126,44 @@
 
           <label for="exampleFormControlInput1" class="form-label">Employement Type<span>*</span> </label>
           <select class="form-select" aria-label="Default select example" name="Employement Type" #EmployeementType="ngModel" [(ngModel)]="NEWEMP.EmployementType" required >
-              <option selected> Employement Type </option>
+              <option value="undefined" disabled selected> Employement Type </option>
               <option value="1"></option>
               <option value="2"></option>
             </select><small *ngIf="(EmployeementType.touched && EmployeementType.invalid) || (EmployeementType.invalid && Newemp.submitted)">EmployeementType is required </small><br>
 
             <label for="exampleFormControlInput1" class="form-label">Job Title<span>*</span> </label>
             <select class="form-select" aria-label="Default select example" name="SelectTitle" #selecttitle="ngModel" [(ngModel)]="NEWEMP.SelectTitle" required>
-                <option selected>Select Title </option>
+                <option value="undefined" disabled selected>Select Title </option>
                 <option value="1"></option>
                 <option value="2"></option>
               </select><small *ngIf="(selecttitle.touched && selecttitle.invalid) || (selecttitle.invalid && Newemp.submitted)">SelectTitle is required </small><br>
               <label for="exampleFormControlInput1" class="form-label">Supervisor Id<span>*</span> </label>
             <select class="form-select" aria-label="Default select example" name="Supervisor Id" #SupervisorId="ngModel" [(ngModel)]="NEWEMP.SupervisorId" required >
-                <option selected></option>
+                <option value="undefined" disabled selected></option>
                 <option value="1"></option>
                 <option value="2"></option>
               </select><small *ngIf="(SupervisorId.touched && SupervisorId.invalid) || (SupervisorId.invalid && Newemp.submitted)">SupervisorId is required </small><br>
               <label for="exampleFormControlInput1" class="form-label">Client Name<span>*</span> </label>
              <select class="form-select" aria-label="Default select example" name="Selectclient" #SelectClient="ngModel" [(ngModel)]="NEWEMP.Selectclient" required >
-                <option selected>Select client</option>
+                <option value="undefined" disabled selected>Select client</option>
                 <option value="1"></option>
                 <option value="2"></option>
-              </select>   <small *ngIf="(SelectClient.touched && SelectClient.invalid) || (SelectClient.invalid && Newemp.submitted)">SelectClient is required </small>
+              </select><small *ngIf="(SelectClient.touched && SelectClient.invalid) || (SelectClient.invalid && Newemp.submitted)">SelectClient is required </small>
 
          </div> 
          </div>
+         <div style="text-align: center;">
+          <button type="submit" class="btn btn-primary">Save Details</button>
+          </div>   
         </form>
-              </div>
+    </div>
               
 </div>
 <br>
-<div style="text-align: center;">
-<button type="button" class="btn btn-primary">Save Details</button></div>
+
       
+
+
+
+
 

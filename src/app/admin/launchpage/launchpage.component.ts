@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LaunchpageComponent implements OnInit {
 
+    loginuser : any;
+
   constructor() { }
 
   ngOnInit(): void {
+    this.loginuser= JSON.parse(localStorage.getItem("logindetails") || '{}'); 
+   
   }
 
 }
