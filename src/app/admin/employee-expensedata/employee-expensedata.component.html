@@ -5,7 +5,7 @@
 <!-- <button type="button" class="btn btn-primary">Back</button></div> -->
 
 <br>
-<div class="fixTableHead  shadow">
+<div class="fixTableHead shadow">
   <table class="table">
       <thead>
           <tr>
@@ -16,6 +16,8 @@
             
           </tr>
         </thead>
+
+
         <tbody>
           <tr *ngFor="let emp of EmployeeExpensedata" class="hover" (click)="select(emp)">
             <td>{{emp.employeeid}}</td>
