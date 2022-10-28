@@ -35,6 +35,7 @@ export class ManagementExpensesComponent implements OnInit {
   constructor(private http:HttpService) { }
 
   ngOnInit(): void {
+
     this.managmentaccessdata();
   }
 
@@ -42,6 +43,7 @@ export class ManagementExpensesComponent implements OnInit {
     this.subscription = this.http.getData("managmentaccessdata").subscribe({
       next: (data: any) => {
         this.management = data.result as IManagement[];
+        console.log (this.management)
       },
       error: reason => console.log(reason)
     });
