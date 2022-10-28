@@ -8,6 +8,23 @@ export interface Isignup {
     SelectEntity: string,
     DateOfBirth: string,
 }
+
+export interface Iemail
+{
+    EmailId:string,
+}
+
+export interface Isecurityquestions{
+  Question1:string,
+  Question2:string,
+  Question3:string,
+  Answer1:string,
+  Answer2:string,
+  Answer3:string,
+
+}
+
+
 export interface Iemail {
     EmailId: string,
 }
@@ -16,3 +33,4 @@ export interface ILogin {
     password: string,
     entity: string,
 }
+
