@@ -15,7 +15,7 @@
                 <div class="col-lg-6 ">
                     <div class="card-body">
                         <div class="shadow-lg p-5  bg-white rounded">
-                            <form>
+                            <form name="Security" #Security="ngForm" (ngSubmit)="Security.valid && security(Security)">
                               
                               <div class="img" align="center">
                                 <img alt="" src="../assets/snadicon.png" />
@@ -23,28 +23,33 @@
                              <h3 style="margin:none;" align="center"><b>Security Questions</b></h3>
                               <br>
                               <div class="form-group">
-                                <label for="userInput">What is your favourite food/dish?</label>
-                                <input type="name" class="form-control" id="text" placeholder="Give your answer">
+                                <label for="answer1">What is your favourite food/dish?</label>
+                                <input type="name" class="form-control" id="text" placeholder="Give your answer"  name="#answer1" aria-label="#answer1" #answer1="ngModel" [(ngModel)]="SECURITY.answer1" required/>
+                                <small *ngIf="(answer1.touched && answer1.invalid) || (answer1.invalid && Security.submitted)"> answer1 is required </small>
                             </div>
                             <br>
                             <div class="form-group">
-                                <label for="text">Who is your favourite actor?</label>
-                                <input type="name" class="form-control" id="text" placeholder="Give your answer">
+                                <label for="answer2">Who is your favourite actor?</label>
+                                <input type="name" class="form-control" id="text" placeholder="Give your answer" name="#answer2" aria-label="#answer2" #answer1="ngModel" [(ngModel)]="SECURITY.answer1" required/>
+                                <small *ngIf="(answer1.touched && answer1.invalid) || (answer1.invalid && Security.submitted)"> answer2 is required </small >
                             </div>
                             <br>
                             <div class="form-group">
-                                <label for="text">What is the name of your favourite pet?</label>
-                                <input type="name" class="form-control" id="text" placeholder="Give your answer">
+                                <label for="answer3">What is the name of your favourite pet?</label>
+                                <input type="name" class="form-control" id="text" placeholder="Give your answer" name="#answer2" aria-label="#answer2" #answer1="ngModel" [(ngModel)]="SECURITY.answer1" required/>
+                                <small *ngIf="(answer1.touched && answer1.invalid) || (answer1.invalid && Security.submitted)"> answer3 is required </small >
                             </div>
                             <br>
                             <div class="form-group">
-                                <label for="text">What is your favourite hobby?</label>
-                                <input type="name" class="form-control" id="text" placeholder="Give your answer">
+                                <label for="answer4">What is your favourite hobby?</label>
+                                <input type="name" class="form-control" id="text" placeholder="Give your answer" name="#answer2" aria-label="#answer2" #answer1="ngModel" [(ngModel)]="SECURITY.answer1" required/>
+                                <small *ngIf="(answer1.touched && answer1.invalid) || (answer1.invalid && Security.submitted)"> answer4 is required </small >
                             </div>
                             <br>
                             <div class="form-group">
-                                <label for="text">Who is your best friend?</label>
-                                <input type="name" class="form-control" id="text" placeholder="Give your answer">
+                                <label for="answer5">Who is your best friend?</label>
+                                <input type="name" class="form-control" id="text" placeholder="Give your answer" name="#answer2" aria-label="#answer2" #answer1="ngModel" [(ngModel)]="SECURITY.answer1" required/>
+                                <small *ngIf="(answer1.touched && answer1.invalid) || (answer1.invalid && Security.submitted)"> answer5 is required </small >
                             </div>
                             <br>
                                

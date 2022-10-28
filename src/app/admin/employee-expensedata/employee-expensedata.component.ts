@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { HttpService } from 'src/app/services/http.service';
 import { IEmployeeExpensedata } from './employee-expensedatamodul';
@@ -30,7 +31,8 @@ export class EmployeeExpensedataComponent implements OnInit {
   //   ]
   subscription!: Subscription;
 
-  constructor(private http:HttpService) { }
+  constructor(private http:HttpService,
+    private router:Router) { }
 
   ngOnInit(): void {
     this.employeeaccess();
@@ -44,6 +46,10 @@ export class EmployeeExpensedataComponent implements OnInit {
       },
       error: reason => console.log(reason)
     });
+  }
+  select(emp:any){
+    localStorage.setItem("empexpdetails",JSON.stringify(emp) );
+    this.router.navigate(["/admin/empexpdetails"])
   }
  
   ngOnDestroy(): void {
