@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { HttpService } from 'src/app/services/http.service';
 import { IActive } from './activeemployeedata';
@@ -11,123 +12,7 @@ import { IActive } from './activeemployeedata';
 export class ActiveemployeedataComponent implements OnInit {
   actemployees = [] as IActive[];
   subscription!: Subscription;
-    // this.actemployees = [
-    //   {
-    //     actEmployeeNumber: '12346',
-    //     actFirstName: 'koushik',
-    //     actLastName: 'anumasa',
-    //     actEmail: 'koushik@gmail.com',
-    //     actContactNumber: 12345679,
-    //     actRole: 'snad',
-    //   },
-    //   {
-    //     actEmployeeNumber: '12345',
-    //     actFirstName: 'koushik',
-    //     actLastName: 'anumasa',
-    //     actEmail: 'koushik@gmail.com',
-    //     actContactNumber: 12345679,
-    //     actRole: 'snad',
-    //   },
-    //   {
-    //     actEmployeeNumber: '12344',
-    //     actFirstName: 'koushik',
-    //     actLastName: 'anumasa',
-    //     actEmail: 'koushik@gmail.com',
-    //     actContactNumber: 12345679,
-    //     actRole: 'snad',
-    //   },
-    //   {
-    //     actEmployeeNumber: '12343',
-    //     actFirstName: 'koushik',
-    //     actLastName: 'anumasa',
-    //     actEmail: 'koushik@gmail.com',
-    //     actContactNumber: 12345679,
-    //     actRole: 'snad',
-    //   },
-    //   {
-    //     actEmployeeNumber: '12341',
-    //     actFirstName: 'koushik',
-    //     actLastName: 'anumasa',
-    //     actEmail: 'koushik@gmail.com',
-    //     actContactNumber: 12345679,
-    //     actRole: 'snad',
-    //   },
-    //   {
-    //     actEmployeeNumber: '12348',
-    //     actFirstName: 'koushik',
-    //     actLastName: 'anumasa',
-    //     actEmail: 'koushik@gmail.com',
-    //     actContactNumber: 12345679,
-    //     actRole: 'snad',
-    //   },
-    //   {
-    //     actEmployeeNumber: '12346',
-    //     actFirstName: 'koushik',
-    //     actLastName: 'anumasa',
-    //     actEmail: 'koushik@gmail.com',
-    //     actContactNumber: 12345679,
-    //     actRole: 'snad',
-    //   },
-    //   {
-    //     actEmployeeNumber: '12346',
-    //     actFirstName: 'koushik',
-    //     actLastName: 'anumasa',
-    //     actEmail: 'koushik@gmail.com',
-    //     actContactNumber: 12345679,
-    //     actRole: 'snad',
-    //   },
-    //   {
-    //     actEmployeeNumber: '12346',
-    //     actFirstName: 'koushik',
-    //     actLastName: 'anumasa',
-    //     actEmail: 'koushik@gmail.com',
-    //     actContactNumber: 12345679,
-    //     actRole: 'snad',
-    //   },
-    //   {
-    //     actEmployeeNumber: '12346',
-    //     actFirstName: 'koushik',
-    //     actLastName: 'anumasa',
-    //     actEmail: 'koushik@gmail.com',
-    //     actContactNumber: 12345679,
-    //     actRole: 'snad',
-    //   },
-    //   {
-    //     actEmployeeNumber: '12346',
-    //     actFirstName: 'koushik',
-    //     actLastName: 'anumasa',
-    //     actEmail: 'koushik@gmail.com',
-    //     actContactNumber: 12345679,
-    //     actRole: 'snad',
-    //   },
-    //   {
-    //     actEmployeeNumber: '12346',
-    //     actFirstName: 'koushik',
-    //     actLastName: 'anumasa',
-    //     actEmail: 'koushik@gmail.com',
-    //     actContactNumber: 12345679,
-    //     actRole: 'snad',
-    //   },
-    //   {
-    //     actEmployeeNumber: '12346',
-    //     actFirstName: 'koushik',
-    //     actLastName: 'anumasa',
-    //     actEmail: 'koushik@gmail.com',
-    //     actContactNumber: 12345679,
-    //     actRole: 'snad',
-    //   },
-    //   {
-    //     actEmployeeNumber: '12346',
-    //     actFirstName: 'koushik',
-    //     actLastName: 'anumasa',
-    //     actEmail: 'koushik@gmail.com',
-    //     actContactNumber: 12345679,
-    //     actRole: 'snad',
-    //   },
-    // ];
-    
-
-  constructor(private http:HttpService) { }
+  constructor(private http:HttpService,private router:Router) { }
 
   ngOnInit(): void {
     this.empdata();
@@ -140,8 +25,12 @@ export class ActiveemployeedataComponent implements OnInit {
       },
       error: reason => console.log(reason)
     });
+
   }
- 
+  select(act:any){
+    localStorage.setItem("personaldata",JSON.stringify(act) );
+    this.router.navigate(["/admin/personaldata"])
+  }
   ngOnDestroy(): void {
     if(this.subscription)
     this.subscription.unsubscribe();
