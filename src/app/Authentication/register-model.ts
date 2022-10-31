@@ -15,6 +15,7 @@ export interface Iemail
 }
 
 export interface Isecurityquestions{
+    
   Question1:string,
   Question2:string,
   Question3:string,
@@ -22,11 +23,6 @@ export interface Isecurityquestions{
   Answer2:string,
   Answer3:string,
 
-}
-
-
-export interface Iemail {
-    EmailId: string,
 }
 export interface ILogin {
     email: string,
