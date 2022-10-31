@@ -11,6 +11,7 @@
    
   </ul>
 <link rel="stylesheet" type="text/css" href="http://www.shieldui.com/shared/components/latest/css/light/all.min.css"  />
+
          <section class="vh-200 gradient-custom">
                 <div class="container py-5 h-100">
                   <div class="row justify-content-center align-items-center h-50">
@@ -19,8 +20,8 @@
                       
                         <div class="card-body p-4 p-md-4">
                           
-                          <h4 class="mb-4 pb-2 pb-md-0 mb-md-3">Hire Date</h4><input type="date" class="form-control" style="width: 50%;"><br>
-
+                          <h4 class="mb-4 pb-2 pb-md-0 mb-md-3">Hire Date</h4><input type="date" name="Hiredate" id="Hiredate"class="form-control" style="width: 50%;margin-bottom: 5;" required>
+                          
                           
                             <h4 class="mb-4 pb-2 pb-md-0 mb-md-3">Employeement Status</h4> 
                             <button type="button" class="btn  btn-primary" >+Update</button>
@@ -40,8 +41,7 @@
                                      <tr>
                                         <td><input type="date" class="form-control" ><br></td>
                                         <td><input type="text" class="form-control" ></td>
-                                        <td><input type="text" class="form-control" ></td>
-                                       
+                                        <td><input type="text" class="form-control" ></td>                                       
                                      </tr>
 
                                      
@@ -64,46 +64,16 @@
                               <th>Reports To</th>
                             </tr>
                           </thead>
-                  
-                         <tr>
-                            <td>2022-06-30</td>
-                            <td>Hyderabad</td>
-                            <td>Wipro</td>
-                            <td>Sales</td>
-                            <td>Kishore</td>
-                            
+                          <tr *ngFor="let item of jobtab">
+                            <td>{{item.effectivedate}}</td>
+                            <td>{{item.location}}</td>
+                            <td>{{item.clientname}}</td>
+                            <td>{{item.jobtitle}}</td>
+                            <td>{{item.reportsto}}</td>
+                          </tr>
+                         
 
-                         </tr>
-
-                         <tr>
-                            <td>2022-06-30</td>
-                            <td>Hyderabad</td>
-                            <td>Wipro</td>
-                            <td>Sales</td>
-                            <td>Kishore</td>
-                         </tr>
-                     
-                         <tr>
-                            <td>2022-06-30</td>
-                            <td>Hyderabad</td>
-                            <td>Wipro</td>
-                            <td>Sales</td>
-                            <td>Kishore</td>
-                         </tr>
-                         <tr>
-                            <td>2022-06-30</td>
-                            <td>Hyderabad</td>
-                            <td>Wipro</td>
-                            <td>Sales</td>
-                            <td>Kishore</td>
-                         </tr>
-                         <tr>
-                            <td>2022-06-30</td>
-                            <td>Hyderabad</td>
-                            <td>Wipro</td>
-                            <td>Sales</td>
-                            <td>Kishore</td>
-                         </tr>
+                        
                         
                     </table>                    
                     
@@ -123,79 +93,20 @@
                               <th>Over Time Rate</th>
                               <th>Change Reason </th>
                               <th>Comment</th>
-
+                            </tr>
+                            <tr *ngFor="let item of jobtab">
+                              <td>{{item.effectivedate}}</td>
+                              <td>{{item.payschedule}}</td>
+                              <td>{{item.paytype}}</td>
+                              <td>{{item.payrate}}</td>
+                              <td>{{item.overtime}}</td>
+                              <td>{{item.overtimerate}}</td>
+                              <td>{{item.changereason}}</td>
+                              <td>{{item.comment}}</td>
 
                             </tr>
+
                           </thead>
-                  
-                         <tr>
-                            <td>2022-06-30</td>
-                            <td>Every Month</td>
-                            <td>Hourly</td>
-                            <td>1000</td>
-                            <td>Non-Exempt</td>
-                            <td>66</td>
-                            <td>Promotion</td>
-                            <td>No</td>
-
-                            
-
-                         </tr>
-
-                         <tr>
-                            <td>2022-06-30</td>
-                            <td>Every Month</td>
-                            <td>Hourly</td>
-                            <td>1000</td>
-                            <td>Non-Exempt</td>
-                            <td>66</td>
-                            <td>Promotion</td>
-                            <td>No</td>
-
-                            
-
-                         </tr>
-                     
-                         <tr>
-                            <td>2022-06-30</td>
-                            <td>Every Month</td>
-                            <td>Hourly</td>
-                            <td>1000</td>
-                            <td>Non-Exempt</td>
-                            <td>66</td>
-                            <td>Promotion</td>
-                            <td>No</td>
-
-                            
-
-                         </tr>
-                         <tr>
-                            <td>2022-06-30</td>
-                            <td>Every Month</td>
-                            <td>Hourly</td>
-                            <td>1000</td>
-                            <td>Non-Exempt</td>
-                            <td>66</td>
-                            <td>Promotion</td>
-                            <td>No</td>
-
-                            
-
-                         </tr>
-                         <tr>
-                            <td>2022-06-30</td>
-                            <td>Every Month</td>
-                            <td>Hourly</td>
-                            <td>1000</td>
-                            <td>Non-Exempt</td>
-                            <td>66</td>
-                            <td>Promotion</td>
-                            <td>No</td>
-
-                            
-
-                         </tr>
-                        
                     </table>                    
                     
                 </div> 

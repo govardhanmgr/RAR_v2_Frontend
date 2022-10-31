@@ -1,32 +1,28 @@
-<form>
+<form name="Visa" #Visa="ngForm" (ngSubmit)="Visa.valid && Visupdate(Visa)">
     <h1 class="text-center">Add Visa Information</h1>
     <button type="button" class="btn btn-primary" style="margin-left: 9%;">Back</button>
-    <div class="px-4 py-2 px-md-5 col-md-8 text-center text-lg-start" style="margin-left:15%">
-        <div class=" shadow-lg p-5 mb-4 bg-white rounded">
-            <div class="card-body py-3 px-md-4">
+    <div class="px-4 py-2 px-md-5 col-md-6 text-center text-lg-start" style="margin-left:24%">
+        <div class=" shadow-lg p-4
+         mb-2 bg-white rounded">
+            <div class="card-body py-3 px-md-2">
                 <div class="col-md-6 mb-4">
-                        <div class="form-outline">
-                            <label for="Date" class="form-label">Date</label>
-                            <input type="date" class="form-control" id="Date" placeholder="Date"/>
-                        </div>
+                    <div class="form-outline">
+                      <label for="Date" class="form-label">Date</label><span style="color: red;right: -3px;position: relative;">*</span>
+                      <input type="date" class="form-control" id="date" name="date" #date="ngModel" placeholder="Date"  [(ngModel)]="VISA.date" required />
+                      <small *ngIf="(date.touched && date.invalid) || (date.invalid && Visa.submitted)">*Date is required </small>
                     </div>
-                    
+                  </div>
                 <div class="col-md-6 mb-4">
-                    <label class="form-label">Visa Type</label>
-                    <select class="form-select" aria-label="Default select example">
+                    <label class="form-label">Visa Type</label><span style="color: red;right: -3px;position: relative;">*</span>
+                    <select class="form-select" id="visastatus" name="visastatus" aria-label="Default select example" #visastatus="ngModel" [(ngModel)]="VISA.visastatus" required>
                         <option>Choose Option</option>
-                        <option value="1">H1-B</option>
-                        <option value="2">H2-B</option>
-                        <option value="B1">B1</option>
-                        <option value="B2">B2</option>
-                        <option value="L1A">L1A</option>
-                        <option value="L2A">L2A</option>
-                        <option value="permanent">Permanent Resident </option>
+                        <option *ngFor="let item of visaupdate" >{{item.visa}}</option>
                     </select>
+                    <small *ngIf="(visastatus.touched && visastatus.invalid) || (visastatus.invalid && Visa.submitted)">*Visa Type is required </small>
                 </div>
                 <div class="col-md-6 mb-4">
-                    <label class="form-label">Issuing Country</label>
-                    <select class="form-select" aria-label="Default select example">
+                    <label class="form-label">Issuing Country</label><span style="color: red;right: -3px;position: relative;">*</span>
+                    <select class="form-select" id="issuingcountry" name="issuingcountry" aria-label="Default select example"  #issuingcountry="ngModel" [(ngModel)]="VISA.issuingcountry" required>
                         <option disabled selected value>Country</option>
                                 <option value="Afghanistan">Afghanistan</option>
                                 <option value="Albania">Albania</option>
@@ -34,7 +30,7 @@
                                 <option value="American Samoa">American Samoa</option>
                                 <option value="Andorra">Andorra</option>
                                 <option value="Angola">Angola</option>
-                                <option value="Anguilla">Anguilla</option>
+                                <option value="Anguilla">Anguilla</option>  
                                 <option value="Antartica">Antarctica</option>
                                 <option value="Antigua and Barbuda">Antigua and Barbuda</option>
                                 <option value="Argentina">Argentina</option>
@@ -162,17 +158,22 @@
                                 <option value="Maldives">Maldives</option>
                                 <option value="Mali">Mali</option>
                     </select>
+                    <small *ngIf="(issuingcountry.touched && issuingcountry.invalid) || (issuingcountry.invalid && Visa.submitted)">*Country is required </small>
                 </div>
-                     <div class="col-md-6 mb-4">
-                        <div class="form-outline">
-                            <label for="Date" class="form-label">Issued Date</label>
-                            <input type="date" class="form-control" id="Date" placeholder="Date"/>
-                        </div>
+                <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                        <label for="Date" class="form-label">Issued Date</label><span style="color: red;right: -3px;position: relative;">*</span>
+                        <input type="date" class="form-control"  id="issueddate" name="issueddate" placeholder="Date"
+                        #issueddate="ngModel" placeholder="IssuedDate" [(ngModel)]="VISA.issueddate" required/>
+                        <small *ngIf="(issueddate.touched && issueddate.invalid) || (issueddate.invalid && Visa.submitted)">*Issued Date is required </small>
                     </div>
+                </div>
                     <div class="col-md-6 mb-4">
                         <div class="form-outline">
-                            <label for="Date" class="form-label">Expiration Date</label>
-                            <input type="date" class="form-control" id="Date" placeholder="Date"/>
+                            <label for="Date" class="form-label">Expiration Date</label><span style="color: red;right: -3px;position: relative;">*</span>
+                            <input type="date" class="form-control" id="expirationdate" name="expirationdate" placeholder="Date"
+                            #expirationdate="ngModel" placeholder="ExpirationDate" [(ngModel)]="VISA.expirationdate" required/>
+                            <small *ngIf="(expirationdate.touched && expirationdate.invalid) || (expirationdate.invalid && Visa.submitted)">*Expiration Date is required </small>
                         </div>
                     </div>
                     <div class="mt-4 pt-2">

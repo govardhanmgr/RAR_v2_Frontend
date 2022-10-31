@@ -42,6 +42,7 @@ export class EmployeeExpensedataComponent implements OnInit {
     this.subscription = this.http.getData("employeeaccessdata").subscribe({
       next: (data: any) => {
         this.EmployeeExpensedata = data.result as IEmployeeExpensedata[];
+        console.log (this.EmployeeExpensedata)
       },
       error: reason => console.log(reason)
     });
