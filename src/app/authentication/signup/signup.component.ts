@@ -18,7 +18,7 @@ export class SignupComponent implements OnInit {
   }
  
   register(f:NgForm){
-
+        console.log(this.Signup);
     
   }
 }
