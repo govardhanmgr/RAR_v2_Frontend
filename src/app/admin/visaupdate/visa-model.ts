@@ -1,4 +1,5 @@
-export interface IActive {
+export interface Ivisaupdate
+{
     employeeid: number,
     firstname: string,
     lastname: string,
@@ -11,7 +12,7 @@ export interface IActive {
     visastatus: string,
     gender: string,
     entity: string,
-    dateofbirth: string,
+    dateofbirth:string,
     clientname: string,
     clientcode: string,
     startdate: string,
@@ -20,14 +21,14 @@ export interface IActive {
     immigrationstatus: string,
     highestdegree: string,
     university: string,
-    contactnumber: string,
+    contactnumber:string,
     addressline2: string,
     city: string,
     state: string,
     zipcode: number,
     country: string,
     ssn: string,
-    taxfilenumber: number,
+    taxfilenumber:number,
     emergencynumber: number,
     effectivedate: string,
     location: string,
@@ -44,11 +45,11 @@ export interface IActive {
     degreestartdate: string,
     degreeenddate: string,
     date: string,
-    issuingcountry: string,
+    issuingcountry:string,
     issueddate: string,
     expirationdate: string,
     status: string,
     employementstatus: string,
-    jobeffectivedate: string,
+    jobeffectivedate:string,
     compensationeffectivedate: string
 }

@@ -22,18 +22,22 @@
           </thead>
 
           <tbody>
+
             <tr *ngFor="let emp of employees">
-              <td>{{ emp.empFirstName }}</td>
-              <td>{{ emp.empLastName }}</td>
-              <td>{{ emp.empEmail }}</td>
-              <td>{{ emp.empRole }}</td>
-              <td>{{ emp.empEntity }}</td>
+              <ng-template [ngIf]="emp.status=='pending'">
+              <td>{{ emp.firstName }}</td>
+              <td>{{ emp.lastName }}</td>
+              <td>{{ emp.email}}</td>
+              <td>{{ emp.role }}</td>
+              <td>{{ emp.entity }}</td>
               <td>
                 <button class="btn btn-primary " [routerLink]="'/admin/viewdetails'">View</button>
                 <button class="btn btn-success me-2 ms-2">Approved</button>
                 <button class="btn btn-danger">Reject</button>
               </td>
+            </ng-template>
             </tr>
+      
           </tbody>
         </table>
       </div>

@@ -45,6 +45,7 @@ export class ReceivablesComponent implements OnInit {
     this.subscription = this.http.getData("accessdata").subscribe({
       next: (data: any) => {
         this.receivables = data.result as IReceivables[];
+        console.log(this.receivables)
       },
       error: reason => console.log(reason)
     });
