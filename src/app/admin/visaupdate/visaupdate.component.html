@@ -1,19 +1,20 @@
-<form>
+<form name="Visa" #Visa="ngForm" (ngSubmit)="Visa.valid && visa(Visa)">
     <h1 class="text-center">Add Visa Information</h1>
     <button type="button" class="btn btn-primary" style="margin-left: 9%;">Back</button>
-    <div class="px-4 py-2 px-md-5 col-md-8 text-center text-lg-start" style="margin-left:15%">
-        <div class=" shadow-lg p-5 mb-4 bg-white rounded">
-            <div class="card-body py-3 px-md-4">
+    <div class="px-4 py-2 px-md-5 col-md-6 text-center text-lg-start" style="margin-left:24%">
+        <div class=" shadow-lg p-4
+         mb-2 bg-white rounded">
+            <div class="card-body py-3 px-md-2">
                 <div class="col-md-6 mb-4">
-                        <div class="form-outline">
-                            <label for="Date" class="form-label">Date</label>
-                            <input type="date" class="form-control" id="Date" placeholder="Date"/>
-                        </div>
+                    <div class="form-outline">
+                      <label for="Date" class="form-label">Date</label><span style="color: red;right: -3px;position: relative;">*</span>
+                      <input type="date" class="form-control" id="Date" name="Date" #Date="ngModel" placeholder="Date"  [(ngModel)]="VISA.Date" required />
+                      <small *ngIf="(Date.touched && Date.invalid) || (Date.invalid && Visa.submitted)">*Date is required </small>
                     </div>
-                    
+                  </div>
                 <div class="col-md-6 mb-4">
-                    <label class="form-label">Visa Type</label>
-                    <select class="form-select" aria-label="Default select example">
+                    <label class="form-label">Visa Type</label><span style="color: red;right: -3px;position: relative;">*</span>
+                    <select class="form-select" id="VisaType" name="VisaType" aria-label="Default select example" #VisaType="ngModel" [(ngModel)]="VISA.VisaType" required>
                         <option>Choose Option</option>
                         <option value="1">H1-B</option>
                         <option value="2">H2-B</option>
@@ -23,10 +24,11 @@
                         <option value="L2A">L2A</option>
                         <option value="permanent">Permanent Resident </option>
                     </select>
+                    <small *ngIf="(VisaType.touched && VisaType.invalid) || (VisaType.invalid && Visa.submitted)">*Visa Type is required </small>
                 </div>
                 <div class="col-md-6 mb-4">
-                    <label class="form-label">Issuing Country</label>
-                    <select class="form-select" aria-label="Default select example">
+                    <label class="form-label">Issuing Country</label><span style="color: red;right: -3px;position: relative;">*</span>
+                    <select class="form-select" id="IssuingCountry" name="IssuingCountry" aria-label="Default select example"  #IssuingCountry="ngModel" [(ngModel)]="VISA.IssuingCountry" required>
                         <option disabled selected value>Country</option>
                                 <option value="Afghanistan">Afghanistan</option>
                                 <option value="Albania">Albania</option>
@@ -162,17 +164,22 @@
                                 <option value="Maldives">Maldives</option>
                                 <option value="Mali">Mali</option>
                     </select>
+                    <small *ngIf="(IssuingCountry.touched && IssuingCountry.invalid) || (IssuingCountry.invalid && Visa.submitted)">*Country is required </small>
                 </div>
-                     <div class="col-md-6 mb-4">
-                        <div class="form-outline">
-                            <label for="Date" class="form-label">Issued Date</label>
-                            <input type="date" class="form-control" id="Date" placeholder="Date"/>
-                        </div>
+                <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                        <label for="Date" class="form-label">Issued Date</label><span style="color: red;right: -3px;position: relative;">*</span>
+                        <input type="date" class="form-control"  id="IssuedDate" name="IssuedDate" placeholder="Date"
+                        #IssuedDate="ngModel" placeholder="IssuedDate" [(ngModel)]="VISA.IssuedDate" required/>
+                        <small *ngIf="(IssuedDate.touched && IssuedDate.invalid) || (IssuedDate.invalid && Visa.submitted)">*Issued Date is required </small>
                     </div>
+                </div>
                     <div class="col-md-6 mb-4">
                         <div class="form-outline">
-                            <label for="Date" class="form-label">Expiration Date</label>
-                            <input type="date" class="form-control" id="Date" placeholder="Date"/>
+                            <label for="Date" class="form-label">Expiration Date</label><span style="color: red;right: -3px;position: relative;">*</span>
+                            <input type="date" class="form-control" id="ExpirationDate" name="ExpirationDate" placeholder="Date"
+                            #ExpirationDate="ngModel" placeholder="ExpirationDate" [(ngModel)]="VISA.ExpirationDate" required/>
+                            <small *ngIf="(ExpirationDate.touched && ExpirationDate.invalid) || (ExpirationDate.invalid && Visa.submitted)">*Expiration Date is required </small>
                         </div>
                     </div>
                     <div class="mt-4 pt-2">

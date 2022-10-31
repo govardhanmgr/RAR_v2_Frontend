@@ -1,4 +1,4 @@
-<form>
+<form name="EDUCATIONUPDATE" #EDUCATIONUPDATE="ngForm" (ngSubmit)="EDUCATIONUPDATE.valid && education(EDUCATIONUPDATE)" novalidate>
     <br>
     <h1 class="text-center">Add Education Information</h1>
     <button type="button" class="btn btn-primary" style="margin-left: 19%;">Back</button>
@@ -6,13 +6,15 @@
     <div class="px-4 py-2 px-md-5 col-md-6 text-center text-lg-start" style="margin-left:24%">
         <div class=" shadow-lg p-4
          mb-2 bg-white rounded">
+
             <div class="card-body py-3 px-md-2">
 
                 <div class="col-md-6 mb-4">
 
                     <div class="form-outline">
-                        <label for="University" class="form-label">University Name</label>
-                        <input type="text" class="form-control" id="University" placeholder="Enter University Name" />
+                        <label for="UniversityName" class="form-label">University Name</label>
+                        <input type="text" id="UniversityName" placeholder="Enter University Name"  name="UniversityName"  #UniversityName="ngModel"  [(ngModel)]="educationupdate.UniversityName" required />
+                        <small *ngIf="(UniversityName.touched && UniversityName.invalid) || (UniversityName.invalid && EDUCATIONUPDATE.submitted)">University Name is required </small>
 
                     </div>
 
@@ -35,48 +37,76 @@
                     <div class="col-md-6 mb-4">
 
                         <div class="form-outline">
-                            <label for="Specialization" class="form-label">Specialization</label>
-                            <input type="text" class="form-control" id="Specialization" placeholder="Specialization" />
-                        </div>
-
-                    </div>
-                    <div class="col-md-2 mb-4">
-
-                        <div class="form-outline">
-                            <label for="GPA" class="form-label">GPA</label>
-                            <input type="text" class="form-control" id="GPA" placeholder="GPA" />
+                            <label for="form2Example1" class="form-label">University Name</label>
+                            <input type="text" class="form-control" id="UniversityName" placeholder="University Name"
+                            name="UniversityName"  #UniversityName="ngModel"  [(ngModel)]="education.UniversityName" required />
+                            <small *ngIf="(UniversityName.touched && UniversityName.invalid) || (UniversityName.invalid && EDUCATIONUPDATE.submitted)">University Name is required </small>
 
                         </div>
 
                     </div>
-                </span>
-                <span>
+
+
+                    <div class="col-md-6 mb-4">
+                        <label class="form-label">Degree</label>
+                        <select class="form-select" aria-label="Default select example">
+                            <option>Choose Option</option>
+                            <option value="1">Bachelors</option>
+                            <option value="2">Masters</option>
+                            <option value="3">Diploma</option>
+                            <option value="4">Doctorate</option>
+                        </select>
+
+
+                    </div>
+                    <span>
+                        <div class="col-md-6 mb-4">
+
+                            <div class="form-outline">
+                                <label for="Specialization" class="form-label">Specialization</label>
+                                <input type="text" class="form-control" id="Specialization"
+                                    placeholder="Specialization" />
+                            </div>
+
+                        </div>
+                        <div class="col-md-2 mb-4">
+
+                            <div class="form-outline">
+                                <label for="GPA" class="form-label">GPA</label>
+                                <input type="text" class="form-control" id="GPA" placeholder="GPA" />
+
+                            </div>
+
+                        </div>
+                    </span>
+                    <span>
+                        <div class="col-md-6 mb-4">
+
+                            <div class="form-outline">
+                                <label for="DegreeStartDate" class="form-label">Degree Start Date</label>
+                                <input type="date" class="form-control" id="DegreeStartDate"
+                                    placeholder="DegreeStartDate" />
+
+                            </div>
+
+                        </div>
+                    </span>
                     <div class="col-md-6 mb-4">
 
                         <div class="form-outline">
-                            <label for="DegreeStartDate" class="form-label">Degree Start Date</label>
-                            <input type="date" class="form-control" id="DateOFBirth" placeholder="DateOFBirth" />
+                            <label for="DegreeEndDate" class="form-label">Degree End Date</label>
+                            <input type="date" class="form-control" id="DegreeEndDate" placeholder="DegreeEndDate" />
 
                         </div>
 
                     </div>
-                </span>
-                <div class="col-md-6 mb-4">
 
-                    <div class="form-outline">
-                        <label for="DegreeEndDate" class="form-label">Degree End Date</label>
-                        <input type="date" class="form-control" id="DateOFBirth" placeholder="DateOFBirth" />
-
+                    <div class="mt-4 pt-2">
+                        <input class="btn btn-primary " type="submit" value="Add Details" style="margin-left: 45%;" />
                     </div>
 
-                </div>
-
-                <div class="mt-4 pt-2">
-                    <input class="btn btn-primary " type="submit" value="Add Details" style="margin-left: 45%;" />
-                </div>
-
-
+                </form>
             </div>
         </div>
     </div>
-</form>
+</section>
