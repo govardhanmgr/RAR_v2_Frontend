@@ -2,7 +2,7 @@ export interface IEducationUpdate{
     UniversityName : string,
     Degree : string,
     Specialization: string,
-    Gpa : Number,
+    GPA : Number,
     DegreeStartDate : Number,
     DegreeEndDate : Number,
 }
