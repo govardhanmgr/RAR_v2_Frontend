@@ -11,7 +11,7 @@ export interface Isignup {
 
 export interface Iemail
 {
-    EmailId:string,
+    email:string,
 }
 
 export interface Isecurityquestions{
