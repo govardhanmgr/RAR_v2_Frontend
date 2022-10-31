@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { IEmployee } from './employee-details';
+import { Subscription } from 'rxjs';
+import { HttpService } from 'src/app/services/http.service';
+
+
 
 @Component({
   selector: 'app-pendingrequest',
@@ -9,38 +13,27 @@ import { IEmployee } from './employee-details';
 export class PendingrequestComponent implements OnInit {
 
   employees = [] as IEmployee[];
+  subscription!: Subscription;
 
-  constructor() { }
+  constructor(private http:HttpService) { }
 
   ngOnInit(): void {
-    this.employees=[
-      {empFirstName:'sripathi', empLastName:'mamillapalli', empEmail:'sripathisri8@gmail.com', empRole:'software developer',  empEntity:'snad' },
-      {empFirstName:'sripathi', empLastName:'mamillapalli', empEmail:'sripathisri8@gmail.com', empRole:'software developer',  empEntity:'snad' },
-      {empFirstName:'sripathi', empLastName:'mamillapalli', empEmail:'sripathisri8@gmail.com', empRole:'software developer',  empEntity:'snad' },
-      {empFirstName:'sripathi', empLastName:'mamillapalli', empEmail:'sripathisri8@gmail.com', empRole:'software developer',  empEntity:'snad' },
-      {empFirstName:'sripathi', empLastName:'mamillapalli', empEmail:'sripathisri8@gmail.com', empRole:'software developer',  empEntity:'snad' },
-      {empFirstName:'sripathi', empLastName:'mamillapalli', empEmail:'sripathisri8@gmail.com', empRole:'software developer',  empEntity:'snad' },
-      {empFirstName:'sripathi', empLastName:'mamillapalli', empEmail:'sripathisri8@gmail.com', empRole:'software developer',  empEntity:'snad' },
-      {empFirstName:'sripathi', empLastName:'mamillapalli', empEmail:'sripathisri8@gmail.com', empRole:'software developer',  empEntity:'snad' },
-      {empFirstName:'sripathi', empLastName:'mamillapalli', empEmail:'sripathisri8@gmail.com', empRole:'software developer',  empEntity:'snad' },
-      {empFirstName:'sripathi', empLastName:'mamillapalli', empEmail:'sripathisri8@gmail.com', empRole:'software developer',  empEntity:'snad' },
-      {empFirstName:'sripathi', empLastName:'mamillapalli', empEmail:'sripathisri8@gmail.com', empRole:'software developer',  empEntity:'snad' },
-      {empFirstName:'sripathi', empLastName:'mamillapalli', empEmail:'sripathisri8@gmail.com', empRole:'software developer',  empEntity:'snad' },
-      {empFirstName:'sripathi', empLastName:'mamillapalli', empEmail:'sripathisri8@gmail.com', empRole:'software developer',  empEntity:'snad' },
-      {empFirstName:'sripathi', empLastName:'mamillapalli', empEmail:'sripathisri8@gmail.com', empRole:'software developer',  empEntity:'snad' },
-      {empFirstName:'sripathi', empLastName:'mamillapalli', empEmail:'sripathisri8@gmail.com', empRole:'software developer',  empEntity:'snad' },
-      {empFirstName:'sripathi', empLastName:'mamillapalli', empEmail:'sripathisri8@gmail.com', empRole:'software developer',  empEntity:'snad' },
-      {empFirstName:'sripathi', empLastName:'mamillapalli', empEmail:'sripathisri8@gmail.com', empRole:'software developer',  empEntity:'snad' },
-      {empFirstName:'sripathi', empLastName:'mamillapalli', empEmail:'sripathisri8@gmail.com', empRole:'software developer',  empEntity:'snad' },
-      {empFirstName:'sripathi', empLastName:'mamillapalli', empEmail:'sripathisri8@gmail.com', empRole:'software developer',  empEntity:'snad' },
-      {empFirstName:'sripathi', empLastName:'mamillapalli', empEmail:'sripathisri8@gmail.com', empRole:'software developer',  empEntity:'snad' }
-      
-      
-    ]
+    this. empdata();
     
-
   }
 
-  
+  empdata() {
+    this.subscription = this.http.getData("reg").subscribe({
+      next: (data: any) => {
+        this.employees = data as IEmployee[];
+      },
+      error: reason => console.log(reason)
+    });
+  }
+ 
+  ngOnDestroy(): void {
+    if(this.subscription)
+    this.subscription.unsubscribe();
+  }
 
 }
