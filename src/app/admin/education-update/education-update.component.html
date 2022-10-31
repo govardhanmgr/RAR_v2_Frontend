@@ -1,11 +1,11 @@
-<form name="EDUCATIONUPDATE" #EDUCATIONUPDATE="ngForm" (ngSubmit)="EDUCATIONUPDATE.valid && education(EDUCATIONUPDATE)" novalidate>
+<form name="EDUCATIONUPDATE" #EDUCATIONUPDATE="ngForm" (ngSubmit)="EDUCATIONUPDATE.valid && education(EDUCATIONUPDATE)"
+    novalidate>
     <br>
     <h1 class="text-center">Add Education Information</h1>
     <button type="button" class="btn btn-primary" style="margin-left: 19%;">Back</button>
 
     <div class="px-4 py-2 px-md-5 col-md-6 text-center text-lg-start" style="margin-left:24%">
-        <div class=" shadow-lg p-4
-         mb-2 bg-white rounded">
+        <div class=" shadow-lg p-4mb-2 bg-white rounded">
 
             <div class="card-body py-3 px-md-2">
 
@@ -13,8 +13,11 @@
 
                     <div class="form-outline">
                         <label for="UniversityName" class="form-label">University Name</label>
-                        <input type="text" id="UniversityName" placeholder="Enter University Name"  name="UniversityName"  #UniversityName="ngModel"  [(ngModel)]="educationupdate.UniversityName" required />
-                        <small *ngIf="(UniversityName.touched && UniversityName.invalid) || (UniversityName.invalid && EDUCATIONUPDATE.submitted)">University Name is required </small>
+                        <input type="text" id="UniversityName" placeholder="Enter University Name" name="UniversityName"
+                            #UniversityName="ngModel" [(ngModel)]="educationupdate.UniversityName" required />
+                        <small
+                            *ngIf="(UniversityName.touched && UniversityName.invalid) || (UniversityName.invalid && EDUCATIONUPDATE.submitted)">University
+                            Name is required </small>
 
                     </div>
 
@@ -39,8 +42,11 @@
                         <div class="form-outline">
                             <label for="form2Example1" class="form-label">University Name</label>
                             <input type="text" class="form-control" id="UniversityName" placeholder="University Name"
-                            name="UniversityName"  #UniversityName="ngModel"  [(ngModel)]="education.UniversityName" required />
-                            <small *ngIf="(UniversityName.touched && UniversityName.invalid) || (UniversityName.invalid && EDUCATIONUPDATE.submitted)">University Name is required </small>
+                                name="UniversityName" #UniversityName="ngModel"
+                                [(ngModel)]="educationupdate.UniversityName" required />
+                            <small
+                                *ngIf="(UniversityName.touched && UniversityName.invalid) || (UniversityName.invalid && EDUCATIONUPDATE.submitted)">University
+                                Name is required </small>
 
                         </div>
 
@@ -57,8 +63,9 @@
                             <option value="4">Doctorate</option>
                         </select>
 
-
+         
                     </div>
+                </span>  
                     <span>
                         <div class="col-md-6 mb-4">
 
@@ -104,9 +111,9 @@
                     <div class="mt-4 pt-2">
                         <input class="btn btn-primary " type="submit" value="Add Details" style="margin-left: 45%;" />
                     </div>
-
-                </form>
+                 
+                
             </div>
         </div>
     </div>
-</section>
+</form>

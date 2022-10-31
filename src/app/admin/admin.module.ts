@@ -20,7 +20,7 @@ import { EmpexpdetailsComponent } from './empexpdetails/empexpdetails.component'
 import { OperationalCostComponent } from './operational-cost/operational-cost.component';
 import { EmployeeExpensedataComponent } from './employee-expensedata/employee-expensedata.component';
 import { UserdataComponent } from './userdata/userdata.component';
-
+import { EducationUpdateComponent } from './education-update/education-update.component';
 import { ManagementExpensesComponent } from './management-expenses/management-expenses.component';
 import { NewempComponent } from './newemp/newemp.component';
 import { ActiveemployeedataComponent } from './activeemployeedata/activeemployeedata.component';
@@ -52,7 +52,7 @@ import { FormsModule } from '@angular/forms';
     EmployeeExpensedataComponent,
     UserdataComponent,
     JobUpdateComponent,
-   
+    EducationUpdateComponent,
     ManagementExpensesComponent,
     NewempComponent,
     ActiveemployeedataComponent,
