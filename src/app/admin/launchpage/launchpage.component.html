@@ -9,13 +9,13 @@
     <div class="row justify-content-evenly">
       <div class="col-sm-12 col-md-5 m-2 text-start">
         <div class="">
-          <h4>Welcome back,Govardhan Reddy</h4>
+          <h4>Welcome back,{{loginuser.firstName}}</h4>
         </div>
       </div>
       <div class="col-sm-12 col-md-5 m-2">
         <div class="text-end">
-          <p>Govardhan Reddy</p>
-          <p>Admin</p>
+          <p>{{loginuser.firstName}} {{loginuser.lastName}}</p>
+          <p>{{loginuser.role}}</p>
         </div>
       </div>
 

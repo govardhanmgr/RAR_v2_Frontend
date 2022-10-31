@@ -20,19 +20,19 @@
                         <div class="card-body p-4 p-md-4">
                           
                           <h4 class="mb-4 pb-2 pb-md-0 mb-md-3">Basic Information</h4>
-                          <div class="fixTableHead  shadow">
-                          
-                          <form>
+                          <div class="fixTableHead">
+                            <form name="Personal" #Personal="ngForm" (ngSubmit)="Personal.valid && personal(Personal)">
                             <div class="row">
                               
                               <div class="col">
-                                  <label class="form-label" for="firstName">Employee Id</label>
-                                <input type="text" class="form-control"  placeholder="203356">
+                                  <label class="form-label" for="firstName">Employee Id</label><span>*</span>
+                                <input type="text" class="form-control"  placeholder="203356" name="EmployeeId" aria-label="EmployeeId" #EmployeeId="ngModel"  [(ngModel)]="PERSONAL. EmployeeId" required />
+                                <small *ngIf="(EmployeeId.touched && EmployeeId.invalid) || (EmployeeId.invalid && Personal.submitted)">EmployeeId is required </small> 
                               </div>
                             
               
                               <div class="col">  
-                                <label class="form-label" for="firstName">Status</label>
+                                <label class="form-label" for="firstName">Status</label><span>*</span>
                                 <select class="form-select" aria-label="Default select example">
 
                 
@@ -47,8 +47,9 @@
               
               
                               <div class="col">
-                                <label class="form-label" for="gender">First Name</label>
-                                <input type="text" class="form-control"  placeholder="likitha">
+                                <label class="form-label" for="FirstName">First Name</label><span>*</span>
+                                <input type="text" class="form-control"  placeholder="likitha" name="firstName" aria-label="firstName" #FirstName="ngModel"  [(ngModel)]="PERSONAL. FirstName" required />
+                                <small *ngIf="(FirstName.touched && FirstName.invalid) || (FirstName.invalid && Personal.submitted)">firstName is required </small> 
                               </div>
               
                             </div>
@@ -62,14 +63,16 @@
                             <div class="row">
                               
                               <div class="col">
-                                  <label class="form-label" for="address line 1">Last Name</label>
-                                <input type="text" class="form-control"  placeholder="reddy">
+                                  <label class="form-label" for="LastName">Last Name</label><span>*</span>
+                                <input type="text" class="form-control"  placeholder="reddy" name="LastName" aria-label="Last Name" #LastName="ngModel" [(ngModel)]="PERSONAL.LastName" required/>
+                                <small *ngIf="(LastName.touched && LastName.invalid) || (LastName.invalid && Personal.submitted)">Last Name is required </small>
                               </div>
                             
               
                               <div class="col">
-                                <label class="form-label" for="address line 2">Full Name</label>
-                                <input type="text" class="form-control"  placeholder="sontena">
+                                <label class="form-label" for="FullName">Full Name</label><span>*</span>
+                                <input type="text" class="form-control"  placeholder="sontena" name="FullName" aria-label="Full Name" #FullName="ngModel" [(ngModel)]="PERSONAL.FullName" required/>
+                                <small *ngIf="(FullName.touched && FullName.invalid) || (FullName.invalid && Personal.submitted)">full  Name is required </small>
                               </div>
               
               
@@ -90,14 +93,16 @@
                             <div class="row">
                               
                               <div class="col-4">
-                                  <label class="form-label" for="zpcode">SSN</label>
-                                <input type="text" class="form-control" placeholder="6633524">
+                                  <label class="form-label" for="SSN">SSN</label><span>*</span>
+                                <input type="text" class="form-control" placeholder="6633524" name="SSN" aria-label="SSN" #SSN="ngModel" [(ngModel)]="PERSONAL.SSN" required/>
+                                <small *ngIf="(SSN.touched && SSN.invalid) || (SSN.invalid && Personal.submitted)">SSN  Name is required </small>
                               </div>
                             
               
                               <div class="col-4">
-                                <label class="form-label" for="firstName">Tax File Number</label>
-                                <input type="text" class="form-control"  placeholder="246880">
+                                <label class="form-label" for="TaxFileNumber">Tax File Number</label><span>*</span>
+                                <input type="text" class="form-control"  placeholder="246880"  name="TaxFileNumber" aria-label="TaxFileNumber" #TaxFileNumber="ngModel" [(ngModel)]="PERSONAL.TaxFileNumber" required/>
+                                <small *ngIf="(TaxFileNumber.touched && TaxFileNumber.invalid) || (TaxFileNumber.invalid && Personal.submitted)">Tax File Number  Name is required </small>
                               </div>
               
               
@@ -107,31 +112,35 @@
                              <hr>
                              
                              <h4 class="mb-4 pb-2 pb-md-0 mb-md-3">Address</h4>
-                             <div class="fixTableHead  shadow">
+                             <div class="fixTableHead">
                              <form>
                                 
                                 <div class="form-group">
-                                  <label for="inputAddress">Address-1</label>
-                                  <input type="text" class="form-control" id="inputAddress" placeholder="H.NO-119/ street">
+                                  <label for="#Address1">Address-1</label><span>*</span>
+                                  <input type="text" class="form-control" id="#Address1" placeholder="H.NO-119/ street" name="#Address1" aria-label="#Address1" #Address1="ngModel" [(ngModel)]="PERSONAL.Address1" required/>
+                                  <small *ngIf="(Address1.touched && Address1.invalid) || (Address1.invalid && Personal.submitted)"> Address-1 is required </small>
                                 </div>
                                 <div class="form-group">
-                                  <label for="inputAddress2">Address-2</label>
-                                  <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, Area/landmark">
+                                  <label for="Address2">Address-2</label><span>*</span>
+                                  <input type="text" class="form-control" id="Address2" placeholder="Apartment, Area/landmark" name="#Address2" aria-label="#Address2" #Address2="ngModel" [(ngModel)]="PERSONAL.Address2" required/>
+                                  <small *ngIf="(Address2.touched && Address2.invalid) || (Address2.invalid && Personal.submitted)"> Address-2 is required </small>
                                 </div>
                                 <div class="form-row">
                                   <div class="form-group col-md-6">
-                                    <label for="inputCity">City</label>
-                                    <input type="text" class="form-control" id="inputCity">
+                                    <label for="CITY1">City</label><span>*</span>
+                                    <input type="text" class="form-control" id="CITY" name="#Address2" aria-label="#Address2" #Address2="ngModel" [(ngModel)]="PERSONAL.Address2" required/>
+                                    <small *ngIf="(Address2.touched && Address2.invalid) || (Address2.invalid && Personal.submitted)"> City is required </small >
                                   </div>
                                   <div class="form-group col-md-4">
-                                    <label for="inputState">State</label>
-                                    <select id="inputState" class="form-control">
+                                    <label for="inputState">State</label><span>*</span>
+                                    <select id="inputState" class="form-control" >
                                       
                                     </select>
                                   </div>
                                   <div class="form-group col-md-2">
-                                    <label for="inputZip">Zip code</label>
-                                    <input type="text" class="form-control" id="inputZip">
+                                    <label for="zipcode">Zip code</label><span>*</span>
+                                    <input type="text" name="zipCode" class="form-control" placeholder="zipCode" aria-label="zipcode" #zipcode="ngModel" [(ngModel)]="PERSONAL.zipcode" required />
+                                   <small *ngIf="(zipcode.touched && zipcode .invalid) || (zipcode.invalid && Personal.submitted)">ZipCode is required </small>
                                   </div>
                                 </div>    
                             </form>
@@ -142,20 +151,23 @@
                             <div class="row">
                                   
                                 <div class="col">
-                                    <label class="form-label" for="firstName">Phone Number</label>
-                                  <input type="text" class="form-control">
+                                    <label class="form-label" for="phonenumber">Phone Number</label><span>*</span>
+                                  <input type="text" class="form-control" name="#phonenumber" aria-label="#phonenumber" #phonenumber="ngModel" [(ngModel)]="PERSONAL.phonenumber" required/>
+                                  <small *ngIf="(phonenumber.touched && phonenumber.invalid) || (phonenumber.invalid && Personal.submitted)"> phone number is required </small>
                                 </div>
                               
                 
                                 <div class="col">
-                                  <label class="form-label" for="lastName">Emergency phone number</label>
-                                  <input type="text" class="form-control">
+                                  <label class="form-label" for="emergencyphonenumber">Emergency phone number</label><span>*</span>
+                                  <input type="text" class="form-control"  name="#emergencyphonenumber" aria-label="#emergencyphonenumber" #emergencyphonenumber="ngModel" [(ngModel)]="PERSONAL.emergencyphonenumber" required/>
+                                  <small *ngIf="(emergencyphonenumber.touched && emergencyphonenumber.invalid) || (emergencyphonenumber.invalid && Personal.submitted)">emergency phone number is required </small>
                                 </div>
                 
                 
                                 <div class="col">
-                                  <label class="form-label" for="gender">Email-Id</label>
-                                  <input type="text" class="form-control">
+                                  <label class="form-label" for="emailid">Email-Id</label><span>*</span>
+                                  <input type="text" class="form-control"  name="#emailid" aria-label="#emailid" #emailid="ngModel" [(ngModel)]="PERSONAL.emailid" required/>
+                                  <small *ngIf="(emailid.touched && emailid.invalid) || (emailid.invalid && Personal.submitted)">email id is required </small>
                                 </div>
                                 <br>
                                 <br>
