@@ -1,8 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { Papa } from 'ngx-papaparse';
-import { Subscriber } from 'rxjs';
+import { Observable } from 'rxjs';
+// import { Papa } from 'ngx-papaparse';
+// import { Subscriber } from 'rxjs';
 
 @Component({
   selector: 'app-ldbpage',
@@ -11,9 +12,13 @@ import { Subscriber } from 'rxjs';
 })
 export class LdbpageComponent implements OnInit {
   ldb ={} as any || null ;
-  fileName = '';
-  // event!:any;
-  filename!:string;
+  fileToUpload: File | null = null;
+  fileUploadService: any
+  httpClient: any;
+  files={} as any || null;
+  //  fileName = '';
+  event!:any;
+   filename!:string;
   // validate_message!:string;
   // content= [];
   // file!:null
@@ -24,6 +29,7 @@ export class LdbpageComponent implements OnInit {
 
 
   constructor(private http: HttpClient) { }
+  
 //   onFileSelected(event: { target: { files: File[]; }; }) {
 
 //     const file:File = event.target.files[0];
@@ -45,7 +51,13 @@ export class LdbpageComponent implements OnInit {
 // }
 
   ngOnInit(): void {
+   this. uploadFileToActivity();
   }
+  handleFileInput(files: FileList,event:any) {
+    this.fileToUpload = files.item(0);
+  }
+  
+
   // load(f:NgForm,event: { target: { files: null[]; }; }){
   //   this.file = event.target.files[0]
   //   this.file = event.target.files[0];
@@ -87,23 +99,43 @@ export class LdbpageComponent implements OnInit {
 //   } );
 // }
   load(F:NgForm){}
+    uploadFileToActivity() {
+      this.fileUploadService.postFile(this.fileToUpload).subscribe((data: any) => {
+        // do something, if upload success
+        }, (error: any) => {
+          console.log(error);
+        });
+    }
+    postFile(fileToUpload: File): Observable<boolean> {
+      const endpoint = 'your-destination-url';
+      const formData: FormData = new FormData();
+      formData.append('fileKey', fileToUpload, fileToUpload.name);
+      return this.httpClient
+        .post(endpoint, formData)
+        .map(() => { return true; })
+        .catch((e: any) => this.handleError(e));
+  }
+  handleError(e: any) {
+    throw new Error('Method not implemented.');
+  }
+  }
 
-onFileSelected(event:any) {
+// onFileSelected(event:any) {
 
-  const file:File = event.target.files();
+//   const file:File = event.target.files();
 
-  if (file) {
+//   if (file) {
 
-      this.fileName = file.name;
+//       this.fileName = file.name;
 
-      const formData = new FormData();
+//       const formData = new FormData();
 
-      formData.append("fileupload", file);
+//       formData.append("fileupload", file);
 
       // const upload$ = this.http.post("fileupload", formData);
 
       // upload$.subscribe();
-  }
-}
   
-}
+
+  
+
