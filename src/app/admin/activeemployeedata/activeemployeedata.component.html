@@ -1,9 +1,7 @@
 <!DOCTYPE html>
-
-<h2 class="header">Active Employee Data</h2>
+<h2 class="header"><b> Active Employee Data</b></h2>
 <br />
-
-<div class="container">
+<div class="container-fluid" id="container">
   <div class="row height d-flex justify-content-center align-items-center">
     <div class="col-md-2">
       <div class="form">
@@ -41,24 +39,24 @@
 <br />
 <div class="fixTableHead shadow">
   <table class="table">
-    <thead>
+    <thead >
       <tr>
-        <th>Employee Number</th>
-        <th>First Name</th>
-        <th>Last Name</th>
-        <th>Email</th>
+        <th >Employee Number</th>
+        <th class="data">First Name</th>
+        <th class="data">Last Name</th>
+        <th class="data">Email</th>
         <th>Contact Number</th>
-        <th>Role</th>
+        <th class="data">Role</th>
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let act of actemployees" class="hover" (click)="select(act)" >
+      <tr *ngFor="let act of actemployees" class="hover" (click)="select(act)" id="height" >
         <td>{{ act.employeeid }}</td>
-        <td>{{ act.firstname }}</td>
-        <td>{{ act.lastname }}</td>
-        <td>{{ act.emailaddress }}</td>
+        <td class="data">{{ act.firstname }}</td>
+        <td class="data">{{ act.lastname }}</td>
+        <td class="data">{{ act.emailaddress }}</td>
         <td>{{ act.contactnumber }}</td>
-        <td>{{ act.jobtitle }}</td>
+        <td class="data">{{ act.jobtitle }}</td>
       </tr>
     </tbody>
   </table>
