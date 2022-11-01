@@ -117,7 +117,7 @@ export class NewempComponent implements OnInit {
     this.subscription = this.http.postdata("empdata", this.empdata).subscribe({
       next: (data: any) => {
         console.log(data)
-         alert("empdetails")
+         alert("datasavedsuccessfully")
       },
       error: reason => console.log(reason)
     });
