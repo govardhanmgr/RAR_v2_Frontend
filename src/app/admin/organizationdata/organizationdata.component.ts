@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpService } from 'src/app/services/http.service';
 
+
 import { Subscription } from 'rxjs';
 import { IExpense } from './org';
-import { IRoles } from './roles';
+import { NgForm } from '@angular/forms';
+
 
 @Component({
   selector: 'app-organizationdata',
@@ -14,9 +16,15 @@ export class OrganizationdataComponent implements OnInit {
 
   expenses = [] as IExpense [];
 
-  roles= [] as IRoles [];
+  role:any;
 
-  entity:any;
+  roles={} as any;
+
+  entities:any;
+
+  entity={} as any;
+
+  
 
   subscription!: Subscription;
   
@@ -35,14 +43,14 @@ export class OrganizationdataComponent implements OnInit {
 
     this.subscription = this.http.getData('roles').subscribe({
       next:(data:any)=>{
-        this.roles = data as IRoles [];
+        this.role = data ;
       }
     });
 
 
     this.subscription = this.http.getData('orgndata').subscribe({
       next:(data:any)=>{
-         this.entity = data;
+         this.entities = data;
       }
     });
 
@@ -60,25 +68,38 @@ export class OrganizationdataComponent implements OnInit {
  }
 
 
- postEntityData(_data:any){
-  this.subscription= this.http.postdata('orgndata',_data).subscribe({
+ postEntityData(_data:NgForm){
+  console.log(_data)
+  if(this.entity.entity==null){
+    alert("entity Name is Required")
+    return 
+  }
+  this.subscription= this.http.postdata('orgndata',this.entity).subscribe({
      next:(_data:any)=>{
+      alert("Entity Added");
       this.ngOnInit();
      }
   });
+  _data.resetForm();
  }
 
-
- postRoleData(_data:any){
+ postRoleData(_data:NgForm){
   console.log(_data)
-  this.subscription = this.http.postdata('roles',_data).subscribe({
-      next:(_data:any)=>{
-        console.log(_data);
-        this.ngOnInit();
-      }
-     
+  if(this.roles.roles==null){
+    alert("role Name is Required");
+    _data.resetForm();
+    return 
+  }
+  this.subscription = this.http.postdata('roles',this.roles).subscribe({
+    next:(_data:any)=>{
+      alert("Role Added");
+      this.ngOnInit();
+    }
   });
+  _data.resetForm();
+
  }
+ 
 
 
   ngOnDestroy():void{
