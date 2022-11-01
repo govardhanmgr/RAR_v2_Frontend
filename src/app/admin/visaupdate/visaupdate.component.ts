@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl,NgForm,Validators,FormGroupDirective } from '@angular/forms';
+import { Subscription } from 'rxjs';
+import { HttpService } from 'src/app/services/http.service';
 import { Ivisaupdate } from './visa-model';
 
 @Component({
@@ -9,12 +11,28 @@ import { Ivisaupdate } from './visa-model';
 })
 export class VisaupdateComponent implements OnInit {
   emailFormControl = new FormControl('', [Validators.required, Validators.email]);
-  constructor() { }
+  constructor(private http:HttpService) { }
+  subscription!: Subscription;
+  visaupdate=[] as any;
   VISA={} as Ivisaupdate;
+
   ngOnInit(): void {
+    this.visainfo();
   }
-  visa(f:NgForm){
+
+  Visupdate(f: NgForm){
     
   }
 
-}
+
+    visainfo(){
+      this.subscription=this.http.getData("getvisainformation").subscribe({
+        next: data  => {
+            this.visaupdate=data
+        }
+      })
+      console.log(this.visaupdate)
+    }
+  }
+
+

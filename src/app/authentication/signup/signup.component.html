@@ -15,7 +15,7 @@
               <div class="col-lg-6 mb-4 ">
                 <div class="card-body  px-md-4">
                     <div class="shadow-lg p-5 mb-7 bg-white rounded">
-                          <form class="needs-validation" name="signup" #signup="ngForm" (ngSubmit)="signup.valid && register(signup)" novalidate>
+                          <form  name="signup" #signup="ngForm" (ngSubmit)="signup.valid && register(signup) && !show">
                             
                             <div class="img" style="position:relative;left: 22%;">
                               <img alt="" class="img" style="position: relative;display: flex;" src="../assets/snadicon.png" />
@@ -27,16 +27,16 @@
               
                                 <div class="form-outline">
                                   <label class="form-label" for="FirstName">First Name</label><span style="color: red;right: -3px;position: relative;">*</span>
-                                  <input type="text" id="FirstName" class="form-control" name="FirstName" #FirstName="ngModel" placeholder="First Name" [(ngModel)]="Signup.FirstName" required />
-                                  <small *ngIf="(FirstName.touched && FirstName.invalid) || (FirstName.invalid && signup.submitted)">First Name is required </small>
+                                  <input type="text" id="firstName" class="form-control" name="firstName" #firstName="ngModel" placeholder="First Name" [(ngModel)]="Signup.firstName" required />
+                                  <small *ngIf="(firstName.touched && firstName.invalid) || (firstName.invalid && signup.submitted)">First Name is required </small>
                                 </div>
                               </div>  
                               <div class="col-md-6 mb-4">
               
                                 <div class="form-outline">
                                   <label class="form-label" for="lastName">Last Name</label><span style="color: red;right: -3px;position: relative;">*</span>
-                                  <input type="text" id="LastName" class="form-control" name="LastName" #LastName="ngModel" placeholder="Last Name"   [(ngModel)]="Signup.LastName" required/>
-                                  <small *ngIf="(LastName.touched && LastName.invalid) || (LastName.invalid && signup.submitted)">Last Name is required </small>
+                                  <input type="text" id="lastName" class="form-control" name="lastName" #lastName="ngModel" placeholder="Last Name"   [(ngModel)]="Signup.lastName" required/>
+                                  <small *ngIf="(lastName.touched && lastName.invalid) || (lastName.invalid && signup.submitted)">Last Name is required </small>
                                 </div>
               
                               </div>
@@ -47,8 +47,8 @@
               
                                 <div class="form-outline">
                                   <label for="EmployeeId" class="form-label">Employee Id</label><span style="color: red;right: -3px;position: relative;">*</span>
-                                  <input type="text" class="form-control" id="EmployeeId" name="EmplyeeId" #EmployeeId="ngModel" placeholder="Employee Id" [(ngModel)]="Signup.EmployeeId" required/>
-                                  <small *ngIf="(EmployeeId.touched && EmployeeId.invalid) || (EmployeeId.invalid && signup.submitted)">EmployeeId is required </small>
+                                  <input type="text" class="form-control" id="idnumber" name="idnumber" #idnumber="ngModel" placeholder="Employee Id" [(ngModel)]="Signup.idnumber" required/>
+                                  <small *ngIf="(idnumber.touched && idnumber.invalid) || (idnumber.invalid && signup.submitted)">EmployeeId is required </small>
                                 </div>
               
                               </div>
@@ -56,8 +56,8 @@
               
                                 <div class="form-outline">
                                   <label for="EmailId" class="form-label">Email Id</label> <span style="color: red;right: -3px;position: relative;">*</span>
-                                  <input type="mail" class="form-control" id="EmailId" name="EmailId" #EmailId="ngModel" placeholder="Email Id" [(ngModel)]="Signup.EmailId" required/>
-                                  <small *ngIf="(EmailId.touched && EmailId.invalid) || (EmailId.invalid && signup.submitted)">EmailId is required </small>
+                                  <input type="mail" class="form-control" id="email" name="email" #email="ngModel" placeholder="Email Id" [(ngModel)]="Signup.email" required/>
+                                  <small *ngIf="(email.touched && email.invalid) || (email.invalid && signup.submitted)">EmailId is required </small>
                                 </div>
               
                               </div>
@@ -69,20 +69,20 @@
               
                                 <div class="form-outline">
                                   <label for="PhoneNumber" class="form-label">Phone Number</label><span style="color: red;right: -3px;position: relative;">*</span>
-                                  <input type="number" class="form-control" id="PhoneNumber" name="PhoneNumber" #PhoneNumber="ngModel" placeholder="Phone Number" minlength="10" [(ngModel)]="Signup.PhoneNumber" required />
-                                  <small *ngIf="(PhoneNumber.touched && PhoneNumber.invalid) || (PhoneNumber.invalid && signup.submitted)">PhoneNumber is required </small>
+                                  <input type="number" class="form-control" id="phoneNumber" name="phoneNumber" #phoneNumber="ngModel" placeholder="Phone Number" minlength="10" [(ngModel)]="Signup.phoneNumber" required />
+                                  <small *ngIf="(phoneNumber.touched && phoneNumber.invalid) || (phoneNumber.invalid && signup.submitted)">PhoneNumber is required </small>
                                 </div>
               
                               </div>
                               <div class="col-md-6 mb-4">
                                 <label class="form-label">Gender</label><span style="color: red;right: -3px;position: relative;">*</span>
-                                <select class="form-select" id="Gender" name="Gender" #Gender="ngModel"  aria-label="Default select example" [(ngModel)]="Signup.Gender" required>
+                                <select class="form-select" id="gender" name="gender" #gender="ngModel"  aria-label="Default select example" [(ngModel)]="Signup.gender" required>
                                   <option value="1" >Choose option</option>
                                   <option value="2">Male</option>
                                   <option value="3">Female</option>
                                   <option value="4">Other</option>
                                 </select>
-                                <small *ngIf="(Gender.touched && Gender.invalid) || (Gender.invalid && signup.submitted)">Gender is required </small>
+                                <small *ngIf="(gender.touched && gender.invalid) || (gender.invalid && signup.submitted)">Gender is required </small>
               
                               </div>
                             </div>
@@ -90,13 +90,13 @@
                             <div class="row">
                               <div class="col-md-6 mb-4">
                                 <label class="form-label">Select Entity</label><span style="color: red;right: -3px;position: relative;">*</span>
-                                <select class="form-select" id="SelectEntity" name="SelectEntity"  aria-label="Default select example" #SelectEntity="ngModel" [(ngModel)]="Signup.SelectEntity" required>
+                                <select class="form-select" id="entity" name="entity"  aria-label="Default select example" #entity="ngModel" [(ngModel)]="Signup.entity" required>
                                   <option value="1" >Choose option</option>
                                   <option value="2">HDFC</option>
                                   <option value="3">AXIS</option>
                                   <option value="4">AVERON</option>
                                 </select>
-                                <small *ngIf="(SelectEntity.touched && SelectEntity.invalid) || (SelectEntity.invalid && signup.submitted)">SelectEntity is required</small>
+                                <small *ngIf="(entity.touched && entity.invalid) || (entity.invalid && signup.submitted)">SelectEntity is required</small>
               
               
                               </div>
@@ -104,8 +104,9 @@
               
                                 <div class="form-outline">
                                   <label for="DateOfBirth" class="form-label">Date Of Birth</label><span style="color: red;right: -3px;position: relative;">*</span>
-                                  <input type="date" class="form-control" id="DateOfBirth" name="DateOfBirth" #DateOfBirth="ngModel" placeholder="DateOfBirth"  [(ngModel)]="Signup.DateOfBirth" required />
-                                  <small *ngIf="(DateOfBirth.touched && DateOfBirth.invalid) || (DateOfBirth.invalid && signup.submitted)">DateOfBirth is required </small>
+                                  <input type="date" class="form-control" id="dateofBirth" name="dateofBirth" (change)="dobvalid(Signup.dateofBirth)" #dateofBirth="ngModel" placeholder="DateOfBirth"  [(ngModel)]="Signup.dateofBirth" required />
+                                  <small *ngIf="(dateofBirth.touched && dateofBirth.invalid) || (dateofBirth.invalid && signup.submitted)">DateOfBirth is required </small>
+                                  <small *ngIf="(show)" > age should be 18 -75 years</small>
                                 </div>
                               </div>
                               
@@ -116,11 +117,11 @@
                             </div>
               
                             <div class="mt-4 pt-2">
-                              <a href="/registrationpage2"></a><input class="btn btn-primary " type="submit" value="Next"  />
+                              <input type="submit" class="btn btn-primary btn-block mb-3" value="Next"/>
                             </div>
               
                           </form>
-                      </div>
+                    </div>
                   </div>
               </div>
           </div>
