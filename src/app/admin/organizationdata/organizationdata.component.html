@@ -13,28 +13,28 @@
           <div class="Entities ">
             <h4 class="text_color">Entities</h4>
             <div   class="col d-flex align-items-baseline justify-content-center " >
-              <form #EntityForm="ngForm" (ngSubmit)="postEntityData(EntityForm.value) ">
+              <form #EntityForm="ngForm" (ngSubmit)="postEntityData(EntityForm) ">
               <div class="d-flex"> 
               <input
-                type="text" ngModel required
+                type="text" ngModel required [(ngModel)]="entity.entity"
                 class="  form-control m-2"
                 placeholder=" Enter Entity Name"
                 name="entity"
               />
-              <small *ngIf="(entity.touched && entity.invalid) || (entity.invalid && entity.submitted)">First Name is required </small>
+              
               <button class=" m-2 btn btn-primary ">Add Entities</button>
             </div>
             </form>
           </div>
           <div class="fixTableHead">
-            <table >
-         <tbody >
-          <tr  *ngFor="let en of  entity">  
-            <td >
+            <table  >
+         
+          <tr  *ngFor="let en of  entities" style="height: 20px;">  
+            <td  >
               {{en.entity}} 
             </td>
          </tr>
-        </tbody>
+        
             </table>
           </div>
         
@@ -45,22 +45,23 @@
           <div class="Entities ">
             <h4 class="text_color">Roles</h4>
             <div   class="col d-flex align-items-baseline justify-content-center " >
-              <form #RoleForm="ngForm" (ngSubmit)="postRoleData(RoleForm.value)">
+              <form #RoleForm="ngForm" (ngSubmit)="postRoleData(RoleForm) ">
                 <div class="d-flex"> 
                 <input
-                  type="text" ngModel
+                  type="text" ngModel required [(ngModel)]="roles.roles"
                   class="  form-control m-2"
-                  placeholder=" Enter Role Name"
+                  placeholder=" Enter Entity Name"
                   name="roles"
                 />
-                <button class=" m-2 btn btn-primary ">Add Entities</button>
+                
+                <button class=" m-2 btn btn-primary ">Add Role</button>
               </div>
               </form>
           </div>
           <div class="fixTableHead">
             <table >
          <tbody >
-          <tr  *ngFor="let rl of  roles">  
+          <tr  *ngFor="let rl of  role" style="max-height: 25px;">  
             <td >
               {{rl.roles}} 
             </td>
@@ -97,7 +98,7 @@
           </div>
           
          <div class="fixTableHead">
-            <table >
+            <table class="t-table" >
               
          <thead>
            <tr>
@@ -106,7 +107,7 @@
             </tr>
          </thead>
          <tbody >
-          <tr  *ngFor="let ex of expenses">
+          <tr  *ngFor="let ex of expenses" style="max-height: 25px;">
             
             <td >
               {{ex.expenses}} 
