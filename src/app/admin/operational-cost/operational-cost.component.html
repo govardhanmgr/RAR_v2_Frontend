@@ -1,5 +1,9 @@
 <strong><h1 align="center" >Opertaional Expenses</h1></strong>
-<div><a class="btn btn-primary" [routerLink]="['/admin/launchpage']" routerLinkActive="router-link-active"  role="button">Back</a></div>
+<div><a class="btn btn-primary" [routerLink]="['/admin/launchpage']" routerLinkActive="router-link-active"  role="button" button style="margin-left:20px">Back
+
+
+  
+</a></div>
 <br>
 <br>
  
@@ -11,20 +15,20 @@
             <tr>
               <th> Employee Id</th> 
               <th>First Name</th>
-              <th>LastName </th>
-              <th>TOTALOPERATIONALEXPENSES</th>
+              <th>Last Name </th>
+              <th>TOTAL OPERATIONAL EXPENSES </th>
         
               
             </tr>
           </thead>
   
           <tbody>
-            <tr *ngFor="let emp of employees">
+            <tr *ngFor="let emp of employees" >
           
               <td>{{emp.employeeid}}</td>
               <td>{{emp.firstname}}</td>
               <td>{{emp.lastname}}</td>
-              <td>{{emp.totalexpenses}}</td>
+              <td>{{emp.totalexpenses | currency }}</td>
               
           
             </tr>  
