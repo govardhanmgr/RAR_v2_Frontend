@@ -31,9 +31,10 @@
                                         mandatory</small>
                                 </div>
                                 <div class="form-outline mb-2">
-                                    <label class="form-label" for="form2Example2"></label>
+                                    <label class="form-label" for="form2Example2"></label><i class="bi bi-eye-slash-fill" style="position: relative;right: -44%;top: 28px;
+                                "></i>
                                     <input type="password" id="password" placeholder="Enter Password" name="password" #password="ngModel"
-                                    [(ngModel)]="Login.password"
+                                    [(ngModel)]="Login.password" 
                                         class="form-control" required />
                                         <small
                                         *ngIf="(password.touched && password.invalid) || (password.invalid && LOGIN.submitted)">Password
