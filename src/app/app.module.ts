@@ -10,11 +10,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
+
 @NgModule({
   declarations: [
     AppComponent,
     AuthenticationLayoutComponent,
     AdminLayoutComponent,
+    
+
   ],
   imports: [
     BrowserModule,
@@ -23,8 +26,10 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
     BrowserAnimationsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    
   ],
+
   providers: [],
   bootstrap: [AppComponent],
 })

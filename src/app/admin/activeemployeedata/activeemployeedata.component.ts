@@ -11,8 +11,8 @@ import { IActive } from './activeemployeedata';
 })
 export class ActiveemployeedataComponent implements OnInit {
   actemployees = [] as IActive[];
+  searchValue: any;
   subscription!: Subscription;
-  searchdata = [] as any
   constructor(private http:HttpService,private router:Router) { }
 
   ngOnInit(): void {
@@ -36,23 +36,4 @@ export class ActiveemployeedataComponent implements OnInit {
     if(this.subscription)
     this.subscription.unsubscribe();
   }
-  
-    SEARCH(act:any) {
-     let se = []
-     if(this.searchdata !== '') {
-      se = this.searchdata.filter((p: { firstname: string; lastname: string; emailaddress: string; jobtitle: string; employeeid: number; }) => 
-        p.firstname.toLowerCase().includes(this.searchdata.toLowerCase()) ||
-        p.lastname.toLowerCase().includes(this.searchdata.toLowerCase()) ||
-        p.emailaddress.toLowerCase().includes(this.searchdata.toLowerCase()) ||
-        p.jobtitle.toLowerCase().includes(this.searchdata.toLowerCase()) ||
-        p.employeeid === Number(this.searchdata)
-      )
-     } else {
-      se = this.searchdata
-     }
-     return se
-    }
- 
-
-  
 }
