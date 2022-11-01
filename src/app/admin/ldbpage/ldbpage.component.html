@@ -115,7 +115,7 @@
             <label for="file">Choose File</label>
             <input type="file"
                    id="file"
-                   (change)="handleFileInput($event)">
+                   (change)="handleFileInput($event.target.files)">
         </div>
           <div class="bt">
             <button type="submit" class="btn btn-primary" >Upload</button>
