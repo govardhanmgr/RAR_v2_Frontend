@@ -14,7 +14,9 @@ import { NgForm } from '@angular/forms';
 })
 export class OrganizationdataComponent implements OnInit {
 
-  expenses = [] as IExpense [];
+  expense : any;
+
+  exp=[] as any;
 
   role:any;
 
@@ -24,10 +26,10 @@ export class OrganizationdataComponent implements OnInit {
 
   entity={} as any;
 
-  
+
 
   subscription!: Subscription;
-  
+
 
   constructor(private  http:HttpService) { }
 
@@ -35,7 +37,7 @@ export class OrganizationdataComponent implements OnInit {
   ngOnInit(): void {
     this.subscription = this.http.getData('expenses').subscribe({
       next: (data: any) => {
-        this.expenses = data as IExpense []; 
+        this.expense = data ;
       },
       error: reason => console.log(reason)
     });
@@ -57,13 +59,19 @@ export class OrganizationdataComponent implements OnInit {
 
   }
 
-  postExpensesData(_data:any){
-    
-    this.subscription= this.http.postdata('expenses',_data).subscribe({
-     next:(_data:any)=>{ 
-       this.ngOnInit();
-     }
-    });
+  postExpensesData(_data:NgForm){
+    console.log(_data)
+    if(this.exp.expenses==null || this.exp.expensescode==null){
+      alert("Please Enter Expenses")
+      return
+    }
+    console.log(this.exp)
+    this.subscription = this.http.postdata('expenses',this.exp).subscribe({
+      next:(_data:any)=>{
+        console.log(_data)
+      },
+      error: reason => console.log(reason)
+    })
 
  }
 
@@ -71,12 +79,12 @@ export class OrganizationdataComponent implements OnInit {
  postEntityData(_data:NgForm){
   console.log(_data)
   if(this.entity.entity==null){
-    alert("entity Name is Required")
-    return 
+    alert("Please Enter Entity")
+    return
   }
   this.subscription= this.http.postdata('orgndata',this.entity).subscribe({
      next:(_data:any)=>{
-      alert("Entity Added");
+      alert("Entity Added successfull");
       this.ngOnInit();
      }
   });
@@ -84,29 +92,28 @@ export class OrganizationdataComponent implements OnInit {
  }
 
  postRoleData(_data:NgForm){
-  console.log(_data)
   if(this.roles.roles==null){
-    alert("role Name is Required");
-    _data.resetForm();
-    return 
+    alert("Please Enter Role");
+
+    return
   }
   this.subscription = this.http.postdata('roles',this.roles).subscribe({
     next:(_data:any)=>{
-      alert("Role Added");
+      alert("Role Added successfull");
       this.ngOnInit();
     }
   });
   _data.resetForm();
 
  }
- 
+
 
 
   ngOnDestroy():void{
     if(this.subscription)
     this.subscription.unsubscribe();
   }
-  
+
 
 
 }
