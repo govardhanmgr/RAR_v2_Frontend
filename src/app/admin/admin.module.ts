@@ -59,6 +59,7 @@ import { FormsModule } from '@angular/forms';
     CompensationUpdateComponent,
     JobTabComponent,  
     UserdetailsComponent
+  
 
   ],
   imports: [
