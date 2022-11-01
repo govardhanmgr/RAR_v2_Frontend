@@ -1,12 +1,12 @@
 export interface Isignup {
-    FirstName: string,
-    LastName: string,
-    EmployeeId: string,
-    EmailId: string,
-    PhoneNumber: string,
-    Gender: string,
-    SelectEntity: string,
-    DateOfBirth: string,
+    firstName: string,
+    lastName: string,
+    idnumber: string,
+    email: string,
+    phoneNumber: string,
+    gender: string,
+    entity: string,
+    dateofBirth: string,
 }
 
 export interface Iemail
