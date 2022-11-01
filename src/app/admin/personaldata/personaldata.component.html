@@ -182,7 +182,7 @@
                               </div>
                             <hr>
                             <h4 class="mb-4 pb-2 pb-md-0 mb-md-3">Educational Information</h4> 
-                            <button type="button" class="btn btn-primary" position="right" id="btn1">+Add new</button>
+                            <button [routerLink]="['/education-update']" routerLinkActive="router-link-active"  type="button" class="btn btn-primary" >+Add New</button><br>
                             <br>
                             <br>
                             <div >
@@ -226,8 +226,9 @@
                                 
                             </div><hr><br>
                 
-                <h4 class="mb-4 pb-2 pb-md-0 mb-md-3">Visa Information</h4> 
-                <button type="button" class="btn btn-primary" id="btn2">+Add new</button>
+                <h4 class="mb-4 pb-2 pb-md-0 mb-md-3">Visa Information</h4>  
+                <button [routerLink]="['/visaupdate']" routerLinkActive="router-link-active"  type="button" class="btn btn-primary" >+Add New</button><br>
+                
                 <br>
                 <br>
                 <div >
