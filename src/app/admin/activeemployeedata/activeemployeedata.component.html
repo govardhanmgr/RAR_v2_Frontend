@@ -47,7 +47,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let act of actemployees" class="hover" (click)="select(act)" >
+      <tr *ngFor="let act of actemployees | searchfilter: searchValue" class="hover" (click)="select(act)"  >
         <td>{{ act.employeeid }}</td>
         <td>{{ act.firstname }}</td>
         <td>{{ act.lastname }}</td>
