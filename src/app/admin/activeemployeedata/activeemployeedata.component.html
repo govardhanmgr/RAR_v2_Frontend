@@ -48,12 +48,14 @@
     </thead>
     <tbody>
       <tr *ngFor="let act of actemployees | searchfilter: searchValue" class="hover" (click)="select(act)"  >
+        <ng-template [ngIf]="act.status=='Active'">
         <td>{{ act.employeeid }}</td>
         <td>{{ act.firstname }}</td>
         <td>{{ act.lastname }}</td>
         <td>{{ act.emailaddress }}</td>
         <td>{{ act.contactnumber }}</td>
         <td>{{ act.jobtitle }}</td>
+      </ng-template>
       </tr>
     </tbody>
   </table>
