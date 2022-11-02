@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { IEmployee } from './employee-details';
 import { Subscription } from 'rxjs';
 import { HttpService } from 'src/app/services/http.service';
+import { Router } from '@angular/router';
 
 
 
@@ -10,16 +11,18 @@ import { HttpService } from 'src/app/services/http.service';
   templateUrl: './pendingrequest.component.html',
   styleUrls: ['./pendingrequest.component.css']
 })
-export class PendingrequestComponent implements OnInit {
+export class PendingrequestComponent implements OnInit, OnDestroy {
 
   employees = [] as IEmployee[];
-  subscription!: Subscription;
 
-  constructor(private http:HttpService) { }
+  subscription!: Subscription;
+  
+
+  constructor(private http: HttpService,_router:Router) { }
 
   ngOnInit(): void {
-    this. empdata();
-    
+    this.empdata();
+
   }
 
   empdata() {
@@ -30,10 +33,46 @@ export class PendingrequestComponent implements OnInit {
       error: reason => console.log(reason)
     });
   }
- 
+
+
+  approved(id: number) {
+    let sdata = {
+      "status": "Approved",
+      "id": id
+    }
+    if(confirm("Are You sure to Approve"))
+    this.subscription = this.http.postdata('approve', sdata).subscribe({
+      next: (data: any) => {
+        console.log(data);
+        this.empdata()
+      }
+    })
+  }
+
+  reject(id:number){
+    console.log(id);
+    let rdata={
+      "status": "Rejected",
+      "id": id
+    }
+    if(confirm("Are You sure to Reject"))
+    this.subscription = this.http.postdata('approve', rdata).subscribe({
+      next: (data: any) => {
+        console.log(data);
+        this.empdata()
+      }
+    })
+  }
+
+  viewdata(vitem: any){
+    localStorage.setItem("updateuser", JSON.stringify(vitem));
+    console.log(vitem)
+  }
+
+
   ngOnDestroy(): void {
-    if(this.subscription)
-    this.subscription.unsubscribe();
+    if (this.subscription)
+      this.subscription.unsubscribe();
   }
 
 }

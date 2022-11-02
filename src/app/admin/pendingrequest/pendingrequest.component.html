@@ -31,9 +31,9 @@
               <td>{{ emp.role }}</td>
               <td>{{ emp.entity }}</td>
               <td>
-                <button class="btn btn-primary " [routerLink]="'/admin/viewdetails'">View</button>
-                <button class="btn btn-success me-2 ms-2">Approved</button>
-                <button class="btn btn-danger">Reject</button>
+                <button class="btn btn-primary "   (click)="viewdata(emp)"  [routerLink]="['/viewdetails']">View</button>
+                <button class="btn btn-success me-2 ms-2" (click)="approved(emp.id)">Approve</button>
+                <button class="btn btn-danger" (click)="reject(emp.id)">Reject</button>
               </td>
             </ng-template>
             </tr>
