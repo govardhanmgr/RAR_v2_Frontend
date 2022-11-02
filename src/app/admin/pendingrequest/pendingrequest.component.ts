@@ -18,7 +18,7 @@ export class PendingrequestComponent implements OnInit, OnDestroy {
   subscription!: Subscription;
   
 
-  constructor(private http: HttpService,_router:Router) { }
+  constructor(private http: HttpService,private router:Router) { }
 
   ngOnInit(): void {
     this.empdata();
@@ -65,8 +65,9 @@ export class PendingrequestComponent implements OnInit, OnDestroy {
   }
 
   viewdata(vitem: any){
-    localStorage.setItem("updateuser", JSON.stringify(vitem));
-    console.log(vitem)
+    localStorage.setItem("updateuser", JSON.stringify(vitem)); 
+    console.log(vitem);
+    this.router.navigate(['/viewdetails'])
   }
 
 
