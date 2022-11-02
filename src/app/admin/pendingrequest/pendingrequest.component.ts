@@ -29,8 +29,9 @@ export class PendingrequestComponent implements OnInit, OnDestroy {
     this.subscription = this.http.getData("reg").subscribe({
       next: (data: any) => {
         this.employees = data as IEmployee[];
+        
       },
-      error: reason => console.log(reason)
+      error: reason => alert(reason.message)
     });
   }
 
