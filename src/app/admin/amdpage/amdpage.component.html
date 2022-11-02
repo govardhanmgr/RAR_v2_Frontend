@@ -24,14 +24,14 @@
             <td >{{item.firstname}}</td>
             <td >{{item.lastname}}</td>
             <td >{{item.emailaddress}}</td>
-            <td >{{item.jobtitle}}</td>
+            <td >{{item.jobtitle}}</td> 
             <td >{{item.entity}}</td>
 
-            <td><button class="btn btn-primary">Update</button></td>
+            <td><button  (click)="userdata(item)" class="btn btn-primary"  [routerLink]="['/admin/userdetails']">Update</button></td>
           </tr>
           
         </tbody>
       </table>
-    </div>
+    </div> 
   </div>
 </div>
