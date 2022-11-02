@@ -11,6 +11,7 @@ import { IActive } from './activeemployeedata';
 })
 export class ActiveemployeedataComponent implements OnInit {
   actemployees = [] as IActive[];
+  searchValue: any;
   subscription!: Subscription;
   constructor(private http:HttpService,private router:Router) { }
 

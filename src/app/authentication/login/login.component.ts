@@ -18,7 +18,8 @@ export class LoginComponent implements OnInit,OnDestroy {
   subscription!: Subscription;
   
   entities= [] as any;
-
+  visible:boolean = false;
+  changetype:boolean =true;
 
   constructor(private _httpservice:HttpService,
     private router:Router,
@@ -28,7 +29,17 @@ export class LoginComponent implements OnInit,OnDestroy {
   ngOnInit(): void {
     this.getentities();
     
+
   }
+
+  
+  viewpass(){
+    this.visible = !this.visible;
+    this.changetype = !this.changetype;
+  }
+  
+ 
+
 
   login(f: NgForm) {
          console.log(this.Login);
