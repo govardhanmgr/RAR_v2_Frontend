@@ -189,37 +189,31 @@
                                 <table class="table" >
                                     <thead >
                                         <tr>
-                                          <th>DEGREE</th>
-                                          <th>UNIVERSITY</th> 
-                                          <th>SPECIALIZATION</th>
-                                          <th>GRADE/Score</th>
-                                          <th>YEAR OF PASSING</th>
+                                          <th>Degree</th>
+                                          <th>University</th> 
+                                          <th>Specialization</th>
+                                          <th>Grade/Score</th>
+                                          <th>Degree StartDate</th>
+                                          <th>Degree EndDate</th>
+
                                         </tr>
                                       </thead>
                               
-                                     <tr>
-                                        <td>Bachelor's</td>
-                                        <td>OU</td>
-                                        <td>computer science</td>
-                                        <td>765</td>
-                                        <td>2022</td>
+                                     <tr *ngFor="let ed of educationData">
+                                        <td>{{ed.highestdegree}}</td>
+                                        <td>{{ed.university}}</td>
+
+                                        <td>{{ed.specialization}}</td>
+
+                                        <td>{{ed.gpa}}</td>
+
+                                        <td>{{ed.degreestartdate}}</td>
+                                        <td>{{ed.degreeenddate}}</td>
+
+
                                      </tr>
 
-                                     <tr>
-                                        <td>Master's</td>
-                                        <td>Jntuh</td>
-                                        <td>Civil</td>
-                                        <td>895</td>
-                                        <td>2020</td>
-                                     </tr>
-                                 
-                                     <tr>
-                                        <td>Bachelor's</td>
-                                        <td>OU</td>
-                                        <td>computer science</td>
-                                        <td>695</td>
-                                        <td>2019</td>
-                                     </tr>
+                                     
                                     
                                 </table> 
                             
@@ -227,7 +221,7 @@
                             </div><hr><br>
                 
                 <h4 class="mb-4 pb-2 pb-md-0 mb-md-3">Visa Information</h4>  
-                <button [routerLink]="['/visaupdate']" routerLinkActive="router-link-active"  type="button" class="btn btn-primary" >+Add New</button><br>
+                <button [routerLink]="['/visaupdate']"   type="button" class="btn btn-primary" >+Add New</button><br>
                 
                 <br>
                 <br>
@@ -244,33 +238,20 @@
                             </tr>
                           </thead>
                   
-                         <tr>
-                            <td>2022-06-30</td>
-                            <td>B2</td>
-                            <td>Belgium</td>
-                            <td>2022-03-12</td>
-                            <td>2023-03-12</td>
-                            <td>Active</td>
+                         <tr *ngFor="let vi of visaData">
+                          <td>{{vi.date}}</td>
+                          <td>{{vi.visastatus}}</td>
 
-                         </tr>
+                          <td>{{vi.issuingcountry}}</td>
 
-                         <tr>
-                            <td>2022-07-25</td>
-                            <td>B2</td>
-                            <td>Australia</td>
-                            <td>2023-03-25</td>
-                            <td>2023-03-25</td>
-                            <td>Active</td>
-                         </tr>
-                     
-                         <tr>
-                            <td>2022-08-15</td>
-                            <td>H1B</td>
-                            <td>India</td>
-                            <td>2023-04-25</td>
-                            <td>2023-04-25</td>
-                            <td>Active</td>
-                         </tr>
+                          <td>{{vi.issueddate}}</td>
+
+                          <td>{{vi.expirationdate}}</td>
+                          <td>{{vi.status}}</td>
+                          <td>{{vi.rowdata}}</td>
+                        
+
+                       </tr>
                         
                     </table>                    
                     

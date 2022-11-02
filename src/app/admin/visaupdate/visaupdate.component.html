@@ -1,4 +1,4 @@
-<form name="Visa" #Visa="ngForm" (ngSubmit)="Visa.valid && Visupdate(Visa)">
+<form name="Visa" #Visa="ngForm" (ngSubmit)="Visa.valid && visaupdate(Visa)">
     <h1 class="text-center">Add Visa Information</h1>
     <button [routerLink]="['/personaldata']" routerLinkActive="router-link-active" button type="button" class="btn btn-primary" style="margin-left: 12%;">Back</button>
     <div class="px-4 py-2 px-md-5 col-md-6 text-center text-lg-start" style="margin-left:24%">
@@ -184,7 +184,7 @@
                     </div>
                     <div class="mt-4 pt-2">
 
-                        <button [routerLink]="['/personaldata']" routerLinkActive="router-link-active"  type="button" class="btn btn-primary" style="margin-left: 45%;">Add Details</button><br>
+                        <button  type="submit" class="btn btn-primary" style="margin-left: 45%;">Add Details</button><br>
                     </div>    
             </div>
         </div>
