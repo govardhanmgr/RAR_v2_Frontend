@@ -14,30 +14,27 @@
             <h4 class="text_color">Entities</h4>
             <div   class="col d-flex align-items-baseline justify-content-center " >
               <form #EntityForm="ngForm" (ngSubmit)="postEntityData(EntityForm) ">
-              <div class="d-flex"> 
+              <div class="d-flex">
               <input
                 type="text" ngModel required [(ngModel)]="entity.entity"
                 class="  form-control m-2"
                 placeholder=" Enter Entity Name"
                 name="entity"
               />
-              
-              <button class=" m-2 btn btn-primary ">Add Entities</button>
+              <button class=" m-2 btn btn-primary ">Add Entity</button>
             </div>
             </form>
           </div>
           <div class="fixTableHead">
-            <table  >
-         
-          <tr  *ngFor="let en of  entities" style="height: 20px;">  
+            <table>
+          <tr  *ngFor="let en of  entities" style="height: 50px;">
             <td  >
-              {{en.entity}} 
+              {{en.entity}}
             </td>
          </tr>
-        
             </table>
           </div>
-        
+
           </div>
         </div>
 
@@ -46,14 +43,14 @@
             <h4 class="text_color">Roles</h4>
             <div   class="col d-flex align-items-baseline justify-content-center " >
               <form #RoleForm="ngForm" (ngSubmit)="postRoleData(RoleForm) ">
-                <div class="d-flex"> 
+                <div class="d-flex">
                 <input
                   type="text" ngModel required [(ngModel)]="roles.roles"
                   class="  form-control m-2"
                   placeholder=" Enter Entity Name"
                   name="roles"
                 />
-                
+
                 <button class=" m-2 btn btn-primary ">Add Role</button>
               </div>
               </form>
@@ -61,15 +58,15 @@
           <div class="fixTableHead">
             <table >
          <tbody >
-          <tr  *ngFor="let rl of  role" style="max-height: 25px;">  
+          <tr  *ngFor="let rl of  role"  style="height:50px;">
             <td >
-              {{rl.roles}} 
+              {{rl.roles}}
             </td>
          </tr>
         </tbody>
             </table>
           </div>
-        
+
           </div>
         </div>
 
@@ -77,16 +74,16 @@
           <div class="Entities ">
             <h4 class="text_color">Expenses</h4>
             <div   class="col d-flex align-items-baseline  justify-content-center  " >
-              <form #expensesForm="ngForm" (ngSubmit)="postExpensesData(expensesForm.value)">
-              <div class="d-flex"> 
+              <form #expensesForm="ngForm" (ngSubmit)="postExpensesData(expensesForm)">
+              <div class="d-flex">
               <input
-                type="text" ngModel
+                type="text" ngModel required [(ngModel)]="exp.expenses"
                 class="  form-control m-2"
                 placeholder=" Expense Name"
                 name="expenses"
               />
               <input
-                type="text" ngModel
+                type="text" ngModel required [(ngModel)]="exp.expensescode"
                 class="  form-control m-2"
                 placeholder="Expense code"
                 name="expensecode"
@@ -96,32 +93,29 @@
             </div>
             </form>
           </div>
-          
+
          <div class="fixTableHead">
             <table class="t-table" >
-              
          <thead>
            <tr>
-             <th>expenses</th>
-             <th>expensecode</th>
+             <th>Expenses</th>
+             <th>Expense Code</th>
             </tr>
          </thead>
          <tbody >
-          <tr  *ngFor="let ex of expenses" style="max-height: 25px;">
-            
+          <tr  *ngFor="let ex of expense" style="height:50px;">
+
             <td >
-              {{ex.expenses}} 
+              {{ex.expenses}}
             </td>
             <td>
-              {{ex.expensecode}} 
+              {{ex.expensecode}}
             </td>
-          
+
          </tr>
         </tbody>
             </table>
           </div>
-          
-        
           </div>
         </div>
 
@@ -132,9 +126,9 @@
           <div
             class="col-md-12 d-flex align-items-baseline m-3 "
           >
-            
+
               <div class="d-flex">
-                
+
               <input
                 type="text" ngModel
                 class="  form-control"
@@ -148,14 +142,14 @@
                 name="expensecode"
               />
             </div>
-            
+
             <div>
               <button class="view p-1 ">Add Expense</button>
             </div>
           </div></form>
             <div class="fixTableHead">
               <table >
-                
+
            <thead>
              <tr>
                <th>expenses</th>
