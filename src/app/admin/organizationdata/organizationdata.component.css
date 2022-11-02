@@ -9,7 +9,8 @@ background-color: rgb(223, 181, 188);
 text-align: center;
 border-top-left-radius: 10px;
 border-top-right-radius: 10px;
-padding: 5px;
+padding: 10px;
+font-weight: 700;
 }
 
 
@@ -23,7 +24,7 @@ padding: 5px;
 
 .fixTableHead {
   overflow-y: auto;
-  height: 59vh;
+  height: 59vh; 
   width: 100%;
   border-bottom-left-radius: 10px;
 }
