@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { IUserDetails } from './userdetails-model';
 
 @Component({
   selector: 'app-userdetails',
@@ -10,10 +12,19 @@ export class UserdetailsComponent implements OnInit {
 alert("Updated");
   }
 
+  userDetails = { } as IUserDetails;
+  
   constructor() { }
 
   ngOnInit(): void {
 
   }
+
+  Details(f:NgForm){
+   console.log(this.userDetails)
+
+  }
+
+  
 
 }
