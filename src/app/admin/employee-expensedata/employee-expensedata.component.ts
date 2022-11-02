@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { HttpService } from 'src/app/services/http.service';
-import { IEmployeeExpensedata } from './employee-expensedatamodul';
+import { IEmployeeExpensedata } from './employee-expensedatamodel';
 
 @Component({
   selector: 'app-employee-expensedata',

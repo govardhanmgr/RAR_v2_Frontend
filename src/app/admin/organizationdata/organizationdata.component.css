@@ -1,5 +1,5 @@
 *{
-  
+
    box-sizing: border-box;
 }
 
@@ -33,7 +33,9 @@ top: 0;
 }
 
 table {
-border-collapse: collapse;        
+   margin-left: auto;
+   margin-right: auto;
+border-collapse: collapse;
  width: 100%;
 background-color: white;
 vertical-align: baseline;
@@ -43,23 +45,26 @@ border-radius: 10px;
 }
 
 td {
-   padding: 15px;
+
    font-size: 18px;
-   border-top: 1px solid rgb(236, 235, 235);
+   border-collapse: collapse;
 }
 th {
    background-color: rgb(238, 229, 231);
-   padding: 15px;
-   font-size: 15px;
+   padding: 10px;
+   font-size: 20px;
+   border-collapse: collapse;
 }
 
-.view{
-color: white;
-background-color: rgba(8,77,179,0.864);
-border-radius:10px;
+td:empty {
+   border-left: 0;
+   border-right: 0;
+ }
 
-border: 1px solid white;
-}
+
+
+
+
 
 
 
@@ -68,9 +73,9 @@ border: 1px solid white;
    height: auto;
    width: 100%;
    display: flex;
-   justify-content: space-between; 
+   justify-content: space-between;
    border-radius: 10px;
-   
+
    }
 .Expenses{
    display: inline-block;
@@ -79,7 +84,7 @@ border: 1px solid white;
  border-radius: 10px;
  border: 1px solid rgba(216, 193, 193, 0.644);
  overflow: hidden;
- 
+
 }
 
 .Roles{
@@ -96,7 +101,14 @@ border: 1px solid white;
 .sri1{
    display: block;
     height: 59vh;
-    
+
 }
 
+
+.view{
+color: white;
+background-color: rgba(8,77,179,0.864);
+border-radius:10px;
+border: 1px solid white;
+}
 */

@@ -2,7 +2,7 @@
     novalidate>
     <br>
     <h1 class="text-center">Add Education Information</h1>
-    <button type="button" class="btn btn-primary" style="margin-left: 19%;">Back</button>
+    <button [routerLink]="['/personaldata']" routerLinkActive="router-link-active" type="button" class="btn btn-primary" style="margin-left: 19%;">Back</button>
 
     <div class="px-4 py-2 px-md-5 col-md-6 text-center text-lg-start" style="margin-left:24%">
         <div class=" shadow-lg p-4mb-2 bg-white rounded">
@@ -29,8 +29,8 @@
                 <div class="col-md-6 mb-4">
                     <label class="form-label">Degree</label>
                     <select class="form-select" aria-label="Default select example" id="Degree" placeholder="Degree"
-                    name="Degree" #Degree="ngModel" [(ngModel)]="educationupdate.Degree" required>
-                    
+                        name="Degree" #Degree="ngModel" [(ngModel)]="educationupdate.Degree" required>
+
                         <option>Choose Option</option>
                         <option value="1">Bachelors</option>
                         <option value="2">Masters</option>
@@ -38,8 +38,8 @@
                         <option value="4">Doctorate</option>
                     </select>
                     <small
-                    *ngIf="(Degree.touched && Degree.invalid) || (Degree.invalid && EDUCATIONUPDATE.submitted)">Degree
-                    is required </small>  
+                        *ngIf="(Degree.touched && Degree.invalid) || (Degree.invalid && EDUCATIONUPDATE.submitted)">Degree
+                        is required </small>
 
 
                 </div>
@@ -49,11 +49,12 @@
 
                         <div class="form-outline">
                             <label for="form2Example3" class="form-label">Specialization</label>
-                            <input type="text" class="form-control" id="Specialization" placeholder="Specialization" name="Specialization" #Specialization="ngModel" [(ngModel)]="educationupdate.Specialization"
-                            required />
-                        <small
-                            *ngIf="(Specialization.touched && Specialization.invalid) || (Specialization.invalid && EDUCATIONUPDATE.submitted)">Specialization
-                         is required </small>
+                            <input type="text" class="form-control" id="Specialization" placeholder="Specialization"
+                                name="Specialization" #Specialization="ngModel"
+                                [(ngModel)]="educationupdate.Specialization" required />
+                            <small
+                                *ngIf="(Specialization.touched && Specialization.invalid) || (Specialization.invalid && EDUCATIONUPDATE.submitted)">Specialization
+                                is required </small>
                         </div>
 
                     </div>
@@ -61,11 +62,11 @@
 
                         <div class="form-outline">
                             <label for="form2Example4" class="form-label">GPA</label>
-                            <input type="text" class="form-control" id="GPA" placeholder="GPA" name="GPA" #GPA="ngModel" [(ngModel)]="educationupdate.GPA"
-                            required />
-                        <small
-                            *ngIf="(GPA.touched && GPA.invalid) || (GPA.invalid && EDUCATIONUPDATE.submitted)">GPA
-                         is required </small>
+                            <input type="text" class="form-control" id="GPA" placeholder="GPA" name="GPA" #GPA="ngModel"
+                                [(ngModel)]="educationupdate.GPA" required />
+                            <small
+                                *ngIf="(GPA.touched && GPA.invalid) || (GPA.invalid && EDUCATIONUPDATE.submitted)">GPA
+                                is required </small>
 
                         </div>
 
@@ -76,12 +77,13 @@
 
                         <div class="form-outline">
                             <label for="DegreeStartDate" class="form-label">Degree Start Date</label>
-                            <input type="date" class="form-control" id="DegreeStartDate"
-                                placeholder="DegreeStartDate" name="DegreeStartDate" #DegreeStartDate="ngModel" [(ngModel)]="educationupdate.DegreeStartDate"
-                                required />
+                            <input type="date" class="form-control" id="DegreeStartDate" placeholder="DegreeStartDate"
+                                name="DegreeStartDate" #DegreeStartDate="ngModel"
+                                [(ngModel)]="educationupdate.DegreeStartDate" required />
                             <small
-                                *ngIf="(DegreeStartDate.touched && DegreeStartDate.invalid) || (DegreeStartDate.invalid && EDUCATIONUPDATE.submitted)">Degree Start Date
-                             is required </small>
+                                *ngIf="(DegreeStartDate.touched && DegreeStartDate.invalid) || (DegreeStartDate.invalid && EDUCATIONUPDATE.submitted)">Degree
+                                Start Date
+                                is required </small>
 
                         </div>
 
@@ -91,11 +93,13 @@
 
                     <div class="form-outline">
                         <label for="DegreeEndDate" class="form-label">Degree End Date</label>
-                        <input type="date" class="form-control" id="DegreeEndDate" placeholder="DegreeEndDate" name="DegreeEndDate" #DegreeEndDate="ngModel" [(ngModel)]="educationupdate.DegreeEndDate"
-                        required />
-                    <small
-                        *ngIf="(DegreeEndDate.touched && DegreeEndDate.invalid) || (DegreeEndDate.invalid && EDUCATIONUPDATE.submitted)">Degree End Date
-                     is required </small>
+                        <input type="date" class="form-control" id="DegreeEndDate" placeholder="DegreeEndDate"
+                            name="DegreeEndDate" #DegreeEndDate="ngModel" [(ngModel)]="educationupdate.DegreeEndDate"
+                            required />
+                        <small
+                            *ngIf="(DegreeEndDate.touched && DegreeEndDate.invalid) || (DegreeEndDate.invalid && EDUCATIONUPDATE.submitted)">Degree
+                            End Date
+                            is required </small>
 
                     </div>
 

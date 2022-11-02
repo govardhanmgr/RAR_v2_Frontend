@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpService } from 'src/app/services/http.service';
 
+
 import { Subscription } from 'rxjs';
 import { IExpense } from './org';
-import { IRoles } from './roles';
+import { NgForm } from '@angular/forms';
+
 
 @Component({
   selector: 'app-organizationdata',
@@ -12,14 +14,22 @@ import { IRoles } from './roles';
 })
 export class OrganizationdataComponent implements OnInit {
 
-  expenses = [] as IExpense [];
+  expense : any;
 
-  roles= [] as IRoles [];
+  exp=[] as any;
 
-  entity:any;
+  role:any;
+
+  roles={} as any;
+
+  entities:any;
+
+  entity={} as any;
+
+
 
   subscription!: Subscription;
-  
+
 
   constructor(private  http:HttpService) { }
 
@@ -27,7 +37,7 @@ export class OrganizationdataComponent implements OnInit {
   ngOnInit(): void {
     this.subscription = this.http.getData('expenses').subscribe({
       next: (data: any) => {
-        this.expenses = data as IExpense []; 
+        this.expense = data ;
       },
       error: reason => console.log(reason)
     });
@@ -35,57 +45,75 @@ export class OrganizationdataComponent implements OnInit {
 
     this.subscription = this.http.getData('roles').subscribe({
       next:(data:any)=>{
-        this.roles = data as IRoles [];
+        this.role = data ;
       }
     });
 
 
     this.subscription = this.http.getData('orgndata').subscribe({
       next:(data:any)=>{
-         this.entity = data;
+         this.entities = data;
       }
     });
 
 
   }
 
-  postExpensesData(_data:any){
-    
-    this.subscription= this.http.postdata('expenses',_data).subscribe({
-     next:(_data:any)=>{ 
-       this.ngOnInit();
-     }
-    });
+  postExpensesData(_data:NgForm){
+    console.log(_data)
+    if(this.exp.expenses==null || this.exp.expensescode==null){
+      alert("Please Enter Expenses")
+      return
+    }
+    console.log(this.exp)
+    this.subscription = this.http.postdata('expenses',this.exp).subscribe({
+      next:(_data:any)=>{
+        console.log(_data)
+      },
+      error: reason => console.log(reason)
+    })
 
  }
 
 
- postEntityData(_data:any){
-  this.subscription= this.http.postdata('orgndata',_data).subscribe({
+ postEntityData(_data:NgForm){
+  console.log(_data)
+  if(this.entity.entity==null){
+    alert("Please Enter Entity")
+    return
+  }
+  this.subscription= this.http.postdata('orgndata',this.entity).subscribe({
      next:(_data:any)=>{
+      alert("Entity Added successfull");
       this.ngOnInit();
      }
   });
+  _data.resetForm();
  }
 
+ postRoleData(_data:NgForm){
+  if(this.roles.roles==null){
+    alert("Please Enter Role");
 
- postRoleData(_data:any){
-  console.log(_data)
-  this.subscription = this.http.postdata('roles',_data).subscribe({
-      next:(_data:any)=>{
-        console.log(_data);
-        this.ngOnInit();
-      }
-     
+    return
+  }
+  this.subscription = this.http.postdata('roles',this.roles).subscribe({
+    next:(_data:any)=>{
+      alert("Role Added successfull");
+      this.ngOnInit();
+    }
   });
+  _data.resetForm();
+
  }
+
 
 
   ngOnDestroy():void{
     if(this.subscription)
     this.subscription.unsubscribe();
   }
-  
+
 
 
 }

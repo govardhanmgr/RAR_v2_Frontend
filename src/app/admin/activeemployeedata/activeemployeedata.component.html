@@ -1,23 +1,18 @@
 <!DOCTYPE html>
-
-<h2 class="header">Active Employee Data</h2>
+<h2 class="header"><b> Active Employee Data</b></h2>
 <br />
-
-<div class="container">
-  <div class="row height d-flex justify-content-center align-items-center">
-    <div class="col-md-2">
-      <div class="form">
-        <i class="fa fa-search"></i>
-        <input
-          type="text"
-          class="form-control form-input"
-          placeholder="Search"
-          id="search"
-        />
+<div class="container-fluid col-md-10">
+  <div class="container-fluid">
+    <div class="row height d-flex justify-content-center align-items-center">
+      <div class="col-md-2">
+        <div class="form">
+          <i class="fa fa-search"></i>
+          <input   type="text"  [(ngModel)]="searchValue" class="form-control form-input"  placeholder="Search" id="search" name="search"
+ />
+        </div>
       </div>
     </div>
   </div>
-</div>
 
 <br />
 <button
@@ -52,7 +47,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let act of actemployees" class="hover" (click)="select(act)" >
+      <tr *ngFor="let act of actemployees | searchfilter: searchValue" class="hover" (click)="select(act)"  >
         <td>{{ act.employeeid }}</td>
         <td>{{ act.firstname }}</td>
         <td>{{ act.lastname }}</td>

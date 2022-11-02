@@ -21,7 +21,7 @@
                                 <h3><b>Login Here</b></h3>
 
                                 <div class="form-outline mb-2">
-                                    <label class="form-label" for="form2Example1"></label>
+                                    <label class="form-label" for="form2Example1"></label><i class="bi bi-person-circle" style="position: relative;right: -44%;top: 28px;"></i>
                                     <input type="email" id="email" name="email" placeholder="Enter User Id"
                                         #email="ngModel" [(ngModel)]="Login.email" class="form-control"
                                         required />
@@ -30,11 +30,17 @@
                                         Email is
                                         mandatory</small>
                                 </div>
+                                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
                                 <div class="form-outline mb-2">
                                     <label class="form-label" for="form2Example2"></label>
-                                    <input type="password" id="password" placeholder="Enter Password" name="password" #password="ngModel"
-                                    [(ngModel)]="Login.password"
+                                    <span style="position: relative;right: -44%;top: 30px;" class="eyeicon"  (click)="viewpass()"><i [ngClass]="visible?'bi bi-eye-fill':'bi bi-eye-slash-fill'"></i>
+                                    </span>
+                                    <input [type]="changetype?'password':'text'"id="password" placeholder="Enter Password" name="password" #password="ngModel"
+                                    [(ngModel)]="Login.password" 
                                         class="form-control" required />
+                                       
+                                       
                                         <small
                                         *ngIf="(password.touched && password.invalid) || (password.invalid && LOGIN.submitted)">Password
                                         is
