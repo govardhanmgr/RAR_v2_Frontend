@@ -16,6 +16,7 @@ export class SearchfilterPipe implements PipeTransform {
       p.lastname.toLowerCase().includes(searchValue.toLowerCase()) ||
       p.emailaddress.toLowerCase().includes(searchValue.toLowerCase()) ||
       p.jobtitle.toLowerCase().includes(searchValue.toLowerCase()) ||
+      p.contactnumber.toString().toLowerCase().includes(searchValue.toLowerCase()) ||
       p.employeeid === Number(searchValue))
  
 

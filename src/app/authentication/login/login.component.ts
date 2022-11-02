@@ -18,7 +18,7 @@ export class LoginComponent implements OnInit,OnDestroy {
   subscription!: Subscription;
   
   entities= [] as any;
-  visible:boolean = true;
+  visible:boolean = false;
   changetype:boolean =true;
 
   constructor(private _httpservice:HttpService,
