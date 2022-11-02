@@ -107,14 +107,21 @@
           </label>
         </div>
         <br />
-        <div class="mb-3">
+        <!-- <div class="mb-3">
           <input class="form-control" type="file"  id="formFile" name="file" #file="ngModel"  [(ngModel)]="ldb.file" required  (change)="onFileSelected($event)" #fileUpload />
           <small *ngIf="(file.touched && file.invalid) || (file.invalid && ldbpage.submitted)">File is Required</small> 
+        </div> -->
           <br />
+          <!-- <div class="form-group">
+            <label for="file">Choose File</label>
+            <input type="file"
+                   id="file"
+                   (change)="handleFileInput($event.target.files)">
+        </div> -->
           <div class="bt">
             <button type="submit" class="btn btn-primary" >Upload</button>
           </div>
-        </div>
+        <!-- </div> -->
         
       </div>
       </form>

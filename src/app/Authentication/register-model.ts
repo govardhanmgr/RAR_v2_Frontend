@@ -29,4 +29,8 @@ export interface ILogin {
     password: string,
     entity: string,
 }
+export interface IPassword{
+    newpassword:string;
+    confirmpassword:string;
+}
 
