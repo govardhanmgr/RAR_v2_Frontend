@@ -30,13 +30,17 @@
                                         Email is
                                         mandatory</small>
                                 </div>
+                                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
                                 <div class="form-outline mb-2">
                                     <label class="form-label" for="form2Example2"></label>
-                                    <i class="bi bi-eye-slash-fill" style="position: relative;right: -44%;top: 30px;"></i>
-                                    <input type="password" id="password" placeholder="Enter Password" name="password" #password="ngModel"
+                                    <span style="position: relative;right: -44%;top: 30px;" class="eyeicon"  (click)="viewpass()"><i [ngClass]="visible?'bi bi-eye-fill':'bi bi-eye-slash-fill'"></i>
+                                    </span>
+                                    <input [type]="changetype?'password':'text'"id="password" placeholder="Enter Password" name="password" #password="ngModel"
                                     [(ngModel)]="Login.password" 
                                         class="form-control" required />
-                                        
+                                       
+                                       
                                         <small
                                         *ngIf="(password.touched && password.invalid) || (password.invalid && LOGIN.submitted)">Password
                                         is
