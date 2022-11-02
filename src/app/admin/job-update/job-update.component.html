@@ -9,7 +9,7 @@
   <body>
    <form  name="Update" #Update="ngForm" (ngSubmit)="Update.valid && JOB(Update)" novalidate>
     <h1 class="text-center">Add Job Information</h1>
-    <button type="button" class="btn btn-primary" style="margin-left: 9%;">Back</button>
+    <button [routerLink]="['/personaldata']" routerLinkActive="router-link-active" button type="button" class="btn btn-primary" style="margin-left: 12%;">Back</button>
     <div class="px-4 py-2 px-md-5 col-md-8 text-center text-lg-start" style="margin-left:15%">
         <div class=" shadow-lg p-5 mb-4 bg-white rounded">
             <div class="card-body py-3 px-md-4">
