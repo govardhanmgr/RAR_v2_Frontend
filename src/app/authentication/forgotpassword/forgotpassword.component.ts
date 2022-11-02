@@ -32,8 +32,7 @@ export class ForgotpasswordComponent implements OnInit {
   }
   register(f:NgForm){ this.subscription = this._httpservice.postdata("forgotpassword", this.Forgotpassword).subscribe({
     next: (data: any) => {
-      console.log(data);
-      console.log(data.mailid)
+      
       if(data.status == "success" && data.statuscode == 200){
         console.log(data);
         localStorage.setItem("forgotpassword",JSON.stringify(data) );
