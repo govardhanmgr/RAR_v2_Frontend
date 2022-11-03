@@ -387,7 +387,7 @@
           *ngIf="(paytype.touched && paytype.invalid) || (paytype.invalid && Newemp.submitted)">SelectPayType is
           required </small><br>
 
-        <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="Pay Rate" for="payrate" name="PayRate"
+        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Pay Rate" for="payrate" name="PayRate"
           #PayRate="ngModel" [(ngModel)]="NEWEMP.payrate" required>
         <small *ngIf="(PayRate.touched && PayRate.invalid) || (PayRate.invalid && Newemp.submitted)">PayRate is required
         </small><br>
