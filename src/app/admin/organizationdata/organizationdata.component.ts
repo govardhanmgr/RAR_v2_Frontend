@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,OnDestroy } from '@angular/core';
 import { HttpService } from 'src/app/services/http.service';
 
 
@@ -12,7 +12,7 @@ import { NgForm } from '@angular/forms';
   templateUrl: './organizationdata.component.html',
   styleUrls: ['./organizationdata.component.css']
 })
-export class OrganizationdataComponent implements OnInit {
+export class OrganizationdataComponent implements OnInit, OnDestroy {
 
   expense : any;
 
@@ -35,29 +35,40 @@ export class OrganizationdataComponent implements OnInit {
 
 
   ngOnInit(): void {
+     this.getExpense();
+     this.getRoles();
+     this.getEntity();   
+  }
+
+  getExpense(){
     this.subscription = this.http.getData('expenses').subscribe({
       next: (data: any) => {
         this.expense = data ;
       },
-      error: reason => console.log(reason)
+      error: reason => alert( " Unable To Show Expenses Data Due to"+ " " + reason.message )
     });
+   } 
 
-
+   getRoles(){
     this.subscription = this.http.getData('roles').subscribe({
       next:(data:any)=>{
         this.role = data ;
-      }
+      },
+      error: reason => alert( " Unable To Show Roles Data Due to"+ " " + reason.message )
     });
+   }
 
-
+   getEntity(){
     this.subscription = this.http.getData('orgndata').subscribe({
       next:(data:any)=>{
          this.entities = data;
-      }
+      },
+      error: reason => alert( " Unable To Show Entities Data Due to"+ " " + reason.message )
     });
 
-
-  }
+   }
+   
+  
 
   postExpensesData(_data:NgForm){
     console.log(_data)
@@ -65,46 +76,61 @@ export class OrganizationdataComponent implements OnInit {
       alert("Please Enter Expenses")
       return
     }
+    if(confirm("Are You sure to Add Expenses"))
     console.log(this.exp)
     this.subscription = this.http.postdata('expenses',this.exp).subscribe({
       next:(da:any)=>{
-        console.log(da)
+        if(da){
+          alert("Expenses Added Successfully");
+          this.getExpense();
+          _data.resetForm();
+        }
+        
       },
-      error: reason => console.log(reason)
-    })
-
+      error:reason=>alert(  "Adding Expenses  Failed Due to" + " "+ reason.message)
+    });
+    
  }
 
 
  postEntityData(_data:NgForm){
-  console.log(_data)
   if(this.entity.entity==null){
     alert("Please Enter Entity")
     return
   }
+  if(confirm("Are You sure to Add Entity"))
   this.subscription= this.http.postdata('orgndata',this.entity).subscribe({
-     next:(_data:any)=>{
-      alert("Entity Added successfull");
-      this.ngOnInit();
-     }
+     next:(data:any)=>{
+      if(data){
+        alert("Entity Added Successfully");
+        this.getEntity();
+        _data.resetForm();
+      }
+       
+     },
+     error:reason=>alert(  "Adding Entity  Failed Due to" + " "+ reason.message)
   });
-  _data.resetForm();
+  
  }
+
 
  postRoleData(_data:NgForm){
   if(this.roles.roles==null){
     alert("Please Enter Role");
-
     return
   }
+  if(confirm("Are You sure to Add Role"))
   this.subscription = this.http.postdata('roles',this.roles).subscribe({
     next:(_data:any)=>{
-      alert("Role Added successfull");
-      this.ngOnInit();
-    }
+      if(_data){
+        alert("Role Added Successfully");
+        this.getRoles();
+        _data.resetForm();
+      }  
+    },
+    error:reason=>alert(  "Adding Role  Failed Due to" + " "+ reason.message)
   });
-  _data.resetForm();
-
+  
  }
 
 
