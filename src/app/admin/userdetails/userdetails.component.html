@@ -1,186 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
+
 <body>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <a href="/admin/amdpage"><button type="button" class="btn btn-primary"align="center">Back</button></a>
+  <a href="/admin/amdpage"><button type="button" class="btn btn-primary" >Back</button></a>
   <section class="vh-200 gradient-custom">
     <div class="container py-5 h-100">
       <div class="row justify-content-center align-items-center h-100">
         <div class="col-12 col-lg-9 col-xl-7">
           <div class="card shadow-2-strong card-registration" style="border-radius: 26px;">
             <div class="card-body p-4 p-md-4">
-              <h1 class="mb-4 pb-2 pb-md-0 mb-md-5"  align="center">User Details </h1>
-              
+              <h1 class="mb-4 pb-2 pb-md-0 mb-md-5">User Details </h1>
 
-              <form >
+
+              <form name="User" #User="ngForm" (ngSubmit)="User.valid && Details(User)">
+
                 <div class="row">
-                  
+
                   <div class="col">
-                      <label class="form-label" for="firstName">First Name</label>
-                    <input type="text" class="form-control">
+                    <label class="form-label" for="firstName">First Name</label>
+                    <input type="text" class="form-control" id="FirstName" placeholder="" name="firstName"
+                      #firstName="ngModel" [(ngModel)]="userDetails.firstName" required />
+                    <small
+                      *ngIf="(firstName.touched && firstName.invalid) || (firstName.invalid && User.submitted)">First
+                      Name is Required </small>
+
                   </div>
-                
+
 
                   <div class="col">
-                    <label class="form-label" for="firstName">Last Name</label>
-                    <input type="text" class="form-control">
+                    <label class="form-label" for="lstName">Last Name</label>
+                    <input type="text" class="form-control" id="lstName" placeholder="" name="lstName"
+                      #lstName="ngModel" [(ngModel)]="userDetails.lstName" required />
+                    <small
+                      *ngIf="(lstName.touched && lstName.invalid) || (lstName.invalid && User.submitted)">Last
+                      Name is Required </small>
                   </div>
 
 
                   <div class="col">
-                    <label class="form-label" for="firstName">Employee Id</label>
-                    <input type="text" class="form-control">
+                    <label class="form-label" for="employeeId">Employee Id</label>
+                    <input type="text" class="form-control" id="employeeId" placeholder="" name="employeeId"
+                      #employeeId="ngModel" [(ngModel)]="userDetails.employeeId" required />
+                    <small
+                      *ngIf="(employeeId.touched && employeeId.invalid) || (employeeId.invalid && User.submitted)">Employee
+                      Id is Required </small>
+
                   </div>
 
                 </div>
 
-              </form>
+            
+                <br>
 
-<br>
-
-              <form>
-                <div class="row">
-                  
-                  <div class="col">
-                      <label class="form-label" for="firstName">Address Line 1</label>
-                    <input type="text" class="form-control">
-                  </div>
-                
-
-                  <div class="col">
-                    <label class="form-label" for="firstName">Address Line 2</label>
-                    <input type="text" class="form-control">
-                  </div>
-
-
-                  <div class="col">
-                    <label class="form-label" for="firstName">City</label>
-                    <input type="text" class="form-control">
-                  </div>
-
-                </div>
-
-              </form>
-
-              <br> 
-
-
-              
-              <form>
-                <div class="row">
-                  
-                  <div class="col">
-                      <label class="form-label" for="firstName">Country</label>
-                    <input type="text" class="form-control">
-                  </div>
-                
-
-                  <div class="col">
-                    <label class="form-label" for="firstName">State</label>
-                    <input type="text" class="form-control">
-                  </div>
-
-
-                  <div class="col">
-                    <label class="form-label" for="firstName">Zipcode</label>
-                    <input type="text" class="form-control">
-                  </div>
-
-                </div>
-              </form>
-
-        <br>      
-  
                
-  
-                 <div class="row">
+                <div class="row">
+
+                  <div class="col">
+                    <label class="form-label" for="addressLine1">Address Line 1</label>
+                    <input type="text" class="form-control" id="addressLine1" placeholder="" name="addressLine1"
+                      #addressLine1="ngModel" [(ngModel)]="userDetails.addressLine1" required />
+                    <small
+                      *ngIf="(addressLine1.touched && addressLine1.invalid) || (addressLine1.invalid && User.submitted)">Address
+                      Line 1 is Required </small>
+                  </div>
+
+
+                  <div class="col">
+                    <label class="form-label" for="addressLine2">Address Line 2</label>
+                    <input type="text" class="form-control" id="addressLine2" placeholder="" name="addressLine2"
+                      #addressLine2="ngModel" [(ngModel)]="userDetails.addressLine2" required />
+                    <small
+                      *ngIf="(addressLine2.touched && addressLine2.invalid) || (addressLine2.invalid && User.submitted)">Address
+                      Line 2 is Required </small>
+                  </div>
+
+
+                  <div class="col">
+                    <label class="form-label" for="city">City</label>
+                    <input type="text" class="form-control" id="city" placeholder="" name="city" #city="ngModel"
+                      [(ngModel)]="userDetails.city" required />
+                    <small *ngIf="(city.touched && city.invalid) || (city.invalid && User.submitted)">City is
+                      Required </small>
+                  </div>
+
+                </div>
+
+               
+
+                <br>
+
+
+
+              
+                <div class="row">
+
+                  <div class="col">
+                    <label class="form-label" for="country">Country</label>
+                    <input type="text" class="form-control" id="country" placeholder="" name="country"
+                      #country="ngModel" [(ngModel)]="userDetails.country" required />
+                    <small
+                      *ngIf="(country.touched && country.invalid) || (country.invalid && User.submitted)">Country
+                      is Required </small>
+                  </div>
+
+
+                  <div class="col">
+                    <label class="form-label" for="state">State</label>
+                    <input type="text" class="form-control" id="state" placeholder="" name="state" #state="ngModel"
+                      [(ngModel)]="userDetails.state" required />
+                    <small *ngIf="(state.touched && state.invalid) || (state.invalid && User.submitted)">State is
+                      Required </small>
+                  </div>
+
+
+                  <div class="col">
+                    <label class="form-label" for="zipcode">Zipcode</label>
+                    <input type="text" class="form-control" id="zipcode" placeholder="" name="zipcode"
+                      #zipcode="ngModel" [(ngModel)]="userDetails.zipcode" required />
+                    <small
+                      *ngIf="(zipcode.touched && zipcode.invalid) || (zipcode.invalid && User.submitted)">Zipcode
+                      is Required </small>
+                  </div>
+
+                </div>
+               
+
+                <br>
+
+
+
+                <div class="row">
                   <div class="col">
                     <label class="form-label select-label">Gender</label>
 
-                    <select class="form-select" aria-label="Default select example">                      
+                    <select class="form-select" aria-label="Default select example" name="gender" #gender="ngModel"
+                      [(ngModel)]="userDetails.gender">
                       <option value="1" disabled>Choose option</option>
                       <option value="2">Subject 1</option>
                       <option value="3">Subject 2</option>
                       <option value="4">Subject 3</option>
-                      
+
                     </select>
-  
+
                   </div>
 
-                   <div class="col">
+                  <div class="col">
                     <label class="form-label select-label">Role</label>
 
-                    <select class="form-select" aria-label="Default select example">                      
+                    <select class="form-select" aria-label="Default select example" name="role" #role="ngModel"
+                      [(ngModel)]="userDetails.role">
                       <option value="1" disabled>Choose option</option>
                       <option value="2">Subject 1</option>
                       <option value="3">Subject 2</option>
                       <option value="4">Subject 3</option>
-                      
+
                     </select>
-  
+
                   </div>
 
 
                   <div class="col">
                     <label class="form-label select-label">Entity</label>
 
-                    <select class="form-select" aria-label="Default select example">                      
+                    <select class="form-select" aria-label="Default select example" name="entity" #entity="ngModel"
+                      [(ngModel)]="userDetails.entity">
                       <option value="1" disabled>Choose option</option>
                       <option value="2">Subject 1</option>
                       <option value="3">Subject 2</option>
                       <option value="4">Subject 3</option>
-                      
+
                     </select>
-  
+
                   </div>
                 </div>
-  
-<br>
-                <form>
-                  <div class="row">
-                    
-                    <div class="col">
-                        <label class="form-label" for="firstName">Email Id</label>
-                      <input type="text" class="form-control">
-                    </div>
-                  
-  
-                    <div class="col">
-                      <label class="form-label" for="firstName">Phone Number</label>
-                      <input type="text" class="form-control">
-                    </div>
-  
-  
-                    <div class="col">
-                      <label class="form-label" for="firstName">Password</label>
-                      <input type="text" class="form-control">
-                      </div>
 
+                <br>
+             
+                <div class="row">
 
+                  <div class="col">
+                    <label class="form-label" for="emailid">Email Id</label>
+                    <input type="text" class="form-control" id="emailid" placeholder="" name="emailid"
+                      #emailid="ngModel" [(ngModel)]="userDetails.emailId" required />
+                    <small
+                      *ngIf="(emailid.touched && emailid.invalid) || (emailid.invalid && User.submitted)">Email
+                      Id is Required </small>
                   </div>
-                    <div class="col-md-4">
-                      <label class="form-label" for="firstName">Confirm Password</label>
-                      <input type="text" class="form-control">
-                       </div>
 
-<br>
-<br>
-                </form>
-<form align="center">
-  <button type="button" id="submit" class="btn btn-primary" (click)="ok()" >Update Details </button>
-</form>
+
+                  <div class="col">
+                    <label class="form-label" for="phonenumber">Phone Number</label>
+                    <input type="text" class="form-control" id="phonenumber" placeholder="" name="phonenumber"
+                      #phonenumber="ngModel" [(ngModel)]="userDetails.phoneNumber" required />
+                    <small
+                      *ngIf="(phonenumber.touched && phonenumber.invalid) || (phonenumber.invalid && User.submitted)">Phone
+                      Number is Required </small>
+                  </div>
+
+
+                  <div class="col">
+                    <label class="form-label" for="password">Password</label>
+                    <input type="text" class="form-control" id="password" placeholder="" name="password"
+                      #password="ngModel" [(ngModel)]="userDetails.password" required />
+                    <small
+                      *ngIf="(password.touched && password.invalid) || (password.invalid && User.submitted)">Password
+                      is Required </small>
+                  </div>
+
+
+                </div>
+                <br>
+
+                <div class="col-md-4 ">
+                  <label class="form-label" for="confirmpassword" style="margin-left: -5%;">Confirm Password</label>
+
+                  <input type="text" class="form-control" id="confirmpassword" placeholder="" name="confirmpassword"
+                    #confirmpassword="ngModel" style="margin-left: -5%;" [(ngModel)]="userDetails.confirmPassword"
+                    required />
+                  <small
+                    *ngIf="(confirmpassword.touched && confirmpassword.invalid) || (confirmpassword.invalid && User.submitted)">Password
+                    is Required </small>
+                </div>
+
+
+                <br>
+
+
+                <div id="box" class="mt-4 pt-2" align="center">
+                <button type="submit" id="submit" class="btn btn-primary" >Update Details </button>
+              </div>
 
               
-                <!-- <div id="box" class="mt-4 pt-2" align="center">
-                  <input class="btn btn-primary btn-lg" type="submit" value="Update Details" />
-                </div>  -->
- 
+              </form>
+
+
             </div>
           </div>
         </div>
@@ -188,4 +249,5 @@
     </div>
   </section>
 </body>
+
 </html>

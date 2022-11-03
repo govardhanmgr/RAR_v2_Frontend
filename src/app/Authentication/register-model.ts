@@ -1,20 +1,21 @@
 export interface Isignup {
-    FirstName: string,
-    LastName: string,
-    EmployeeId: string,
-    EmailId: string,
-    PhoneNumber: string,
-    Gender: string,
-    SelectEntity: string,
-    DateOfBirth: string,
+    firstName: string,
+    lastName: string,
+    idnumber: string,
+    email: string,
+    phoneNumber: string,
+    gender: string,
+    entity: string,
+    dateofBirth: string,
 }
 
 export interface Iemail
 {
-    EmailId:string,
+    email:string,
 }
 
 export interface Isecurityquestions{
+    
   Question1:string,
   Question2:string,
   Question3:string,
@@ -23,14 +24,13 @@ export interface Isecurityquestions{
   Answer3:string,
 
 }
-
-
-export interface Iemail {
-    EmailId: string,
-}
 export interface ILogin {
     email: string,
     password: string,
     entity: string,
+}
+export interface IPassword{
+    newpassword:string;
+    confirmpassword:string;
 }
 

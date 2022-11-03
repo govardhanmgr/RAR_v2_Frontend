@@ -35,6 +35,7 @@ export class AmdpageComponent implements OnInit {
   empdata() {
 
     this.subscription = this.http.getData("empdata").subscribe({
+      
 
       next: (data: any) => {
 
@@ -45,8 +46,15 @@ export class AmdpageComponent implements OnInit {
       },
 
       error: reason => console.log(reason)
-
+     
     });
+
+  }
+  userdata(item: any) {
+    localStorage.setItem("updateuser", JSON.stringify(item))
+    console.log(item)
+    
+
 
   }
 
@@ -62,3 +70,4 @@ export class AmdpageComponent implements OnInit {
 
 
 }
+

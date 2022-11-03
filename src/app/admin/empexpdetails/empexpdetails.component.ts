@@ -40,6 +40,7 @@ export class EmpexpdetailsComponent implements OnInit {
         console.log(this.Expensedata)
       },
     });
+    
   }
   
   ngOnDestroy(): void {

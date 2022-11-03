@@ -4,8 +4,12 @@
   </div>
   <div class="v1"></div>
   <br />
-  <div class="container-fluid">
-    <div class="shadow-lg p-5 mb-7 bg-white" id="shadow">
+  <br>
+  <!-- <div class="container"> -->
+    <div class="col-lg-10 mb-12 ">
+      <div class="card-body  px-md-7">
+    <div class="shadow-lg p-5 mb-9 bg-white" id="shadow">
+      
       <form name="ldbpage" #ldbpage="ngForm" (ngSubmit)="ldbpage.valid && load(ldbpage)">
       <!-- <div class="card" style="width: 22rem;height: 27rem;">     -->
 
@@ -14,42 +18,42 @@
 
         <h3>Select The Data You Want To Load</h3>
         <br />
-        <div class="form-check">
+        <!-- <div class="form-check">
           <input
             class="form-check-input"
             type="radio"
-            name="flexRadioDefault"
+            name="flexRadio"
             id="flexRadioDefault1"
-            name="flexRadioDefault" required
+            name="flexRadio"   required (click)="(filename='0')"
           />
           <label class="form-check-label" for="flexRadioDefault1"
             >Client
           </label>
           <br>
-          <!-- <small *ngIf="(client.touched && client.invalid) || (client.invalid && ldb.submitted)"> Please Select the File </small> -->
+          
         </div>
         <br />
         <div class="form-check">
           <input
             class="form-check-input"
             type="radio"
-           name="flexRadioDefault"
+           name="flexRadio"
             id="flexRadioDefault2"
-              required
+                required (click)="(filename='1')"
           />
           <label class="form-check-label" for="flexRadioDefault2">
             Pay Roll
           </label>
           <br>
-          <!-- <small *ngIf="(payroll.touched && payroll.invalid) || (payroll.invalid && ldb.submitted)"> Please Select the File </small> -->
+          
         </div>
         <br />
         <div class="form-check">
           <input
             class="form-check-input"
             type="radio"
-            name="flexRadioDefault"
-            id="flexRadioDefault3"
+            name="flexRadio"
+            id="flexRadioDefault3"  required (click)="(filename='2')"
           />
           <label class="form-check-label" for="flexRadioDefault3">
             Time Sheet
@@ -60,9 +64,9 @@
           <input
             class="form-check-input"
             type="radio"
-            name="flexRadioDefault"
+            name="flexRadio"
             id="flexRadioDefault4"
-            checked
+            required (click)="(filename='3')"
           />
           <label class="form-check-label" for="flexRadioDefault4">
             Management Expenses
@@ -73,9 +77,10 @@
           <input
             class="form-check-input"
             type="radio"
-            name="flexRadioDefault"
-            id="flexRadioDefault5"
-          />
+            name="flexRadio"
+            id="flexRadioDefault5" 
+            required (click)="(filename='4')" />
+
           <label class="form-check-label" for="flexRadioDefault5">
             Employee Expenses
           </label>
@@ -85,9 +90,9 @@
           <input
             class="form-check-input"
             type="radio"
-            name="flexRadioDefault"
+            name="flexRadio"
             id="flexRadioDefault6"
-            checked
+            checked  required (click)="(filename='5')"
           />
           <label class="form-check-label" for="flexRadioDefault6">
             Immigration Expenses
@@ -98,27 +103,67 @@
           <input
             class="form-check-input"
             type="radio"
-            name="flexRadioDefault"
-            id="flexRadioDefault7"
+            name="flexRadio"
+            id="flexRadioDefault7"  required (click)="(filename='6')"
           />
           <label class="form-check-label" for="flexRadioDefault7">
             Employee Data
           </label>
+        </div> -->
+        <div class="custom-control custom-radio ">
+          <input type="radio" class="custom-control-input" id="defaultInline1" name="inlineDefaultRadiosExample">
+          <label class="custom-control-label" for="defaultInline1">Client</label>
+        </div>
+        <div class="custom-control custom-radio ">
+          <input type="radio" class="custom-control-input" id="defaultInline2" name="inlineDefaultRadiosExample">
+          <label class="custom-control-label" for="defaultInline2"> Pay Roll</label>
+        </div>
+        <div class="custom-control custom-radio ">
+          <input type="radio" class="custom-control-input" id="defaultInline3" name="inlineDefaultRadiosExample">
+          <label class="custom-control-label" for="defaultInline3">Time Sheet</label>
+        </div>
+        <div class="custom-control custom-radio ">
+          <input type="radio" class="custom-control-input" id="defaultInline4" name="inlineDefaultRadiosExample">
+          <label class="custom-control-label" for="defaultInline4"> Management Expenses</label>
+        </div>
+        <div class="custom-control custom-radio ">
+          <input type="radio" class="custom-control-input" id="defaultInline5" name="inlineDefaultRadiosExample">
+          <label class="custom-control-label" for="defaultInline5"> Employee Expenses</label>
+        </div>
+        <div class="custom-control custom-radio ">
+          <input type="radio" class="custom-control-input" id="defaultInline6" name="inlineDefaultRadiosExample">
+          <label class="custom-control-label" for="defaultInline6">  Immigration Expenses</label>
+        </div>
+        <div class="custom-control custom-radio ">
+          <input type="radio" class="custom-control-input" id="defaultInline7" name="inlineDefaultRadiosExample">
+          <label class="custom-control-label" for="defaultInline7"> Employee Data </label>
         </div>
         <br />
-        <div class="mb-3">
-          <input class="form-control" type="file" id="formFile" name="file" #file="ngModel"  [(ngModel)]="ldb.file" required />
-          <small *ngIf="(file.touched && file.invalid) || (file.invalid && ldbpage.submitted)">File is Required</small> 
-          <br />
+        <input type="file" (change)="selectFile($event)" name="file" #file="ngModel"  [(ngModel)]="ldb.file" required />
+        <small *ngIf="(file.touched && file.invalid) || (file.invalid && ldbpage.submitted)">File is Required</small> 
           <div class="bt">
-            <button type="submit" class="btn btn-primary">Upload</button>
+            <button type="submit" class="btn btn-primary" >Upload</button>
           </div>
-        </div>
+        
+        <!-- <div class="mb-3">
+          <input class="form-control" type="file"  id="formFile" name="file" #file="ngModel"  [(ngModel)]="ldb.file" required   />
+          <small *ngIf="(file.touched && file.invalid) || (file.invalid && ldbpage.submitted)">File is Required</small> 
+        </div> -->
+          <br />
+          <!-- <div class="form-group">
+            <label for="file">Choose File</label>
+            <input type="file"
+                   id="file"
+                   (change)="handleFileInput($event.target.files)">
+        </div> -->
+        
         
       </div>
       </form>
     </div>
   </div>
-    
+
   </div>
+  </div>
+<!-- </div> -->
 
