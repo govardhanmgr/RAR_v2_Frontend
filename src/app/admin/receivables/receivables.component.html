@@ -18,11 +18,11 @@
         </thead>
         <tbody>
           
-          <tr *ngFor="let rec of receivables" >
+          <tr *ngFor="let rec of receivables"  >
         
             <td>{{rec.clientid}}</td>
             <td>{{rec.clientname}}</td>
-            <td>{{rec.sum}}</td>
+            <td>{{rec.sum |currency}}</td>
            
        
          

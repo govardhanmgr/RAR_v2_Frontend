@@ -12,12 +12,14 @@ import { Observable } from 'rxjs';
 })
 export class LdbpageComponent implements OnInit {
   ldb ={} as any || null ;
-  fileToUpload: File | null = null;
-  fileUploadService: any
+  fileToUpload : File | null = null;
+  fileUploadService: any;
   httpClient: any;
-  files={} as any || null;
+  selectedFiles?: FileList;
+  currentFile?: File;
+
   //  fileName = '';
-  event!:any;
+ 
    filename!:string;
   // validate_message!:string;
   // content= [];
@@ -29,6 +31,10 @@ export class LdbpageComponent implements OnInit {
 
 
   constructor(private http: HttpClient) { }
+  selectFile(event: any): void {
+    this.selectedFiles = event.target.files[0];
+    console.log(this.selectedFiles)
+  }
   
 //   onFileSelected(event: { target: { files: File[]; }; }) {
 
@@ -51,10 +57,12 @@ export class LdbpageComponent implements OnInit {
 // }
 
   ngOnInit(): void {
-   this. uploadFileToActivity();
+  //  this. uploadFileToActivity();
   }
-  handleFileInput(files: FileList,event:any) {
+
+  handleFileInput(files:FileList | any) {
     this.fileToUpload = files.item(0);
+    console.log(this.fileToUpload)
   }
   
 
@@ -99,26 +107,26 @@ export class LdbpageComponent implements OnInit {
 //   } );
 // }
   load(F:NgForm){}
-    uploadFileToActivity() {
-      this.fileUploadService.postFile(this.fileToUpload).subscribe((data: any) => {
-        // do something, if upload success
-        }, (error: any) => {
-          console.log(error);
-        });
-    }
-    postFile(fileToUpload: File): Observable<boolean> {
-      const endpoint = 'your-destination-url';
-      const formData: FormData = new FormData();
-      formData.append('fileKey', fileToUpload, fileToUpload.name);
-      return this.httpClient
-        .post(endpoint, formData)
-        .map(() => { return true; })
-        .catch((e: any) => this.handleError(e));
-  }
-  handleError(e: any) {
-    throw new Error('Method not implemented.');
-  }
-  }
+  //   uploadFileToActivity() {
+  //     this.fileUploadService.postFile(this.fileToUpload).subscribe((data: any) => {
+  //       // do something, if upload success
+  //       }, (error: any) => {
+  //         console.log(error);
+  //       });
+  //   }
+  //   postFile(fileToUpload: File): Observable<boolean> {
+  //     const endpoint = 'your-destination-url';
+  //     const formData: FormData = new FormData();
+  //     formData.append('fileKey', fileToUpload, fileToUpload.name);
+  //     return this.httpClient
+  //       .post(endpoint, formData)
+  //       .map(() => { return true; })
+  //       .catch((e: any) => this.handleError(e));
+  // }
+  // handleError(e: any) {
+  //   throw new Error('Method not implemented.');
+  // }
+  // }
 
 // onFileSelected(event:any) {
 
@@ -137,5 +145,5 @@ export class LdbpageComponent implements OnInit {
       // upload$.subscribe();
   
 
-  
+}
 
