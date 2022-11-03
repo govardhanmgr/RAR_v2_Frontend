@@ -4,18 +4,18 @@ export interface IViewdetails {
     // Gender:string;
     // AddressLine1:string;
     // AddressLine2:string;
-    // City:string;
-    // Zipcode:number;
-    // Country:string;
-    // Role:string;
+     City:string;
+    Zipcode:number;
+    Country:string;
+     Role:string;
     // Entity:string;
     // CompanyId:string
     firstName: string,
     lastName: string,
-    // idnumber: number,
-    // email: string,
+     idnumber: number,
+    email: string,
     // phoneNumber: number,
-    // dateofBirth: string,
+     dateofBirth: string,
     gender: string,
     role: string,
     address1: string,

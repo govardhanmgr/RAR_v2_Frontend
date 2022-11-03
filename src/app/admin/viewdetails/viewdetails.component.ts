@@ -20,7 +20,7 @@ export class ViewdetailsComponent implements OnInit {
  
 
   ngOnInit(): void {
-    this.viewdetails=JSON.parse(localStorage.getItem('updatedata')||'{}');
+    this.viewdetails=JSON.parse(localStorage.getItem('updateuser')||'{}');
     console.log(this.viewdetails)
     // this.Viewdetail();
   }
