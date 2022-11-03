@@ -52,7 +52,7 @@
                             </div>
                 
                 <h4 class="mb-4 pb-2 pb-md-0 mb-md-3">Job Details</h4> 
-                <button type="button" class="btn btn-primary">+Add new</button><br> <br>
+                <button [routerLink]="['/job-update']" routerLinkActive="router-link-active" type="button" class="btn btn-primary">+Add new</button><br> <br>
                 <div class="table-bordered">
                     <table class="table">
                         <thead class="table-light">
@@ -64,23 +64,18 @@
                               <th>Reports To</th>
                             </tr>
                           </thead>
-                          <tr *ngFor="let item of jobtab">
-                            <td>{{item.effectivedate}}</td>
+                          <tr *ngFor="let item of jobData">
+                            <td>{{item.jobeffectivedate}}</td>
                             <td>{{item.location}}</td>
                             <td>{{item.clientname}}</td>
                             <td>{{item.jobtitle}}</td>
                             <td>{{item.reportsto}}</td>
                           </tr>
-                         
-
-                        
-                        
                     </table>                    
-                    
                 </div>
                 
                 <h4 class="mb-4 pb-2 pb-md-0 mb-md-3">Compensation Details</h4> 
-                <button type="button" class="btn btn-primary">+Add new</button><br><br>
+                <button [routerLink]="['/compensationupdate']" routerLinkActive="router-link-active" type="button" class="btn btn-primary">+Add new</button><br> <br>
                 <div class="table-bordered">
                     <table class="table">
                         <thead class="table-light">
@@ -94,8 +89,9 @@
                               <th>Change Reason </th>
                               <th>Comment</th>
                             </tr>
-                            <tr *ngFor="let item of jobtab">
-                              <td>{{item.effectivedate}}</td>
+                            </thead>
+                            <tr *ngFor="let item of compensationData">
+                              <td>{{item.compensationeffectivedate}}</td>
                               <td>{{item.payschedule}}</td>
                               <td>{{item.paytype}}</td>
                               <td>{{item.payrate}}</td>
@@ -103,10 +99,7 @@
                               <td>{{item.overtimerate}}</td>
                               <td>{{item.changereason}}</td>
                               <td>{{item.comment}}</td>
-
                             </tr>
-
-                          </thead>
                     </table>                    
                     
                 </div> 
