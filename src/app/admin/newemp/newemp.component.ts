@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { FormControl, FormGroupDirective, NgForm, Validators } from '@angular/forms';
+import { EmailValidator, FormControl, FormGroupDirective, NgForm, Validators } from '@angular/forms';
 import { Subscription } from 'rxjs';
 import { HttpService } from 'src/app/services/http.service';
 import { INewemp } from './newemp-model';
@@ -25,8 +25,9 @@ export class NewempComponent implements OnInit {
   constructor(private http: HttpService) { }
 
   ngOnInit(): void {
-
-
+    // this.NEWEMP = this.emailFormControl({
+    // EmailId: ['', [Validators.required, Validators.email,Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$')]]
+    // })
     this.clientdata();
     this.emp();
   }
@@ -117,7 +118,7 @@ export class NewempComponent implements OnInit {
     this.subscription = this.http.postdata("empdata", this.empdata).subscribe({
       next: (data: any) => {
         console.log(data)
-         alert("datasavedsuccessfully")
+         alert("Data Saved Successfully")
       },
       error: reason => console.log(reason)
     });
