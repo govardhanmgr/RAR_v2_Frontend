@@ -6,6 +6,9 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root',
 })
 export class HttpService {
+  upload(currentFile: File) {
+    throw new Error('Method not implemented.');
+  }
   ApiUrl = environment.ApiUrl;
 
   constructor(private http: HttpClient) {}

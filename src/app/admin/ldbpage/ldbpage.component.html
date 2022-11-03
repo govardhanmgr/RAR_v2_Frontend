@@ -1,4 +1,5 @@
 <div class="container-fluid d-flex bg-light flex c-bg">
+
   <div class="container-fluid" style="width: fit-content">
     <app-navbar></app-navbar>
   </div>
@@ -6,11 +7,11 @@
   <br />
   <br>
   <!-- <div class="container"> -->
-    <div class="col-lg-10 mb-12 ">
+    <div class="col-lg-10 mb-12 w-sm-100 ">
       <div class="card-body  px-md-7">
-    <div class="shadow-lg p-5 mb-9 bg-white" id="shadow">
+    <div class="shadow-lg p-5 mb-9 bg-white "  id="shadow">
       
-      <form name="ldbpage" #ldbpage="ngForm" (ngSubmit)="ldbpage.valid && load(ldbpage)">
+      <form name="ldbpage" #ldbpage="ngForm" (ngSubmit)="load(ldbpage)">
       <!-- <div class="card" style="width: 22rem;height: 27rem;">     -->
 
       <div class="card-body">
@@ -111,36 +112,39 @@
           </label>
         </div> -->
         <div class="custom-control custom-radio ">
-          <input type="radio" class="custom-control-input" id="defaultInline1" name="inlineDefaultRadiosExample">
+          <input type="radio" class="custom-control-input" id="defaultInline1" name="inlineDefaultRadiosExample" (click)="(filename = '0')">
           <label class="custom-control-label" for="defaultInline1">Client</label>
         </div>
         <div class="custom-control custom-radio ">
-          <input type="radio" class="custom-control-input" id="defaultInline2" name="inlineDefaultRadiosExample">
+          <input type="radio" class="custom-control-input" id="defaultInline2" name="inlineDefaultRadiosExample" (click)="(filename = '1')">
           <label class="custom-control-label" for="defaultInline2"> Pay Roll</label>
         </div>
         <div class="custom-control custom-radio ">
-          <input type="radio" class="custom-control-input" id="defaultInline3" name="inlineDefaultRadiosExample">
+          <input type="radio" class="custom-control-input" id="defaultInline3" name="inlineDefaultRadiosExample" (click)="(filename = '2')">
           <label class="custom-control-label" for="defaultInline3">Time Sheet</label>
         </div>
         <div class="custom-control custom-radio ">
-          <input type="radio" class="custom-control-input" id="defaultInline4" name="inlineDefaultRadiosExample">
+          <input type="radio" class="custom-control-input" id="defaultInline4" name="inlineDefaultRadiosExample" (click)="(filename = '3')">
           <label class="custom-control-label" for="defaultInline4"> Management Expenses</label>
         </div>
         <div class="custom-control custom-radio ">
-          <input type="radio" class="custom-control-input" id="defaultInline5" name="inlineDefaultRadiosExample">
+          <input type="radio" class="custom-control-input" id="defaultInline5" name="inlineDefaultRadiosExample" (click)="(filename = '4')">
           <label class="custom-control-label" for="defaultInline5"> Employee Expenses</label>
         </div>
         <div class="custom-control custom-radio ">
-          <input type="radio" class="custom-control-input" id="defaultInline6" name="inlineDefaultRadiosExample">
+          <input type="radio" class="custom-control-input" id="defaultInline6" name="inlineDefaultRadiosExample" (click)="(filename = '5')">
           <label class="custom-control-label" for="defaultInline6">  Immigration Expenses</label>
         </div>
         <div class="custom-control custom-radio ">
-          <input type="radio" class="custom-control-input" id="defaultInline7" name="inlineDefaultRadiosExample">
+          <input type="radio" class="custom-control-input" id="defaultInline7" name="inlineDefaultRadiosExample" (click)="(filename = '6')">
           <label class="custom-control-label" for="defaultInline7"> Employee Data </label>
         </div>
         <br />
+        <div class="mb-3">
         <input type="file" (change)="selectFile($event)" name="file" #file="ngModel"  [(ngModel)]="ldb.file" required />
-        <small *ngIf="(file.touched && file.invalid) || (file.invalid && ldbpage.submitted)">File is Required</small> 
+        <small>{{validate_message}}</small>
+          
+      </div>  
           <div class="bt">
             <button type="submit" class="btn btn-primary" >Upload</button>
           </div>
