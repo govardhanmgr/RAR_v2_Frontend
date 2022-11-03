@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormControl, NgForm, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
@@ -12,36 +12,38 @@ import { IEducationUpdate } from './educationupdate-model';
   templateUrl: './education-update.component.html',
   styleUrls: ['./education-update.component.css']
 })
-export class EducationUpdateComponent implements OnInit {
+export class EducationUpdateComponent implements OnInit,OnDestroy{
 
   emailFormControl = new FormControl('', [Validators.required, Validators.email]);
 
-  educationupdate={} as IEducationUpdate;
+  empdata = {} as any;
+  constructor( private http: HttpService, private router:Router) { }
   subscription!: Subscription;
-
-
-  constructor(private _httpservice:HttpService,
-    private router:Router,) { }
-
+  educationupdate = {} as IEducationUpdate;
   ngOnInit(): void {
+    this.empdata = JSON.parse(localStorage.getItem("personaldata") || '{}')
+    console.log(this.empdata)
   }
+  education(f:NgForm){
+    this.educationupdate.employeeid = parseInt(this.empdata.employeeid)
+  
+   console.log(this.educationupdate)
 
-
- education(f:NgForm){
-  console.log(this.educationupdate);
-  this.subscription=this._httpservice.postdata("education",this.educationupdate).subscribe({
-   next: (data:any) => {
-   if(data.status == "success" && data.statuscode == 200){
-     console.log(data);
-     localStorage.setItem("education",JSON.stringify(data.logindetails) );
-     this.router.navigate(['/personaldata'])
-   }
-   else{
-     alert(data.message)
-   }
-
-   },
-   error:reason=>console.log(reason)
+  this.subscription=this.http.empPostData("empdata/",this.educationupdate, parseInt(this.empdata.id)).subscribe({
+    next: (data: any) => {
+      console.log(data)
+      if(data.statuscode==200){
+        alert(data.message)
+        this.router.navigate(["/admin/personaldata"])
+      }
+    },
+    error: (reason: any) => {
+      console.log(reason);
+    }
   });
+}
+ngOnDestroy(): void {
+  if(this.subscription)
+  this.subscription.unsubscribe();
  }
 }
