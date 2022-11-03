@@ -12,14 +12,19 @@ export class HttpService {
   getData(url: string) {
     return this.http.get(`${this.ApiUrl}${url}`);
   }
-  
+
 
   logindata(url: string,data:any){
     return this.http.post(`${this.ApiUrl}${url}`,data);
   }
  postdata(url:string,data:any){
-  return this.http.post(`${this.ApiUrl}${url}`,data)
+  return this.http.post(`${this.ApiUrl}${url}`,data);
  }
-  
+
+ empPostData(url:string,data:any,id:any){
+  return this.http.post(`${this.ApiUrl}${url}${id}`,data);
+
+ }
+
+
 }
-  

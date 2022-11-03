@@ -16,7 +16,7 @@ export class OrganizationdataComponent implements OnInit {
 
   expense : any;
 
-  exp=[] as any;
+  exp={} as any;
 
   role:any;
 
@@ -61,14 +61,14 @@ export class OrganizationdataComponent implements OnInit {
 
   postExpensesData(_data:NgForm){
     console.log(_data)
-    if(this.exp.expenses==null || this.exp.expensescode==null){
+    if(this.exp.expenses==null || this.exp.expensecode==null){
       alert("Please Enter Expenses")
       return
     }
     console.log(this.exp)
     this.subscription = this.http.postdata('expenses',this.exp).subscribe({
-      next:(_data:any)=>{
-        console.log(_data)
+      next:(da:any)=>{
+        console.log(da)
       },
       error: reason => console.log(reason)
     })
