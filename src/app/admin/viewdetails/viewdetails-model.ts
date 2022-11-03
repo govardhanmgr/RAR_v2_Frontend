@@ -32,5 +32,6 @@ export interface IViewdetails {
     // ans4: string,
     // ans5: string,
     entity: string,
-    // status: string
+    // status: stringu
+    
 }
