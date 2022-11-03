@@ -18,7 +18,7 @@ export interface IViewdetails {
      dateofBirth: string,
     gender: string,
     role: string,
-    address1: string,
+    //address1: string,
     address2: string,
     country: string,
     state: string,
