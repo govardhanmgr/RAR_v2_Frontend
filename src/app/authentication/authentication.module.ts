@@ -12,6 +12,7 @@ import { RegistrationPageTwoComponent } from './registration-page-two/registrati
 import { ResetpasswordComponent } from './resetpassword/resetpassword.component';
 import { FormsModule } from '@angular/forms';
 import { SharedModule } from '../shared/shared.module';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { SharedModule } from '../shared/shared.module';
     ForgotpasswordComponent,
     SecurityquestionsComponent,
     RegistrationPageTwoComponent,
-    ResetpasswordComponent
+    ResetpasswordComponent,
+    RegisterComponent
 
   ],
   imports: [
@@ -33,3 +35,7 @@ import { SharedModule } from '../shared/shared.module';
   ]
 })
 export class AuthenticationModule { }
+
+
+
+

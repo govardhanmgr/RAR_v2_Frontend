@@ -18,20 +18,21 @@
               <input
                 type="text" ngModel required [(ngModel)]="entity.entity"
                 class="  form-control m-2"
-                placeholder=" Enter Entity Name"
+                placeholder=" Add Entity Name"
                 name="entity"
               />
-              <button class=" m-2 btn btn-primary ">Add Entity</button>
+              <button class=" m-2 btn btn-primary " >Add Entity</button>
             </div>
             </form>
           </div>
           <div class="fixTableHead">
             <table>
-          <tr  *ngFor="let en of  entities" style="height: 50px;">
+              <tbody   >
+          <tr  *ngFor="let en of  entities" style="height:px;">
             <td  >
               {{en.entity}}
             </td>
-         </tr>
+         </tr></tbody>
             </table>
           </div>
 
@@ -47,7 +48,7 @@
                 <input
                   type="text" ngModel required [(ngModel)]="roles.roles"
                   class="  form-control m-2"
-                  placeholder=" Enter Entity Name"
+                  placeholder=" Add Role Name"
                   name="roles"
                 />
 
@@ -79,13 +80,13 @@
               <input
                 type="text" ngModel required [(ngModel)]="exp.expenses"
                 class="  form-control m-2"
-                placeholder=" Expense Name"
+                placeholder="Add Expense Name"
                 name="expenses"
               />
               <input
                 type="text" ngModel required [(ngModel)]="exp.expensecode"
                 class="  form-control m-2"
-                placeholder="Expense code"
+                placeholder="Add Expense code"
                 name="expensecode"
               />
 
