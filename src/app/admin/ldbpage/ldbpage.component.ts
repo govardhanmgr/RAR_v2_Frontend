@@ -185,11 +185,11 @@ export class LdbpageComponent implements OnInit {
 
     }
     console.log(sdata)
-    this.subscription= this.http.postdata("fileupload", sdata).subscribe({
-      next:data=>{
-        console.log(data);
-      }
-    })
+    // this.subscription= this.http.postdata("fileupload", sdata).subscribe({
+    //   next:data=>{
+    //     console.log(data);
+    //   }
+    // })
 
 
   }
