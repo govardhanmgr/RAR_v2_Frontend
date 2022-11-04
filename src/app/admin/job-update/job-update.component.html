@@ -25,9 +25,14 @@
                     <select class="form-select" aria-label="Default select example" id="clientname" name="clientname" #clientname="ngModel" placeholder=""  [(ngModel)]="jobupdate.clientname" required>
                         <option>Choose Option</option>
                         <option>UPS</option>
-                        <option>Google</option>
+                        <option>TCS</option>
                         <option>Facebook</option>
                         <option>Twitter</option>
+                        <option>IBM</option>
+                        <option>Infosys</option>
+                        <option>ATT</option>
+                        <option>Estee Lauder</option>
+                        <option>CH robinson</option>
                         </select>
                         <small *ngIf="(clientname.touched && clientname.invalid) || (clientname.invalid && Update.submitted)">*Client Name is required </small>
 
