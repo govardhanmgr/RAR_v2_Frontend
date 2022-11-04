@@ -42,7 +42,12 @@ export class JobTabComponent implements OnInit,OnDestroy {
         this.jobData= data
       }
     })
+
   }
+ JB(f:NgForm){
+  
+ }
+
   getcompensationData(){
     let sdata = {
       "employeeid": parseInt(this.empdata.employeeid)
