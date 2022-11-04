@@ -1,8 +1,7 @@
 <br>
 
-<button [routerLink]="['/admin/launchpage']" routerLinkActive="router-link-active" type="button" class="btn btn-primary"
-  id="buttons">Back</button><br><br>
-
+<button [routerLink]="['/admin/pendingrequest']" routerLinkActive="router-link-active" type="button"
+  class="btn btn-primary" id="buttons">Back</button><br><br>
 
 <section class="vh-200 gradient-custom">
   <div class="container py-5 h-100">
@@ -14,29 +13,30 @@
 
             <h1 class="mb-4 pb-2 pb-md-0 mb-md-5">User Details</h1>
 
-            <form name="view" #view="ngForm" >
+            <form name="view" #view="ngForm">
+
               <div class="row">
 
                 <div class="col">
                   <label class="form-label" for="firstName">First Name</label>
-                  <input type="text" id="firstName" name="firstName" class="form-control"  disabled #firstName="ngModel"  [(ngModel)]="viewdetails.firstName">
+                  <input type="text" id="firstName" name="firstName" class="form-control" disabled #firstName="ngModel"
+                    [(ngModel)]="viewdetails.firstName">
                 </div>
-
 
                 <div class="col">
-                  <label class="form-label" for="lastName" >Last Name</label>
-                  <input type="text" class="form-control" id="lastName" name="lastName" disabled #lastName="ngModel" [(ngModel)]="viewdetails.lastName" >
+                  <label class="form-label" for="lastName">Last Name</label>
+                  <input type="text" class="form-control" id="lastName" name="lastName" disabled #lastName="ngModel"
+                    [(ngModel)]="viewdetails.lastName">
 
                 </div>
-
 
                 <div class="col">
                   <label class="form-label" for="gender">Gender</label>
-                  <input type="text" class="form-control" id="gender" name="gender" disabled #gender="ngModel" [(ngModel)]="viewdetails.gender">
+                  <input type="text" class="form-control" id="gender" name="gender" disabled #gender="ngModel"
+                    [(ngModel)]="viewdetails.gender">
                 </div>
 
               </div>
-
 
 
               <br>
@@ -46,46 +46,44 @@
 
                 <div class="col">
                   <label class="form-label" for="address line 1">Address Line 1</label>
-                  <input type="text" class="form-control" id="address line 1" name="address line 1" disabled #address1="ngModel" [(ngModel)]="viewdetails.address1" >
+                  <input type="text" class="form-control" id="address line 1" name="address line 1" disabled
+                    #address1="ngModel" [(ngModel)]="viewdetails.address1">
                 </div>
-
 
                 <div class="col">
                   <label class="form-label" for="address line 2">Address Line 2</label>
-                  <input type="text" class="form-control"  id="address line 2" name="address line 2" disabled #address2="ngModel" [(ngModel)]="viewdetails.address2">
+                  <input type="text" class="form-control" id="address line 2" name="address line 2" disabled
+                    #address2="ngModel" [(ngModel)]="viewdetails.address2">
                 </div>
-
 
                 <div class="col">
                   <label class="form-label" for="city">City</label>
-                  <input type="text" class="form-control"  id="city" name="city" disabled #city="ngModel" [(ngModel)]="viewdetails.city">
+                  <input type="text" class="form-control" id="city" name="city" disabled #city="ngModel"
+                    [(ngModel)]="viewdetails.city">
                 </div>
 
               </div>
 
-
-
               <br>
-
-
 
               <div class="row">
 
                 <div class="col">
                   <label class="form-label" for="zipcode">Zipcode</label>
-                  <input type="text" class="form-control" id="zipcode" name="zipcode" disabled #zipcode="ngModel" [(ngModel)]="viewdetails.zipcode">
+                  <input type="text" class="form-control" id="zipcode" name="zipcode" disabled #zipcode="ngModel"
+                    [(ngModel)]="viewdetails.zipcode">
                 </div>
-
 
                 <div class="col">
                   <label class="form-label" for="state">State</label>
-                  <input type="text" class="form-control" id="state" name="state" disabled #state="ngModel" [(ngModel)]="viewdetails.state">
+                  <input type="text" class="form-control" id="state" name="state" disabled #state="ngModel"
+                    [(ngModel)]="viewdetails.state">
                 </div>
-
 
                 <div class="col">
                   <label class="form-label" for="country">Country</label>
-                  <input type="text" class="form-control" id="country" name="country" disabled #country="ngModel" [(ngModel)]="viewdetails.country">
+                  <input type="text" class="form-control" id="country" name="country" disabled #country="ngModel"
+                    [(ngModel)]="viewdetails.country">
                 </div>
 
               </div>
@@ -98,24 +96,43 @@
 
                 <div class="col">
                   <label class="form-label" for="role">Role</label>
-                  <input type="text" class="form-control" id="role" name="role" disabled #role="ngModel" [(ngModel)]="viewdetails.role">
+                  <input type="text" class="form-control" id="role" name="role" disabled #role="ngModel"
+                    [(ngModel)]="viewdetails.role">
                 </div>
 
 
                 <div class="col">
                   <label class="form-label" for="entity">Entity</label>
-                  <input type="text" class="form-control" id="entity" name="entity" disabled #entity="ngModel" [(ngModel)]="viewdetails.entity">
+                  <input type="text" class="form-control" id="entity" name="entity" disabled #entity="ngModel"
+                    [(ngModel)]="viewdetails.entity">
                 </div>
 
-
-                <!-- <div class="col">
+                <div class="col">
                   <label class="form-label" for="company id">Company Id</label>
-                  <input type="text" class="form-control" id="" name="" disabled #country="ngModel" [(ngModel)]="viewdetails.country">
+                  <input type="text" class="form-control" id="" name="" disabled #companyid="ngModel"
+                    [(ngModel)]="viewdetails.CompanyId">
 
-                </div> -->
+                </div>
 
               </div>
 
+              <br>
+
+              <div class="row">
+
+                <div class="col">
+                  <label class="form-label" for="role">Email Id</label>
+                  <input type="text" class="form-control" id="emailid" name="emailid" disabled #email id="ngModel"
+                    [(ngModel)]="viewdetails.email">
+                </div>
+
+                <div class="col">
+                  <label class="form-label" for="entity">Phone Nummber</label>
+                  <input type="text" class="form-control" id="phonenumber" name="phonenumber" disabled #entity="ngModel"
+                    [(ngModel)]="viewdetails.phoneNumber">
+                </div>
+
+              </div>
 
             </form>
 
