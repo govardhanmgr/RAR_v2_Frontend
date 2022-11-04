@@ -22,7 +22,6 @@ export class RegisterComponent implements OnInit {
 
   next() {
     
-    this.stepper.next();
   }
 
   onSubmit() {
