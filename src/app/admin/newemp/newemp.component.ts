@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { EmailValidator, FormControl, FormGroupDirective, NgForm, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { HttpService } from 'src/app/services/http.service';
 import { INewemp } from './newemp-model';
@@ -22,7 +23,11 @@ export class NewempComponent implements OnInit {
 
   subscription!: Subscription;
 
-  constructor(private http: HttpService) { }
+
+  constructor(
+    private http: HttpService,
+    private router:Router    
+    ) { }
 
   ngOnInit(): void {
     // this.NEWEMP = this.emailFormControl({
@@ -118,7 +123,10 @@ export class NewempComponent implements OnInit {
     this.subscription = this.http.postdata("empdata", this.empdata).subscribe({
       next: (data: any) => {
         console.log(data)
+        if(data.statuscode==200){
          alert("Data Saved Successfully")
+         this.router.navigate(["/admin/activeemployeedata"])
+        }
       },
       error: reason => console.log(reason)
     });

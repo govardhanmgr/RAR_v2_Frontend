@@ -31,7 +31,7 @@ export class PendingrequestComponent implements OnInit, OnDestroy {
         this.employees = data as IEmployee[];
         
       },
-      error: reason => alert(reason.message)
+      error: reason => alert(reason.message + " " +" Unable to Get Employee Data")
     });
   }
 
@@ -44,9 +44,14 @@ export class PendingrequestComponent implements OnInit, OnDestroy {
     if(confirm("Are You sure to Approve"))
     this.subscription = this.http.postdata('approve', sdata).subscribe({
       next: (data: any) => {
+      
+        if(data.status == "success" && data.statuscode == 200){
+          alert("Employe Approved Successfully")
+        }
         console.log(data);
         this.empdata()
-      }
+      },
+      error:reason=>alert(reason.message + " "+" Employee Approved Failed")
     })
   }
 
@@ -59,9 +64,13 @@ export class PendingrequestComponent implements OnInit, OnDestroy {
     if(confirm("Are You sure to Reject"))
     this.subscription = this.http.postdata('approve', rdata).subscribe({
       next: (data: any) => {
+        if(data.status == "success" && data.statuscode == 200){
+          alert("Employe Rejected Successfully")
+        }
         console.log(data);
         this.empdata()
-      }
+      },
+      error:reason=>alert(reason.message + " "+" Employee Rejected Failed")
     })
   }
 

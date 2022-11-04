@@ -3,7 +3,7 @@
 <h1 class="text-center">Add Compensation Information</h1>
 
 
-<button type="button" class="btn btn-primary">back</button>
+<button [routerLink]="['/job-update']" routerLinkActive="router-link-active" type="button" class="btn btn-primary">Back</button><br> <br>
 <form >
     <div class="px-4 py-2 px-md-5 col-md-8 text-center text-lg-start" style="margin-left:15%">
         <div class=" shadow-lg p-5 mb-4 bg-white rounded">
@@ -11,7 +11,7 @@
             <div class="col-md-6 mb-4">
                 <div class="form-outline">
         <label for="exampleFormControlInput1" class="form-label" >Effective Date</label>
-        <input type="date" class="form-control" id="exampleFormControlInput1" placeholder="" name="compensationeffectivedate" #compensationeffectivedate="ngModel"  [(ngModel)]="compensation.compensationeffectivedate" required />
+        <input type="date" class="form-control" id="compensationeffectivedate" placeholder="" name="compensationeffectivedate" #compensationeffectivedate="ngModel"  [(ngModel)]="compensation.compensationeffectivedate" required />
         <small *ngIf="(compensationeffectivedate.touched && compensationeffectivedate.invalid) || (compensationeffectivedate.invalid && Compensation.submitted)">Compensationdate is Required </small>
     
     </div>
@@ -19,53 +19,57 @@
     <div></div>
     <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label">Pay Schedule</label>
-  <select class="form-select" aria-label="Default select example"  name="payschedule" #payschedule="ngModel"  aria-label="Default select example" [(ngModel)]="compensation.payschedule" required>    
-    <option value="3">Twice a Month</option>
-      <option value="1"> Every week</option>
-      <option value="2">Every Month</option>
+  <select class="form-select" aria-label="Default select example" id="payschedule"  name="payschedule" #payschedule="ngModel"  aria-label="Default select example" [(ngModel)]="compensation.payschedule" required>    
+    <option>Twice a Month</option>
+      <option> Every week</option>
+      <option>Every Month</option>
     </select>
-    <small *ngIf="(payschedule.touched && payschedule.invalid) || (payschedule.invalid && Compensation.submitted)">Payschedule is required </small>
+    <small *ngIf="(payschedule.touched && payschedule.invalid) || (payschedule.invalid && Compensation.submitted)">payschedule is required </small>
  </div>
     
     <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label">Pay Type</label>
-    <select class="form-select" aria-label="Default select example"  name="paytype" #paytype="ngModel"  aria-label="Default select example" [(ngModel)]="compensation.paytype" required>    
-        <option value="1"> Hourly </option>
-        <option value="2">Commission only</option>
+    <select class="form-select" aria-label="Default select example"  name="paytype" #paytype="ngModel" id="paytype"  aria-label="Default select example" [(ngModel)]="compensation.paytype" required>    
+        <option> Hourly </option>
+        <option>Commission only</option>
     </select> 
     <small *ngIf="(paytype.touched && paytype.invalid) || (paytype.invalid && Compensation.submitted)">Payshedule is required </small>
   </div>
     
     <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label" >Pay Rate</label>
-        <input type="number" class="form-control" id="exampleFormControlInput1" placeholder=""  name="payrate" #payrate="ngModel"  [(ngModel)]="compensation.payrate" required />
+        <input type="text" class="form-control" id="payrate" placeholder=""  name="payrate" #payrate="ngModel"  [(ngModel)]="compensation.payrate" required />
         <small *ngIf="(payrate.touched && payrate.invalid) || (payrate.invalid && Compensation.submitted)">Payrate is Required </small>
     </div>
 
     <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label">Overtime Status</label>
-    <select class="form-select" aria-label="Default select example" name="overtime" #overtime="ngModel"  aria-label="Default select example" [(ngModel)]="compensation. overtime" required>
-       
-      <option value="1"> Exempt </option>
-      <option value="2">Non Exempt</option>
-
+    <select class="form-select" aria-label="Default select example" name="overtime" id="overtime" #overtime="ngModel"  aria-label="Default select example" [(ngModel)]="compensation. overtime" required>
+      <option> Exempt </option>
+      <option>Non Exempt</option>
     </select>
-    <small *ngIf="( overtime.touched &&  overtime.invalid) || ( overtime.invalid && Compensation.submitted)">Overtime is required </small> 
+    <small *ngIf="(overtime.touched &&  overtime.invalid) || (overtime.invalid && Compensation.submitted)">Overtime is required </small> 
    </div>
-    
+
+   <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label" >Overtime Rate</label>
+    <input type="text" class="form-control" id="overtimerate" placeholder=""  name="overtimerate" #overtimerate="ngModel"  [(ngModel)]="compensation.overtimerate" required />
+    <small *ngIf="(overtimerate.touched && overtimerate.invalid) || (overtimerate.invalid && Compensation.submitted)">overtimerate is Required </small>
+   </div> 
+
     <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label">Change Reasons</label>
-    <select class="form-select" aria-label="Default select example"  name="changereason" #changereason="ngModel"  aria-label="Default select example" [(ngModel)]="compensation.changereason" required>
+    <select class="form-select" aria-label="Default select example" id="changereason"  name="changereason" #changereason="ngModel"  aria-label="Default select example" [(ngModel)]="compensation.changereason" required>
         
-      <option value="1"> Promotion</option>
-      <option value="2">Relocated</option>
-      <option value="3">Pay Increase</option>
+      <option > Promotion</option>
+      <option >Relocated</option>
+      <option >Pay Increase</option>
     </select>
-    <small *ngIf="( changereason.touched &&  changereason.invalid) || ( changereason.invalid && Compensation.submitted)">Changereason is required </small>  
+    <small *ngIf="(changereason.touched &&  changereason.invalid) || (changereason.invalid && Compensation.submitted)">Changereason is required </small>  
    </div>
     <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label" >Comments</label>
-        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder=""  name="comment" #comment="ngModel"  [(ngModel)]="compensation.comment" required />
+        <input type="text" class="form-control" id="comment" placeholder=""  name="comment" #comment="ngModel"  [(ngModel)]="compensation.comment" required />
         <small *ngIf="(comment.touched && comment.invalid) || (comment.invalid &&Compensation.submitted)">Comment is Required </small>
     </div>
     <div class="mt-4 pt-2">
