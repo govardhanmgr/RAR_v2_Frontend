@@ -128,20 +128,20 @@
           <label class="custom-control-label" for="defaultInline4"> Management Expenses</label>
         </div>
         <div class="custom-control custom-radio ">
-          <input type="radio" class="custom-control-input" id="defaultInline5" name="inlineDefaultRadiosExample" (click)="(filename = '4')">
+          <input type="radio" class="custom-control-input" id="defaultInline5" name="inlineDefaultRadiosExample" (click)="(filename = '5')">
           <label class="custom-control-label" for="defaultInline5"> Employee Expenses</label>
         </div>
         <div class="custom-control custom-radio ">
-          <input type="radio" class="custom-control-input" id="defaultInline6" name="inlineDefaultRadiosExample" (click)="(filename = '5')">
+          <input type="radio" class="custom-control-input" id="defaultInline6" name="inlineDefaultRadiosExample" (click)="(filename = '6')">
           <label class="custom-control-label" for="defaultInline6">  Immigration Expenses</label>
         </div>
         <div class="custom-control custom-radio ">
-          <input type="radio" class="custom-control-input" id="defaultInline7" name="inlineDefaultRadiosExample" (click)="(filename = '6')">
+          <input type="radio" class="custom-control-input" id="defaultInline7" name="inlineDefaultRadiosExample" (click)="(filename = '4')">
           <label class="custom-control-label" for="defaultInline7"> Employee Data </label>
         </div>
         <br />
         <div class="mb-3">
-        <input type="file" (change)="selectFile($event)" name="file" #file="ngModel"  [(ngModel)]="ldb.file" required />
+        <input type="file" accept=".csv" (change)="selectFile($event)" name="file" #file="ngModel"  [(ngModel)]="ldb.file" required />
         <small>{{validate_message}}</small>
           
       </div>  
