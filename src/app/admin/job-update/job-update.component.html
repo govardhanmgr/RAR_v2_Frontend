@@ -7,58 +7,72 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     </head>
   <body>
-   <form>
+   <form  name="Update" #Update="ngForm" (ngSubmit)="Update.valid && JOB(Update)" >
     <h1 class="text-center">Add Job Information</h1>
-    <button type="button" class="btn btn-primary" style="margin-left: 9%;">Back</button>
+    <button [routerLink]="['/jobtab']" routerLinkActive="router-link-active" button type="button" class="btn btn-primary" style="margin-left: 12%;">Back</button>
     <div class="px-4 py-2 px-md-5 col-md-8 text-center text-lg-start" style="margin-left:15%">
         <div class=" shadow-lg p-5 mb-4 bg-white rounded">
             <div class="card-body py-3 px-md-4">
                 <div class="col-md-6 mb-4">
                         <div class="form-outline">
-                            <label for="Date" class="form-label" style="position: relative; left: -39%;">Effective Date</label>
-                            <input type="date" class="form-control" id="Date" placeholder="Date"/>
+                            <label for="Date" class="form-label" style="position: relative; left: -39%;">Effective Date<span style="color: red;right: -3px;position: relative;">*</span></label>
+                            <input type="date" class="form-control" id="jobeffectivedate" name="jobeffectivedate" #jobeffectivedate="ngModel" placeholder=""  [(ngModel)]="jobupdate.jobeffectivedate" required />
+                            <small *ngIf="(jobeffectivedate.touched && jobeffectivedate.invalid) || (jobeffectivedate.invalid && Update.submitted)">*Effective Date is required </small>
                         </div>
-                    </div>
-                    
+                    </div>    
                 <div class="col-md-6 mb-4">
-                    <label class="form-label" style="position: relative; left: -39%;">Client Name</label>
-                    <select class="form-select" aria-label="Default select example">
+                    <label class="form-label" style="position: relative; left: -39%;">Client Name<span style="color: red;right: -3px;position: relative;">*</span></label>
+                    <select class="form-select" aria-label="Default select example" id="clientname" name="clientname" #clientname="ngModel" placeholder=""  [(ngModel)]="jobupdate.clientname" required>
                         <option>Choose Option</option>
-                        <option value="1">UPS</option>
-                        <option value="2">Google</option>
-                        <option value="3">Facebook</option>
-                        <option value="4">Twitter</option>
-                    </select>
+                        <option>UPS</option>
+                        <option>TCS</option>
+                        <option>Facebook</option>
+                        <option>Twitter</option>
+                        <option>IBM</option>
+                        <option>Infosys</option>
+                        <option>ATT</option>
+                        <option>Estee Lauder</option>
+                        <option>CH robinson</option>
+                        </select>
+                        <small *ngIf="(clientname.touched && clientname.invalid) || (clientname.invalid && Update.submitted)">*Client Name is required </small>
+
+
                 </div>
                 <div class="col-md-6 mb-4">
-                    <label class="form-label" style="position: relative; left: -39%;">Job Title</label>
-                    <select class="form-select" aria-label="Default select example">
+                    <label class="form-label" style="position: relative; left: -39%;">Job Title<span style="color: red;right: -3px;position: relative;">*</span></label>
+                    <select class="form-select" aria-label="Default select example" id="jobtitle" name="jobtitle" #jobtitle="ngModel" placeholder=""  [(ngModel)]="jobupdate.jobtitle" required>
                         <option>Choose Option</option>
-                        <option value="1">Cloud Engineer</option>
-                        <option value="2">Dotnet Developer</option>
-                        <option value="3">Java Developer</option>
-                        <option value="4">Python Developer</option>
+                        <option>Cloudengineer</option>
+                        <option>Dotnet Developer</option>
+                        <option>Java Developer</option>
+                        <option>Datascientist</option>
                     </select>
+                    <small *ngIf="(jobtitle.touched && jobtitle.invalid) || (jobtitle.invalid && Update.submitted)">*Job Title is required </small>
+
+
                 </div>
                       <div class="col-md-6 mb-4">
-                    <label class="form-label" style="position: relative; left: -39%;">Reports to</label>
-                    <select class="form-select" aria-label="Default select example">
+                    <label class="form-label" style="position: relative; left: -39%;">Reports to<span style="color: red;right: -3px;position: relative;">*</span></label>
+                    <select class="form-select" aria-label="Default select example" id="reportsto" name="reportsto" #reportsto="ngModel" placeholder=""  [(ngModel)]="jobupdate.reportsto" required>
                         <option>Choose Option</option>
-                        <option value="1">Naga Deepthi Nandigurr</option>
-                        <option value="2">Satya Kishore Mavuri</option>
-                        <option value="3">Pavan Kumar Avn</option>
-                        <option value="4">Ravi Teja</option>
+                        <option>Naga Deepthi Nandigurr</option>
+                        <option>Satya Kishore Mavuri</option>
+                        <option>Pavan Kumar Avn</option>
+                        <option>Ravali Voruganti</option>
                     </select>
+                    <small *ngIf="(reportsto.touched && reportsto.invalid) || (reportsto.invalid && Update.submitted)">*Reports is required </small>
+
                 </div>
                       <div class="col-md-6 mb-4">
-                    <label class="form-label" style="position: relative; left: -39%;">Location</label>
-                    <select class="form-select" aria-label="Default select example">
+                    <label class="form-label" style="position: relative; left: -39%;">Location<span style="color: red;right: -3px;position: relative;">*</span></label>
+                    <select class="form-select" aria-label="Default select example" id="location" name="location" #location="ngModel" placeholder=""  [(ngModel)]="jobupdate.location" required>
                         <option>Choose Option</option>
-                        <option value="1">India</option>
-                        <option value="2">USA</option>
-                        <option value="3">United Kingdom</option>
-                        <option value="4">Germany</option>
+                        <option>India</option>
+                        <option>USA</option>
+                        <option>United Kingdom</option>
+                        <option>Germany</option>
                     </select>
+                    <small *ngIf="(location.touched && location.invalid) || (location.invalid && Update.submitted)">*location  is required </small>
                 </div>
                     <div class="mt-4 pt-2">
                         <input class="btn btn-primary " type="submit" value="Add Details" style="margin-left: 45%;" />

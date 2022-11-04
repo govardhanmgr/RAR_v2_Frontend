@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
-import { FormControl, FormGroupDirective, NgForm, Validators } from '@angular/forms';
+import { EmailValidator, FormControl, FormGroupDirective, NgForm, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import * as moment from 'moment';
 import { Subscription } from 'rxjs';
 import { HttpService } from 'src/app/services/http.service';
 import { INewemp } from './newemp-model';
@@ -19,16 +21,34 @@ export class NewempComponent implements OnInit {
   logid: any;
   client = [] as any;
   empdetails = [] as any;
-
+  show = false as boolean;
   subscription!: Subscription;
 
-  constructor(private http: HttpService) { }
+
+  constructor(
+    private http: HttpService,
+    private router:Router    
+    ) { }
 
   ngOnInit(): void {
-
-
+    // this.NEWEMP = this.emailFormControl({
+    // EmailId: ['', [Validators.required, Validators.email,Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$')]]
+    // })
     this.clientdata();
     this.emp();
+  }
+  dobvalid(value:any) {
+
+    console.log(value)
+    
+   var age = moment(moment.now()).diff(value, "years");
+   console.log(age)
+
+    if (age >= 18 && age <= 75) {
+      this.show = false
+    } else {
+      this.show= true
+    }
   }
 
   clientdata() {
@@ -117,7 +137,10 @@ export class NewempComponent implements OnInit {
     this.subscription = this.http.postdata("empdata", this.empdata).subscribe({
       next: (data: any) => {
         console.log(data)
-         alert("datasavedsuccessfully")
+        if(data.statuscode==200){
+         alert("Data Saved Successfully")
+         this.router.navigate(["/admin/activeemployeedata"])
+        }
       },
       error: reason => console.log(reason)
     });

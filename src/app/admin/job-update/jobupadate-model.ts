@@ -1,4 +1,4 @@
-export interface IEducationUpdate{
+export interface Ijobupdate{
     employeeid: number,
     firstname: string,
     lastname: string,

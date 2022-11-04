@@ -9,19 +9,18 @@ export interface Isignup {
     dateofBirth: string,
 }
 
-export interface Iemail
-{
-    email:string,
+export interface Iemail {
+    email: string,
 }
 
-export interface Isecurityquestions{
-    
-  Question1:string,
-  Question2:string,
-  Question3:string,
-  Answer1:string,
-  Answer2:string,
-  Answer3:string,
+export interface Isecurityquestions {
+
+    Question1: string,
+    Question2: string,
+    Question3: string,
+    Answer1: string,
+    Answer2: string,
+    Answer3: string,
 
 }
 export interface ILogin {
@@ -29,8 +28,32 @@ export interface ILogin {
     password: string,
     entity: string,
 }
-export interface IPassword{
-    newpassword:string;
-    confirmpassword:string;
+export interface IPassword {
+    newpassword: string;
+    confirmpassword: string;
 }
+export interface ISignup {
+    firstName: String,
+    Entity: String,
+    lastName: String,
+    idnumber: String,
+    email: String,
+    phoneNumber: String,
+    dateofBirth: String,
+    gender: String,
+    role: String,
+    address1: String,
+    address2: String,
+    country: String,
+    state: String,
+    city: String,
+    zipcode: String,
+    password: String,
+    confirmPassword: String,
+    ans1: String,
+    ans2: String,
+    ans3: String,
+    ans4: String,
+    ans5: String,
 
+}

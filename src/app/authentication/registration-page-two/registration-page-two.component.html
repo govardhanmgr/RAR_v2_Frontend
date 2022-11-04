@@ -16,38 +16,23 @@
         <div class="card-body  px-md-4">
           <div class="shadow-lg p-5 mb-7 bg-white rounded">
             <form>
-               
+
               <div class="img" style="position:relative;left: 22%;">
                 <img alt="" class="img" style="position: relative;display: flex;" src="../assets/snadicon.png" />
-             </div>
+              </div>
               <h1>Sign up for new account</h1>
 
               <div class="row">
                 <div class="col-md-6 mb-4">
 
                   <div class="form-outline">
-                    <input type="text" class="form-control" name="FirstName" placeholder="Address Line 1" />
+                    <input type="text" class="form-control" name="AddressLine1" placeholder="Address Line 1" />
                   </div>
                 </div>
                 <div class="col-md-6 mb-4">
 
                   <div class="form-outline">
-                    <input type="text" class="form-control" name="LastName" placeholder="Address Line 2" />
-                  </div>
-
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-6 mb-4">
-
-                  <div class="form-outline">
-                    <input type="text" class="form-control" name="FirstName" placeholder="City" />
-                  </div>
-                </div>
-                <div class="col-md-6 mb-4">
-
-                  <div class="form-outline">
-                    <input type="text" class="form-control" name="LastName" placeholder="State" />
+                    <input type="text" class="form-control" name="Addressline2" placeholder="Address Line 2" />
                   </div>
 
                 </div>
@@ -56,13 +41,13 @@
                 <div class="col-md-6 mb-4">
 
                   <div class="form-outline">
-                    <input type="text" class="form-control" name="FirstName" placeholder="Zipcode" />
+                    <input type="text" class="form-control" name="City" placeholder="City" />
                   </div>
                 </div>
                 <div class="col-md-6 mb-4">
 
                   <div class="form-outline">
-                    <input type="text" class="form-control" name="LastName" placeholder="Country" />
+                    <input type="text" class="form-control" name="State" placeholder="State" />
                   </div>
 
                 </div>
@@ -71,13 +56,29 @@
                 <div class="col-md-6 mb-4">
 
                   <div class="form-outline">
-                    <input type="text" class="form-control" name="FirstName" placeholder="Password" />
+                    <input type="text" class="form-control" name="Zipcode" placeholder="Zipcode" />
                   </div>
                 </div>
                 <div class="col-md-6 mb-4">
 
                   <div class="form-outline">
-                    <input type="text" class="form-control" name="LastName" placeholder="Confirm Password" />
+                    <input type="text" class="form-control" name="Country" placeholder="Country" />
+                  </div>
+
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 mb-4">
+
+                  <div class="form-outline">
+                    <input type="text" class="form-control" name="Password" placeholder="Password" />
+                  </div>
+                </div>
+                <div class="col-md-6 mb-4">
+
+                  <div class="form-outline" >
+                    
+                    <input type="text" class="form-control" name="Confirmpassword" placeholder="Confirm Password" />
                   </div>
 
                 </div>
@@ -94,30 +95,35 @@
                   <li><a class="dropdown-item" href="#">option 3</a></li>
                 </ul> -->
                 <!-- <label class="form-label">Select Entity</label> -->
-                <select class="form-select" id="SelectEntity" aria-label="Default select example" aria-placeholder="Select Role">
-                  <option >Select Role</option>
-                  <option >Software Engineer</option>
-                  <option >Business Analyst</option>
-                  <option >Devops Engineer</option>
+                <select class="form-select" id="SelectEntity" aria-label="Default select example"
+                  aria-placeholder="Select Role">
+                  <option>Select Role</option>
+                  <option>Software Engineer</option>
+                  <option>Business Analyst</option>
+                  <option>Devops Engineer</option>
                 </select>
               </div>
               <!-- <div class="container mt-3">
                 <div class="col-md-12 text-center"> -->
 
-                  <!-- <a href="https://www.awesomescreenshot.com/image/32940840?key=148989e655643d4e4e88122b9727ca1b"
+              <!-- <a href="https://www.awesomescreenshot.com/image/32940840?key=148989e655643d4e4e88122b9727ca1b"
                     class="btn btn-primary">Go Back</a> -->
-                    <!-- <button [routerLink]="['/signup']" routerLinkActive="router-link-active"  type="button" class="btn btn-primary" >Back</button><br> -->
-                  <!-- <a href="https://www.awesomescreenshot.com/image/32940926?key=0aa4a7fd2b7cc5f4b0fa1f365815768a"
+              <!-- <button [routerLink]="['/signup']" routerLinkActive="router-link-active"  type="button" class="btn btn-primary" >Back</button><br> -->
+              <!-- <a href="https://www.awesomescreenshot.com/image/32940926?key=0aa4a7fd2b7cc5f4b0fa1f365815768a"
                     class="btn btn-primary">Next</a> -->
-                    <!-- <button [routerLink]="['/registrationpage3']" routerLinkActive="router-link-active"  type="button" class="btn btn-primary" >GO Next</button><br>
+              <!-- <button [routerLink]="['/registrationpage3']" routerLinkActive="router-link-active"  type="button" class="btn btn-primary" >GO Next</button><br>
                 </div>
               </div> -->
               <div class="container">
                 <div class="row">
                   <div class="col">
-                    <button [routerLink]="['/signup']" routerlinkActive="router-link-active" class="btn btn-primary form-control  btn-block" type="button" >Go Back</button></div>
+                    <button [routerLink]="['/signup']" routerlinkActive="router-link-active"
+                      class="btn btn-primary form-control  btn-block" type="button">Go Back</button>
+                  </div>
                   <div class="col">
-                    <button  [routerLink]="['/registrationpage3']" routerlinkActive="router-link-active" class="btn btn-primary form-control btn-block" type="" >Next</button></div>
+                    <button [routerLink]="['/registrationpage3']" routerlinkActive="router-link-active"
+                      class="btn btn-primary form-control btn-block" type="">Next</button>
+                  </div>
                 </div>
               </div>
             </form>

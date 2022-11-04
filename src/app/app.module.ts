@@ -11,12 +11,13 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
     AuthenticationLayoutComponent,
     AdminLayoutComponent,
-    
+
 
   ],
   imports: [
@@ -27,10 +28,13 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
     ReactiveFormsModule,
     HttpClientModule,
     FormsModule,
-    
+
+
+
+
   ],
 
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }

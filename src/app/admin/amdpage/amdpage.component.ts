@@ -26,27 +26,35 @@ export class AmdpageComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.empdata();
+    this.userData();
 
   }
 
 
 
-  empdata() {
+  userData() {
 
-    this.subscription = this.http.getData("empdata").subscribe({
+    this.subscription = this.http.getData("reg").subscribe({
+      
 
       next: (data: any) => {
 
-        this.tabledata= data as any
+        this.tabledata= data as Itabledata 
         console.log(this.tabledata)
         
 
       },
 
       error: reason => console.log(reason)
-
+     
     });
+
+  }
+  postUserData(item: any) {
+    localStorage.setItem("updateuser", JSON.stringify(item))
+    console.log(item)
+    
+
 
   }
 
@@ -62,3 +70,4 @@ export class AmdpageComponent implements OnInit {
 
 
 }
+
