@@ -38,7 +38,7 @@
     
     <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label" >Pay Rate</label>
-        <input type="number" class="form-control" id="payrate" placeholder=""  name="payrate" #payrate="ngModel"  [(ngModel)]="compensation.payrate" required />
+        <input type="text" class="form-control" id="payrate" placeholder=""  name="payrate" #payrate="ngModel"  [(ngModel)]="compensation.payrate" required />
         <small *ngIf="(payrate.touched && payrate.invalid) || (payrate.invalid && Compensation.submitted)">Payrate is Required </small>
     </div>
 
@@ -53,7 +53,7 @@
 
    <div class="mb-3">
     <label for="exampleFormControlInput1" class="form-label" >Overtime Rate</label>
-    <input type="number" class="form-control" id="overtimerate" placeholder=""  name="overtimerate" #overtimerate="ngModel"  [(ngModel)]="compensation.overtimerate" required />
+    <input type="text" class="form-control" id="overtimerate" placeholder=""  name="overtimerate" #overtimerate="ngModel"  [(ngModel)]="compensation.overtimerate" required />
     <small *ngIf="(overtimerate.touched && overtimerate.invalid) || (overtimerate.invalid && Compensation.submitted)">overtimerate is Required </small>
    </div> 
 
