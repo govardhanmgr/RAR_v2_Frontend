@@ -32,10 +32,11 @@
       <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label">Date Of Birth<span>*</span> </label>
         <input type="date" class="form-control" id="exampleFormControlInput1" placeholder="" name="DateOfBirth"
-          #DateOfBirth="ngModel" [(ngModel)]="NEWEMP.dateofbirth" required />
+        (change)="dobvalid(NEWEMP.dateofbirth)" #DateOfBirth="ngModel" [(ngModel)]="NEWEMP.dateofbirth" required />
         <small
           *ngIf="(DateOfBirth.touched && DateOfBirth.invalid) || (DateOfBirth.invalid && Newemp.submitted)">*DateOfBirth
           is required </small>
+          <small *ngIf="(show)" > age should be 18 -75 years</small>
       </div>
       <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label">Gender<span>*</span> </label>
@@ -352,15 +353,12 @@
         <div class="col">
           <input type="number" name="ContactNumber" class="form-control" id="ContactNumber" name="ContactNumber"
             pattern="[0-9]{10}"  #ContactNumber="ngModel" placeholder="Contact Number" [(ngModel)]="NEWEMP.contactnumber"
-            required ng-model="ContactNumber" />
+            required ng-model="ContactNumber" min="0" />
           <small *ngIf="(ContactNumber.touched && ContactNumber.invalid) || ( ContactNumber.invalid && Newemp.submitted)">Contact Number
             is required
           </small>
-          
-          <!-- <small *ngIf="(ContactNumber.invalid  && ContactNumber.touched )">
-            Please enter valid mobile number
-          </small> -->
         </div>
+
         <div class="col">
           <input type="Email" class="form-control" name="EmailId" id="EmailId" name="EmailId" #EmailId="ngModel"
             placeholder="Email Id" [(ngModel)]="NEWEMP.emailaddress" required
@@ -450,10 +448,11 @@
           <small
             *ngIf="(selecttitle.touched && selecttitle.invalid) || (selecttitle.invalid && Newemp.submitted)">SelectTitle
             is required </small><br>
+
           <label for="exampleFormControlInput1" class="form-label">Supervisor<span>*</span> </label>
           <select class="form-select" aria-label="Default select example" name="Supervisor Id" #SupervisorId="ngModel"
             [(ngModel)]="NEWEMP.supervisor" required>
-            <option value="undefined" disabled selected>select id</option>
+            <option value="undefined" disabled selected>Select Id</option>
             <option *ngFor="let item of empdetails" [ngValue]="item.employeeid"> {{item.fullname}} </option>
 
           </select>
@@ -465,7 +464,7 @@
           <label for="exampleFormControlInput1" class="form-label">Client Name<span>*</span> </label>
           <select class="form-select" aria-label="Default select example" name="Selectclient" for="clientname"
             #SelectClient="ngModel" [(ngModel)]="NEWEMP.clientname" required>
-            <option value="undefined" disabled selected>Select client</option>
+            <option value="undefined" disabled selected>Select Client</option>
 
             <option *ngFor="let item of client"> {{item.clientname}} </option>
           </select><small
@@ -479,6 +478,4 @@
       </div>
     </form>
   </div>
-
 </div>
-<br>
