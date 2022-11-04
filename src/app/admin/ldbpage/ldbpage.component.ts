@@ -79,6 +79,7 @@ export class LdbpageComponent implements OnInit {
     }
     else if (this.filename && this.fileContent.data.length > 0) {
       this.submitUpdates()
+      F.resetForm()
     }
 
 
