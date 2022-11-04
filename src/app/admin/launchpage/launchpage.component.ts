@@ -26,7 +26,7 @@ export class LaunchpageComponent implements OnInit {
 								  ], 
 	       datasets: [
           {
-           
+            label:'data',
             data: ['20000','40000', '60000', '80000', '90000',
 								 ],
             backgroundColor: 'pink'
