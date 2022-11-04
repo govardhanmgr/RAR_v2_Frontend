@@ -1,5 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Subscription } from 'rxjs';
 import { AnyCatcher } from 'rxjs/internal/AnyCatcher';
 import { HttpService } from 'src/app/services/http.service';
 import { IUserDetails } from './userdetails-model';
@@ -10,7 +11,9 @@ import { IUserDetails } from './userdetails-model';
   styleUrls: ['./userdetails.component.css']
 })
 export class UserdetailsComponent implements OnInit, OnDestroy {
-  subscription: any;
+
+  
+  subscription!: Subscription;
 
   postUserDetails = {} as any;
   userDetails = {} as IUserDetails
