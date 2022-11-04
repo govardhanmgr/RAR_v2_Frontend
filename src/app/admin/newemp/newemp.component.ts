@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { EmailValidator, FormControl, FormGroupDirective, NgForm, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import * as moment from 'moment';
 import { Subscription } from 'rxjs';
 import { HttpService } from 'src/app/services/http.service';
 import { INewemp } from './newemp-model';
@@ -20,7 +21,7 @@ export class NewempComponent implements OnInit {
   logid: any;
   client = [] as any;
   empdetails = [] as any;
-
+  show = false as boolean;
   subscription!: Subscription;
 
 
@@ -35,6 +36,19 @@ export class NewempComponent implements OnInit {
     // })
     this.clientdata();
     this.emp();
+  }
+  dobvalid(value:any) {
+
+    console.log(value)
+    
+   var age = moment(moment.now()).diff(value, "years");
+   console.log(age)
+
+    if (age >= 18 && age <= 75) {
+      this.show = false
+    } else {
+      this.show= true
+    }
   }
 
   clientdata() {
