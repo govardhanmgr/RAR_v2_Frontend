@@ -52,7 +52,11 @@
     </select>
     <small *ngIf="( overtime.touched &&  overtime.invalid) || ( overtime.invalid && Compensation.submitted)">Overtime is required </small> 
    </div>
-    
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label" >Overtime Rate</label>
+        <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="" name="overtimerate" #overtimerate="ngModel"  [(ngModel)]="compensation.overtimerate" required />
+        <small *ngIf="(overtimerate.touched && overtimerate.invalid) || (overtimerate.invalid && Compensation.submitted)">Overtimerate  is Required </small>
+    </div>
     <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label">Change Reasons</label>
     <select class="form-select" aria-label="Default select example"  name="changereason" #changereason="ngModel"  aria-label="Default select example" [(ngModel)]="compensation.changereason" required>
