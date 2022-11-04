@@ -15,7 +15,7 @@
 }
 
 .progressbar{
-    min-height:30vh ;
+    min-height:60vh ;
     box-shadow: 0 2px 15px rgba(64,64,64,.4);
     background-color: white;
 }
@@ -42,3 +42,7 @@ cursor: pointer;
 background-color: rgb(224, 216, 216);
 }
 
+.chart-container{
+  width: 70%;
+  float: left;
+}
