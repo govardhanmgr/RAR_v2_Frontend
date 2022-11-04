@@ -79,6 +79,7 @@ export class LdbpageComponent implements OnInit {
     }
     else if (this.filename && this.fileContent.data.length > 0) {
       this.submitUpdates()
+      F.resetForm()
     }
 
 
@@ -184,11 +185,11 @@ export class LdbpageComponent implements OnInit {
 
     }
     console.log(sdata)
-    this.subscription= this.http.postdata("fileupload", sdata).subscribe({
-      next:data=>{
-        console.log(data);
-      }
-    })
+    // this.subscription= this.http.postdata("fileupload", sdata).subscribe({
+    //   next:data=>{
+    //     console.log(data);
+    //   }
+    // })
 
 
   }

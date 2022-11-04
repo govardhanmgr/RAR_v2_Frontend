@@ -32,7 +32,7 @@ export interface IPassword {
     newpassword: string;
     confirmpassword: string;
 }
-export interface Ireg {
+export interface ISignup {
     firstName: String,
     Entity: String,
     lastName: String,
