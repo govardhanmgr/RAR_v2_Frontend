@@ -36,11 +36,11 @@
 
 
                   <div class="col">
-                    <label class="form-label" for="lstName">Last Name</label>
+                    <label class="form-label" for="lastName">Last Name</label>
                     <input type="text" class="form-control" id="lstName" placeholder="" name="lstName"
-                      #lstName="ngModel" [(ngModel)]="userDetails.lstName" required />
+                      #lastName="ngModel" [(ngModel)]="userDetails.lastName" required />
                     <small
-                      *ngIf="(lstName.touched && lstName.invalid) || (lstName.invalid && User.submitted)">Last
+                      *ngIf="(lastName.touched && lastName.invalid) || (lastName.invalid && User.submitted)">Last
                       Name is Required </small>
                   </div>
 
@@ -48,9 +48,10 @@
                   <div class="col">
                     <label class="form-label" for="employeeId">Employee Id</label>
                     <input type="text" class="form-control" id="employeeId" placeholder="" name="employeeId"
-                      #employeeId="ngModel" [(ngModel)]="userDetails.employeeId" required />
+                      #Id="ngModel" [(ngModel)]="userDetails.id
+                      " required />
                     <small
-                      *ngIf="(employeeId.touched && employeeId.invalid) || (employeeId.invalid && User.submitted)">Employee
+                      *ngIf="(Id.touched && Id.invalid) || (Id.invalid && User.submitted)">Employee
                       Id is Required </small>
 
                   </div>
@@ -66,9 +67,10 @@
                   <div class="col">
                     <label class="form-label" for="addressLine1">Address Line 1</label>
                     <input type="text" class="form-control" id="addressLine1" placeholder="" name="addressLine1"
-                      #addressLine1="ngModel" [(ngModel)]="userDetails.addressLine1" required />
+                      #address1="ngModel" [(ngModel)]="userDetails.address1
+                      " required />
                     <small
-                      *ngIf="(addressLine1.touched && addressLine1.invalid) || (addressLine1.invalid && User.submitted)">Address
+                      *ngIf="(address1.touched && address1.invalid) || (address1.invalid && User.submitted)">Address
                       Line 1 is Required </small>
                   </div>
 
@@ -76,9 +78,10 @@
                   <div class="col">
                     <label class="form-label" for="addressLine2">Address Line 2</label>
                     <input type="text" class="form-control" id="addressLine2" placeholder="" name="addressLine2"
-                      #addressLine2="ngModel" [(ngModel)]="userDetails.addressLine2" required />
+                      #address2="ngModel" [(ngModel)]="userDetails.address2
+                      " required />
                     <small
-                      *ngIf="(addressLine2.touched && addressLine2.invalid) || (addressLine2.invalid && User.submitted)">Address
+                      *ngIf="(address2.touched && address2.invalid) || (address2.invalid && User.submitted)">Address
                       Line 2 is Required </small>
                   </div>
 
@@ -143,10 +146,11 @@
 
                     <select class="form-select" aria-label="Default select example" name="gender" #gender="ngModel"
                       [(ngModel)]="userDetails.gender">
-                      <option value="1" disabled>Choose option</option>
-                      <option value="2">Subject 1</option>
-                      <option value="3">Subject 2</option>
-                      <option value="4">Subject 3</option>
+                      <option  disabled>Choose option</option>
+                      <option >Male</option>
+                      <option >Female</option>
+                      <option >Others</option>
+                      
 
                     </select>
 
@@ -157,10 +161,9 @@
 
                     <select class="form-select" aria-label="Default select example" name="role" #role="ngModel"
                       [(ngModel)]="userDetails.role">
-                      <option value="1" disabled>Choose option</option>
-                      <option value="2">Subject 1</option>
-                      <option value="3">Subject 2</option>
-                      <option value="4">Subject 3</option>
+                      <option  disabled>Choose option</option>
+                      <option *ngFor="let i of roleData"> {{i.roles}} </option>
+                      
 
                     </select>
 
@@ -172,10 +175,10 @@
 
                     <select class="form-select" aria-label="Default select example" name="entity" #entity="ngModel"
                       [(ngModel)]="userDetails.entity">
-                      <option value="1" disabled>Choose option</option>
-                      <option value="2">Subject 1</option>
-                      <option value="3">Subject 2</option>
-                      <option value="4">Subject 3</option>
+                      <option   disabled>Choose option</option>
+                      <option  *ngFor="let e of EntityData">{{e.entity}}</option>
+
+                      
 
                     </select>
 
@@ -189,9 +192,9 @@
                   <div class="col">
                     <label class="form-label" for="emailid">Email Id</label>
                     <input type="text" class="form-control" id="emailid" placeholder="" name="emailid"
-                      #emailid="ngModel" [(ngModel)]="userDetails.emailId" required />
+                      #email="ngModel" [(ngModel)]="userDetails.email" required />
                     <small
-                      *ngIf="(emailid.touched && emailid.invalid) || (emailid.invalid && User.submitted)">Email
+                      *ngIf="(email.touched && email.invalid) || (email.invalid && User.submitted)">Email
                       Id is Required </small>
                   </div>
 
