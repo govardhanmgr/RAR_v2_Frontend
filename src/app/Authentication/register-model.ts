@@ -34,7 +34,7 @@ export interface IPassword {
 }
 export interface ISignup {
     firstName: String,
-    Entity: String,
+    entity: String,
     lastName: String,
     idnumber: String,
     email: String,
