@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import Stepper from 'bs-stepper';
+import { ISignup } from '../register-model';
+import * as moment from 'moment';
+import { NgForm } from '@angular/forms';
 
 
 @Component({
@@ -10,17 +13,42 @@ import Stepper from 'bs-stepper';
 export class RegisterComponent implements OnInit {
   name = 'Angular';
   private stepper!: Stepper;
+  Signup = {} as ISignup;
+  show = false as boolean;
   
   constructor() { }
 
-
+   
 
   next() {
+    
     this.stepper.next();
   }
 
   onSubmit() {
     return false;
+  }
+  dobvalid(value:any) {
+
+
+    console.log(value)
+    
+
+   var age = moment(moment.now()).diff(value, "years");
+   console.log(age)
+
+    if (age >= 18 && age <= 75) {
+
+      this.show = false
+
+    } else {
+
+      this.show= true
+
+    }
+  }
+  register(f: NgForm) {
+
   }
  
   ngOnInit() {
