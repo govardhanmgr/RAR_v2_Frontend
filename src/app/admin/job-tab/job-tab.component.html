@@ -11,7 +11,7 @@
    
   </ul>
 <link rel="stylesheet" type="text/css" href="http://www.shieldui.com/shared/components/latest/css/light/all.min.css"  />
-
+<form name="jobTab" #jobTab="ngForm" (ngSubmit)="jobTab.valid && JB(jobTab)">
          <section class="vh-200 gradient-custom">
                 <div class="container py-5 h-100">
                   <div class="row justify-content-center align-items-center h-50">
@@ -75,7 +75,7 @@
                 </div>
                 
                 <h4 class="mb-4 pb-2 pb-md-0 mb-md-3">Compensation Details</h4> 
-                <button [routerLink]="['/compensationupdate']" routerLinkActive="router-link-active" type="button" class="btn btn-primary">+Add new</button><br> <br>
+                <button [routerLink]="['/compensationupdate']" routerLinkActive="router-link-active" type="submit" class="btn btn-primary">+Add new</button><br> <br>
                 <div class="table-bordered">
                     <table class="table">
                         <thead class="table-light">
@@ -104,7 +104,7 @@
                     
                 </div> 
                 <br>
-                <button type="button" class="btn btn-success">Save All</button>
+                <button type="submit" class="btn btn-success">Save All</button>
                           </div>
                         </div>
                       
@@ -113,3 +113,4 @@
                 </div>
                 
               </section>
+            </form>
