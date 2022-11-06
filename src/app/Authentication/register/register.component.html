@@ -1,36 +1,36 @@
 <div class="container">
+  <div class="px-4 py-5 px-md-5 text-center text-lg-start">
+    <div class="container">
+      <div class="row gx-lg-5 align-items-center">
 
-  <div id="stepper1" class="bs-stepper">
-    <div class="bs-stepper-header">
-      <div class="step" data-target="#test-l-1">
-        <button  class="step-trigger">
-          <span class="bs-stepper-circle">1</span>
-          <span class="bs-stepper-label">Email</span>
-        </button>
-      </div>
-      <div class="line"></div>
-      <div class="step" (click)="next()" data-target="#test-l-2">
-        <button   type="submit" class="step-trigger">
-          <span class="bs-stepper-circle">2</span>
-          <span class="bs-stepper-label">Password</span>
-        </button>
-      </div>
-      <div class="line"></div>
-      <div class="step" data-target="#test-l-3">
-        <button class="step-trigger">
-          <span class="bs-stepper-circle">3</span>
-          <span class="bs-stepper-label">Validate</span>
-        </button>
-      </div>
-    </div>
-    <div class="bs-stepper-content">
-      <div class="px-4 py-5 px-md-5 text-center text-lg-start">
-        <div class="container">
-          <div class="row gx-lg-5 align-items-center">
+        <div class="col-lg-6 mb-4 ">
+          <div class="card-body  px-md-4">
+            <div class="shadow-lg p-5 mb-7 bg-white rounded">
+              <div id="stepper1" class="bs-stepper">
+                <div class="bs-stepper-header">
+                  <div class="step" data-target="#test-l-1">
+                    <button class="step-trigger">
+                      <span class="bs-stepper-circle">1</span>
+                      <span class="bs-stepper-label">PAGE</span>
+                    </button>
+                  </div>
+                  <div class="line"></div>
+                  <div class="step" (click)="next()" data-target="#test-l-2">
+                    <button type="submit" class="step-trigger">
+                      <span class="bs-stepper-circle">2</span>
+                      <span class="bs-stepper-label">PAGE</span>
+                    </button>
+                  </div>
+                  <div class="line"></div>
+                  <div class="step" data-target="#test-l-3">
+                    <button class="step-trigger">
+                      <span class="bs-stepper-circle">3</span>
+                      <span class="bs-stepper-label">PAGE</span>
+                    </button>
+                  </div>
+                </div>
+                <div class="bs-stepper-content">
 
-            <div class="col-lg-6 mb-4 ">
-              <div class="card-body  px-md-4">
-                <div class="shadow-lg p-5 mb-7 bg-white rounded">
 
                   <form (ngSubmit)="onSubmit()" name="signup" #signup="ngForm"
                     (ngSubmit)="signup.valid && register(signup) && !show">
@@ -46,7 +46,7 @@
                       <div class="row">
                         <div class="col-md-6 mb-4">
 
-                          <div class="form-outline" >
+                          <div class="form-outline">
                             <label class="form-label" for="FirstName">First Name</label><span
                               style="color: red;right: -3px;position: relative;">*</span>
                             <input type="text" id="firstName" class="form-control" name="firstName" #firstName="ngModel"
@@ -176,128 +176,140 @@
 
 
                       <div class="mt-4 pt-2">
-                        <input   (click)="next()" type="submit" class="btn btn-primary btn-block mb-3" value="Next" />
+                        <input (click)="next()" type="submit" class="btn btn-primary btn-block mb-3" value="Next" />
                       </div>
                     </div>
                     <div id="test-l-2" class="content">
-                    
-              <div class="img" style="position:relative;left: 22%;">
-                <img alt="" class="img" style="position: relative;display: flex;" src="../assets/snadicon.png" />
-              </div>
-              <h1>Sign up for new account</h1>
 
-              <div class="row">
-                <div class="col-md-6 mb-4">
+                      <div class="img" style="position:relative;left: 22%;">
+                        <img alt="" class="img" style="position: relative;display: flex;"
+                          src="../assets/snadicon.png" />
+                      </div>
+                      <h1>Sign up for new account</h1>
 
-                  <div class="form-outline">
-                    <input type="text" class="form-control" name="AddressLine1" placeholder="Address Line 1" />
-                  </div>
-                </div>
-                <div class="col-md-6 mb-4">
+                      <div class="row">
+                        <div class="col-md-6 mb-4">
 
-                  <div class="form-outline">
-                    <input type="text" class="form-control" name="Addressline2" placeholder="Address Line 2" />
-                  </div>
+                          <div class="form-outline">
+                            <input type="text" class="form-control" name="AddressLine1" placeholder="Address Line 1" />
+                          </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
 
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-6 mb-4">
+                          <div class="form-outline">
+                            <input type="text" class="form-control" name="Addressline2" placeholder="Address Line 2" />
+                          </div>
 
-                  <div class="form-outline">
-                    <input type="text" class="form-control" name="City" placeholder="City" />
-                  </div>
-                </div>
-                <div class="col-md-6 mb-4">
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6 mb-4">
 
-                  <div class="form-outline">
-                    <input type="text" class="form-control" name="State" placeholder="State" />
-                  </div>
+                          <div class="form-outline">
+                            <input type="text" class="form-control" name="City" placeholder="City" />
+                          </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
 
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-6 mb-4">
+                          <div class="form-outline">
+                            <input type="text" class="form-control" name="State" placeholder="State" />
+                          </div>
 
-                  <div class="form-outline">
-                    <input type="text" class="form-control" name="Zipcode" placeholder="Zipcode" />
-                  </div>
-                </div>
-                <div class="col-md-6 mb-4">
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6 mb-4">
 
-                  <div class="form-outline">
-                    <input type="text" class="form-control" name="Country" placeholder="Country" />
-                  </div>
+                          <div class="form-outline">
+                            <input type="text" class="form-control" name="Zipcode" placeholder="Zipcode" />
+                          </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
 
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-6 mb-4">
+                          <div class="form-outline">
+                            <input type="text" class="form-control" name="Country" placeholder="Country" />
+                          </div>
 
-                  <div class="form-outline">
-                    <input type="text" class="form-control" name="Password" placeholder="Password" />
-                  </div>
-                </div>
-                <div class="col-md-6 mb-4">
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6 mb-4">
 
-                  <div class="form-outline" >
-                    
-                    <input type="text" class="form-control" name="Confirmpassword" placeholder="Confirm Password" />
-                  </div>
+                          <div class="form-outline">
+                            <input type="text" class="form-control" name="Password" placeholder="Password" />
+                          </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
 
-                </div>
-              </div>
+                          <div class="form-outline">
 
-              <div class="form-group required">
-                
-                <select class="form-select" id="SelectEntity" aria-label="Default select example"
-                  aria-placeholder="Select Role">
-                  <option>Select Role</option>
-                  <option>Software Engineer</option>
-                  <option>Business Analyst</option>
-                  <option>Devops Engineer</option>
-                </select>
-              </div>
-              
-              
+                            <input type="text" class="form-control" name="Confirmpassword"
+                              placeholder="Confirm Password" />
+                          </div>
+
+                        </div>
+                      </div>
+
+                      <div class="form-group required">
+
+                        <select class="form-select" id="SelectEntity" aria-label="Default select example"
+                          aria-placeholder="Select Role">
+                          <option>Select Role</option>
+                          <option>Software Engineer</option>
+                          <option>Business Analyst</option>
+                          <option>Devops Engineer</option>
+                        </select>
+                      </div>
+
+
                       <input (click)="next()" type="submit" class="btn btn-primary btn-block mb-3" value="Next" />
                     </div>
                     <div id="test-l-3" class="content text-center">
                       <div class="img" align="center">
                         <img alt="" src="../assets/snadicon.png" />
-                     </div>
-                     <h3 style="margin:none;" align="center"><b>Security Questions</b></h3>
+                      </div>
+                      <h3 style="margin:none;" align="center"><b>Security Questions</b></h3>
                       <br>
                       <div class="form-group">
                         <label for="ans1">What is your favourite food/dish?</label>
-                        <input type="name" class="form-control" id="ans1" placeholder="Give your answer"  name="#ans1" aria-label="#answer1" #ans1="ngModel" [(ngModel)]="Signup.ans1" required/>
-                        <small *ngIf="(ans1.touched && ans1.invalid) || (ans1.invalid && signup.submitted)"> answer1 is required </small>
-                    </div>
-                    <br>
-                    <div class="form-group">
+                        <input type="name" class="form-control" id="ans1" placeholder="Give your answer" name="#ans1"
+                          aria-label="#answer1" #ans1="ngModel" [(ngModel)]="Signup.ans1" required />
+                        <small *ngIf="(ans1.touched && ans1.invalid) || (ans1.invalid && signup.submitted)"> answer1 is
+                          required </small>
+                      </div>
+                      <br>
+                      <div class="form-group">
                         <label for="ans2">Who is your favourite actor?</label>
-                        <input type="name" class="form-control" id="ans2" placeholder="Give your answer" name="#ans2" aria-label="#ans2" #ans2="ngModel" [(ngModel)]="Signup.ans2" required/>
-                        <small *ngIf="(ans2.touched && ans2.invalid) || (ans2.invalid && signup.submitted)"> answer2 is required </small >
-                    </div>
-                    <br>
-                    <div class="form-group">
+                        <input type="name" class="form-control" id="ans2" placeholder="Give your answer" name="#ans2"
+                          aria-label="#ans2" #ans2="ngModel" [(ngModel)]="Signup.ans2" required />
+                        <small *ngIf="(ans2.touched && ans2.invalid) || (ans2.invalid && signup.submitted)"> answer2 is
+                          required </small>
+                      </div>
+                      <br>
+                      <div class="form-group">
                         <label for="ans3">What is the name of your favourite pet?</label>
-                        <input type="name" class="form-control" id="ans3" placeholder="Give your answer" name="#ans3" aria-label="#ans3" #ans3="ngModel" [(ngModel)]="Signup.ans3" required/>
-                        <small *ngIf="(ans3.touched && ans3.invalid) || (ans3.invalid && signup.submitted)"> answer3 is required </small >
-                    </div>
-                    <br>
-                    <div class="form-group">
+                        <input type="name" class="form-control" id="ans3" placeholder="Give your answer" name="#ans3"
+                          aria-label="#ans3" #ans3="ngModel" [(ngModel)]="Signup.ans3" required />
+                        <small *ngIf="(ans3.touched && ans3.invalid) || (ans3.invalid && signup.submitted)"> answer3 is
+                          required </small>
+                      </div>
+                      <br>
+                      <div class="form-group">
                         <label for="ans4">What is your favourite hobby?</label>
-                        <input type="name" class="form-control" id="ans4" placeholder="Give your answer" name="#ans4" aria-label="#ans4" #ans4="ngModel" [(ngModel)]="Signup.ans4" required/>
-                        <small *ngIf="(ans4.touched && ans4.invalid) || (ans4.invalid && signup.submitted)"> answer4 is required </small >
-                    </div>
-                    <br>
-                    <div class="form-group">
+                        <input type="name" class="form-control" id="ans4" placeholder="Give your answer" name="#ans4"
+                          aria-label="#ans4" #ans4="ngModel" [(ngModel)]="Signup.ans4" required />
+                        <small *ngIf="(ans4.touched && ans4.invalid) || (ans4.invalid && signup.submitted)"> answer4 is
+                          required </small>
+                      </div>
+                      <br>
+                      <div class="form-group">
                         <label for="ans5">Who is your best friend?</label>
-                        <input type="name" class="form-control" id="ans5" placeholder="Give your answer" name="#ans5" aria-label="#ans5" #ans5="ngModel" [(ngModel)]="Signup.ans5" required/>
-                        <small *ngIf="(ans5.touched && ans5.invalid) || (ans5.invalid && signup.submitted)"> answer5 is required </small >
-                    </div>
-                    <br>
+                        <input type="name" class="form-control" id="ans5" placeholder="Give your answer" name="#ans5"
+                          aria-label="#ans5" #ans5="ngModel" [(ngModel)]="Signup.ans5" required />
+                        <small *ngIf="(ans5.touched && ans5.invalid) || (ans5.invalid && signup.submitted)"> answer5 is
+                          required </small>
+                      </div>
+                      <br>
                       <button type="submit" class="btn btn-primary mt-5">Submit</button>
                     </div>
                   </form>
