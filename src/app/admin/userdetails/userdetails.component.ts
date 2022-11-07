@@ -89,7 +89,7 @@ export class UserdetailsComponent implements OnInit, OnDestroy {
       next: (data: any) => {
         console.log(data)
         if (data) {
-          alert("user updated successfully")
+          alert("user details updated successfully")
           this.router.navigate(["/admin/amdpage"])
         }
       }
