@@ -34,7 +34,7 @@
     }
   
   
-    td {
+    /* td {
       padding: 8px 15px;
       padding: 20px;
       font-size: 18px;
@@ -44,7 +44,21 @@
         background-color: rgb(241, 224, 227);
         padding: 20px;
         font-size: 18px;
-      }
+      } */
+      td {
+        padding: 8px 15px;
+        padding: 20px;
+        font-size: 18px;
+        border-top: 1px solid rgb(236, 235, 235);
+        left: 20%;
+  
+        }
+        th {
+          background-color: rgb(84, 164, 238);
+          padding: 20px;
+          font-size: 18px;
+        }
+          
       .header{
         text-align: center;
     }

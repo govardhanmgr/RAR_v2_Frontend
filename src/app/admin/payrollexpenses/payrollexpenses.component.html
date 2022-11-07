@@ -1,7 +1,7 @@
 <div class="container" >
   <h1>Payroll Expenses</h1>
   <input   [routerLink]="['/admin/launchpage']" type="submit" class="btn btn-primary" id="expense" value="Back" name="payroll"><br><br>
-  <div class="container">
+  <div class="container-fluid col-md-10">
 <div class="fixTableHead hi shadow ">
 
   <table class="table" >
@@ -20,7 +20,7 @@
               <td>{{emp.employeeid}}</td>
               <td>{{emp.firstname}}</td>
               <td>{{emp.lastname}}</td>
-              <td>{{emp.sum}}</td>
+              <td>{{emp.sum |currency}}</td>
           </tr>
       </tbody>
       
