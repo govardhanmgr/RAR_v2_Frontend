@@ -1,6 +1,6 @@
 <ul class="nav nav-tabs">
     <li class="nav-item">
-      <a class="nav-link" aria-current="page" href="/personaldata">Personal</a>
+      <a class="nav-link"   href="/personaldata">Personal</a>
     </li>
     <li class="nav-item">
       <a class="nav-link"  href="/jobtab">Job</a>
@@ -20,7 +20,7 @@
                       
                         <div class="card-body p-4 p-md-4">
                           
-                          <h4 class="mb-4 pb-2 pb-md-0 mb-md-3">Hire Date</h4><input type="date" name="Hiredate" id="Hiredate"class="form-control" style="width: 50%;margin-bottom: 5;" required>
+                          <h4 class="mb-4 pb-2 pb-md-0 mb-md-3">Hire Date</h4><input type="datetime" #startdate="ngModel" [(ngModel)]="empdata.startdate" name="startdate" id="startdate"class="form-control" style="width: 50%;margin-bottom: 5;" required>
                           
                           
                             <h4 class="mb-4 pb-2 pb-md-0 mb-md-3">Employeement Status</h4> 
@@ -39,9 +39,9 @@
                                       </thead>
                               
                                      <tr>
-                                        <td><input type="date" class="form-control" ><br></td>
-                                        <td><input type="text" class="form-control" ></td>
-                                        <td><input type="text" class="form-control" ></td>                                       
+                                        <td><input type="date" class="form-control" #effectivedate="ngModel" [(ngModel)]="empdata.effectivedate" name="effectivedate" id="effectivedate" ><br></td>
+                                        <td><input type="text" class="form-control"  #employementstatus="ngModel" [(ngModel)]="empdata.employementstatus" name="employementstatus" id="employementstatus"></td>
+                                        <td><input type="text" class="form-control" #comment="ngModel" [(ngModel)]="empdata.comment" name="comment" id="comment" ></td>                                       
                                      </tr>
 
                                      
@@ -52,7 +52,7 @@
                             </div>
                 
                 <h4 class="mb-4 pb-2 pb-md-0 mb-md-3">Job Details</h4> 
-                <button [routerLink]="['/job-update']" routerLinkActive="router-link-active" type="button" class="btn btn-primary">+Add new</button><br> <br>
+                <button [routerLink]="['/job-update']" style="position: relative;left: 83%;top: -36px;"  type="button" class="btn btn-primary">+Add new</button>
                 <div class="table-bordered">
                     <table class="table">
                         <thead class="table-light">
@@ -75,7 +75,7 @@
                 </div>
                 
                 <h4 class="mb-4 pb-2 pb-md-0 mb-md-3">Compensation Details</h4> 
-                <button [routerLink]="['/compensationupdate']" routerLinkActive="router-link-active" type="submit" class="btn btn-primary">+Add new</button><br> <br>
+                <button [routerLink]="['/compensationupdate']" style="position: relative;left: 83%;top: -36px;"  type="submit" class="btn btn-primary">+Add new</button>
                 <div class="table-bordered">
                     <table class="table">
                         <thead class="table-light">
@@ -103,7 +103,7 @@
                     </table>                    
                     
                 </div> 
-                <br>
+               
                 <button type="submit" class="btn btn-success">Save All</button>
                           </div>
                         </div>

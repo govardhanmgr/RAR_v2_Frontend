@@ -17,6 +17,7 @@ export class PersonaldataComponent implements OnInit, OnDestroy {
   PERSONAL= {} as   Ipersonaldata;
   empdata ={} as any;
   subscription !:Subscription;
+  personalData=[] as any ;
 
 
   constructor(
@@ -31,7 +32,9 @@ export class PersonaldataComponent implements OnInit, OnDestroy {
 
     this.getEducationData();
     this.getvisainformation();
+  
   }
+
 
 
   getEducationData(){

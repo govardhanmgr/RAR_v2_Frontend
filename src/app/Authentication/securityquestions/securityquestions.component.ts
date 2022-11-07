@@ -92,4 +92,13 @@ export class SecurityquestionsComponent implements OnInit {
   onChangeQueryDetails(event: any,) {
     console.log("my console event", event,);
   }
+  valueSelected(){
+
+    this.questionsSecurity=this.questionsSecurity.filter((item: string ) => item.indexOf(this.Securityquestions.Question1))
+
+  }
+  VALUESELECTED(){
+    this.questionsSecurity=this.questionsSecurity.filter((item: string) => item.indexOf(this.Securityquestions.Question1) && item.indexOf(this.Securityquestions.Question2))
+
+  }
 }
