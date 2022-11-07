@@ -1,13 +1,8 @@
-
-<br>
-<a href="/admin/employeeexpensedata"><button type="button" class="btn btn-primary">Back</button></a>
-
+<div class="container" >
 <h2 align="center" >Employee Expenses </h2>
-<br>
+<input   [routerLink]="['/admin/employeeexpensedata']" type="submit" class="btn btn-primary" id="expense" value="Back" name="payroll"><br><br>
 
-
-<!-- 
-  <div class="container" > -->
+<div class="container" >
     <div class="row">
       <div class="col-sm">
         <h5>Name: {{employeeeexpense.firstname +" "+employeeeexpense.lastname}} </h5>
@@ -19,104 +14,11 @@
         <h5> Total Amount $ {{employeeeexpense.sum}}</h5>
             </div>
     </div>
-  
-
-  <br>
+  </div>
 
   
-<!-- <div class="fixTableHead  shadow">
-  
-<table class="table">
-  <thead>
-    <tr>
-      <th scope="col">S No</th>
-      <th scope="col">Expense Data</th>
-      <th scope="col">Expense Type</th>
-      <th scope="col">Amount</th>
-      <th scope="col">invoice</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td scope="row">1</td>
-      <td>18-04-2022</td>
-      <td>Travel Expense</td>
-      <td>$1000</td>
-      <td ><a href=".\src\app\admin\empexpdetails\Invoices">clickhere</a></td>
-    </tr>
-    <tr>
-      <td scope="row">2</td>
-      <td>18-04-2022</td>
-      <td>Food Expense</td>
-      <td>$1999</td>
-      
-      <td><a href="clickme">clickhere</a></td>
-    </tr>
-    <tr>
-      <td scope="row">3</td>
-      <td>18-04-2022</td>
-      <td>Internet Expense</td>
-      <td>$7228</td>
-      <td><a href="clickme">clickhere</a></td>
-    </tr>
-    <tr>
-      <td scope="row">4</td>
-      <td>18-04-2022</td>
-      <td>Travel Expense</td>
-      <td>$7228</td>
-      <td><a href="clickme">clickhere</a></td>
-    </tr>
-    <tr>
-      <td scope="row">5</td>
-      <td>18-04-2022</td>
-      <td>Food Expense</td>
-      <td>$7228</td>
-      <td><a href="clickme">clickhere</a></td>
-    </tr>
-    <tr>
-        <td scope="row">6</td>
-        <td>18-04-2022</td>
-        <td>Travel Expense</td>
-        <td>$7228</td>
-        <td><a href="clickme">clickhere</a></td>
-      </tr>
-      <tr>
-        <td scope="row">7</td>
-        <td>18-04-2022</td>
-        <td>Internet Expense</td>
-        <td>$7228</td>
-        <td><a href="clickme">clickhere</a></td>
-      </tr>
-      <tr>
-        <td scope="row">8</td>
-        <td>18-04-2022</td>
-        <td>Travel Expense</td>
-        <td>$7228</td>
-        <td><a href="clickme">clickhere</a></td>
-      </tr>
-      <tr>
-        <td scope="row">9</td>
-        <td>18-04-2022</td>
-        <td>Food Expense</td>
-        <td>$7228</td>
-        <td><a href="clickme">clickhere</a></td>
-      </tr>
-      
-      <tr>
-        <td scope="row">10</td>
-        <td>18-04-2022</td>
-        <td>Travel Expense</td>
-        <td>$7228</td>
-        <td><a href="clickme">clickhere</a></td>
-      </tr>
 
   
-  </tbody>
-</table>
-</div>
-
-  
-</div> -->
 <div class="fixTableHead  shadow">
   <table class="table auto-index">
       <thead>
@@ -135,7 +37,7 @@
             <td>{{emp.expensedate}}</td>
             <td>{{emp.expenses}}</td>
             <td>{{emp.amount}}</td>
-            <!-- <td>{{emp.sum}}</td> -->
+           
             <td><a href="https://www.freshbooks.com/wp-content/uploads/invoice-template-pdf-white.png">Click Here</a></td>
         </tbody>
       
