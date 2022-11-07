@@ -354,8 +354,7 @@
           <input type="number" name="ContactNumber" class="form-control" id="ContactNumber" name="ContactNumber"
             pattern="[0-9]{10}"  #ContactNumber="ngModel" placeholder="Contact Number" [(ngModel)]="NEWEMP.contactnumber"
             required ng-model="ContactNumber" min="0" />
-          <small *ngIf="(ContactNumber.touched && ContactNumber.invalid) || ( ContactNumber.invalid && Newemp.submitted)">Contact Number
-            is required
+          <small *ngIf="(ContactNumber.touched && ContactNumber.invalid) || ( ContactNumber.invalid && Newemp.submitted)">Please enter a valid mobile number
           </small>
         </div>
 
@@ -419,7 +418,7 @@
           <select class="form-select" aria-label="Default select example" for="EmployementType" name="Employement Type"
             #EmployeementType="ngModel" [(ngModel)]="NEWEMP.employementstatus" required>
             <option value="undefined" disabled selected> Employement Type </option>
-            <option>Full Time</option>
+            <option>Full Time</option> 
             <option>Part Time</option>
             <option>Intern</option>
           </select><small
