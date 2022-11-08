@@ -29,8 +29,8 @@ export interface ILogin {
     entity: string,
 }
 export interface IPassword {
-    newpassword: string;
-    confirmpassword: string;
+    password: string;
+    confirmPassword: string;
 }
 export interface ISignup {
     firstName: String,
