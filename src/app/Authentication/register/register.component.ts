@@ -20,6 +20,7 @@ export class RegisterComponent implements OnInit {
   show = false as boolean;
   subscription!: Subscription;
   entities= [] as any;
+  roles=[] as any
   constructor(private _httpservice:HttpService,
     private router:Router) { }
 
@@ -81,7 +82,14 @@ export class RegisterComponent implements OnInit {
     })
     console.log(this.entities)
   }
-  
+  getroles(){
+    this.subscription=this._httpservice.getData("roles").subscribe({
+      next: data  => {
+          this.roles=data
+      }
+    })
+    console.log(this.roles)
+  }
  
   ngOnInit() {
     this.stepper = new Stepper(document.querySelector('#stepper1') as Element, {
@@ -89,6 +97,7 @@ export class RegisterComponent implements OnInit {
       animation: true
     });
     this.getentities();
+    this.getroles();
   }
 }
 

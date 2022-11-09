@@ -414,9 +414,7 @@
                         <select class="form-select"  aria-label="Default select example" name="role" #role="ngModel" [(ngModel)]="Signup.role"
                           id="role" aria-placeholder="Select Role" required>
                           <option>Select Role</option>
-                          <option>Software Engineer</option>
-                          <option>Business Analyst</option>
-                          <option>Devops Engineer</option>
+                          <option *ngFor="let item of roles">{{item.roles}}</option>
                         </select>
                         <small
                               *ngIf="(role.touched && role.invalid) || (role.invalid && signup.submitted)">entity is
