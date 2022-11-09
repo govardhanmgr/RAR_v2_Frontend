@@ -3,6 +3,9 @@ import Stepper from 'bs-stepper';
 import { ISignup } from '../register-model';
 import * as moment from 'moment';
 import { NgForm } from '@angular/forms';
+import { HttpService } from 'src/app/services/http.service';
+import { Router } from '@angular/router';
+import { Subscription } from 'rxjs';
 
 
 @Component({
@@ -15,8 +18,10 @@ export class RegisterComponent implements OnInit {
   private stepper!: Stepper;
   Signup = {} as ISignup;
   show = false as boolean;
-  
-  constructor() { }
+  subscription!: Subscription;
+  entities= [] as any;
+  constructor(private _httpservice:HttpService,
+    private router:Router) { }
 
    
 
@@ -47,14 +52,43 @@ export class RegisterComponent implements OnInit {
     }
   }
   register(f: NgForm) {
-
+    console.log(this.Signup)
+    this.Signup.status = "pending"
+    this.subscription = this._httpservice.postdata("reg", this.Signup).subscribe({
+      next: (data: any) => {
+        
+        if(data.status == "success" && data.statuscode == 200){
+          console.log(data);
+          
+       
+          this.router.navigate(["/"])
+        }
+        else {
+          alert(data.message);
+        }
+      },
+      error: reason => {
+        console.log(reason);
+      }
+    });
+  
   }
+  getentities(){
+    this.subscription=this._httpservice.getData("orgndata").subscribe({
+      next: data  => {
+          this.entities=data
+      }
+    })
+    console.log(this.entities)
+  }
+  
  
   ngOnInit() {
     this.stepper = new Stepper(document.querySelector('#stepper1') as Element, {
       linear: false,
       animation: true
-    })
+    });
+    this.getentities();
   }
 }
 
