@@ -15,9 +15,10 @@ export class PersonaldataComponent implements OnInit, OnDestroy {
   educationData=[] as any;
   visaData=[] as any;
   PERSONAL= {} as   Ipersonaldata;
-  empdata ={} as any;
+  empdata =[] as any;
   subscription !:Subscription;
   personalData=[] as any ;
+  
 
 
   constructor(
@@ -54,7 +55,7 @@ export class PersonaldataComponent implements OnInit, OnDestroy {
       "employeeid": parseInt(this.empdata.employeeid)
     }
     console.log(sdata)
-    this.subscription = this.http.postdata("getvisainformation", sdata).subscribe({
+    this.subscription = this.http.empPostData("getvisainformation",this.PERSONAL, sdata).subscribe({
       next:(data:any)=>{
         console.log(data);
         this.visaData= data
@@ -63,6 +64,20 @@ export class PersonaldataComponent implements OnInit, OnDestroy {
   }
   personal(f:NgForm){
     
+  }
+  personaltab(){
+    let sdata = {
+      "employeeid": parseInt(this.empdata.employeeid)
+    }
+    console.log(this.empdata)
+    
+    console.log(sdata)
+    this.subscription = this.http.empPostData("empdata",this.empdata,sdata).subscribe({
+      next:(data:any)=>{
+        console.log(data);
+        
+      }
+    })
   }
   ngOnDestroy(): void {
     if(this.subscription){
