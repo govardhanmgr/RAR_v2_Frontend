@@ -11,7 +11,7 @@ import { HttpService } from 'src/app/services/http.service';
 export class LaunchpageComponent implements OnInit, OnDestroy {
   loginuser: any;
   public chart: any;
-  chartData = [] as any;
+
   subscription!: Subscription;
   dashBoardData = {} as any;
 
@@ -21,8 +21,6 @@ export class LaunchpageComponent implements OnInit, OnDestroy {
     this.loginuser = JSON.parse(localStorage.getItem('logindetails') || '{}');
     this.getDashBoardData();
     this.getOperationalcostData();
-
-    console.log(this.chartData);
   }
 
   getDashBoardData() {
@@ -35,19 +33,10 @@ export class LaunchpageComponent implements OnInit, OnDestroy {
         this.dashBoardData.EmpExpenses = data.empexpensestotal;
         this.dashBoardData.MgmtExpenses = data.mgmtexpensestotal;
 
-        let chart = [
-          this.dashBoardData.OReceivables,
-          this.dashBoardData.PayrollExp,
-          this.dashBoardData.EmpExpenses,
-          this.dashBoardData.MgmtExpenses,
-          this.dashBoardData.operationalCount,
-        ];
-        this.chartData = chart;
-        console.log(this.chartData);
+        this.createChart();
       },
       error: (reason) => console.log(reason),
     });
-    this.createChart();
   }
   getOperationalcostData() {
     this.subscription = this.http.getData('operationalaccess').subscribe({
@@ -60,7 +49,6 @@ export class LaunchpageComponent implements OnInit, OnDestroy {
           opCount = (opCount + parseInt(showData[i].totalexpenses)) as number;
           this.dashBoardData.operationalCount = opCount;
         }
-        console.log(this.dashBoardData.operationalCount);
       },
       error: (reason) => console.log(reason),
     });
@@ -84,10 +72,10 @@ export class LaunchpageComponent implements OnInit, OnDestroy {
             label: 'EXPENSE DATA',
             data: [
               this.dashBoardData.OReceivables,
-              this.chartData[1],
-              this.chartData[2],
-              this.chartData[3],
-              this.chartData[4],
+              this.dashBoardData.PayrollExp,
+              this.dashBoardData.EmpExpenses,
+              this.dashBoardData.MgmtExpenses,
+              this.dashBoardData.operationalCount,
             ],
             backgroundColor: 'pink',
           },
