@@ -27,6 +27,12 @@ export class HttpService {
  empPostData(url:string,data:any,id:any){
   return this.http.post(`${this.ApiUrl}${url}${id}`,data);
 
+ 
  }
+ updatedata(url:String, id:any ,data: any){
+ 
+  return this.http.post(`${this.ApiUrl}${url}${id}`,data)
+    
+}
 
 }

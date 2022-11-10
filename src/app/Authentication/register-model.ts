@@ -55,5 +55,6 @@ export interface ISignup {
     ans3: String,
     ans4: String,
     ans5: String,
+    status:String,
 
 }
