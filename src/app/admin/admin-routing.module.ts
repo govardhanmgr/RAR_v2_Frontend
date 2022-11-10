@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ActiveemployeedataComponent } from './activeemployeedata/activeemployeedata.component';
+import { AddNewInvoiceComponent } from './add-new-invoice/add-new-invoice.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { AmdpageComponent } from './amdpage/amdpage.component';
 import { CompensationUpdateComponent } from './compensation-update/compensation-update.component';
@@ -58,6 +59,7 @@ const routes: Routes = [
   { path: 'jobtab', component: JobTabComponent },
   {path:'job-update' ,component:JobUpdateComponent},
   {path:'document',component:DocumentComponent},
+  {path:'addNewInvoice',component:AddNewInvoiceComponent}
 ];
 
 @NgModule({

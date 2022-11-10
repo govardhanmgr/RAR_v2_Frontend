@@ -32,6 +32,8 @@ import { FormsModule } from '@angular/forms';
 import { SearchfilterPipe } from './searchfilter.pipe';
 import { DocumentComponent } from './document/document.component';
 
+import { AddNewInvoiceComponent } from './add-new-invoice/add-new-invoice.component';
+
 
 
 
@@ -63,7 +65,9 @@ import { DocumentComponent } from './document/document.component';
     JobTabComponent,  
     UserdetailsComponent, 
     SearchfilterPipe,
-   DocumentComponent
+   DocumentComponent,
+
+   AddNewInvoiceComponent
   
 
   ],
