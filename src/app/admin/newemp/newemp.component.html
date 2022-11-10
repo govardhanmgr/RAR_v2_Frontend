@@ -8,7 +8,7 @@
           name="EmployeeNumber" aria-label="EmployeeNumber" #EmployeeNumber="ngModel" [(ngModel)]="NEWEMP. employeeid"
           required />
         <small
-          *ngIf="(EmployeeNumber.touched && EmployeeNumber.invalid) || (EmployeeNumber.invalid && Newemp.submitted)">EmployeeNumber
+          *ngIf="(EmployeeNumber.touched && EmployeeNumber.invalid) || (EmployeeNumber.invalid && Newemp.submitted)">Employee number
           is required </small>
       </div>
       
@@ -18,13 +18,13 @@
           <input type="text" class="form-control" id="FirstName" placeholder="First Name" name="FirstName"
             aria-label="First Name" #FirstName="ngModel" placeholder="First Name" [(ngModel)]="NEWEMP.firstname"
             required />
-          <small *ngIf="(FirstName.touched && FirstName.invalid) || (FirstName.invalid && Newemp.submitted)">First Name
+          <small *ngIf="(FirstName.touched && FirstName.invalid) || (FirstName.invalid && Newemp.submitted)">First name
             is required </small>
         </div>
         <div class="col">
           <input type="text" class="form-control" placeholder="Last Name" name="LastName" aria-label="Last Name"
             #LastName="ngModel" [(ngModel)]="NEWEMP.lastname" required />
-          <small *ngIf="(LastName.touched && LastName.invalid) || (LastName.invalid && Newemp.submitted)">Last Name is
+          <small *ngIf="(LastName.touched && LastName.invalid) || (LastName.invalid && Newemp.submitted)">Last name is
             required </small>
         </div>
         <div class="col"></div>
@@ -34,7 +34,7 @@
         <input type="date" class="form-control" id="exampleFormControlInput1" placeholder="" name="DateOfBirth"
         (change)="dobvalid(NEWEMP.dateofbirth)" #DateOfBirth="ngModel" [(ngModel)]="NEWEMP.dateofbirth" required />
         <small
-          *ngIf="(DateOfBirth.touched && DateOfBirth.invalid) || (DateOfBirth.invalid && Newemp.submitted)">*DateOfBirth
+          *ngIf="(DateOfBirth.touched && DateOfBirth.invalid) || (DateOfBirth.invalid && Newemp.submitted)">*Date of birth
           is required </small>
           <small *ngIf="(show)" > age should be 18 -75 years</small>
       </div>
@@ -56,7 +56,7 @@
         <input type="text" class="form-control" name="NationalID" id="exampleFormControlInput1"
           placeholder="National ID" #NationalID="ngModel" [(ngModel)]="NEWEMP.ssn" required />
         <small
-          *ngIf="(NationalID.touched && NationalID .invalid) || (NationalID.invalid && Newemp.submitted)">NationalID is
+          *ngIf="(NationalID.touched && NationalID .invalid) || (NationalID.invalid && Newemp.submitted)">National ID is
           required </small>
       </div>
       <hr>
@@ -67,14 +67,14 @@
             aria-label="Address Line 1" #AddressLine1="ngModel" [(ngModel)]="NEWEMP.addressline1" required />
           <small
             *ngIf="(AddressLine1.touched && AddressLine1 .invalid) || (AddressLine1.invalid && Newemp.submitted)">Address
-            Line 1 is required </small>
+            line 1 is required </small>
         </div>
         <div class="col">
           <input type="text" class="form-control" name="AddressLine1" placeholder="Address Line 2"
             aria-label="Address Line 2" #AddressLine2="ngModel" [(ngModel)]="NEWEMP.addressline2" required />
           <small
             *ngIf="(AddressLine2.touched && AddressLine2 .invalid) || (AddressLine2.invalid && Newemp.submitted)">Address
-            Line 2 is required </small>
+            line 2 is required </small>
         </div>
         <div class="col">
         </div>
@@ -346,7 +346,7 @@
       </select>
       <small
         *ngIf="(selectcountry.touched && selectcountry .invalid) || (selectcountry.invalid && Newemp.submitted)">Select
-        Country is required </small>
+        country is required </small>
       <hr>
       <h4>Contact<span>*</span> </h4>
       <div class="row">
@@ -377,7 +377,7 @@
           <option>Every Month</option>
           <option>Twice a Month</option>
         </select><small
-          *ngIf="(SelectPaySchedule.touched && SelectPaySchedule.invalid) || (SelectPaySchedule.invalid && Newemp.submitted)">SelectPaySchedule
+          *ngIf="(SelectPaySchedule.touched && SelectPaySchedule.invalid) || (SelectPaySchedule.invalid && Newemp.submitted)">Select pay schedule
           is required </small>
         <br>
         <select class="form-select" aria-label="Default select example" name="SelectPayType" #paytype="ngModel"
@@ -387,12 +387,12 @@
           <option>Hourly</option>
           <option>Commission Only</option>
         </select><small
-          *ngIf="(paytype.touched && paytype.invalid) || (paytype.invalid && Newemp.submitted)">SelectPayType is
+          *ngIf="(paytype.touched && paytype.invalid) || (paytype.invalid && Newemp.submitted)">Select pay type is
           required </small><br>
 
         <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Pay Rate" for="payrate"
           name="PayRate" #PayRate="ngModel" [(ngModel)]="NEWEMP.payrate" required>
-        <small *ngIf="(PayRate.touched && PayRate.invalid) || (PayRate.invalid && Newemp.submitted)">PayRate is required
+        <small *ngIf="(PayRate.touched && PayRate.invalid) || (PayRate.invalid && Newemp.submitted)">Pay rate is required
         </small><br>
         <hr>
         <h4>Job Information</h4>
@@ -400,7 +400,7 @@
           <label for="exampleFormControlInput1" class="form-label">Hire Date <span>*</span> </label>
           <input type="Date" class="form-control" id="exampleFormControlInput1" placeholder="Hire Date" name="HireDate"
             #HireDate="ngModel" [(ngModel)]="NEWEMP.startdate" required>
-          <small *ngIf="(HireDate.touched && HireDate.invalid) || (HireDate.invalid && Newemp.submitted)">HireDate is
+          <small *ngIf="(HireDate.touched && HireDate.invalid) || (HireDate.invalid && Newemp.submitted)">Hire date is
             required </small><br>
 
           <label for="exampleFormControlInput1" class="form-label">Employement Status</label>
@@ -410,7 +410,7 @@
             <option>Active</option>
             <option>Inactive</option>
           </select><small
-            *ngIf="(EmployeementStatus.touched && EmployeementStatus.invalid) || (EmployeementStatus.invalid && Newemp.submitted)">EmployeementStatus
+            *ngIf="(EmployeementStatus.touched && EmployeementStatus.invalid) || (EmployeementStatus.invalid && Newemp.submitted)">Employeement status
             is required </small>
           <br>
 
@@ -422,7 +422,7 @@
             <option>Part Time</option>
             <option>Intern</option>
           </select><small
-            *ngIf="(EmployeementType.touched && EmployeementType.invalid) || (EmployeementType.invalid && Newemp.submitted)">EmployeementType
+            *ngIf="(EmployeementType.touched && EmployeementType.invalid) || (EmployeementType.invalid && Newemp.submitted)">Employeement type
             is required </small><br>
 
           <label for="exampleFormControlInput1" class="form-label">Job Title<span>*</span> </label>
@@ -445,7 +445,7 @@
 
           </select>
           <small
-            *ngIf="(selecttitle.touched && selecttitle.invalid) || (selecttitle.invalid && Newemp.submitted)">SelectTitle
+            *ngIf="(selecttitle.touched && selecttitle.invalid) || (selecttitle.invalid && Newemp.submitted)">Select title
             is required </small><br>
 
           <label for="exampleFormControlInput1" class="form-label">Supervisor<span>*</span> </label>
@@ -456,7 +456,7 @@
 
           </select>
           <small
-            *ngIf="(SupervisorId.touched && SupervisorId.invalid) || (SupervisorId.invalid && Newemp.submitted)">SupervisorId
+            *ngIf="(SupervisorId.touched && SupervisorId.invalid) || (SupervisorId.invalid && Newemp.submitted)">Supervisor Id
             is required </small><br>
 
 
@@ -467,7 +467,7 @@
 
             <option *ngFor="let item of client"> {{item.clientname}} </option>
           </select><small
-            *ngIf="(SelectClient.touched && SelectClient.invalid) || (SelectClient.invalid && Newemp.submitted)">SelectClient
+            *ngIf="(SelectClient.touched && SelectClient.invalid) || (SelectClient.invalid && Newemp.submitted)">Select client
             is required </small>
 
         </div>
