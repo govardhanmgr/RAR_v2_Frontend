@@ -30,6 +30,8 @@ import { JobUpdateComponent } from './job-update/job-update.component';
 import { UserdetailsComponent } from './userdetails/userdetails.component';
 import { FormsModule } from '@angular/forms';
 import { SearchfilterPipe } from './searchfilter.pipe';
+import { DocumentComponent } from './document/document.component';
+
 
 
 
@@ -59,7 +61,9 @@ import { SearchfilterPipe } from './searchfilter.pipe';
     ActiveemployeedataComponent,
     CompensationUpdateComponent,
     JobTabComponent,  
-    UserdetailsComponent, SearchfilterPipe
+    UserdetailsComponent, 
+    SearchfilterPipe,
+   DocumentComponent
   
 
   ],
