@@ -5,6 +5,7 @@ import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.compo
 import { AmdpageComponent } from './amdpage/amdpage.component';
 import { CompensationUpdateComponent } from './compensation-update/compensation-update.component';
 import { DepartmentComponent } from './department/department.component';
+import { DocumentComponent } from './document/document.component';
 import { EducationUpdateComponent } from './education-update/education-update.component';
 import { EmpexpdetailsComponent } from './empexpdetails/empexpdetails.component';
 import { EmployeeExpensedataComponent } from './employee-expensedata/employee-expensedata.component';
@@ -55,7 +56,8 @@ const routes: Routes = [
   { path: 'activeemployeedata', component: ActiveemployeedataComponent },
   { path: 'compensationupdate', component: CompensationUpdateComponent },
   { path: 'jobtab', component: JobTabComponent },
-  {path:'job-update' ,component:JobUpdateComponent}
+  {path:'job-update' ,component:JobUpdateComponent},
+  {path:'document',component:DocumentComponent},
 ];
 
 @NgModule({
