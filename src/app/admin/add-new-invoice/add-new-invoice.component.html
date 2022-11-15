@@ -14,7 +14,7 @@
                     <div class="form-outline">
                         <label for="form2Example1" class="form-label">Invoice Number</label> <span>*</span>
                         <input type="text" #invoicenumber="ngModel" class="form-control" id="number"
-                            placeholder="number" name="number" [(ngModel)]="newinvoice.invoicenumber" required/>
+                            placeholder="Invoice Number" name="number" [(ngModel)]="newinvoice.invoicenumber" required/>
                         <small *ngIf="invoicenumber.touched &&invoicenumber.invalid" required="">Invoice Number is
                             Mandatory</small>
                     </div>
@@ -22,7 +22,7 @@
                 <div class="col-md-6 mb-4">
                     <div class="form-outline">
                         <label for="form2Example1" class="form-label">Invoice Date</label> <span>*</span>
-                        <input type="date" #invoicedate="ngModel" class="form-control" id="date" placeholder="date"
+                        <input type="date" #invoicedate="ngModel" class="form-control" id="date" placeholder="Invoice Date"
                             name="date" [(ngModel)]="newinvoice.invoicedate" required />
                         <small *ngIf="invoicedate.touched &&invoicedate.invalid">Invoice Date is Mandatory</small>
                     </div>
@@ -57,7 +57,7 @@
             <div class="col-md-6 mb-4">
                 <div class="form-outline">
                     <label for="form2Example1" class="form-label">Invoice Amount</label> <span>*</span>
-                    <input type="numeric" class="form-control" id="number" placeholder="number" #invoiceamount="ngModel"
+                    <input type="numeric" class="form-control" id="number" placeholder="Invoice Amount" #invoiceamount="ngModel"
                         name="number" [(ngModel)]="newinvoice.invoiceamount" required />
                     <small *ngIf="invoiceamount.touched &&invoiceamount.invalid">Invoice Amount is Mandatory</small>
                 </div>
