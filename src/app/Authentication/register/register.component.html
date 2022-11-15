@@ -86,7 +86,7 @@
                             <input type="text" class="form-control" id="idnumber" name="idnumber" #idnumber="ngModel"
                               placeholder="Employee Id" [(ngModel)]="Signup.idnumber" required />
                             <small
-                              *ngIf="(idnumber.touched && idnumber.invalid) || (idnumber.invalid && signup.submitted)">EmployeeId
+                              *ngIf="(idnumber.touched && idnumber.invalid) || (idnumber.invalid && signup.submitted)">Employee Id
                               is required </small>
                           </div>
 
@@ -99,7 +99,7 @@
                             <input type="mail" class="form-control" id="email" name="email" #email="ngModel"
                               placeholder="Email Id" [(ngModel)]="Signup.email" required />
                             <small
-                              *ngIf="(email.touched && email.invalid) || (email.invalid && signup.submitted)">EmailId is
+                              *ngIf="(email.touched && email.invalid) || (email.invalid && signup.submitted)">Email Id is
                               required </small>
                           </div>
 
@@ -117,7 +117,7 @@
                               #phoneNumber="ngModel" placeholder="Phone Number" minlength="10"
                               [(ngModel)]="Signup.phoneNumber" required />
                             <small
-                              *ngIf="(phoneNumber.touched && phoneNumber.invalid) || (phoneNumber.invalid && signup.submitted)">PhoneNumber
+                              *ngIf="(phoneNumber.touched && phoneNumber.invalid) || (phoneNumber.invalid && signup.submitted)">Phone Number
                               is required </small>
                           </div>
 
@@ -149,7 +149,7 @@
                             <option *ngFor="let item of entities"> {{item.entity}} </option>
                           </select>
                           <small
-                            *ngIf="(entity.touched && entity.invalid) || (entity.invalid && signup.submitted)">SelectEntity
+                            *ngIf="(entity.touched && entity.invalid) || (entity.invalid && signup.submitted)">Select Entity
                             is required</small>
 
 
@@ -163,7 +163,7 @@
                               (change)="dobvalid(Signup.dateofBirth)" #dateofBirth="ngModel" placeholder="DateOfBirth"
                               [(ngModel)]="Signup.dateofBirth" required />
                             <small
-                              *ngIf="(dateofBirth.touched && dateofBirth.invalid) || (dateofBirth.invalid && signup.submitted)">DateOfBirth
+                              *ngIf="(dateofBirth.touched && dateofBirth.invalid) || (dateofBirth.invalid && signup.submitted)">Date Of Birth
                               is required </small>
                             <small *ngIf="(show)"> age should be 18 -75 years</small>
                           </div>
