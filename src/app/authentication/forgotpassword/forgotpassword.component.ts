@@ -30,7 +30,8 @@ export class ForgotpasswordComponent implements OnInit {
   ngOnInit(): void {
     
   }
-  register(f:NgForm){ this.subscription = this._httpservice.postdata("forgotpassword", this.Forgotpassword).subscribe({
+  register(f:NgForm){ 
+    this.subscription = this._httpservice.postdata("forgotpassword", this.Forgotpassword).subscribe({
     next: (data: any) => {
       
       if(data.status == "success" && data.statuscode == 200){

@@ -113,7 +113,7 @@
                           <div class="form-outline">
                             <label for="PhoneNumber" class="form-label">Phone Number</label><span
                               style="color: red;right: -3px;position: relative;">*</span>
-                            <input type="number" class="form-control" id="phoneNumber" name="phoneNumber"
+                            <input type="text" class="form-control" id="phoneNumber" name="phoneNumber"
                               #phoneNumber="ngModel" placeholder="Phone Number" minlength="10"
                               [(ngModel)]="Signup.phoneNumber" required />
                             <small
@@ -127,10 +127,10 @@
                             style="color: red;right: -3px;position: relative;">*</span>
                           <select class="form-select" id="gender" name="gender" #gender="ngModel"
                             aria-label="Default select example" [(ngModel)]="Signup.gender" required>
-                            <option value="1">Choose option</option>
-                            <option value="2">Male</option>
-                            <option value="3">Female</option>
-                            <option value="4">Other</option>
+                            <option di>Choose option</option>
+                            <option >Male</option>
+                            <option >Female</option>
+                            <option >Other</option>
                           </select>
                           <small
                             *ngIf="(gender.touched && gender.invalid) || (gender.invalid && signup.submitted)">Gender is
@@ -145,10 +145,8 @@
                             style="color: red;right: -3px;position: relative;">*</span>
                           <select class="form-select" id="entity" name="entity" aria-label="Default select example"
                             #entity="ngModel" [(ngModel)]="Signup.entity" required>
-                            <option value="1">Choose option</option>
-                            <option value="2">HDFC</option>
-                            <option value="3">AXIS</option>
-                            <option value="4">AVERON</option>
+                            <option >Select Entity</option>
+                            <option *ngFor="let item of entities"> {{item.entity}} </option>
                           </select>
                           <small
                             *ngIf="(entity.touched && entity.invalid) || (entity.invalid && signup.submitted)">SelectEntity
@@ -174,7 +172,7 @@
                       </div>
 
                       <div class="mt-4 pt-2">
-                        <input (click)="next()" type="submit" class="btn btn-primary btn-block mb-3" value="Next" />
+                        <input (click)="next()" type="button" class="btn btn-primary btn-block mb-3" value="Next"  />
                       </div>
                     </div>
                     <div id="test-l-2" class="content">
@@ -190,7 +188,7 @@
 
                           <div class="form-outline">
                             <input type="text" class="form-control" #address1="ngModel" [(ngModel)]="Signup.address1" name="address1" id="address1"
-                              placeholder="Address Line 1" />
+                              placeholder="Address Line 1" required />
                               <small
                             *ngIf="(address1.touched && address1.invalid) || (address1.invalid && signup.submitted)">address1 is
                             required </small>
@@ -200,7 +198,7 @@
 
                           <div class="form-outline">
                             <input type="text" class="form-control" name="address2" id="address2" #address2="ngModel" [(ngModel)]="Signup.address2"
-                              placeholder="Address Line 2" />
+                              placeholder="Address Line 2" required />
                               <small
                             *ngIf="(address2.touched && address2.invalid) || (address2.invalid && signup.submitted)">address2 is
                             required </small>
@@ -212,7 +210,7 @@
                         <div class="col-md-6 mb-4">
 
                           <div class="form-outline">
-                            <input type="text" class="form-control" name="city" id="city" placeholder="City" id="city" name="city" #city="ngModel" [(ngModel)]="Signup.city">
+                            <input type="text" class="form-control" name="city" id="city" placeholder="City" id="city" name="city" #city="ngModel" [(ngModel)]="Signup.city" required >
                             <small
                             *ngIf="(city.touched && city.invalid) || (city.invalid && signup.submitted)">City is
                             required </small>
@@ -221,7 +219,7 @@
                         <div class="col-md-6 mb-4">
 
                           <div class="form-outline">
-                            <input type="text" class="form-control" name="state" id="state" placeholder="State" #state="ngModel" [(ngModel)]="Signup.state"  />
+                            <input type="text" class="form-control" name="state" id="state" placeholder="State" #state="ngModel" [(ngModel)]="Signup.state" required />
                             <small
                             *ngIf="(state.touched && state.invalid) || (state.invalid && signup.submitted)">State is
                             required </small>
@@ -233,7 +231,7 @@
                         <div class="col-md-6 mb-4">
 
                           <div class="form-outline">
-                            <input type="text" class="form-control" name="zipcode" id="zipcode" placeholder="Zipcode" #zipcode="ngModel" [(ngModel)]="Signup.zipcode" />
+                            <input type="text" class="form-control" name="zipcode" id="zipcode" placeholder="Zipcode" #zipcode="ngModel" [(ngModel)]="Signup.zipcode" required />
                             <small
                             *ngIf="(zipcode.touched && zipcode.invalid) || (zipcode.invalid && signup.submitted)">Zipcode is
                             required </small>
@@ -242,7 +240,7 @@
                         <div class="col-md-6 mb-4">
 
                           <div class="form-outline">
-                            <select type="text" class="form-select" aria-label="Default select example" name="country" id="country" placeholder="Country" #country="ngModel" [(ngModel)]="Signup.country">
+                            <select type="text" class="form-select" aria-label="Default select example" name="country" id="country" placeholder="Country" #country="ngModel" required [(ngModel)]="Signup.country">
                               <option disabled selected value>Country</option>
                               <option value="Afghanistan">Afghanistan</option>
                               <option value="Albania">Albania</option>
@@ -391,7 +389,7 @@
 
                           <div class="form-outline">
                             <input type="text" class="form-control" name="password" id="password" #password="ngModel" [(ngModel)]="Signup.password"
-                              placeholder="Password" />
+                              placeholder="Password" required />
                               <small
                               *ngIf="(password.touched && password.invalid) || (password.invalid && signup.submitted)">password is
                               required </small>
@@ -402,7 +400,7 @@
                           <div class="form-outline">
 
                             <input type="text" class="form-control" name="confirmPassword" id="confirmPassword" #confirmPassword="ngModel" [(ngModel)]="Signup.confirmPassword"
-                              placeholder="Password" />
+                              placeholder="Password" required />
                               <small
                               *ngIf="(confirmPassword.touched && confirmPassword.invalid) || (confirmPassword.invalid && signup.submitted)">confirmPassword is
                               required </small>
@@ -413,20 +411,18 @@
 
                       <div class="form-group required">
 
-                        <select class="form-select" id="entity" aria-label="Default select example" name="entity" #entity="ngModel" [(ngModel)]="Signup.entity"
-                          id="role" aria-placeholder="Select Role">
+                        <select class="form-select"  aria-label="Default select example" name="role" #role="ngModel" [(ngModel)]="Signup.role"
+                          id="role" aria-placeholder="Select Role" required>
                           <option>Select Role</option>
-                          <option>Software Engineer</option>
-                          <option>Business Analyst</option>
-                          <option>Devops Engineer</option>
+                          <option *ngFor="let item of roles">{{item.roles}}</option>
                         </select>
                         <small
-                              *ngIf="(entity.touched && entity.invalid) || (entity.invalid && signup.submitted)">entity is
+                              *ngIf="(role.touched && role.invalid) || (role.invalid && signup.submitted)">entity is
                               required </small>
                       </div>
 
 
-                      <input (click)="next()" type="submit" class="btn btn-primary btn-block mb-3" value="Next" />
+                      <input (click)="next()" type="button" class="btn btn-primary btn-block mb-3" value="Next" />
                     </div>
                     <div id="test-l-3" class="content text-center">
                       <div class="img" align="center">
