@@ -57,7 +57,7 @@ node('slave001'){
   echo 'Artifacts copied'
 
   echo 'Copy'
-  sh 'yes | sudo cp -R bundle.tar.gz /var/www/html && cd /var/ww/html && sudo tar -xvf bundle.tar.gz'
+  sh 'yes | sudo cp -R bundle.tar.gz /var/www/html && cd /var/www/html && sudo tar -xvf bundle.tar.gz'
   echo 'Copy Completed'
 
 }
