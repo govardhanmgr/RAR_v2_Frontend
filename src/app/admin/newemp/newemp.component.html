@@ -5,7 +5,7 @@
       <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label">Employee Number <span>*</span> </label>
         <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="Employee Number"
-          name="EmployeeNumber" aria-label="EmployeeNumber" #EmployeeNumber="ngModel" [(ngModel)]="NEWEMP. employeeid"
+          name="EmployeeNumber" min="0" aria-label="EmployeeNumber" #EmployeeNumber="ngModel" [(ngModel)]="NEWEMP. employeeid"
           required />
         <small
           *ngIf="(EmployeeNumber.touched && EmployeeNumber.invalid) || (EmployeeNumber.invalid && Newemp.submitted)">Employee number
@@ -15,7 +15,7 @@
       <div class="row">
         <label for="exampleFormControlInput1" class="form-label" required>Name<span>*</span> </label>
         <div class="col">
-          <input type="text" class="form-control" id="FirstName" placeholder="First Name" name="FirstName"
+          <input type="text" class="form-control" id="FirstName" placeholder="First Name" name="FirstName"  pattern="^[a-zA-Z0-9]+$" 
             aria-label="First Name" #FirstName="ngModel" placeholder="First Name" [(ngModel)]="NEWEMP.firstname"
             required />
           <small *ngIf="(FirstName.touched && FirstName.invalid) || (FirstName.invalid && Newemp.submitted)">First name
@@ -354,7 +354,7 @@
           <input type="number" name="ContactNumber" class="form-control" id="ContactNumber" name="ContactNumber"
             pattern="[0-9]{10}"  #ContactNumber="ngModel" placeholder="Contact Number" [(ngModel)]="NEWEMP.contactnumber"
             required ng-model="ContactNumber" min="0" />
-          <small *ngIf="(ContactNumber.touched && ContactNumber.invalid) || ( ContactNumber.invalid && Newemp.submitted)">Please enter a valid mobile number
+          <small *ngIf="(ContactNumber.touched && ContactNumber.invalid) || ( ContactNumber.invalid && Newemp.submitted)">Please enter a valid contact number
           </small>
         </div>
 
