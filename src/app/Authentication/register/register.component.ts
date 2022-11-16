@@ -24,10 +24,25 @@ export class RegisterComponent implements OnInit {
   constructor(private _httpservice:HttpService,
     private router:Router) { }
 
+    validateuser()
+    {
+     
+
+    }
    
 
   next() {
+    // if(document.getElementById("firstName")== null){
+        
+    // }
+    if(this.Signup.firstName == null || this.Signup.lastName== null || this.Signup.idnumber== null || this.Signup.email== null || this.Signup.phoneNumber== null || this.Signup.entity== null || this.Signup.dateofBirth== null){
+        
+    }
+     else{
     this.stepper.next()
+    
+     }
+    
   }
 
   onSubmit() {
