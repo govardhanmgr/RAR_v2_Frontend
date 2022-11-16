@@ -1,3 +1,4 @@
+
 <ul class="nav nav-tabs">
   <li class="nav-item">
     <a class="nav-link" href="/personaldata">Personal</a>
@@ -10,6 +11,14 @@
   </li>
 
 </ul>
+<br>
+<button
+  [routerLink]="['/admin/activeemployeedata']"
+  routerLinkActive="router-link-active"
+  type="button"
+  class="btn btn-primary">Back</button>
+
+ 
 <link rel="stylesheet" type="text/css" href="http://www.shieldui.com/shared/components/latest/css/light/all.min.css" />
 <section class="vh-200 gradient-custom">
   <div class="container py-5 h-100">
@@ -175,7 +184,7 @@
                   <div class="col">
                     <label class="form-label" for="contactnumber">Phone Number</label><span>*</span>
                     <input type="number" class="form-control" name="contactnumber" aria-label="contactnumber"
-                      #contactnumber="ngModel" [(ngModel)]="empdata.contactnumber" required />
+                    pattern="[0-9]{10}" #contactnumber="ngModel" [(ngModel)]="empdata.contactnumber" required />
                     <small
                       *ngIf="(contactnumber.touched && contactnumber.invalid) || (contactnumber.invalid && Personal.submitted)">
                       phone number is required </small>
@@ -185,7 +194,7 @@
                   <div class="col">
                     <label class="form-label" for="emergencynumber">Emergency phone number</label><span>*</span>
                     <input type="number" class="form-control" name="emergencynumber"
-                      aria-label="emergencynumber" #emergencynumber="ngModel"
+                      aria-label="emergencynumber" pattern="[0-9]{10}" #emergencynumber="ngModel"
                       [(ngModel)]="empdata.emergencynumber" required />
                     <small
                       *ngIf="(emergencynumber.touched && emergencynumber.invalid) || (emergencynumber.invalid && Personal.submitted)">emergency
@@ -195,7 +204,7 @@
 
                   <div class="col">
                     <label class="form-label" for="emailaddress">Email-Id</label><span>*</span>
-                    <input type="text" class="form-control" name="emailaddress" aria-label="emailaddress" #emailaddress="ngModel"
+                    <input type="text" class="form-control" name="emailaddress" aria-label="emailaddress" pattern="[a-z0-9._+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" #emailaddress="ngModel"
                       [(ngModel)]="empdata.emailaddress" required />
                     <small *ngIf="(emailaddress.touched && emailaddress.invalid) || (emailaddress.invalid && Personal.submitted)">email
                       id
