@@ -21,13 +21,10 @@
                         <div class="card-body p-4 p-md-4">
                           
                           <h4 class="mb-4 pb-2 pb-md-0 mb-md-3">Hire Date</h4><input type="date" #startdate="ngModel" [(ngModel)]="empdata.startdate" name="startdate" id="startdate"class="form-control" style="width: 50%;margin-bottom: 5;" required>
-                          
-                          
-                            <h4 class="mb-4 pb-2 pb-md-0 mb-md-3">Employment Status</h4> 
-                            <button type="button" class="btn  btn-primary" >+Update</button>
+                          <br>
+                          <br>
+                            <h4 class="mb-4 pb-2 pb-md-0 mb-md-3">Employment Status</h4>                             
                             
-                            <br>
-                            <br>
                             <div class="table-bordered">
                                 <table class="table" >
                                     <thead class="table-light">
@@ -48,9 +45,10 @@
                                     
                                 </table> 
                             
-                                
+                                <button type="button" class="btn  btn-primary" style="position: relative;left: 45%; margin-top: -2%;">+Update</button>
                             </div>
-                
+                            
+                            <br>
                 <h4 class="mb-4 pb-2 pb-md-0 mb-md-3">Job Details</h4> 
                 <button [routerLink]="['/job-update']" style="position: relative;left: 83%;top: -36px;"  type="button" class="btn btn-primary">+Add new</button>
                 <div class="table-bordered">
@@ -73,7 +71,7 @@
                           </tr>
                     </table>                    
                 </div>
-                
+                <br>
                 <h4 class="mb-4 pb-2 pb-md-0 mb-md-3">Compensation Details</h4> 
                 <button [routerLink]="['/compensationupdate']" style="position: relative;left: 83%;top: -36px;"  type="submit" class="btn btn-primary">+Add new</button>
                 <div class="table-bordered">
@@ -103,7 +101,7 @@
                     </table>                    
                     
                 </div> 
-               
+                <br>
                 <button type="submit" class="btn btn-success">Save All</button>
                           </div>
                         </div>

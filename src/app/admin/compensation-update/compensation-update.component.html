@@ -12,7 +12,7 @@
                 <div class="form-outline">
         <label for="exampleFormControlInput1" class="form-label" >Effective Date</label>
         <input type="date" class="form-control" id="compensationeffectivedate" placeholder="" name="compensationeffectivedate" #compensationeffectivedate="ngModel"  [(ngModel)]="compensation.compensationeffectivedate" required />
-        <small *ngIf="(compensationeffectivedate.touched && compensationeffectivedate.invalid) || (compensationeffectivedate.invalid && Compensation.submitted)">Compensationdate is Required </small>
+        <small *ngIf="(compensationeffectivedate.touched && compensationeffectivedate.invalid) || (compensationeffectivedate.invalid && Compensation.submitted)">Effective date is required </small>
     
     </div>
     <br>
@@ -24,7 +24,7 @@
       <option> Every week</option>
       <option>Every Month</option>
     </select>
-    <small *ngIf="(payschedule.touched && payschedule.invalid) || (payschedule.invalid && Compensation.submitted)">payschedule is required </small>
+    <small *ngIf="(payschedule.touched && payschedule.invalid) || (payschedule.invalid && Compensation.submitted)">Pay Schedule is required </small>
  </div>
     
     <div class="mb-3">
@@ -33,13 +33,13 @@
         <option> Hourly </option>
         <option>Commission only</option>
     </select> 
-    <small *ngIf="(paytype.touched && paytype.invalid) || (paytype.invalid && Compensation.submitted)">Payshedule is required </small>
+    <small *ngIf="(paytype.touched && paytype.invalid) || (paytype.invalid && Compensation.submitted)">Pay Type is required </small>
   </div>
     
     <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label" >Pay Rate</label>
         <input type="text" class="form-control" id="payrate" placeholder=""  name="payrate" #payrate="ngModel"  [(ngModel)]="compensation.payrate" required />
-        <small *ngIf="(payrate.touched && payrate.invalid) || (payrate.invalid && Compensation.submitted)">Payrate is Required </small>
+        <small *ngIf="(payrate.touched && payrate.invalid) || (payrate.invalid && Compensation.submitted)">Pay Rate is required </small>
     </div>
 
     <div class="mb-3">
@@ -48,13 +48,13 @@
       <option> Exempt </option>
       <option>Non Exempt</option>
     </select>
-    <small *ngIf="(overtime.touched &&  overtime.invalid) || (overtime.invalid && Compensation.submitted)">Overtime is required </small> 
+    <small *ngIf="(overtime.touched &&  overtime.invalid) || (overtime.invalid && Compensation.submitted)">Overtime Status is required </small> 
    </div>
 
    <div class="mb-3">
     <label for="exampleFormControlInput1" class="form-label" >Overtime Rate</label>
     <input type="text" class="form-control" id="overtimerate" placeholder=""  name="overtimerate" #overtimerate="ngModel"  [(ngModel)]="compensation.overtimerate" required />
-    <small *ngIf="(overtimerate.touched && overtimerate.invalid) || (overtimerate.invalid && Compensation.submitted)">overtimerate is Required </small>
+    <small *ngIf="(overtimerate.touched && overtimerate.invalid) || (overtimerate.invalid && Compensation.submitted)">Overtime Rate is required </small>
    </div> 
 
     <div class="mb-3">
@@ -65,12 +65,12 @@
       <option >Relocated</option>
       <option >Pay Increase</option>
     </select>
-    <small *ngIf="(changereason.touched &&  changereason.invalid) || (changereason.invalid && Compensation.submitted)">Changereason is required </small>  
+    <small *ngIf="(changereason.touched &&  changereason.invalid) || (changereason.invalid && Compensation.submitted)">Change Reason is required </small>  
    </div>
     <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label" >Comments</label>
         <input type="text" class="form-control" id="comment" placeholder=""  name="comment" #comment="ngModel"  [(ngModel)]="compensation.comment" required />
-        <small *ngIf="(comment.touched && comment.invalid) || (comment.invalid &&Compensation.submitted)">Comment is Required </small>
+        <small *ngIf="(comment.touched && comment.invalid) || (comment.invalid &&Compensation.submitted)">Comment is required </small>
     </div>
     <div class="mt-4 pt-2">
         <input class="btn btn-primary " type="submit" value="Add Details" style="margin-left: 90%;" />
