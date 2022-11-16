@@ -99,6 +99,18 @@ export class RegisterComponent implements OnInit {
     this.getentities();
     this.getroles();
   }
+  
+  handleConfirmPassword(value:any){
+    console.log(value)
+    if(this.Signup.confirmPassword){
+      if(this.Signup.password!= this.Signup.confirmPassword){
+       this.show=true
+      }
+      else{
+        this.show=false
+      }
+    }
+  }
 }
 
 
