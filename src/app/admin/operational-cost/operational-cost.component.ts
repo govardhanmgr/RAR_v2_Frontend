@@ -1,25 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { HttpService } from 'src/app/services/http.service';
 import { IEmployee } from './employeedetails';
 
-
-
-
 @Component({
   selector: 'app-Operational-cost',
-  templateUrl: './Operational-cost.component.html',
-  styleUrls: ['./Operational-cost.component.css']
+  templateUrl: './operational-cost.component.html',
+  styleUrls: ['./operational-cost.component.css'],
 })
-export class OperationalCostComponent implements OnInit {
-
+export class OperationalCostComponent implements OnInit, OnDestroy {
   employees = [] as IEmployee[];
 
   // constructor() { }
 
-  // ngOnInit(): void { 
+  // ngOnInit(): void {
   //   this.employees=[
-
 
   //     {empEmployeeNo:1, empFIRSTNAME:'channu', empLASTNAME:'praveen', empTOTALOPERATIONALEXPENSES:'$4888',     },
   //     {empEmployeeNo:2, empFIRSTNAME:'channu', empLASTNAME:'praveen', empTOTALOPERATIONALEXPENSES:'$6497',    },
@@ -41,29 +36,27 @@ export class OperationalCostComponent implements OnInit {
   //     {empEmployeeNo:18, empFIRSTNAME:'channu', empLASTNAME:'praveen', empTOTALOPERATIONALEXPENSES:'$9282',   },
   //     {empEmployeeNo:19, empFIRSTNAME:'channu', empLASTNAME:'praveen', empTOTALOPERATIONALEXPENSES:'$9282',   },
   //     {empEmployeeNo:20, empFIRSTNAME:'channu', empLASTNAME:'praveen', empTOTALOPERATIONALEXPENSES:'$2922',   },
-      
-      
+
   // ]
-    
+
   subscription!: Subscription;
 
-  constructor(private http:HttpService) { }
+  constructor(private http: HttpService) {}
 
   ngOnInit(): void {
     this.operationalaccessdata();
   }
 
   operationalaccessdata() {
-    this.subscription = this.http.getData("operationalaccess").subscribe({
+    this.subscription = this.http.getData('operationalaccess').subscribe({
       next: (data: any) => {
         this.employees = data.result as IEmployee[];
       },
-      error: reason => console.log(reason)
+      error: (reason) => console.log(reason),
     });
   }
- 
+
   ngOnDestroy(): void {
-    if(this.subscription)
-    this.subscription.unsubscribe();
+    if (this.subscription) this.subscription.unsubscribe();
   }
-  }
+}
