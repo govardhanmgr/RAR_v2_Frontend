@@ -11,11 +11,11 @@
           *ngIf="(EmployeeNumber.touched && EmployeeNumber.invalid) || (EmployeeNumber.invalid && Newemp.submitted)">Employee number
           is required </small>
       </div>
-      
+
       <div class="row">
         <label for="exampleFormControlInput1" class="form-label" required>Name<span>*</span> </label>
         <div class="col">
-          <input type="text" class="form-control" id="FirstName" placeholder="First Name" name="FirstName"  pattern="^[a-zA-Z0-9]+$" 
+          <input type="text" class="form-control" id="FirstName" placeholder="First Name" name="FirstName"  pattern="^[a-zA-Z0-9]+$"
             aria-label="First Name" #FirstName="ngModel" placeholder="First Name" [(ngModel)]="NEWEMP.firstname"
             required />
           <small *ngIf="(FirstName.touched && FirstName.invalid) || (FirstName.invalid && Newemp.submitted)">First name
@@ -352,10 +352,19 @@
       <div class="row">
         <div class="col">
           <input type="number" name="ContactNumber" class="form-control" id="ContactNumber" name="ContactNumber"
-            pattern="[0-9]{10}"  #ContactNumber="ngModel" placeholder="Contact Number" [(ngModel)]="NEWEMP.contactnumber"
-            required ng-model="ContactNumber" min="0" />
-          <small *ngIf="(ContactNumber.touched && ContactNumber.invalid) || ( ContactNumber.invalid && Newemp.submitted)">Please enter a valid contact number
-          </small>
+            pattern="^((\\+91-?)|0)?[0-9]{10}$"  #ContactNumber="ngModel" placeholder="Contact Number" [(ngModel)]="NEWEMP.contactnumber"
+            required ng-model="ContactNumber" minlength="10" />
+            <div *ngIf="(ContactNumber.touched && ContactNumber.invalid) || (ContactNumber.invalid && Newemp.submitted)"
+            class="alert">
+
+            <small *ngIf="ContactNumber.errors?.['required']">
+              please enter mobile number
+            </small>
+            <small *ngIf="ContactNumber.errors?.['pattern']">
+              please enter valid mobile number
+            </small>
+
+        </div>
         </div>
 
         <div class="col">
@@ -418,7 +427,7 @@
           <select class="form-select" aria-label="Default select example" for="EmployementType" name="Employement Type"
             #EmployeementType="ngModel" [(ngModel)]="NEWEMP.employementstatus" required>
             <option value="undefined" disabled selected> Employement Type </option>
-            <option>Full Time</option> 
+            <option>Full Time</option>
             <option>Part Time</option>
             <option>Intern</option>
           </select><small

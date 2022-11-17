@@ -52,7 +52,7 @@ node(){
 
 node('slave001'){
 
-  stage('Unstashing'){
+  stage('Unstashing Changed Artifacts'){
 
     echo 'Unstash'
     unstash 'buildArtifacts'
@@ -63,7 +63,7 @@ node('slave001'){
   stage('Deployment'){
 
     echo 'Copy'
-    sh 'yes | sudo cp -R bundle.tar.gz /var/www/html && cd /var/ww/html && sudo tar -xvf bundle.tar.gz'
+    sh 'yes | sudo cp -R bundle.tar.gz /var/www/html && cd /var/www/html && sudo tar -xvf bundle.tar.gz'
     echo 'Copy Completed'
 
   }
