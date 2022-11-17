@@ -40,7 +40,7 @@ node(){
 
   }
 
-  stage('Stach Changes'){
+  stage('Stash Changes'){
 
     stash allowEmpty: true, includes: 'bundle.tar.gz', name: 'buildArtifacts'
 
@@ -52,12 +52,20 @@ node(){
 
 node('slave001'){
 
-  echo 'Unstash'
-  unstash 'buildArtifacts'
-  echo 'Artifacts copied'
+  stage('Unstashing Changed Artifacts'){
 
-  echo 'Copy'
-  sh 'yes | sudo cp -R bundle.tar.gz /var/www/html && cd /var/www/html && sudo tar -xvf bundle.tar.gz'
-  echo 'Copy Completed'
+    echo 'Unstash'
+    unstash 'buildArtifacts'
+    echo 'Artifacts copied'
+
+  }
+
+  stage('Deployment'){
+
+    echo 'Copy'
+    sh 'yes | sudo cp -R bundle.tar.gz /var/www/html && cd /var/www/html && sudo tar -xvf bundle.tar.gz'
+    echo 'Copy Completed'
+
+  }
 
 }
