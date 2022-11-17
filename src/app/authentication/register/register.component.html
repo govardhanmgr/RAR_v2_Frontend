@@ -21,8 +21,8 @@
                     </button>
                   </div>
                   <div class="line"></div>
-                  <div class="step" (click)="next()" data-target="#test-l-2">
-                    <button type="submit" class="step-trigger">
+                  <div class="step"  data-target="#test-l-2">
+                    <button type="submit" (click)="NEXT()" class="step-trigger">
                       <span class="bs-stepper-circle">2</span>
                       <span class="bs-stepper-label">PAGE</span>
                     </button>
@@ -39,7 +39,7 @@
 
 
                   <form (ngSubmit)="onSubmit()" name="signup"  #signup="ngForm"
-                    (ngSubmit)="signup.valid && register(signup) && !show && show">
+                    (ngSubmit)="signup.valid && register(signup) && !show && show ">
                     <div id="test-l-1" class="content">
 
 
@@ -173,7 +173,7 @@
                       </div>
 
                       <div class="mt-4 pt-2">
-                        <input (click)="next()" type="button" class="btn btn-primary btn-block mb-3" value="Next"  />
+                        <input (click)="next()" type="submit" class="btn btn-primary btn-block mb-3" value="Next"  />
                       </div>
                     </div>
                     <div id="test-l-2" class="content">
@@ -424,7 +424,7 @@
                       </div>
 
 
-                      <input (click)="next()" type="button" class="btn btn-primary btn-block mb-3" value="Next" />
+                      <input (click)="NEXT()" type="submit" class="btn btn-primary btn-block mb-3" value="Next" />
                     </div>
                     <div id="test-l-3" class="content text-center">
                       <div class="img" align="center">
