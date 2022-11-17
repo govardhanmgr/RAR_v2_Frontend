@@ -35,14 +35,25 @@ export class RegisterComponent implements OnInit {
     // if(document.getElementById("firstName")== null){
         
     // }
-    if(this.Signup.firstName == null || this.Signup.lastName== null || this.Signup.idnumber== null || this.Signup.email== null || this.Signup.phoneNumber== null || this.Signup.entity== null || this.Signup.dateofBirth== null){
-        
+    if(this.Signup.firstName == null || this.Signup.lastName== null || this.Signup.idnumber== null || this.Signup.email== null || this.Signup.phoneNumber== null || this.Signup.entity== null || this.Signup.dateofBirth== null || this.Signup.gender== null){
+        alert("Fill up the required details. ")
     }
      else{
+      
     this.stepper.next()
     
      }
     
+  }
+  NEXT(){
+    if(this.Signup.address1 == null || this.Signup.address2== null || this.Signup.city== null || this.Signup.state== null || this.Signup.zipcode== null || this.Signup.country== null || this.Signup.password== null || this.Signup.confirmPassword== null|| this.Signup.role== null){
+      alert("Fill up the required details. ")
+  }
+   else{
+    
+  this.stepper.next()
+  
+   }
   }
 
   onSubmit() {
