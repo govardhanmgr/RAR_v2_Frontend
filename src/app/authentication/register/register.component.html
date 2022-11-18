@@ -408,7 +408,7 @@
                               <small
                               *ngIf="(confirmPassword.touched && confirmPassword.invalid) || (confirmPassword.invalid && signup.submitted)">Confirm Password is
                               required </small>
-                              <small *ngIf="(show)">Confirm Password is mismatched </small>
+                              <small *ngIf="(show && confirmPassword.valid)">Confirm Password is mismatched </small>
                           </div>
 
                         </div>
