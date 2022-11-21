@@ -113,13 +113,16 @@
                           <div class="form-outline">
                             <label for="PhoneNumber" class="form-label">Phone Number</label><span
                               style="color: red;right: -3px;position: relative;">*</span>
-                            <input type="number" pattern="^((\\+91-?)|0)?[0-9]{10}$" class="form-control" id="phoneNumber" name="phoneNumber"
-                              #phoneNumber="ngModel" placeholder="Phone Number" minlength="10"
+                            <input type="number" [maxlength]="10" [minlength]="10" class="form-control" id="phoneNumber" name="phoneNumber"
+                              #phoneNumber="ngModel" placeholder="Phone Number" minlength="10" pattern="^((\\+91-?)|0)?[0-9]{10}$" 
                               [(ngModel)]="Signup.phoneNumber" required />
                             <small
                               *ngIf="(phoneNumber.touched && phoneNumber.pristine) || (phoneNumber.invalid && signup.submitted)">Phone Number
                               is required </small>
-                              <small *ngIf="phoneNumber.errors?.['pattern']">Phone Number must contain 10 digits </small>
+                              <small *ngIf="phoneNumber.errors?.['minlength']">Phone Number must contain 10 digits </small>
+                              <small *ngIf="phoneNumber.errors?.['pattern']">
+                                please enter valid phone number
+                              </small>
                           </div>
 
                         </div>
@@ -405,7 +408,7 @@
                               <small
                               *ngIf="(confirmPassword.touched && confirmPassword.pristine) || (confirmPassword.invalid && signup.submitted)">Confirm Password is
                               required </small>
-                              <small *ngIf="(show)">Confirm Password is mismatched </small>
+                              <small *ngIf="(show && confirmPassword.valid)">Confirm Password is mismatched </small>
                           </div>
 
                         </div>

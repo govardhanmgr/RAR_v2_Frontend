@@ -1,3 +1,9 @@
+<br>
+
+<button [routerLink]="['/admin/activeemployeedata']" routerLinkActive="router-link-active" type="button"
+  class="btn btn-primary" id="buttons">Back</button><br><br>
+
+
 <div class="col d-flex justify-content-center">
   <div class="shadow-lg p-5 mb-7 bg-white " id="shadow">
     <form name="Newemp" #Newemp="ngForm" (ngSubmit)="Newemp.valid && employee(Newemp)">
@@ -358,10 +364,10 @@
             class="alert">
 
             <small *ngIf="ContactNumber.errors?.['required']">
-              please enter contact number
+              Contact Number is required
             </small>
             <small *ngIf="ContactNumber.errors?.['pattern']">
-              please enter valid contact number
+              Please enter a valid contact number
             </small>
 
         </div>
