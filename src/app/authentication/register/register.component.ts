@@ -81,6 +81,7 @@ export class RegisterComponent implements OnInit {
   register(f: NgForm) {
     console.log(this.Signup)
     this.Signup.status = "pending"
+    this.Signup.phoneNumber=this.Signup.phoneNumber.toString()
     this.subscription = this._httpservice.postdata("reg", this.Signup).subscribe({
       next: (data: any) => {
         

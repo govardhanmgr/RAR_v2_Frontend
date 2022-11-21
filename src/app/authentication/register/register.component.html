@@ -81,9 +81,9 @@
                         <div class="col-md-6 mb-4">
 
                           <div class="form-outline">
-                            <label for="EmployeeId" class="form-label">Employee Id</label><span
+                            <label for="EmployeeId"  class="form-label">Employee Id</label><span
                               style="color: red;right: -3px;position: relative;">*</span>
-                            <input type="text" class="form-control" id="idnumber" name="idnumber" #idnumber="ngModel"
+                            <input type="number"  class="form-control" id="idnumber" name="idnumber" #idnumber="ngModel"
                               placeholder="Employee Id" [(ngModel)]="Signup.idnumber" required />
                             <small
                               *ngIf="(idnumber.touched && idnumber.invalid) || (idnumber.invalid && signup.submitted)">Employee Id
@@ -113,13 +113,13 @@
                           <div class="form-outline">
                             <label for="PhoneNumber" class="form-label">Phone Number</label><span
                               style="color: red;right: -3px;position: relative;">*</span>
-                            <input type="text" [maxlength]="10" [minlength]="10" class="form-control" id="phoneNumber" name="phoneNumber"
+                            <input type="number" pattern="^((\\+91-?)|0)?[0-9]{10}$" class="form-control" id="phoneNumber" name="phoneNumber"
                               #phoneNumber="ngModel" placeholder="Phone Number" minlength="10"
                               [(ngModel)]="Signup.phoneNumber" required />
                             <small
-                              *ngIf="(phoneNumber.touched && phoneNumber.invalid) || (phoneNumber.invalid && signup.submitted)">Phone Number
+                              *ngIf="(phoneNumber.touched && phoneNumber.pristine) || (phoneNumber.invalid && signup.submitted)">Phone Number
                               is required </small>
-                              <small *ngIf="phoneNumber.errors?.['minlength']">Phone Number must contain 10 digits </small>
+                              <small *ngIf="phoneNumber.errors?.['pattern']">Phone Number must contain 10 digits </small>
                           </div>
 
                         </div>
@@ -232,7 +232,7 @@
                         <div class="col-md-6 mb-4">
 
                           <div class="form-outline">
-                            <input type="number" class="form-control" name="zipcode" id="zipcode" [maxlength]="6" placeholder="Zipcode" #zipcode="ngModel" [(ngModel)]="Signup.zipcode" required />
+                            <input type="number"  class="form-control" name="zipcode" id="zipcode" [maxlength]="6" placeholder="Zipcode" #zipcode="ngModel" [(ngModel)]="Signup.zipcode" required />
                             <small
                             *ngIf="(zipcode.touched && zipcode.invalid) || (zipcode.invalid && signup.submitted)">Zipcode is
                             required </small>
@@ -403,7 +403,7 @@
                             <input type="password" class="form-control" name="confirmPassword" id="confirmPassword" (keyup)="handleConfirmPassword(Signup.confirmPassword)" #confirmPassword="ngModel" [(ngModel)]="Signup.confirmPassword"
                               placeholder="Confirm Password" required />
                               <small
-                              *ngIf="(confirmPassword.touched && confirmPassword.invalid) || (confirmPassword.invalid && signup.submitted)">Confirm Password is
+                              *ngIf="(confirmPassword.touched && confirmPassword.pristine) || (confirmPassword.invalid && signup.submitted)">Confirm Password is
                               required </small>
                               <small *ngIf="(show)">Confirm Password is mismatched </small>
                           </div>
