@@ -21,7 +21,7 @@
                     </button>
                   </div>
                   <div class="line"></div>
-                  <div class="step"  data-target="#test-l-2">
+                  <div class="step" data-target="#test-l-2">
                     <button type="submit" (click)="NEXT()" class="step-trigger">
                       <span class="bs-stepper-circle">2</span>
                       <span class="bs-stepper-label">PAGE</span>
@@ -38,7 +38,7 @@
                 <div class="bs-stepper-content">
 
 
-                  <form (ngSubmit)="onSubmit()" name="signup"  #signup="ngForm"
+                  <form (ngSubmit)="onSubmit()" name="signup" #signup="ngForm"
                     (ngSubmit)="signup.valid && register(signup) && !show && show ">
                     <div id="test-l-1" class="content">
 
@@ -81,12 +81,13 @@
                         <div class="col-md-6 mb-4">
 
                           <div class="form-outline">
-                            <label for="EmployeeId"  class="form-label">Employee Id</label><span
+                            <label for="EmployeeId" class="form-label">Employee Id</label><span
                               style="color: red;right: -3px;position: relative;">*</span>
-                            <input type="number"  class="form-control" id="idnumber" name="idnumber" #idnumber="ngModel"
+                            <input type="number" class="form-control" id="idnumber" name="idnumber" #idnumber="ngModel"
                               placeholder="Employee Id" [(ngModel)]="Signup.idnumber" required />
                             <small
-                              *ngIf="(idnumber.touched && idnumber.invalid) || (idnumber.invalid && signup.submitted)">Employee Id
+                              *ngIf="(idnumber.touched && idnumber.invalid) || (idnumber.invalid && signup.submitted)">Employee
+                              Id
                               is required </small>
                           </div>
 
@@ -96,10 +97,10 @@
                           <div class="form-outline">
                             <label for="EmailId" class="form-label">Email Id</label> <span
                               style="color: red;right: -3px;position: relative;">*</span>
-                            <input type="mail"  class="form-control" id="email" name="email" #email="ngModel"
+                            <input type="mail" class="form-control" id="email" name="email" #email="ngModel"
                               placeholder="Email Id" [(ngModel)]="Signup.email" required />
-                            <small
-                              *ngIf="(email.touched && email.invalid) || (email.invalid && signup.submitted)">Email Id is
+                            <small *ngIf="(email.touched && email.invalid) || (email.invalid && signup.submitted)">Email
+                              Id is
                               required </small>
                           </div>
 
@@ -113,16 +114,16 @@
                           <div class="form-outline">
                             <label for="PhoneNumber" class="form-label">Phone Number</label><span
                               style="color: red;right: -3px;position: relative;">*</span>
-                            <input type="number" [maxlength]="10" [minlength]="10" class="form-control" id="phoneNumber" name="phoneNumber"
-                              #phoneNumber="ngModel" placeholder="Phone Number" minlength="10" pattern="^((\\+91-?)|0)?[0-9]{10}$" 
-                              [(ngModel)]="Signup.phoneNumber" required />
+                            <input type="number" [maxlength]="10" [minlength]="10" class="form-control" id="phoneNumber"
+                              name="phoneNumber" #phoneNumber="ngModel" placeholder="Phone Number" 
+                              pattern="^((\\+91-?)|0)?[0-9]{10}$" [(ngModel)]="Signup.phoneNumber" required />
                             <small
-                              *ngIf="(phoneNumber.touched && phoneNumber.pristine) || (phoneNumber.invalid && signup.submitted)">Phone Number
+                              *ngIf="(phoneNumber.touched && phoneNumber.pristine) || (phoneNumber.invalid && signup.submitted)">Phone
+                              Number
                               is required </small>
-                              <small *ngIf="phoneNumber.errors?.['minlength']">Phone Number must contain 10 digits </small>
-                              <small *ngIf="phoneNumber.errors?.['pattern']">
-                                please enter valid phone number
-                              </small>
+                            <small *ngIf="phoneNumber.errors?.['pattern']">
+                              please enter 10 digit Phone Number
+                            </small>
                           </div>
 
                         </div>
@@ -132,9 +133,9 @@
                           <select class="form-select" id="gender" name="gender" #gender="ngModel"
                             aria-label="Default select example" [(ngModel)]="Signup.gender" required>
                             <option di>Choose option</option>
-                            <option >Male</option>
-                            <option >Female</option>
-                            <option >Other</option>
+                            <option>Male</option>
+                            <option>Female</option>
+                            <option>Other</option>
                           </select>
                           <small
                             *ngIf="(gender.touched && gender.invalid) || (gender.invalid && signup.submitted)">Gender is
@@ -149,11 +150,12 @@
                             style="color: red;right: -3px;position: relative;">*</span>
                           <select class="form-select" id="entity" name="entity" aria-label="Default select example"
                             #entity="ngModel" [(ngModel)]="Signup.entity" required>
-                            <option >Select Entity</option>
+                            <option>Select Entity</option>
                             <option *ngFor="let item of entities"> {{item.entity}} </option>
                           </select>
                           <small
-                            *ngIf="(entity.touched && entity.invalid) || (entity.invalid && signup.submitted)">Select Entity
+                            *ngIf="(entity.touched && entity.invalid) || (entity.invalid && signup.submitted)">Select
+                            Entity
                             is required</small>
 
 
@@ -167,7 +169,8 @@
                               (change)="dobvalid(Signup.dateofBirth)" #dateofBirth="ngModel" placeholder="DateOfBirth"
                               [(ngModel)]="Signup.dateofBirth" required />
                             <small
-                              *ngIf="(dateofBirth.touched && dateofBirth.invalid) || (dateofBirth.invalid && signup.submitted)">Date Of Birth
+                              *ngIf="(dateofBirth.touched && dateofBirth.invalid) || (dateofBirth.invalid && signup.submitted)">Date
+                              Of Birth
                               is required </small>
                             <small *ngIf="(show)"> Age should be 18 -75 years</small>
                           </div>
@@ -176,13 +179,13 @@
                       </div>
 
                       <div class="mt-4 pt-2">
-                        <input (click)="next()" type="submit" class="btn btn-primary btn-block mb-3" value="Next"  />
+                        <input (click)="next()" type="submit" class="btn btn-primary btn-block mb-3" value="Next" />
                       </div>
                     </div>
                     <div id="test-l-2" class="content">
 
                       <div class="img" style="position:relative;left: 22%;">
-                        <img alt="" class="img" style="position: relative;display: flex;"
+                        <img  class="img" style="position: relative;display: flex;"
                           src="../assets/snadicon.png" />
                       </div>
                       <h1>Sign up for new account</h1>
@@ -191,21 +194,23 @@
                         <div class="col-md-6 mb-4">
 
                           <div class="form-outline">
-                            <input type="text" class="form-control" #address1="ngModel" [(ngModel)]="Signup.address1" name="address1" id="address1"
-                              placeholder="Address Line 1" required />
-                              <small
-                            *ngIf="(address1.touched && address1.invalid) || (address1.invalid && signup.submitted)">Address1 is
-                            required </small>
+                            <input type="text" class="form-control" #address1="ngModel" [(ngModel)]="Signup.address1"
+                              name="address1" id="address1" placeholder="Address Line 1" required />
+                            <small
+                              *ngIf="(address1.touched && address1.invalid) || (address1.invalid && signup.submitted)">Address1
+                              is
+                              required </small>
                           </div>
                         </div>
                         <div class="col-md-6 mb-4">
 
                           <div class="form-outline">
-                            <input type="text" class="form-control" name="address2" id="address2" #address2="ngModel" [(ngModel)]="Signup.address2"
-                              placeholder="Address Line 2" required />
-                              <small
-                            *ngIf="(address2.touched && address2.invalid) || (address2.invalid && signup.submitted)">Address2 is
-                            required </small>
+                            <input type="text" class="form-control" name="address2" id="address2" #address2="ngModel"
+                              [(ngModel)]="Signup.address2" placeholder="Address Line 2" required />
+                            <small
+                              *ngIf="(address2.touched && address2.invalid) || (address2.invalid && signup.submitted)">Address2
+                              is
+                              required </small>
                           </div>
 
                         </div>
@@ -214,19 +219,20 @@
                         <div class="col-md-6 mb-4">
 
                           <div class="form-outline">
-                            <input type="text" class="form-control" name="city" id="city" placeholder="City" id="city" name="city" #city="ngModel" [(ngModel)]="Signup.city" required >
-                            <small
-                            *ngIf="(city.touched && city.invalid) || (city.invalid && signup.submitted)">City is
-                            required </small>
+                            <input type="text" class="form-control" name="city" id="city" placeholder="City" id="city"
+                              name="city" #city="ngModel" [(ngModel)]="Signup.city" required>
+                            <small *ngIf="(city.touched && city.invalid) || (city.invalid && signup.submitted)">City is
+                              required </small>
                           </div>
                         </div>
                         <div class="col-md-6 mb-4">
 
                           <div class="form-outline">
-                            <input type="text" class="form-control" name="state" id="state" placeholder="State" #state="ngModel" [(ngModel)]="Signup.state" required />
-                            <small
-                            *ngIf="(state.touched && state.invalid) || (state.invalid && signup.submitted)">State is
-                            required </small>
+                            <input type="text" class="form-control" name="state" id="state" placeholder="State"
+                              #state="ngModel" [(ngModel)]="Signup.state" required />
+                            <small *ngIf="(state.touched && state.invalid) || (state.invalid && signup.submitted)">State
+                              is
+                              required </small>
                           </div>
 
                         </div>
@@ -235,16 +241,20 @@
                         <div class="col-md-6 mb-4">
 
                           <div class="form-outline">
-                            <input type="number"  class="form-control" name="zipcode" id="zipcode" [maxlength]="6" placeholder="Zipcode" #zipcode="ngModel" [(ngModel)]="Signup.zipcode" required />
+                            <input type="number" class="form-control" name="zipcode" id="zipcode" [maxlength]="6"
+                              placeholder="Zipcode" #zipcode="ngModel" [(ngModel)]="Signup.zipcode" required />
                             <small
-                            *ngIf="(zipcode.touched && zipcode.invalid) || (zipcode.invalid && signup.submitted)">Zipcode is
-                            required </small>
+                              *ngIf="(zipcode.touched && zipcode.invalid) || (zipcode.invalid && signup.submitted)">Zipcode
+                              is
+                              required </small>
                           </div>
                         </div>
                         <div class="col-md-6 mb-4">
 
                           <div class="form-outline">
-                            <select type="text" class="form-select" aria-label="Default select example" name="country" id="country" placeholder="Country" #country="ngModel" required [(ngModel)]="Signup.country">
+                            <select type="text" class="form-select" aria-label="Default select example" name="country"
+                              id="country" placeholder="Country" #country="ngModel" required
+                              [(ngModel)]="Signup.country">
                               <option disabled selected value>Country</option>
                               <option value="Afghanistan">Afghanistan</option>
                               <option value="Albania">Albania</option>
@@ -382,8 +392,9 @@
                               <option value="Mali">Mali</option>
                             </select>
                             <small
-                            *ngIf="(country.touched && country.invalid) || (country.invalid && signup.submitted)">Country is
-                            required </small>
+                              *ngIf="(country.touched && country.invalid) || (country.invalid && signup.submitted)">Country
+                              is
+                              required </small>
                           </div>
 
                         </div>
@@ -392,10 +403,11 @@
                         <div class="col-md-6 mb-4">
 
                           <div class="form-outline">
-                            <input type="password" class="form-control" name="password" id="password" #password="ngModel" [(ngModel)]="Signup.password"
-                              placeholder="Password" required />
-                              <small
-                              *ngIf="(password.touched && password.invalid) || (password.invalid && signup.submitted)">Password is
+                            <input type="password" class="form-control" name="password" id="password"
+                              #password="ngModel" [(ngModel)]="Signup.password" placeholder="Password" required />
+                            <small
+                              *ngIf="(password.touched && password.invalid) || (password.invalid && signup.submitted)">Password
+                              is
                               required </small>
                           </div>
                         </div>
@@ -403,12 +415,14 @@
 
                           <div class="form-outline">
 
-                            <input type="password" class="form-control" name="confirmPassword" id="confirmPassword" (keyup)="handleConfirmPassword(Signup.confirmPassword)" #confirmPassword="ngModel" [(ngModel)]="Signup.confirmPassword"
-                              placeholder="Confirm Password" required />
-                              <small
-                              *ngIf="(confirmPassword.touched && confirmPassword.pristine) || (confirmPassword.invalid && signup.submitted)">Confirm Password is
+                            <input type="password" class="form-control" name="confirmPassword" id="confirmPassword"
+                              (keyup)="handleConfirmPassword(Signup.confirmPassword)" #confirmPassword="ngModel"
+                              [(ngModel)]="Signup.confirmPassword" placeholder="Confirm Password" required />
+                            <small
+                              *ngIf="(confirmPassword.touched && confirmPassword.pristine) || (confirmPassword.invalid && signup.submitted)">Confirm
+                              Password is
                               required </small>
-                              <small *ngIf="(show && confirmPassword.valid)">Confirm Password is mismatched </small>
+                            <small *ngIf="(show && confirmPassword.valid)">Confirm Password is mismatched </small>
                           </div>
 
                         </div>
@@ -416,14 +430,13 @@
 
                       <div class="form-group required">
 
-                        <select class="form-select"  aria-label="Default select example" name="role" #role="ngModel" [(ngModel)]="Signup.role"
-                          id="role" aria-placeholder="Select Role" required>
+                        <select class="form-select" aria-label="Default select example" name="role" #role="ngModel"
+                          [(ngModel)]="Signup.role" id="role" aria-placeholder="Select Role" required>
                           <option>Select Role</option>
                           <option *ngFor="let item of roles">{{item.roles}}</option>
                         </select>
-                        <small
-                              *ngIf="(role.touched && role.invalid) || (role.invalid && signup.submitted)">Role is
-                              required </small>
+                        <small *ngIf="(role.touched && role.invalid) || (role.invalid && signup.submitted)">Role is
+                          required </small>
                       </div>
 
 
