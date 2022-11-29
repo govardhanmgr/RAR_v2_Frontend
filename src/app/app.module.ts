@@ -9,7 +9,7 @@ import { SharedModule } from './shared/shared.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { AdminComponent } from './superuser/admin/admin.component';
+
 import { ManagerComponent } from './manager/manager/manager.component';
 import { EmployeeComponent } from './employee/employee/employee.component';
 import { ManagerLayoutComponent } from './layouts/manager-layout/manager-layout.component';
@@ -22,7 +22,7 @@ import { EmployeeLayoutComponent } from './layouts/employee-layout/employee-layo
     AppComponent,
     AuthenticationLayoutComponent,
     AdminLayoutComponent,
-    AdminComponent,
+
     ManagerComponent,
     EmployeeComponent,
     ManagerLayoutComponent,
