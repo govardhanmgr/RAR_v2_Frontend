@@ -37,6 +37,7 @@ import { AddNewInvoiceComponent } from './add-new-invoice/add-new-invoice.compon
 
 
 
+
 @NgModule({
   declarations: [
     EmployeeComponent,
@@ -67,7 +68,8 @@ import { AddNewInvoiceComponent } from './add-new-invoice/add-new-invoice.compon
     SearchfilterPipe,
    DocumentComponent,
 
-   AddNewInvoiceComponent
+   AddNewInvoiceComponent,
+    
   
 
   ],
